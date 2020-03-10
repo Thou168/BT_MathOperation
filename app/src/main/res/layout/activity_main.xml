@@ -23,6 +23,7 @@
         android:layout_centerInParent="true"/>
     <Button
         android:id="@+id/sound_click"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click to play sound 1!"
@@ -32,6 +33,7 @@
         android:layout_below="@+id/id2"/>
     <Button
         android:id="@+id/sound_click2"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click to play sound 2!"
@@ -41,6 +43,7 @@
         android:layout_below="@+id/sound_click"/>
     <Button
         android:id="@+id/sound_click3"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click to play sound 3!"
@@ -50,6 +53,7 @@
         android:layout_below="@+id/sound_click2"/>
     <Button
         android:id="@+id/sound_click4"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click to play sound 4!"
@@ -59,6 +63,7 @@
         android:layout_below="@+id/sound_click3"/>
     <Button
         android:id="@+id/sound_click5"
+        android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="click to play sound 5!"
