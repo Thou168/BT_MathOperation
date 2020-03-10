@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BT_MathOperation</string>
+    <string-array name="show_text">
+        <item>Like the video</item>
+        <item>Subscribe to the channel</item>
+    </string-array>
 </resources>
