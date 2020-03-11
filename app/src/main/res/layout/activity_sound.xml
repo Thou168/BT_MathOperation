@@ -5,29 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/transition_container"
-    tools:context=".MainActivity">
+    tools:context=".Sound_Activity">
     <RelativeLayout
         android:background="@drawable/quinn_with_joker"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/id1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:text="Hello World!"
-            android:layout_marginTop="20dp"
-            android:layout_centerInParent="true"
-            android:layout_alignParentTop="true"/>
-        <TextView
-            android:id="@+id/id2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:layout_below="@+id/id1"
-            android:text="Hello world Below!"
-            android:layout_centerInParent="true"/>
+
         <Button
             android:id="@+id/sound_click"
             android:padding="10dp"
@@ -36,9 +20,9 @@
             android:textColor="@color/color_for_text"
             android:text="click to play sound 1!"
             android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
             android:background="@color/button_tint_color"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/id2"/>
+            android:layout_marginTop="30dp" />
         <Button
             android:id="@+id/sound_click2"
             android:padding="10dp"
@@ -100,8 +84,9 @@
             android:layout_marginTop="100dp"
             android:orientation="vertical"
             android:background="#9009"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_centerInParent="true"
+            android:layout_width="200dp"
+            android:layout_height="50dp">
             <TextView
                 android:id="@+id/show_animation_text"
                 android:text="some thing show"
@@ -110,18 +95,28 @@
                 android:gravity="center"
                 android:textSize="20sp"
                 android:padding="10dp"
-                android:textColor="@color/color_for_text"
+                android:textColor="@color/sunflower_yellow_300"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"/>
-            <com.tomer.fadingtextview.FadingTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:textColor="@color/color_for_text"
-                app:texts="@array/show_text"
-                app:timeout="500"/>
+<!--            <com.tomer.fadingtextview.FadingTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/color_for_text"-->
+<!--                app:texts="@array/show_text"-->
+<!--                app:timeout="500"/>-->
         </LinearLayout>
+        <Button
+            android:id="@+id/btnNext"
+            android:text="Next"
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="100dp"/>
     </RelativeLayout>
 </RelativeLayout>

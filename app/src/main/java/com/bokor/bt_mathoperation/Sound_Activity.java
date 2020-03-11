@@ -14,10 +14,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class Sound_Activity extends AppCompatActivity {
 
     Button btn_click,btn_click2,btn_click3,btn_click4,btn_click5;
-    Button btn_gone;
+    Button btn_gone,btnNext;
     Animation fadeout,fadein;
     TextView show_text;
     ViewGroup container;
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sound);
 
         show_text=findViewById(R.id.show_animation_text);
         fadeout= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
@@ -34,13 +34,14 @@ public class MainActivity extends AppCompatActivity {
         container=findViewById(R.id.transition_container);
 
         btn_gone = findViewById(R.id.btn_gone);
+        btnNext = findViewById(R.id.btnNext);
 
         btn_click = findViewById(R.id.sound_click);
         btn_click2 = findViewById(R.id.sound_click2);
         btn_click3 = findViewById(R.id.sound_click3);
         btn_click4 = findViewById(R.id.sound_click4);
         btn_click5 = findViewById(R.id.sound_click5);
-        final MediaPlayer mp=MediaPlayer.create(this, R.raw.bells001);
+        final MediaPlayer mp1=MediaPlayer.create(this, R.raw.bells001);
         final MediaPlayer mp2=MediaPlayer.create(this, R.raw.bells002);
         final MediaPlayer mp3=MediaPlayer.create(this, R.raw.bells003);
         final MediaPlayer mp4=MediaPlayer.create(this, R.raw.bells004);
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btn_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
+                mp1.start();
                 TransitionManager.beginDelayedTransition(container);
                 visible = !visible;
                 show_text.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
@@ -103,6 +104,31 @@ public class MainActivity extends AppCompatActivity {
                 TransitionManager.beginDelayedTransition(container);
                 visible = !visible;
                 show_text.setVisibility(visible ? View.GONE: View.GONE);
+            }
+        });
+
+//        btnNext.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(),Activity_second.class));
+//            }
+//        });
+        btnNext.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        view.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        view.getBackground().clearColorFilter();
+                        view.invalidate();
+                        break;
+                    }
+                }
+                return false;
             }
         });
         for_animation_button();
@@ -210,7 +236,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void animation_for_text(){
-
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

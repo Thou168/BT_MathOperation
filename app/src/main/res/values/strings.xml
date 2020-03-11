@@ -4,4 +4,19 @@
         <item>Like the video</item>
         <item>Subscribe to the channel</item>
     </string-array>
+
+    <string name="home_title">Home</string>
+    <string name="home_sub_title">smiguel.net</string>
+    <string name="home_lead">Android template and offline app sample</string>
+    <string name="coming_soon">coming soon</string>
+    <string name="about">about</string>
+
+    <!-- LINKS -->
+    <string name="opt_home">home</string>
+    <string name="opt_customers">customers</string>
+    <string name="opt_logout">Logout</string>
+    <string name="opt_delete">Delete</string>
+
+    <string name="nav_about_us">About Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>
