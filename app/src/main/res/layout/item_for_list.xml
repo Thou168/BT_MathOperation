@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_item"
+            android:src="@drawable/joker"
+            android:scaleType="centerCrop"
+            android:layout_gravity="start"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txt_title"
+               android:layout_margin="5dp"
+                android:textColor="@color/black"
+               android:text="Joker is my favorite actor"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_level"
+                android:textColor="@color/black"
+                android:layout_below="@+id/txt_title"
+                android:layout_margin="5dp"
+                android:text="5 levels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_below="@+id/txt_level"
+                android:layout_margin="5dp"
+                android:text="simple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

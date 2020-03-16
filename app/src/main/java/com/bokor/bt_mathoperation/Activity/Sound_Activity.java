@@ -1,4 +1,4 @@
-package com.bokor.bt_mathoperation;
+package com.bokor.bt_mathoperation.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,10 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bokor.bt_mathoperation.R;
 
 public class Sound_Activity extends AppCompatActivity {
 
@@ -21,12 +24,23 @@ public class Sound_Activity extends AppCompatActivity {
     Animation fadeout,fadein;
     TextView show_text;
     ViewGroup container;
+    ImageView img_back;
     boolean visible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound);
+        img_back=findViewById(R.id.back);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+                img_back.startAnimation(animFadein);
+
+                onBackPressed();
+            }
+        });
 
         show_text=findViewById(R.id.show_animation_text);
         fadeout= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
@@ -104,31 +118,6 @@ public class Sound_Activity extends AppCompatActivity {
                 TransitionManager.beginDelayedTransition(container);
                 visible = !visible;
                 show_text.setVisibility(visible ? View.GONE: View.GONE);
-            }
-        });
-
-//        btnNext.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(getApplicationContext(),Activity_second.class));
-//            }
-//        });
-        btnNext.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        view.getBackground().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
-                }
-                return false;
             }
         });
         for_animation_button();

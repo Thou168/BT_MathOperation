@@ -1,4 +1,4 @@
-package com.bokor.bt_mathoperation;
+package com.bokor.bt_mathoperation.Splash_screen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,10 +9,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.R;
+
 public class Splashscreen extends AppCompatActivity {
 
     private ImageView logo;
-    private static int splashTimeOut=5000;
+    private static int splashTimeOut=3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +25,7 @@ public class Splashscreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(Splashscreen.this, Activity_home.class);
+                Intent i = new Intent(Splashscreen.this, Home_Activity.class);
                 startActivity(i);
                 finish();
             }

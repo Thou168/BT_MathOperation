@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/side_nav_bar"
+    tools:showIn="@layout/toolbar">
+
+    <TextView
+        android:text="This is Home"
+        android:textSize="40dp"
+        android:visibility="gone"
+        android:textColor="@color/color_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:id="@+id/ln_1"
+        android:layout_marginTop="70dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_sum"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/sum"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/colorF7"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:id="@+id/btn_sub"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/sub"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorF7"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln_2"
+        android:padding="5dp"
+        android:layout_below="@+id/ln_1"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_mul"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/mul"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/colorF7"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:id="@+id/btn_div"
+            android:background="@drawable/btn_bg_selector"
+            android:text="@string/div"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorF7"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:text="Go to second"
+        android:background="@drawable/bg_button"
+        android:layout_below="@+id/ln_2"
+        android:padding="4dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

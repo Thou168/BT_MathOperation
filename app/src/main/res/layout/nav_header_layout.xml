@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/white"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/nav_header_circleimageview_id"-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/joker" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/nav_header_name_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingTop="8dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="Lusan"-->
+<!--        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"-->
+<!--        android:textSize="18dp"-->
+<!--        android:textColor="@android:color/black"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/nav_header_emailaddress_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingTop="4dp"-->
+<!--        android:text="lusan_ronaldo@gmail.com"-->
+<!--        android:textColor="@android:color/holo_blue_bright"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+<!--        android:textSize="14sp"-->
+<!--        android:paddingBottom="4dp"/>-->
+    <TextView
+        android:text="About us"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#15000000"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="Alan Walker - Forget Me Mix 2019 | Best Of Alan Walker Style Music 2019 Nightcore | #2NIGHTCORE
+
+        Hello Guys ! hope you like our new Video ! please make sur to subscribe and like this Video for more amazing Music By alan Walker Fans ! Thanks
+
+        ⚠ If you are the artist of the picture, please notify me, if you want me to remove the video or give me a few links so i can give you proper credit ♡
+
+        There is absolutely no copyright infringement intended and all in this video (image, audio) is not owned by me, I simply mixed it together for entertainment
+
+        ♫ Message for the Original creator of this song ♪
+        If you are the original artist and you dont want me to have your work uploaded on my channel, please contact me by my channel's email, send a message on youtube or comment in the section below.
+        I will immediately remove it
+
+        Enjoy ❤️️"
+        android:textSize="@dimen/fab_margin"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

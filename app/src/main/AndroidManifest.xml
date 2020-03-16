@@ -9,16 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Sum.Sum_class"></activity>
+        <activity android:name=".List_Lesson.List_Lesson"></activity>
+        <activity android:name=".Activity.Setting" />
+        <activity android:name=".Difficulty.Difficulty" />
+        <activity android:name=".Activity_Sum.Sum_class" />
         <activity android:name=".Activity_Sub.Sub_class" />
         <activity android:name=".Activity_Mul.Mul_class" />
         <activity android:name=".Activity_Div.Div_class" />
-        <activity
-            android:name=".Activity_home"
-            android:label="Home page" />
-        <activity
-            android:name=".Splashscreen"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".Activity.Home_Activity" />
+        <activity android:name=".Splash_screen.Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Sound_Activity"
+            android:name=".Activity.Sound_Activity"
             android:label="Sound Activity" />
     </application>
 
