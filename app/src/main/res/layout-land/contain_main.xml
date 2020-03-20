@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@drawable/side_nav_bar"
+    android:background="@color/colorPrimary1"
     tools:showIn="@layout/toolbar">
 
     <TextView
@@ -18,7 +18,7 @@
         android:layout_centerInParent="true"/>
     <LinearLayout
         android:id="@+id/ln_1"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:padding="5dp"
         android:orientation="horizontal"
         android:gravity="center"
@@ -71,13 +71,20 @@
     <Button
         android:id="@+id/btnNext"
         android:text="Go to second"
-        android:background="@drawable/bg_button"
         android:layout_below="@+id/ln_2"
         android:padding="4dp"
         android:layout_marginTop="10dp"
         android:textColor="@color/color_secondary"
+        android:background="@drawable/radious_color_normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/btnNext"
+        android:layout_centerInParent="true"
+        android:src="@drawable/symbol_img"
+        android:layout_width="150dp"
+        android:layout_height="100dp"/>
 
 </RelativeLayout>

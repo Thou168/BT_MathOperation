@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".List_Lesson.List_Lesson">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/varnished_wood"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <ImageView
+                android:id="@+id/back_level"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:layout_marginStart="10dp"
+                android:text="ជ្រើសរើសកម្រិត"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ListView
+        android:id="@+id/list_level"
+        style="@style/ListView"
+        android:layout_below="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -8,8 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,25 +21,41 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.bestsoft32.tt_fancy_gif_dialog_lib.TTFancyGifDialog;
+import com.bestsoft32.tt_fancy_gif_dialog_lib.TTFancyGifDialogListener;
 import com.bokor.bt_mathoperation.Activity_Div.Div_class;
 import com.bokor.bt_mathoperation.Activity_Mul.Mul_class;
 import com.bokor.bt_mathoperation.Activity_Sub.Sub_class;
 import com.bokor.bt_mathoperation.Activity_Sum.Sum_class;
 import com.bokor.bt_mathoperation.R;
 import com.google.android.material.navigation.NavigationView;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
-public class Home_Activity extends AppCompatActivity {
+import pl.droidsonroids.gif.GifImageView;
+
+import static com.thekhaeng.pushdownanim.PushDownAnim.DEFAULT_PUSH_SCALE;
+import static com.thekhaeng.pushdownanim.PushDownAnim.DEFAULT_PUSH_STATIC;
+import static com.thekhaeng.pushdownanim.PushDownAnim.MODE_SCALE;
+import static com.thekhaeng.pushdownanim.PushDownAnim.MODE_STATIC_DP;
+
+public class Home_Activity extends AppCompatActivity implements View.OnClickListener {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
     ImageButton img_setting;
     Toolbar toolbar;
-    Button btn_sum,btn_sub,btn_mul,btn_div,btn_next;
+    Button btn_sum,btn_mul,btn_div,btn_next;
+    Button btn_sub;
+//    Button gif;
+//    GifImageView img_gif;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
+//        gif=findViewById(R.id.btn_show_gif);
+//        img_gif=findViewById(R.id.gifImageView);
+//        gif.setOnClickListener(this);
         call_id();
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("BT_MathOperation");
@@ -79,7 +97,7 @@ public class Home_Activity extends AppCompatActivity {
             }
         });
         btn_sub = findViewById(R.id.btn_sub);
-        btn_sub.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(btn_sub).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Home_Activity.this, Sub_class.class));
@@ -100,7 +118,16 @@ public class Home_Activity extends AppCompatActivity {
             }
         });
         btn_next = findViewById(R.id.btnNext);
-        btn_next.setOnClickListener(new View.OnClickListener() {
+//        btn_next.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Home_Activity.this, Sound_Activity.class));
+//            }
+//        });
+
+//        Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click);
+//        btn_next.startAnimation(hyperspaceJumpAnimation);
+        PushDownAnim.setPushDownAnimTo(btn_next).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Home_Activity.this, Sound_Activity.class));
@@ -115,5 +142,12 @@ public class Home_Activity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+//        if(view.getId() == R.id.btn_show_gif){
+//            img_gif.setImageResource(R.drawable.gif2);
+//        }
     }
 }

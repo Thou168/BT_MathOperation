@@ -5,20 +5,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@drawable/side_nav_bar"
+    android:background="@color/colorPrimary1"
     tools:showIn="@layout/toolbar">
-
-    <TextView
-        android:text="This is Home"
-        android:textSize="40sp"
-        android:visibility="gone"
-        android:textColor="@color/color_primary"
+    <Button
+        android:id="@+id/btn_show_gif"
+        android:text="GIF Show"
+        android:visibility="invisible"
+        android:background="@drawable/bg_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="true"/>
+
     <LinearLayout
         android:id="@+id/ln_1"
-        android:layout_marginTop="200dp"
+        android:layout_below="@+id/btn_show_gif"
+        android:layout_marginTop="20dp"
         android:padding="5dp"
         android:orientation="horizontal"
         android:gravity="center"
@@ -70,14 +72,20 @@
 
     <Button
         android:id="@+id/btnNext"
-        android:text="Go to second"
+        android:text="ចុចទៅសកម្មភាពសម្លេង"
         android:layout_below="@+id/ln_2"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_button"
         android:padding="4dp"
+        android:background="@drawable/radious_color_normal"
         android:textColor="@color/color_secondary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
-
+    <ImageView
+        android:layout_below="@+id/btnNext"
+        android:layout_centerInParent="true"
+        android:src="@drawable/symbol_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+<!--android:background="@drawable/bg_button"-->
 </RelativeLayout>

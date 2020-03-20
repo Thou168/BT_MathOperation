@@ -2,6 +2,7 @@ package com.bokor.bt_mathoperation.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bokor.bt_mathoperation.R;
+import com.thekhaeng.pushdownanim.PushDownAnim;
+
+import static com.thekhaeng.pushdownanim.PushDownAnim.DEFAULT_PUSH_SCALE;
 
 public class Sound_Activity extends AppCompatActivity {
 
@@ -48,20 +52,42 @@ public class Sound_Activity extends AppCompatActivity {
         container=findViewById(R.id.transition_container);
 
         btn_gone = findViewById(R.id.btn_gone);
+        btn_gone.setBackground(getDrawable(R.drawable.button_state_list_animator));
+        btn_gone.setTextColor(getResources().getColor(R.color.button_tint_color));
         btnNext = findViewById(R.id.btnNext);
 
         btn_click = findViewById(R.id.sound_click);
+        btn_click.setBackground(getDrawable(R.drawable.button_state_list_animator));
+        btn_click.setTextColor(getResources().getColor(R.color.button_tint_color));
         btn_click2 = findViewById(R.id.sound_click2);
+        btn_click2.setBackground(getDrawable(R.drawable.button_state_list_animator));
+        btn_click2.setTextColor(getResources().getColor(R.color.button_tint_color));
         btn_click3 = findViewById(R.id.sound_click3);
+        btn_click3.setBackground(getDrawable(R.drawable.button_state_list_animator));
+        btn_click3.setTextColor(getResources().getColor(R.color.button_tint_color));
         btn_click4 = findViewById(R.id.sound_click4);
+        btn_click4.setBackground(getDrawable(R.drawable.button_state_list_animator));
+        btn_click4.setTextColor(getResources().getColor(R.color.button_tint_color));
         btn_click5 = findViewById(R.id.sound_click5);
+        btn_click5.setBackground(getDrawable(R.drawable.button_state_list_animator));
+        btn_click5.setTextColor(getResources().getColor(R.color.button_tint_color));
         final MediaPlayer mp1=MediaPlayer.create(this, R.raw.bells001);
         final MediaPlayer mp2=MediaPlayer.create(this, R.raw.bells002);
         final MediaPlayer mp3=MediaPlayer.create(this, R.raw.bells003);
         final MediaPlayer mp4=MediaPlayer.create(this, R.raw.bells004);
         final MediaPlayer mp5=MediaPlayer.create(this, R.raw.bells007);
 
-        btn_click.setOnClickListener(new View.OnClickListener() {
+//        btn_click.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mp1.start();
+//                TransitionManager.beginDelayedTransition(container);
+//                visible = !visible;
+//                show_text.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
+//                show_text.setText("Click to play sound 1!");
+//            }
+//        });
+        PushDownAnim.setPushDownAnimTo(btn_click).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp1.start();
@@ -71,7 +97,17 @@ public class Sound_Activity extends AppCompatActivity {
                 show_text.setText("Click to play sound 1!");
             }
         });
-        btn_click2.setOnClickListener(new View.OnClickListener() {
+//        btn_click2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mp2.start();
+//                TransitionManager.beginDelayedTransition(container);
+//                visible = !visible;
+//                show_text.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
+//                show_text.setText("Click to play sound 2!");
+//            }
+//        });
+        PushDownAnim.setPushDownAnimTo(btn_click2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp2.start();
@@ -81,7 +117,17 @@ public class Sound_Activity extends AppCompatActivity {
                 show_text.setText("Click to play sound 2!");
             }
         });
-        btn_click3.setOnClickListener(new View.OnClickListener() {
+//        btn_click3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mp3.start();
+//                TransitionManager.beginDelayedTransition(container);
+//                visible = !visible;
+//                show_text.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
+//                show_text.setText("Click to play sound 3!");
+//            }
+//        });
+        PushDownAnim.setPushDownAnimTo(btn_click3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp3.start();
@@ -91,7 +137,17 @@ public class Sound_Activity extends AppCompatActivity {
                 show_text.setText("Click to play sound 3!");
             }
         });
-        btn_click4.setOnClickListener(new View.OnClickListener() {
+//        btn_click4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mp4.start();
+//                TransitionManager.beginDelayedTransition(container);
+//                visible = !visible;
+//                show_text.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
+//                show_text.setText("Click to play sound 4!");
+//            }
+//        });
+        PushDownAnim.setPushDownAnimTo(btn_click4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp4.start();
@@ -101,7 +157,17 @@ public class Sound_Activity extends AppCompatActivity {
                 show_text.setText("Click to play sound 4!");
             }
         });
-        btn_click5.setOnClickListener(new View.OnClickListener() {
+//        btn_click5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mp5.start();
+//                TransitionManager.beginDelayedTransition(container);
+//                visible = !visible;
+//                show_text.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
+//                show_text.setText("Click to play sound 5!");
+//            }
+//        });
+        PushDownAnim.setPushDownAnimTo(btn_click5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp5.start();
@@ -120,110 +186,110 @@ public class Sound_Activity extends AppCompatActivity {
                 show_text.setVisibility(visible ? View.GONE: View.GONE);
             }
         });
-        for_animation_button();
+//        for_animation_button();
     }
 
-    private void for_animation_button(){
-        btn_click.setOnTouchListener(new View.OnTouchListener() {
+//    private void for_animation_button(){
+//        btn_click.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                switch (motionEvent.getAction()) {
+//                    case MotionEvent.ACTION_DOWN: {
+//                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+//                        view.invalidate();
+//                        break;
+//                    }
+//                    case MotionEvent.ACTION_UP: {
+//                        view.getBackground().clearColorFilter();
+//                        view.invalidate();
+//                        break;
+//                    }
+//                }
+//                return false;
+//            }
+//        });
 
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        view.getBackground().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
-
-        btn_click2.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        view.getBackground().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
-
-        btn_click3.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        view.getBackground().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
-
-        btn_click4.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        view.getBackground().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
-
-        btn_click5.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP: {
-                        view.getBackground().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
-    }
+//        btn_click2.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                switch (motionEvent.getAction()) {
+//                    case MotionEvent.ACTION_DOWN: {
+//                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+//                        view.invalidate();
+//                        break;
+//                    }
+//                    case MotionEvent.ACTION_UP: {
+//                        view.getBackground().clearColorFilter();
+//                        view.invalidate();
+//                        break;
+//                    }
+//                }
+//                return false;
+//            }
+//        });
+//
+//        btn_click3.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                switch (motionEvent.getAction()) {
+//                    case MotionEvent.ACTION_DOWN: {
+//                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+//                        view.invalidate();
+//                        break;
+//                    }
+//                    case MotionEvent.ACTION_UP: {
+//                        view.getBackground().clearColorFilter();
+//                        view.invalidate();
+//                        break;
+//                    }
+//                }
+//                return false;
+//            }
+//        });
+//
+//        btn_click4.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                switch (motionEvent.getAction()) {
+//                    case MotionEvent.ACTION_DOWN: {
+//                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+//                        view.invalidate();
+//                        break;
+//                    }
+//                    case MotionEvent.ACTION_UP: {
+//                        view.getBackground().clearColorFilter();
+//                        view.invalidate();
+//                        break;
+//                    }
+//                }
+//                return false;
+//            }
+//        });
+//
+//        btn_click5.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                switch (motionEvent.getAction()) {
+//                    case MotionEvent.ACTION_DOWN: {
+//                        view.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+//                        view.invalidate();
+//                        break;
+//                    }
+//                    case MotionEvent.ACTION_UP: {
+//                        view.getBackground().clearColorFilter();
+//                        view.invalidate();
+//                        break;
+//                    }
+//                }
+//                return false;
+//            }
+//        });
+//    }
 
     @Override
     public void onBackPressed() {

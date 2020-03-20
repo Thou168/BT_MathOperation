@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_secondary"
+            android:background="@drawable/varnished_wood"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
             <ImageView
                 android:id="@+id/back_dif"

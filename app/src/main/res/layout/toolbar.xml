@@ -13,7 +13,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@drawable/varnished_wood"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
             <ImageButton
                 android:id="@+id/settings"
@@ -26,5 +26,6 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <include layout="@layout/contain_main" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

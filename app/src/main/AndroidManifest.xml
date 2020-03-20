@@ -2,14 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bokor.bt_mathoperation">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".List_Lesson.List_Lesson"></activity>
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+        >
+        <activity android:name=".Splash_screen.Splashscreen_3"></activity>
+        <activity android:name=".Splash_screen.Splashscreen_2" />
+        <activity android:name=".List_Lesson.Display.Play_Display" android:configChanges="orientation" />
+        <activity android:name=".List_Lesson.List_level.List_Level" />
+        <activity android:name=".List_Lesson.List_Lesson" />
         <activity android:name=".Activity.Setting" />
         <activity android:name=".Difficulty.Difficulty" />
         <activity android:name=".Activity_Sum.Sum_class" />
@@ -17,7 +24,8 @@
         <activity android:name=".Activity_Mul.Mul_class" />
         <activity android:name=".Activity_Div.Div_class" />
         <activity android:name=".Activity.Home_Activity" />
-        <activity android:name=".Splash_screen.Splashscreen">
+        <activity android:name=".Splash_screen.Splashscreen"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +34,7 @@
         </activity>
         <activity
             android:name=".Activity.Sound_Activity"
-            android:label="Sound Activity" />
+            android:configChanges="screenSize|keyboardHidden|locale" />
     </application>
 
 </manifest>

@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/color_secondary"
+            android:background="@drawable/varnished_wood"
             app:popupTheme="@style/AppTheme.PopupOverlay">
             <ImageView
                 android:id="@+id/back"
@@ -25,7 +25,7 @@
                 android:layout_height="30dp"/>
             <TextView
                 android:layout_marginStart="10dp"
-                android:text="Sound Class"
+                android:text="សម្លេង"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
 <!--        android:layout_height="match_parent">-->
         <RelativeLayout
             android:layout_below="@+id/bar_layout"
-            android:background="@drawable/quinn_with_joker"
+            android:background="@color/colorPrimary1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
@@ -121,8 +121,8 @@
                 android:orientation="vertical"
                 android:background="@color/white"
                 android:layout_centerInParent="true"
-                android:layout_width="200dp"
-                android:layout_height="50dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/show_animation_text"
                     android:text="some thing show"
@@ -130,7 +130,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:textSize="20sp"
-                    android:padding="10dp"
+                    android:layout_margin="10dp"
                     android:textColor="@color/red"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"/>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flaganim"
+    android:oneshot="false"
+    >
+    <item android:drawable="@drawable/emoji_1_3" android:duration="1000" />
+    <item android:drawable="@drawable/emoji_2_3" android:duration="1000" />
+    <item android:drawable="@drawable/emoji_3_3" android:duration="1000" />
+    <item android:drawable="@drawable/emoji_4_3" android:duration="1000" />
+    <item android:drawable="@drawable/emoji_5_3" android:duration="1000" />
+</animation-list>

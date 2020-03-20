@@ -5,7 +5,7 @@
     android:gravity="top"
     android:orientation="vertical"
     android:padding="12dp"
-    android:background="@color/white"
+    android:background="@color/colorPrimary1"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 <!--    <de.hdodenhof.circleimageview.CircleImageView-->
@@ -38,11 +38,12 @@
 <!--        android:paddingBottom="4dp"/>-->
     <TextView
         android:text="About us"
-        android:textSize="50dp"
+        android:textSize="40sp"
         android:gravity="center"
         android:textColor="@color/black"
+        android:background="@drawable/varnished_wood"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="70dp"/>
 
     <View
         android:layout_marginTop="2dp"
@@ -50,25 +51,27 @@
         android:layout_height="1dp"
         android:layout_gravity="center_horizontal"
         android:background="#15000000"/>
-
-    <TextView
+    <ScrollView
         android:layout_marginTop="@dimen/fab_margin"
-        android:text="Alan Walker - Forget Me Mix 2019 | Best Of Alan Walker Style Music 2019 Nightcore | #2NIGHTCORE
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Alan Walker - Forget Me Mix 2019 | Best Of Alan Walker Style Music 2019 Nightcore | #2NIGHTCORE
 
-        Hello Guys ! hope you like our new Video ! please make sur to subscribe and like this Video for more amazing Music By alan Walker Fans ! Thanks
+            Hello Guys ! hope you like our new Video ! please make sur to subscribe and like this Video for more amazing Music By alan Walker Fans ! Thanks
 
-        ⚠ If you are the artist of the picture, please notify me, if you want me to remove the video or give me a few links so i can give you proper credit ♡
+            ⚠ If you are the artist of the picture, please notify me, if you want me to remove the video or give me a few links so i can give you proper credit ♡
 
-        There is absolutely no copyright infringement intended and all in this video (image, audio) is not owned by me, I simply mixed it together for entertainment
+            There is absolutely no copyright infringement intended and all in this video (image, audio) is not owned by me, I simply mixed it together for entertainment
 
-        ♫ Message for the Original creator of this song ♪
-        If you are the original artist and you dont want me to have your work uploaded on my channel, please contact me by my channel's email, send a message on youtube or comment in the section below.
-        I will immediately remove it
+            ♫ Message for the Original creator of this song ♪
+            If you are the original artist and you dont want me to have your work uploaded on my channel, please contact me by my channel's email, send a message on youtube or comment in the section below.
+            I will immediately remove it
 
-        Enjoy ❤️️"
-        android:textSize="@dimen/fab_margin"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
+            Enjoy ❤️️"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
 </LinearLayout>
