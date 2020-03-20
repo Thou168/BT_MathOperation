@@ -11,7 +11,13 @@
     android:background="@color/colorPrimary1">
 
     <ImageView
-        android:id="@+id/logo"
+        android:src="@drawable/ic_hello"
+        android:layout_width="120dp"
+        android:layout_height="150dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/logo_splash"
+        android:src="@drawable/gif2"
         android:layout_width="120dp"
         android:layout_height="150dp" />
     <ProgressBar

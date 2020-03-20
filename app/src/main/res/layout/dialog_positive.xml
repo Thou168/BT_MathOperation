@@ -10,7 +10,7 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
-        android:src="@drawable/smart_img"
+        android:src="@drawable/champian"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"

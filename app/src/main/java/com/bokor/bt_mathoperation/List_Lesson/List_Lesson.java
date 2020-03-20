@@ -31,7 +31,7 @@ public class List_Lesson extends AppCompatActivity {
     ImageView back_img;
     ListView lv;
     String[] title = {"មេរៀនទី 1","មេរៀនទី 2","មេរៀនទី 3","មេរៀនទី 4","មេរៀនទី 5","មេរៀនទី 6","មេរៀនទី 7","មេរៀនទី 8"};
-    int[] img = {R.drawable.calculate,R.drawable.calculate,R.drawable.calculate,R.drawable.calculate,R.drawable.calculate,R.drawable.calculate,R.drawable.calculate,R.drawable.calculate};
+    int[] img = {R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

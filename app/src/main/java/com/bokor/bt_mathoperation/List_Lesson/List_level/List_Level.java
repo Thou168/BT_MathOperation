@@ -27,7 +27,7 @@ public class List_Level extends AppCompatActivity {
     ImageView back_img;
     ListView lv;
     String[] title = {"កម្រិត 1","កម្រិត 2","កម្រិត 3","កម្រិត 4"};
-    int[] img = {R.drawable.calculate,R.drawable.calculate,R.drawable.calculate,R.drawable.calculate};
+    int[] img = {R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

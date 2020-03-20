@@ -74,17 +74,10 @@
         android:layout_below="@+id/ln_2"
         android:padding="4dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/color_secondary"
-        android:background="@drawable/radious_color_normal"
+        android:textColor="@color/white"
+        android:background="@drawable/button_state_list_animator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
-    <ImageView
-        android:layout_marginStart="20dp"
-        android:layout_toEndOf="@+id/btnNext"
-        android:layout_centerInParent="true"
-        android:src="@drawable/symbol_img"
-        android:layout_width="150dp"
-        android:layout_height="100dp"/>
 
 </RelativeLayout>

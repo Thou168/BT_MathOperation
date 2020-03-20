@@ -10,8 +10,8 @@
         android:layout_height="match_parent">
         <ImageView
             android:id="@+id/img_item"
-            android:src="@drawable/joker"
             android:scaleType="centerCrop"
+            android:src="@drawable/ic_hello"
             android:layout_gravity="start"
             android:layout_width="120dp"
             android:layout_height="match_parent"/>
@@ -23,7 +23,7 @@
                 android:layout_margin="5dp"
                 android:textSize="25sp"
                 android:layout_centerInParent="true"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="Joker is my favorite actor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

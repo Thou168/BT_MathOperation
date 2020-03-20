@@ -4,15 +4,15 @@
         <layer-list>
             <item>
                 <shape>
-                    <solid android:color="#1c4985" />
+                    <solid android:color="@color/white" />
                     <corners android:radius="19dp" />
-                    <padding android:bottom="5dp"/>
+                    <padding android:bottom="2dp"/>
                 </shape>
             </item>
             <item android:bottom="5px">
                 <shape>
                     <padding android:bottom="5dp" />
-                    <gradient android:angle="270" android:endColor="#163969" android:startColor="#1c4985" />
+                    <gradient android:angle="270" android:endColor="#163969" android:startColor="#163969" />
                     <corners android:radius="19dp" />
                     <padding android:bottom="10dp" android:left="10dp" android:right="5dp" android:top="10dp" />
                 </shape>
@@ -22,6 +22,14 @@
 
     <item android:state_pressed="true">
         <layer-list>
+            <item android:top="5px">
+                <shape>
+                    <padding android:top="2dp" />
+                    <gradient android:angle="270" android:endColor="#163969" android:startColor="#163969" />
+                    <corners android:radius="19dp" />
+                    <padding android:bottom="10dp" android:left="10dp" android:right="5dp" android:top="10dp" />
+                </shape>
+            </item>
             <item>
                 <shape>
                     <solid android:color="#163969" />
@@ -31,8 +39,8 @@
             </item>
             <item android:bottom="5px">
                 <shape>
-                    <padding android:bottom="5dp" />
-                    <gradient android:angle="270" android:endColor="#163969" android:startColor="#1c4985" />
+                    <padding android:bottom="2dp" />
+                    <gradient android:angle="270" android:endColor="#163969" android:startColor="#163969" />
                     <corners android:radius="19dp" />
                     <padding android:bottom="10dp" android:left="10dp" android:right="5dp" android:top="10dp" />
                 </shape>

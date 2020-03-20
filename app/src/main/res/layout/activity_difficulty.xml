@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/varnished_wood"
+            android:background="@color/colorPrimary1"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
             <ImageView
                 android:id="@+id/back_dif"
@@ -59,10 +59,8 @@
                 android:id="@+id/tab_dif"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
-                android:background="@drawable/tab_layout_background"
                 app:tabMode="scrollable"
                 android:layout_centerInParent="true"
-                app:tabBackground="@drawable/tab_layout_selector"
                 app:tabSelectedTextColor="@color/colorPrimaryDark"
                 app:tabPaddingStart="16dp"
                 app:tabPaddingEnd="16dp"

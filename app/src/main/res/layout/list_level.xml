@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/varnished_wood"
+            android:background="@color/colorPrimary1"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
             <ImageView
                 android:id="@+id/back_level"
@@ -34,7 +34,7 @@
     </com.google.android.material.appbar.AppBarLayout>
     <ListView
         android:id="@+id/list_level"
-        style="@style/ListView"
+        android:background="@color/colorPrimary1"
         android:layout_below="@+id/bar_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

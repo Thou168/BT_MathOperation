@@ -12,8 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
         >
-        <activity android:name=".Splash_screen.Splashscreen_3"></activity>
-        <activity android:name=".Splash_screen.Splashscreen_2" />
         <activity android:name=".List_Lesson.Display.Play_Display" android:configChanges="orientation" />
         <activity android:name=".List_Lesson.List_level.List_Level" />
         <activity android:name=".List_Lesson.List_Lesson" />
