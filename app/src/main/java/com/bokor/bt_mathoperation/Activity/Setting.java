@@ -2,6 +2,7 @@ package com.bokor.bt_mathoperation.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -26,6 +27,7 @@ public class Setting extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
+        startActivity(new Intent(Setting.this,Start_Up.class));
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }

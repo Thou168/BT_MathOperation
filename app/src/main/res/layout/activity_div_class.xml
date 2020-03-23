@@ -5,35 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary1"
-    tools:context=".Activity_Div.Div_class">
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/bar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+    tools:context=".Activity.Symbol_Activity.Div_class">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay">-->
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary1"
-            app:popupTheme="@style/AppTheme.PopupOverlay" >
-            <ImageView
-                android:id="@+id/back_div"
-                android:src="@drawable/ic_arrow_back_black_24dp"
-                android:layout_width="50dp"
-                android:layout_height="30dp"/>
-            <TextView
-                android:layout_marginStart="10dp"
-                android:text="គណនាចំនួនចែក"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="@color/colorPrimary1"-->
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay" >-->
+<!--            <ImageView-->
+<!--                android:id="@+id/back_div"-->
+<!--                android:src="@drawable/ic_arrow_back_black_24dp"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="30dp"/>-->
+<!--            <TextView-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="គណនាចំនួនចែក"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--        </androidx.appcompat.widget.Toolbar>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+    <ImageView
+        android:id="@+id/back_div"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_back"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
     <androidx.core.widget.NestedScrollView
-        android:layout_below="@+id/bar_layout"
+        android:layout_below="@+id/back_div"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout

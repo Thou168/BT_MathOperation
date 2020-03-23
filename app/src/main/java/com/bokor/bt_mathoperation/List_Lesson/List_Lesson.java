@@ -31,7 +31,7 @@ public class List_Lesson extends AppCompatActivity {
     ImageView back_img;
     ListView lv;
     String[] title = {"មេរៀនទី 1","មេរៀនទី 2","មេរៀនទី 3","មេរៀនទី 4","មេរៀនទី 5","មេរៀនទី 6","មេរៀនទី 7","មេរៀនទី 8"};
-    int[] img = {R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello};
+    int[] img = {R.drawable.lesson_img,R.drawable.lesson_img,R.drawable.lesson_img,R.drawable.lesson_img,R.drawable.lesson_img,R.drawable.lesson_img,R.drawable.lesson_img,R.drawable.lesson_img};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +65,7 @@ public class List_Lesson extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 
     class ListAdapter extends ArrayAdapter<String>{

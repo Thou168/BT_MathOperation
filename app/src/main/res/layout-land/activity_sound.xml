@@ -4,41 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary1"
     android:id="@+id/transition_container"
     tools:context=".Activity.Sound_Activity">
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/bar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay">-->
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary1"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-            <ImageView
-                android:id="@+id/back"
-                android:src="@drawable/ic_arrow_back_black_24dp"
-                android:layout_width="50dp"
-                android:layout_height="30dp"/>
-            <TextView
-                android:layout_marginStart="10dp"
-                android:text="សម្លេង"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </androidx.appcompat.widget.Toolbar>
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="@color/colorPrimary1"-->
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/back"-->
+<!--                android:src="@drawable/ic_arrow_back_black_24dp"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="30dp"/>-->
+<!--            <TextView-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="សម្លេង"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--        </androidx.appcompat.widget.Toolbar>-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 <!--    <androidx.core.widget.NestedScrollView-->
 <!--        android:layout_below="@+id/bar_layout"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent">-->
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:background="@drawable/bg_button_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
         <RelativeLayout
-            android:layout_below="@+id/bar_layout"
+            android:layout_below="@+id/back"
             android:background="@color/colorPrimary1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">

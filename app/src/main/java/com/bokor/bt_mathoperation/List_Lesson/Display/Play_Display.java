@@ -69,7 +69,7 @@ public class Play_Display extends AppCompatActivity implements View.OnClickListe
         dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimation;
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlideExit;
         alertDialog.getWindow().getDecorView().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
         exit.setOnClickListener(new View.OnClickListener() {
@@ -116,31 +116,23 @@ public class Play_Display extends AppCompatActivity implements View.OnClickListe
                 autoTransition.setDuration(2000);
                 TransitionManager.beginDelayedTransition(container,autoTransition);
 
-                container.addEmoji(R.drawable.ic_hello);
-                container.addEmoji(R.drawable.ic_hello);
-                container.addEmoji(R.drawable.ic_hello);
-                container.addEmoji(R.drawable.ic_hello);
-                container.addEmoji(R.drawable.ic_hello);
-
-//                container.addEmoji(R.drawable.flower1);
-//                container.addEmoji(R.drawable.flower2);
-//                container.addEmoji(R.drawable.flower3);
-//                container.addEmoji(R.drawable.flower4);
-//                container.addEmoji(R.drawable.flower5);
-//                container.addEmoji(R.drawable.joker);
-
-                container.stopDropping();
+                container.addEmoji(R.drawable.star1);
+                container.addEmoji(R.drawable.star2);
+                container.addEmoji(R.drawable.star3);
+                container.addEmoji(R.drawable.star4);
+                container.addEmoji(R.drawable.star5);
+                container.startDropping();
+    //                container.stopDropping();
                 container.setPer(10);
                 container.setDuration(7200);
                 container.setDropDuration(2400);
                 container.setDropFrequency(500);
-                container.startDropping();
                 //end
 
                 visible = !visible;
                 result_id.setVisibility(visible ? View.VISIBLE: View.VISIBLE);
                 result_id.setText("True");
-                result_id.setTextColor(getResources().getColor(R.color.yellow));
+                result_id.setTextColor(getResources().getColor(R.color.green));
                 showAlertDialogPositive();
             }
         });
@@ -150,7 +142,8 @@ public class Play_Display extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 vibe.vibrate(200);
                 result_id.setText("False");
-                result_id.setTextColor(getResources().getColor(R.color.logo_orange));
+                result_id.setTextColor(getResources().getColor(R.color.red));
+                container.stopDropping();
                 showAlertDialogNegative();
             }
         });
@@ -160,7 +153,8 @@ public class Play_Display extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 vibe.vibrate(200);
                 result_id.setText("False");
-                result_id.setTextColor(getResources().getColor(R.color.aqua));
+                result_id.setTextColor(getResources().getColor(R.color.red));
+                container.stopDropping();
                 showAlertDialogNegative();
             }
         });
@@ -174,7 +168,7 @@ public class Play_Display extends AppCompatActivity implements View.OnClickListe
         dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimation;
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimationFalse;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
@@ -193,7 +187,7 @@ public class Play_Display extends AppCompatActivity implements View.OnClickListe
         dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimation;
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimationTrue;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,4 @@
-package com.bokor.bt_mathoperation.Activity_Mul;
+package com.bokor.bt_mathoperation.Activity.Symbol_Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,14 +14,14 @@ import com.bokor.bt_mathoperation.Difficulty.Difficulty;
 import com.bokor.bt_mathoperation.List_Lesson.List_Lesson;
 import com.bokor.bt_mathoperation.R;
 
-public class Mul_class extends AppCompatActivity {
+public class Div_class extends AppCompatActivity {
 
-    ImageView back_mul;
+    ImageView back_div;
     RelativeLayout rl_play,rl_practice,rl_quiz,rl_duel,rl_learn,rl_test,rl_exam,rl_time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mul_class);
+        setContentView(R.layout.activity_div_class);
         rl_play = findViewById(R.id.rl_play);
         rl_play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,13 +91,13 @@ public class Mul_class extends AppCompatActivity {
 //            }
 //        });
 //
-        back_mul=findViewById(R.id.back_mul);
-        back_mul.setOnClickListener(new View.OnClickListener() {
+        back_div = findViewById(R.id.back_div);
+        back_div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
                 Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
-                back_mul.startAnimation(animFadein);
+                back_div.startAnimation(animFadein);
             }
         });
     }
@@ -105,5 +105,6 @@ public class Mul_class extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }

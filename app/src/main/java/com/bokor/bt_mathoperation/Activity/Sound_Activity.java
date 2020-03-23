@@ -294,5 +294,6 @@ public class Sound_Activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }

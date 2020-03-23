@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/background_exit_dialog"
+    android:background="@drawable/background_bluesky"
     android:minWidth="280dp"
     android:orientation="vertical"
     android:padding="10dp">
@@ -33,11 +33,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginTop="-2dp"
-        android:background="@drawable/background_orange"
+        android:background="@drawable/background_green"
         android:padding="0dp" >
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="2dp"
@@ -49,29 +48,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="តើអ្នកពិតជាចង់បិទកម្មវិធីមែនទេ?" />
+                android:text="តើអ្នកពិតជាចង់ចាកចេញមែនទេ?" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
 
                 <Button
-                    android:id="@+id/yes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/background_yellow"
-                    android:minWidth="100dp"
-                    android:text="បាទ/ចាស" />
-
-                <Button
                     android:id="@+id/no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/background_yellow"
                     android:minWidth="100dp"
-                    android:text="ទេ" />
+                    android:text="ទេ"
+                    android:drawableStart="@drawable/ic_close_black_24dp"/>
+
+                <Button
+                    android:id="@+id/yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/background_red"
+                    android:minWidth="100dp"
+                    android:text="ចេញឥឡូវ"
+                    android:drawableStart="@drawable/ic_exit_app"/>
 
             </LinearLayout>
         </LinearLayout>

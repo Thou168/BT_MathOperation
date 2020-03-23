@@ -7,47 +7,57 @@
     android:id="@+id/container"
     tools:context=".List_Lesson.Display.Play_Display">
     <RelativeLayout
+        android:background="@color/colorPrimary1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/bar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/bar_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:theme="@style/AppTheme.AppBarOverlay">-->
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorPrimary1"
-                app:popupTheme="@style/AppTheme.PopupOverlay" >
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="end"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:text="ចាកចេញ"
-                        android:textColor="@color/black"
-                        android:layout_marginEnd="5dp"
-                        android:textSize="20dp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <ImageButton
-                        android:id="@+id/leave_id"
-                        android:background="@drawable/bg_button_setting"
-                        android:src="@drawable/ic_exit_app"
-                        android:layout_gravity="center"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginEnd="10dp"/>
-                </LinearLayout>
-            </androidx.appcompat.widget.Toolbar>
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:background="@color/colorPrimary1"-->
+<!--                app:popupTheme="@style/AppTheme.PopupOverlay" >-->
+<!--                <LinearLayout-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:gravity="end"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+<!--                    <TextView-->
+<!--                        android:text="ចាកចេញ"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:layout_marginEnd="5dp"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/leave_id"-->
+<!--                        android:background="@drawable/bg_button_setting"-->
+<!--                        android:src="@drawable/ic_exit_app"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginEnd="10dp"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.appcompat.widget.Toolbar>-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+        <ImageButton
+            android:id="@+id/leave_id"
+            android:background="@drawable/bg_button_back"
+            android:src="@drawable/ic_exit_app"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"/>
         <RelativeLayout
-            android:layout_below="@+id/bar_layout"
+            android:layout_below="@+id/leave_id"
             android:background="@color/colorPrimary1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">

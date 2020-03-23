@@ -13,24 +13,29 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Activity.Start_Up;
 import com.bokor.bt_mathoperation.R;
 
 public class Splashscreen extends AppCompatActivity {
 
     ProgressBar splashProgress;
     static int splashTimeOut=4500;
+    private AnimationDrawable animationDrawable;
+    ImageView splashImageView,change_pc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click);
         splashProgress = findViewById(R.id.splashProgress);
         splashProgress.getProgressDrawable().setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
         playProgress();
 
-        final ImageView splashImageView = findViewById(R.id.logo_splash);
-//        splashImageView.setBackgroundResource(R.drawable.splash_screen);
-//        final AnimationDrawable frameAnimation = (AnimationDrawable)splashImageView.getBackground();
+        splashImageView = findViewById(R.id.logo_splash);
+        change_pc = findViewById(R.id.change_pic);
+        change_pc.setBackgroundResource(R.drawable.splash_screen);
+        animationDrawable = (AnimationDrawable) change_pc.getBackground();
         Thread timer= new Thread(){
             public void run(){
                 try{
@@ -40,7 +45,7 @@ public class Splashscreen extends AppCompatActivity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally {
-                    Intent splash =new Intent(getApplicationContext(),Home_Activity.class);
+                    Intent splash =new Intent(getApplicationContext(), Start_Up.class);
                     startActivity(splash);
                 }
             }
@@ -58,6 +63,12 @@ public class Splashscreen extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        animationDrawable.start();
     }
 
     private void playProgress() {

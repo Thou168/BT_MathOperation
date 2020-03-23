@@ -19,10 +19,10 @@
     </style>
 
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
-        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
-        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
-        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
-        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+        <item name="android:activityOpenEnterAnimation">@anim/fadein</item>
+        <item name="android:activityOpenExitAnimation">@anim/fadeout</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fadein</item>
+        <item name="android:activityCloseExitAnimation">@anim/fadeout</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -50,11 +50,21 @@
 
     //dialog animation
     <style name="SlidingDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
-        <item name="android:windowAnimationStyle">@style/SlidingDialogAnimation</item>
+        <item name="android:windowAnimationStyle">@style/SlidingDialogAnimationFalse</item>
     </style>
-    <style name="SlidingDialogAnimation">
-        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
-        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    <style name="SlidingDialogAnimationFalse">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+
+    <style name="SlidingDialogAnimationTrue">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fragment_close_exit</item>
+    </style>
+
+    <style name="SlideExit">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
     </style>
 
     <style name="SCBSwitch" parent="Theme.AppCompat.Light">

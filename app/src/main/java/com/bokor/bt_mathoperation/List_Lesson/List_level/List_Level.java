@@ -27,7 +27,7 @@ public class List_Level extends AppCompatActivity {
     ImageView back_img;
     ListView lv;
     String[] title = {"កម្រិត 1","កម្រិត 2","កម្រិត 3","កម្រិត 4"};
-    int[] img = {R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello,R.drawable.ic_hello};
+    int[] img = {R.drawable.level_img,R.drawable.level_img,R.drawable.level_img,R.drawable.level_img};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,7 @@ public class List_Level extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 
     class ListAdapter extends ArrayAdapter<String>{
