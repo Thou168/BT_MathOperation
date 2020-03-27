@@ -4,54 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary1"
+    android:background="#3A3D5F"
     tools:context=".Activity.Start_Up">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/rl_1"
             android:orientation="horizontal"
+            android:layout_marginTop="34dp"
+            android:gravity="end"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageButton
                 android:id="@+id/sounds"
                 android:layout_gravity="start"
-                android:background="@drawable/bg_background_bold"
+                android:visibility="gone"
+                android:background="@drawable/button_state_sound"
                 android:src="@drawable/on"
                 android:scaleType="centerCrop"
                 android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_height="50dp"/>
             <ImageButton
-                android:id="@+id/settings"
-                android:layout_gravity="end"
-                android:background="@drawable/bg_button_setting"
+                android:id="@+id/info"
+                android:background="@drawable/button_state_rating"
+                android:layout_marginEnd="42dp"
                 android:src="@drawable/ic_settings_black_24dp"
+                android:scaleType="centerCrop"
+                android:layout_width="52dp"
+                android:layout_height="46dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/img_start_up"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/rl_1"
+            android:layout_marginTop="77dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginEnd="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="207dp"
+            android:background="@drawable/board_start">
+            <ImageView
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:src="@drawable/two_plus_two"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="27dp"
+                android:layout_width="117dp"
+                android:layout_height="29dp"/>
+            <ImageView
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/learn_image"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="57dp"
+                android:layout_marginStart="67dp"
+                android:layout_width="53dp"
+                android:layout_height="43dp"/>
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/math_image"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="47dp"
+                android:layout_marginStart="55dp"
+                android:layout_width="228dp"
+                android:layout_height="74dp"/>
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/pencle"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="30.4dp"
+                android:layout_marginBottom="30.30dp"
+                android:layout_width="26.68dp"
+                android:layout_height="20.95dp"/>
         </RelativeLayout>
         <LinearLayout
-            android:id="@+id/ln_2"
-            android:layout_below="@+id/rl_1"
+            android:layout_below="@+id/img_start_up"
+            android:layout_marginTop="118dp"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:id="@+id/ln_play"
             android:gravity="center"
+            android:layout_width="233dp"
+            android:layout_height="78dp"
+            android:background="@drawable/button_state_rating">
+            <ImageView
+                android:src="@drawable/let_start"
+                android:layout_width="77dp"
+                android:layout_height="44dp"/>
+            <ImageView
+                android:src="@drawable/around_image"
+                android:layout_marginStart="9dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24.72dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="នាំមកជូនដោយ"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/logo_sponsor"
+                android:layout_width="51dp"
+                android:layout_height="38.72dp"/>
+            <ImageView
+                android:src="@drawable/sipar_logo"
+                android:layout_width="31.48dp"
+                android:layout_height="19.52dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/ln_play"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="85dp"
+            android:layout_marginTop="45dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <ImageButton
-                android:id="@+id/img_play"
-                android:background="@color/colorPrimary1"
-                android:src="@drawable/play_img"
-                android:scaleType="fitCenter"
-                android:layout_width="150dp"
-                android:layout_height="150dp"/>
+                android:id="@+id/rating"
+                android:background="@drawable/button_state_music"
+                android:src="@drawable/star_rate"
+                android:scaleType="centerCrop"
+                android:layout_width="52dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="11dp"/>
+            <ImageButton
+                android:id="@+id/music"
+                android:background="@drawable/button_state_rating"
+                android:src="@drawable/sound_on"
+                android:scaleType="centerCrop"
+                android:layout_width="52dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="11dp"/>
         </LinearLayout>
     </RelativeLayout>
 

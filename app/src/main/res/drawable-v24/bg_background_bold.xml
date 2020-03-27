@@ -6,7 +6,7 @@
                 android:color="#004F81" />
             <stroke android:width="2dp" android:color="@color/black" />
             <corners
-                android:radius="100dp" />
+                android:radius="4dp" />
             <padding
                 android:left="10dp"
                 android:top="10dp"
@@ -18,13 +18,13 @@
         <shape android:shape="rectangle">
             <gradient
                 android:angle="135"
-                android:centerColor="@color/logo_orange"
-                android:endColor="@color/logo_orange"
-                android:startColor="@color/logo_orange"
+                android:centerColor="#1BA575"
+                android:endColor="#1BA575"
+                android:startColor="#1BA575"
                 android:type="linear" />
             <stroke android:width="2dp" android:color="@color/black" />
             <corners
-                android:radius="100dp" />
+                android:radius="4dp" />
         </shape>
     </item>
 </selector>

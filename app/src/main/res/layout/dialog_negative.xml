@@ -1,63 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_height="300dp"
+    android:layout_width="351dp"
+    android:layout_height="441.23dp"
     android:orientation="vertical"
     android:gravity="center"
     android:layout_gravity="center"
-    android:background="@drawable/background_negative"
+    android:background="@drawable/background_positive"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
         android:src="@drawable/frog_cry"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Opp!"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Do you want to play again?"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_width="243.25dp"
+        android:layout_height="228dp"/>
 
     <Button
         android:id="@+id/btnDialogNegative"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/bg_button"
-        android:text="Try again"
-        android:textColor="@color/red"
-        app:backgroundTint="@android:color/white"/>
+        android:layout_marginTop="23dp"
+        android:layout_width="233dp"
+        android:layout_height="55dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/button_state_rating"
+        android:text="ព្យាយាមម្តងទៀត"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/home"
+            android:background="@drawable/button_state_rating"
+            android:src="@drawable/ic_home"
+            android:layout_width="55.48dp"
+            android:layout_height="46dp"/>
+<!--        <ImageButton-->
+<!--            android:id="@+id/again"-->
+<!--            android:layout_marginStart="3.8dp"-->
+<!--            android:background="@drawable/button_state_rating"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/roundss"-->
+<!--            android:layout_width="55.48dp"-->
+<!--            android:layout_height="46dp"/>-->
+    </LinearLayout>
 </LinearLayout>

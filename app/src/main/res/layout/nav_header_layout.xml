@@ -5,7 +5,7 @@
     android:gravity="top"
     android:orientation="vertical"
     android:padding="12dp"
-    android:background="@color/colorPrimary1"
+    android:background="#3A3D5F"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 <!--    <de.hdodenhof.circleimageview.CircleImageView-->

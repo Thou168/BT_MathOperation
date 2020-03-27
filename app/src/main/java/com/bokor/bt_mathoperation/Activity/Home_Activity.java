@@ -11,10 +11,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Capacity_class;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Decimal_class;
 import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Div_class;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Fraction_class;
 import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Mul_class;
 import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sub_class;
 import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sum_class;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Weight_class;
 import com.bokor.bt_mathoperation.R;
 import com.google.android.material.navigation.NavigationView;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -25,7 +29,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
     NavigationView navigationView;
     ImageButton img_setting;
 //    Toolbar toolbar;
-    ImageButton btn_sum,btn_mul,btn_div;
+    ImageButton btn_sum,btn_mul,btn_div,btn_fraction,btn_weight,btn_capacity,btn_decimal;
     Button btn_next;
     ImageButton btn_sub;
     Context context;
@@ -49,7 +53,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Home_Activity.this,Setting.class));
+                startActivity(new Intent(Home_Activity.this, Info.class));
             }
         });
 
@@ -112,16 +116,40 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(Home_Activity.this, Div_class.class));
             }
         });
-        btn_next = findViewById(R.id.btnNext);
-//        btn_next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(Home_Activity.this, Sound_Activity.class));
-//            }
-//        });
 
-//        Animation hyperspaceJumpAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click);
-//        btn_next.startAnimation(hyperspaceJumpAnimation);
+        btn_fraction = findViewById(R.id.btn_fraction);
+        PushDownAnim.setPushDownAnimTo(btn_fraction).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home_Activity.this, Fraction_class.class));
+            }
+        });
+
+        btn_weight = findViewById(R.id.btn_weight);
+        PushDownAnim.setPushDownAnimTo(btn_weight).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home_Activity.this, Weight_class.class));
+            }
+        });
+
+        btn_capacity = findViewById(R.id.btn_capacity);
+        PushDownAnim.setPushDownAnimTo(btn_capacity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home_Activity.this, Capacity_class.class));
+            }
+        });
+
+        btn_decimal = findViewById(R.id.btn_decimal);
+        PushDownAnim.setPushDownAnimTo(btn_decimal).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home_Activity.this, Decimal_class.class));
+            }
+        });
+
+        btn_next = findViewById(R.id.btnNext);
         PushDownAnim.setPushDownAnimTo(btn_next).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

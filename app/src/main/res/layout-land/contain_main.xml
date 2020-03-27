@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@color/colorPrimary1"
     tools:showIn="@layout/toolbar">
 
     <ImageButton
@@ -23,8 +22,8 @@
         android:id="@+id/back"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_button_back"
-        android:src="@drawable/ic_home"
+        android:background="@drawable/button_state_rating"
+        android:src="@drawable/img_back"
         android:layout_width="50dp"
         android:layout_height="50dp"/>
     <LinearLayout
@@ -39,7 +38,7 @@
         <ImageButton
             android:id="@+id/btn_sum"
             android:text="@string/sum"
-            android:background="@color/colorPrimary1"
+            android:background="@drawable/button_state_rating"
             android:src="@drawable/img_sum_green"
             android:layout_marginEnd="5dp"
             android:textColor="@color/colorF7"
@@ -49,7 +48,7 @@
         <ImageButton
             android:id="@+id/btn_sub"
             android:text="@string/sub"
-            android:background="@color/colorPrimary1"
+            android:background="@drawable/button_state_sub"
             android:layout_marginStart="5dp"
             android:src="@drawable/img_sub"
             android:scaleType="centerCrop"
@@ -70,7 +69,7 @@
             android:id="@+id/btn_mul"
             android:text="@string/mul"
             android:src="@drawable/img_mul"
-            android:background="@color/colorPrimary1"
+            android:background="@drawable/button_state_mul"
             android:scaleType="centerCrop"
             android:layout_marginEnd="5dp"
             android:textColor="@color/colorF7"
@@ -79,10 +78,28 @@
         <ImageButton
             android:id="@+id/btn_div"
             android:text="@string/div"
-            android:background="@color/colorPrimary1"
+            android:background="@drawable/button_state_info"
             android:src="@drawable/img_div"
             android:scaleType="centerCrop"
             android:layout_marginStart="5dp"
+            android:textColor="@color/colorF7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln_3"
+        android:layout_below="@+id/ln_2"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageButton
+            android:id="@+id/btn_fraction"
+            android:background="@drawable/button_state_sound"
+            android:text="@string/div"
+            android:src="@drawable/fraction"
+            android:scaleType="centerCrop"
             android:textColor="@color/colorF7"
             android:layout_width="100dp"
             android:layout_height="100dp"/>
@@ -91,13 +108,12 @@
     <Button
         android:id="@+id/btnNext"
         android:text="Go to second"
-        android:layout_below="@+id/ln_2"
         android:padding="4dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
         android:textColor="@color/white"
         android:background="@drawable/button_state_list_animator"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>
