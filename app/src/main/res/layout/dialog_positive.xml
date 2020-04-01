@@ -18,9 +18,9 @@
         android:id="@+id/btnDialogPositive"
         android:layout_marginTop="23dp"
         android:layout_width="233dp"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:textSize="22sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/battambang_bold"
         android:background="@drawable/button_state_sound"
         android:text="តោះទៅកំរិតបន្ទាប់"
         android:textColor="@color/white"/>
@@ -32,7 +32,7 @@
         <ImageButton
             android:id="@+id/home"
             android:layout_marginEnd="3.8dp"
-            android:background="@drawable/button_state_rating"
+            android:background="@drawable/button_state_div"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_home"
             android:layout_width="55.48dp"
@@ -40,7 +40,7 @@
         <ImageButton
             android:id="@+id/again"
             android:layout_marginStart="3.8dp"
-            android:background="@drawable/button_state_rating"
+            android:background="@drawable/button_state_div"
             android:scaleType="fitCenter"
             android:src="@drawable/roundss"
             android:layout_width="55.48dp"

@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.View;
@@ -34,7 +37,7 @@ public class Learn extends AppCompatActivity {
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
     GifImageView gifImageView;
-    TextView num_result;
+    TextView num_result,answer;
     EmojiRainLayout container;
 
     Vibrator vibe;
@@ -63,7 +66,7 @@ public class Learn extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                container.stopDropping();
                 showAlertDialogNegative();
                 vibe.vibrate(200);
             }
@@ -97,6 +100,7 @@ public class Learn extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(btn3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                container.stopDropping();
                 showAlertDialogNegative();
                 vibe.vibrate(200);
             }
@@ -104,6 +108,7 @@ public class Learn extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(btn4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                container.stopDropping();
                 showAlertDialogNegative();
                 vibe.vibrate(200);
             }
@@ -111,6 +116,9 @@ public class Learn extends AppCompatActivity {
 
         num_result=findViewById(R.id.num_result);
         num_result.setText("?   ?");
+
+        answer=findViewById(R.id.answer);
+        answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
     }
 
     @Override

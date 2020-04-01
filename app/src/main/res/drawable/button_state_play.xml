@@ -4,16 +4,16 @@
         <layer-list>
             <item>
                 <shape>
-                    <solid android:color="#D1D1D1" />
-                    <corners android:radius="50dp" />
+                    <solid android:color="#202450" />
+                    <corners android:radius="4dp" />
                     <padding android:bottom="2dp"/>
                 </shape>
             </item>
             <item android:bottom="5px">
                 <shape>
                     <padding android:bottom="5dp" />
-                    <gradient android:angle="270" android:endColor="@color/white" android:startColor="@color/white" />
-                    <corners android:radius="50dp" />
+                    <gradient android:angle="270" android:endColor="#292D59" android:startColor="#292D59" />
+                    <corners android:radius="4dp" />
                     <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
                 </shape>
             </item>
@@ -25,23 +25,23 @@
             <item android:top="5px">
                 <shape>
                     <padding android:top="2dp" />
-                    <gradient android:angle="270" android:endColor="@color/white" android:startColor="@color/white" />
-                    <corners android:radius="50dp" />
+                    <gradient android:angle="270" android:endColor="#292D59" android:startColor="#292D59" />
+                    <corners android:radius="4dp" />
                     <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
                 </shape>
             </item>
             <item>
                 <shape>
-                    <solid android:color="@color/white" />
-                    <corners android:radius="50dp" />
+                    <solid android:color="#292D59" />
+                    <corners android:radius="4dp" />
                     <padding android:bottom="2dp"/>
                 </shape>
             </item>
             <item android:bottom="5px">
                 <shape>
                     <padding android:bottom="2dp" />
-                    <gradient android:angle="270" android:endColor="@color/white" android:startColor="@color/white" />
-                    <corners android:radius="50dp" />
+                    <gradient android:angle="270" android:endColor="#292D59" android:startColor="#292D59" />
+                    <corners android:radius="4dp" />
                     <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
                 </shape>
             </item>

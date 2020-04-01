@@ -8,10 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_your_lesson;
 import com.bokor.bt_mathoperation.Lesson_learn.Learn;
-import com.bokor.bt_mathoperation.List_Lesson.Display.Play_Display;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 

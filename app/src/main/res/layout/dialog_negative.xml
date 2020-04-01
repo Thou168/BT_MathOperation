@@ -18,10 +18,10 @@
         android:id="@+id/btnDialogNegative"
         android:layout_marginTop="23dp"
         android:layout_width="233dp"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:background="@drawable/button_state_rating"
+        android:fontFamily="@font/battambang_regular"
+        android:background="@drawable/button_state_div"
         android:text="ព្យាយាមម្តងទៀត"
         android:textColor="@color/white"/>
     <LinearLayout
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content">
         <ImageButton
             android:id="@+id/home"
-            android:background="@drawable/button_state_rating"
+            android:background="@drawable/button_state_div"
             android:src="@drawable/ic_home"
             android:layout_width="55.48dp"
             android:layout_height="46dp"/>

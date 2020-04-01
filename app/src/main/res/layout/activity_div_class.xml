@@ -11,9 +11,9 @@
         android:id="@+id/back_div"
         android:layout_marginStart="42dp"
         android:layout_marginTop="32dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/button_state_info"
-        android:src="@drawable/img_back"
+        android:scaleType="fitCenter"
+        android:background="@drawable/button_state_div"
+        android:src="@drawable/back_white"
         android:layout_width="52dp"
         android:layout_height="44dp"/>
     <RelativeLayout
@@ -26,16 +26,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:background="@drawable/button_state_info"
+                android:background="@drawable/button_state_div"
+                android:padding="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/img_div"
+                android:src="@drawable/div"
                 android:scaleType="fitCenter"
                 android:layout_width="123dp"
                 android:layout_height="100dp"/>
             <ImageView
                 android:layout_marginTop="16.96dp"
-                android:src="@drawable/below_div"
+                android:src="@drawable/below_di"
                 android:layout_gravity="center"
                 android:layout_width="90dp"
                 android:layout_height="6dp"/>
@@ -45,21 +46,26 @@
                 android:orientation="vertical"
                 android:layout_gravity="center"
                 android:layout_marginTop="70dp"
-                android:background="@drawable/button_state_info"
+                android:background="@drawable/button_state_div"
                 android:layout_width="234dp"
                 android:layout_height="163dp" >
 
                 <ImageView
                     android:id="@+id/myImageView"
-                    android:layout_width="64.83dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/lesson"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/white_hat"
                     android:scaleType="centerCrop"/>
 
-                <ImageView
+                <TextView
                     android:layout_marginTop="20.97dp"
-                    android:layout_width="109dp"
-                    android:layout_height="33dp"
+                    android:text="សិក្សាមេរៀន"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:fontFamily="@font/battambang_regular"
+                    android:textSize="22sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/learn_lesson" />
 
             </LinearLayout>
@@ -76,17 +82,21 @@
 
                 <ImageView
                     android:id="@+id/myImageGame"
-                    android:layout_width="70dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/puzzle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/game"
                     android:scaleType="centerCrop"/>
 
-                <ImageView
+                <TextView
                     android:layout_marginTop="20.97dp"
                     android:id="@+id/myImageViewText"
-                    android:layout_width="109dp"
-                    android:layout_height="33dp"
-                    android:src="@drawable/play_game" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="លេងហ្គេម"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:fontFamily="@font/battambang_regular"
+                    android:textSize="22sp" />
 
             </LinearLayout>
         </LinearLayout>

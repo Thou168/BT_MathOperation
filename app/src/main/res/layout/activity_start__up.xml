@@ -12,6 +12,7 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/rl_1"
+            android:visibility="gone"
             android:orientation="horizontal"
             android:layout_marginTop="34dp"
             android:gravity="end"
@@ -37,93 +38,140 @@
         </LinearLayout>
         <RelativeLayout
             android:id="@+id/img_start_up"
+            android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_below="@+id/rl_1"
-            android:layout_marginTop="77dp"
+            android:layout_marginTop="47dp"
             android:layout_marginStart="37dp"
             android:layout_marginEnd="35dp"
             android:layout_width="match_parent"
             android:layout_height="207dp"
             android:background="@drawable/board_start">
-            <ImageView
+            <TextView
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/two_plus_two"
-                android:scaleType="fitCenter"
+                android:text="2  +  2  =  4"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
                 android:layout_marginTop="34dp"
                 android:layout_marginEnd="27dp"
                 android:layout_width="117dp"
-                android:layout_height="29dp"/>
+                android:layout_height="wrap_content"/>
             <ImageView
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
                 android:src="@drawable/learn_image"
                 android:scaleType="centerCrop"
-                android:layout_marginTop="57dp"
-                android:layout_marginStart="67dp"
-                android:layout_width="53dp"
-                android:layout_height="43dp"/>
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="70dp"
+                android:layout_width="60dp"
+                android:layout_height="50dp"/>
             <ImageView
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:src="@drawable/math_image"
                 android:scaleType="centerCrop"
-                android:layout_marginBottom="47dp"
-                android:layout_marginStart="55dp"
-                android:layout_width="228dp"
-                android:layout_height="74dp"/>
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_width="250dp"
+                android:layout_height="80dp"/>
             <ImageView
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:src="@drawable/pencle"
                 android:scaleType="centerCrop"
-                android:layout_marginStart="30.4dp"
+                android:layout_marginEnd="30.4dp"
                 android:layout_marginBottom="30.30dp"
-                android:layout_width="26.68dp"
-                android:layout_height="20.95dp"/>
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
         </RelativeLayout>
-        <LinearLayout
+        <ImageView
             android:layout_below="@+id/img_start_up"
+            android:background="@drawable/gradient_round_green"
+            android:layout_marginTop="31dp"
+            android:src="@drawable/learning"
+            android:layout_centerInParent="true"
+            android:layout_width="215dp"
+            android:layout_height="215dp"
+            android:padding="3dp">
+        </ImageView>
+        <LinearLayout
+            android:layout_above="@+id/ln_sponsor_main"
             android:layout_marginTop="118dp"
             android:orientation="horizontal"
             android:layout_centerInParent="true"
+            android:layout_marginBottom="62dp"
             android:id="@+id/ln_play"
             android:gravity="center"
             android:layout_width="233dp"
             android:layout_height="78dp"
-            android:background="@drawable/button_state_rating">
+            android:background="@drawable/button_state_div">
+            <TextView
+                android:text="ចាប់ផ្តើម"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:fontFamily="@font/battambang_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"/>
             <ImageView
-                android:src="@drawable/let_start"
-                android:layout_width="77dp"
-                android:layout_height="44dp"/>
-            <ImageView
-                android:src="@drawable/around_image"
+                android:src="@drawable/play_true"
                 android:layout_marginStart="9dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ln_sponsor_main"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="24.72dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:text="នាំមកជូនដោយ"
+                android:text="សហកាផលិតដោយ"
+                android:fontFamily="@font/battambang_regular"
                 android:textColor="@color/white"
                 android:textSize="13sp"
+                android:layout_gravity="start"
+                android:layout_marginStart="43dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <ImageView
-                android:src="@drawable/logo_sponsor"
-                android:layout_width="51dp"
-                android:layout_height="38.72dp"/>
-            <ImageView
-                android:src="@drawable/sipar_logo"
-                android:layout_width="31.48dp"
-                android:layout_height="19.52dp"/>
+                android:layout_height="19dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="43dp"
+                    android:orientation="vertical"
+                    android:id="@+id/ln_sponsor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/sipar_pic"
+                        android:src="@drawable/logo_sponsor"
+                        android:layout_width="51dp"
+                        android:layout_height="38.72dp"/>
+
+                    <ImageView
+                        android:id="@+id/sipar_txt"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sipar_logo"
+                        android:layout_width="31.48dp"
+                        android:layout_height="19.52dp"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/bk_click"
+                    android:layout_toEndOf="@+id/ln_sponsor"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="43dp"
+                    android:src="@drawable/bokor_logo"
+                    android:layout_width="63dp"
+                    android:layout_height="28dp"/>
+            </RelativeLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_below="@+id/ln_play"

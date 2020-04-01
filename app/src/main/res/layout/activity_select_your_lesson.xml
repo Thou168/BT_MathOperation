@@ -11,9 +11,9 @@
         android:id="@+id/back"
         android:layout_marginStart="42dp"
         android:layout_marginTop="32dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         android:background="@drawable/button_state_rating"
-        android:src="@drawable/img_back"
+        android:src="@drawable/back_white"
         android:layout_width="52dp"
         android:layout_height="44dp"/>
     <LinearLayout
@@ -21,13 +21,17 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
+        <TextView
             android:id="@+id/txt_about"
-            android:src="@drawable/select_lesson"
+            android:text="ជ្រើសរើសមេរៀន"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/battambang_regular"
+            android:textSize="24sp"
             android:layout_width="253dp"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:layout_height="39dp"/>
+            android:layout_height="wrap_content"/>
         <ImageView
             android:layout_marginTop="9dp"
             android:src="@drawable/below_white"
@@ -41,24 +45,29 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/button_state_info"
+            android:background="@drawable/button_state_play"
             android:layout_width="327dp"
             android:layout_height="113.05dp" >
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/lesson"
-                android:scaleType="centerCrop"/>
+            <TextView
+                android:background="@drawable/gradient"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:text="01"
+                android:textColor="#F50057"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="start|center"
                 android:text="វិធីបូកលេខពីរខ្ទង់នឹងមួយខ្ទង់គ្មានត្រាទុក"
-                android:textStyle="bold"
+                android:fontFamily="@font/battambang_regular"
                 android:textColor="@color/white" />
         </LinearLayout>
         <LinearLayout
@@ -67,24 +76,29 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_state_sound"
+            android:background="@drawable/button_state_play"
             android:layout_width="327dp"
             android:layout_height="113.05dp" >
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/lesson"
-                android:scaleType="centerCrop"/>
+            <TextView
+                android:background="@drawable/gradient"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:text="02"
+                android:textColor="#F50057"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="start|center"
                 android:text="វិធីបូកលេខពីរខ្ទង់នឹងមួយខ្ទង់មានត្រាទុក"
-                android:textStyle="bold"
+                android:fontFamily="@font/battambang_regular"
                 android:textColor="@color/white" />
         </LinearLayout>
         <LinearLayout
@@ -93,23 +107,28 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_state_mul"
+            android:background="@drawable/button_state_play"
             android:layout_width="327dp"
             android:layout_height="113.05dp" >
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/lesson"
-                android:scaleType="centerCrop"/>
+            <TextView
+                android:background="@drawable/gradient"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:text="03"
+                android:textColor="#F50057"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="start|center"
                 android:text="វិធីបូកលេខពីរខ្ទង់នឹងពីរខ្ទង់គ្មានត្រាទុក"
-                android:textStyle="bold"
+                android:fontFamily="@font/battambang_regular"
                 android:textSize="18sp"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -119,22 +138,27 @@
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_state_rating"
+            android:background="@drawable/button_state_play"
             android:layout_width="327dp"
             android:layout_height="113.05dp">
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/lesson"
-                android:scaleType="centerCrop"/>
+            <TextView
+                android:background="@drawable/gradient"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:text="04"
+                android:textColor="#F50057"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textStyle="bold"
+                android:gravity="start|center"
+                android:fontFamily="@font/battambang_regular"
                 android:text="វិធីបូកលេខពីរខ្ទង់នឹងពីរខ្ទង់មានត្រាទុក"
                 android:textSize="18sp"
                 android:textColor="@color/white" />
