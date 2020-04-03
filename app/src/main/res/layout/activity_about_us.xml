@@ -4,29 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3A3D5F"
-    tools:context=".Activity.Info_List.About_us">
+    android:id="@+id/rl_slide_down"
+    android:background="#00000000">
 
     <ImageButton
         android:id="@+id/img_back"
-        android:layout_marginTop="34dp"
         android:layout_marginStart="42dp"
-        android:src="@drawable/back_white"
+        android:layout_marginTop="34dp"
+        android:src="@drawable/exit_img"
         android:scaleType="fitCenter"
         android:background="@drawable/button_state_rating"
         android:layout_width="52dp"
         android:layout_height="42dp"/>
 
     <LinearLayout
-        android:layout_below="@+id/img_back"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_state_music"
+        android:layout_marginStart="45dp"
+        android:gravity="center"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="137dp"
+        android:layout_marginBottom="90dp"
+        android:layout_width="326dp"
+        android:layout_height="596dp">
         <ImageView
             android:id="@+id/txt_about"
             android:src="@drawable/bokor_logo"
             android:layout_width="99dp"
-            android:layout_marginTop="37dp"
+            android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:layout_height="44dp"/>
         <ImageView
@@ -38,29 +44,24 @@
         <ScrollView
             android:id="@+id/sv"
             android:layout_width="match_parent"
-            android:layout_height="432dp"
-            android:layout_marginTop="52dp"
-            android:fadeScrollbars="false"
-            style="@style/scrollbar_shape_style"
+            android:layout_gravity="center"
+            android:layout_height="348dp"
+            android:layout_marginTop="51dp"
             android:background="#3A3D5F">
             <TextView
-                android:text="ក្នុងដំណាក់កាល ដែលពិភពលោកទាំងមូល និងកម្ពុជាកំពុងប្រយុទ្ធនឹងជម្ងឺរាតត្បាតកូវីដ១៩ឯកឧត្តមហង់ជួនណារ៉ុនរដ្ឋមន្ត្រីក្រសួងអប់រំបានធ្វើការផ្ញើសារដោយផ្ទាល់ជាក្រដាសដែលសរសេរដោយដៃជូនទៅដល់អស់ លោកលោកស្រីដែលជាបុគ្គលិកអប់រំទាំង
-អស់អោយមានសុខភាពល្អ និង ចូលរួមទាំងអស់គ្នាដើម្បីបង្ការ ទប់ស្កាត់ រក្សាអនាម័យនិងសហការជាមួយអាជ្ញាធរសុខាភិបាលដើម្បីបន្តជួយដល់សិស្សានុ
-សិស្ស។
-
-ចូលរួមទាំងអស់គ្នាដើម្បីបង្ការ ទប់ស្កាត់ រក្សាអនាម័យនិងសហការជាមួយអាជ្ញាធរសុខាភិបាលដើម្បីបន្តជួយដល់សិស្សា"
-                android:textSize="18sp"
+                android:text="ក្នុងដំណាក់កាលដែលពិភពលោកទាំងមូលនិងកម្ពុជាកំពុងប្រយុទ្ធនឹងជម្ងឺរាតត្បាតកូវីដ១៩ឯកឧត្តមហង់ជួនណារ៉ុនរដ្ឋមន្ត្រីក្រសួងអប់រំបានធ្វើការផ្ញើសារដោយផ្ទាល់ជាក្រដាសដែលសរសេរដោយដៃជូនទៅដល់អស់លោកលោកស្រីដែលជាបុគ្គលិកអប់រំទាំងអស់អោយមានសុខភាពល្អ និង ចូលរួមទាំងអស់គ្នាដើម្បីបង្ការ ទប់ស្កាត់ រក្សាអនាម័យនិងសហការជាមួយអាជ្ញាធរសុខាភិបាលដើម្បីបន្តជួយដល់សិស្សានុសិស្ស។"
+                android:textSize="16sp"
+                android:gravity="start|center"
                 android:fontFamily="@font/battambang_regular"
                 android:textColor="@color/white"
-                android:layout_marginEnd="42dp"
-                android:layout_marginStart="42dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </ScrollView>
         <ImageView
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
+            android:layout_marginTop="19dp"
+            android:layout_gravity="bottom|center"
             android:src="@drawable/below_word"
+            android:layout_marginBottom="67.5dp"
             android:layout_width="226dp"
             android:layout_height="3.5dp"/>
     </LinearLayout>

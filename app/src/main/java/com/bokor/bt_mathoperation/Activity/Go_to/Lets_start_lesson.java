@@ -8,16 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bokor.bt_mathoperation.Lesson_learn.Learn;
 import com.bokor.bt_mathoperation.List_Lesson.Display.Play_Display;
 import com.bokor.bt_mathoperation.R;
+import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
 public class Lets_start_lesson extends AppCompatActivity {
 
-    Button start;
+    TextView start;
     ImageView img_back;
+    ShadowLayout shadowLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +28,15 @@ public class Lets_start_lesson extends AppCompatActivity {
         setContentView(R.layout.activity_lets_start_lesson);
 
         start=findViewById(R.id.start);
-        PushDownAnim.setPushDownAnimTo(start).setOnClickListener(new View.OnClickListener() {
+//        start.setOutlineProvider(new ZoftinoCustomOutlineProvider(8));
+//        start.setClipToOutline(true);
+//        TextView textView = (TextView) findViewById(R.id.shadow_txt);
+//        textView.setOutlineProvider(new ZoftinoCustomOutlineProvider(10));
+//        textView.setClipToOutline(true);
+        shadowLayout=findViewById(R.id.shadow_id);
+        PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
-
                 startActivity(new Intent(Lets_start_lesson.this, Learn.class));
             }
         });
@@ -38,8 +44,6 @@ public class Lets_start_lesson extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
 
                 onBackPressed();
             }

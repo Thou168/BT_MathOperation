@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/back_sub"
         android:src="@drawable/back_white"
-        android:background="@drawable/button_state_sub"
+        android:background="@drawable/button_state_rating"
         android:scaleType="fitCenter"
         android:layout_marginTop="32dp"
         android:layout_marginStart="42dp"
@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/alert"
                 android:background="@drawable/button_state_sub"
                 android:padding="30dp"
                 android:layout_marginTop="50dp"
@@ -36,7 +37,7 @@
                 android:layout_height="100dp"/>
             <ImageView
                 android:layout_marginTop="16.96dp"
-                android:src="@drawable/below_sub"
+                android:src="@drawable/below_s"
                 android:layout_gravity="center"
                 android:layout_width="90dp"
                 android:layout_height="6dp"/>

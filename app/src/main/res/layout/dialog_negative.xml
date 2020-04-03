@@ -10,8 +10,10 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
-        android:src="@drawable/frog_cry"
-        android:layout_width="243.25dp"
+        android:src="@drawable/dear_sad"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:layout_width="228dp"
         android:layout_height="228dp"/>
 
     <Button
@@ -21,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:fontFamily="@font/battambang_regular"
-        android:background="@drawable/button_state_div"
+        android:background="@drawable/button_state_rating"
         android:text="ព្យាយាមម្តងទៀត"
         android:textColor="@color/white"/>
     <LinearLayout
@@ -31,7 +33,7 @@
         android:layout_height="wrap_content">
         <ImageButton
             android:id="@+id/home"
-            android:background="@drawable/button_state_div"
+            android:background="@drawable/button_state_rating"
             android:src="@drawable/ic_home"
             android:layout_width="55.48dp"
             android:layout_height="46dp"/>

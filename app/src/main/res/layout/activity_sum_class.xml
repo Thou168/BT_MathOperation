@@ -10,7 +10,7 @@
         android:id="@+id/back_sum"
         android:layout_marginStart="42dp"
         android:layout_marginTop="34dp"
-        android:background="@drawable/button_state_info"
+        android:background="@drawable/button_state_rating"
         android:src="@drawable/back_white"
         android:scaleType="fitCenter"
         android:layout_width="52dp"
@@ -25,6 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
+                    android:id="@+id/alert"
                     android:background="@drawable/button_state_info"
                     android:padding="20dp"
                     android:layout_marginTop="50dp"

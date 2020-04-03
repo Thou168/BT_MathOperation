@@ -163,7 +163,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
 //        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 //            drawerLayout.closeDrawer(GravityCompat.START);
 //        } else {
-            super.onBackPressed();
+            finish();
 //        }
     }
 

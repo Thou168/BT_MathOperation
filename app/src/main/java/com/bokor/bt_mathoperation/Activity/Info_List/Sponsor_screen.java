@@ -8,6 +8,7 @@ import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
@@ -21,6 +22,7 @@ public class Sponsor_screen extends AppCompatActivity {
     LinearLayout ln_View;
     TextView txt_sponsor;
     boolean visible;
+    Thread timer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class Sponsor_screen extends AppCompatActivity {
 
         valueAnimator.start();
 
-        Thread timer = new Thread() {
+        timer = new Thread() {
             public void run() {
                 try {
                     sleep(splashTimeOut);
@@ -58,5 +60,10 @@ public class Sponsor_screen extends AppCompatActivity {
             }
         };
         timer.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

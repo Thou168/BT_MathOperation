@@ -11,7 +11,9 @@
         android:roundIcon="@drawable/learning"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".Activity.Info_List.Sponsor_screen"></activity>
+        <activity android:name=".Lesson_learn.Learn_2"></activity>
+        <activity android:name=".Lesson_learn.Learn_3"></activity>
+        <activity android:name=".Activity.Info_List.Sponsor_screen" />
         <activity
             android:name=".Activity.Symbol_Activity.Decimal_class"
             android:screenOrientation="portrait" />
