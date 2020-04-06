@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3A3D5F"
+    android:background="@color/white"
     tools:context=".Activity.Start_Up">
 
     <RelativeLayout
@@ -92,10 +92,10 @@
             android:layout_below="@+id/img_start_up"
             android:background="@drawable/gradient_round_green"
             android:layout_marginTop="31dp"
-            android:src="@drawable/learning"
+            android:src="@drawable/reading_girl"
             android:layout_centerInParent="true"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="193dp"
+            android:layout_height="193dp"
             android:padding="3dp">
         </ImageView>
         <LinearLayout
@@ -127,70 +127,68 @@
             android:id="@+id/ln_sponsor_main"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="78dp"
-            android:orientation="vertical"
             android:gravity="center"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:text="សហកាផលិតដោយ"
+                android:text="សហការផលិតដោយ"
                 android:fontFamily="@font/battambang_regular"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="13sp"
-                android:layout_marginBottom="15.12dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="43dp"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"/>
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/bk_click"
+            android:id="@+id/ln_sponsor"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginStart="43dp"
+            android:layout_marginBottom="23dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/bokor_logo"
-                android:layout_marginBottom="14.8dp"
-                android:layout_width="63dp"
-                android:layout_height="28dp"/>
-            <ImageView
-                android:src="@drawable/show_bottom"
-                android:layout_gravity="bottom|center"
-                android:layout_marginBottom="13.68dp"
-                android:layout_width="17dp"
-                android:layout_height="16dp" />
+                android:src="@drawable/logo_sipar"
+                android:layout_width="49dp"
+                android:layout_height="58dp"/>
+<!--            <ImageView-->
+<!--                android:src="@drawable/show_bottom"-->
+<!--                android:layout_gravity="bottom|center"-->
+<!--                android:layout_marginBottom="13.68dp"-->
+<!--                android:layout_width="17dp"-->
+<!--                android:layout_height="16dp" />-->
         </LinearLayout>
         <LinearLayout
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="43dp"
+            android:layout_marginBottom="25dp"
             android:orientation="vertical"
-            android:id="@+id/ln_sponsor"
+            android:id="@+id/bk_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/sipar_pic"
-                android:src="@drawable/logo_sponsor"
-                android:layout_width="51dp"
-                android:layout_height="38.72dp"/>
+                android:src="@drawable/logo_bokor"
+                android:layout_width="71dp"
+                android:layout_height="35dp"
+                />
 
-            <ImageView
-                android:id="@+id/sipar_txt"
-                android:layout_gravity="center"
-                android:src="@drawable/sipar_logo"
-                android:layout_width="31.48dp"
-                android:layout_height="19.52dp"/>
-            <ImageView
-                android:src="@drawable/show_bottom"
-                android:layout_gravity="center"
-                android:layout_marginTop="4.68dp"
-                android:layout_marginBottom="13.68dp"
-                android:layout_width="17dp"
-                android:layout_height="16dp" />
+<!--            <ImageView-->
+<!--                android:id="@+id/sipar_txt"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:src="@drawable/sipar_logo"-->
+<!--                android:layout_width="31.48dp"-->
+<!--                android:layout_height="19.52dp"/>-->
+<!--            <ImageView-->
+<!--                android:src="@drawable/show_bottom"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="4.68dp"-->
+<!--                android:layout_marginBottom="13.68dp"-->
+<!--                android:layout_width="17dp"-->
+<!--                android:layout_height="16dp" />-->
         </LinearLayout>
         <LinearLayout
             android:layout_below="@+id/ln_play"

@@ -25,7 +25,7 @@ public class Splashscreen extends AppCompatActivity {
     private int i=0;
     TextView progress_view;
     ProgressBar splashProgress;
-    static int splashTimeOut=4500;
+    static int splashTimeOut=3000;
     private AnimationDrawable animationDrawable;
     ImageView splashImageView,change_pc;
     Animation animation;
@@ -40,61 +40,50 @@ public class Splashscreen extends AppCompatActivity {
         splashProgress = findViewById(R.id.splashProgress);
         splashProgress.setProgress(0);
 //        splashProgress.getProgressDrawable().setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
-        final long period = 100;
-        timer=new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                //this repeats every 100 ms
-                if (i<100){
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            progress_view.setText(String.valueOf(i)+"%");
-                        }
-                    });
-                    splashProgress.setProgress(i);
-                    i++;
-                }else{
-                    //closing the timer
-                    timer.cancel();
-                    Intent intent =new Intent(Splashscreen.this,Start_Up.class);
-                    startActivity(intent);
-                    // close this activity
-                    finish();
-                }
-            }
-        }, 0, period);
+//        final long period = 100;
+//        timer=new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                //this repeats every 100 ms
+//                if (i<100){
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            progress_view.setText(String.valueOf(i)+"%");
+//                        }
+//                    });
+//                    splashProgress.setProgress(i);
+//                    i++;
+//                }else{
+//                    //closing the timer
+//                    timer.cancel();
+//                    Intent intent =new Intent(Splashscreen.this,Start_Up.class);
+//                    startActivity(intent);
+//                    // close this activity
+//                    finish();
+//                }
+//            }
+//        }, 0, period);
 
-//        playProgress();
-
-//        splashImageView = findViewById(R.id.logo_splash);
+        playProgress();
         change_pc = findViewById(R.id.change_pic);
         animation = AnimationUtils.loadAnimation(this, R.anim.button_click);
         change_pc.startAnimation(animation);
-//        change_pc.setBackgroundResource(R.drawable.sp);
-//        animationDrawable = (AnimationDrawable) change_pc.getBackground();
-//        Thread timer= new Thread(){
-//            public void run(){
-//                try{
-//                    Animation myanim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.mysplashanimation);
-//                    splashImageView.startAnimation(myanim);
-//                    sleep(splashTimeOut);
-//                }catch(InterruptedException e){
-//                    e.printStackTrace();
-//                }finally {
-//                    Intent splash =new Intent(getApplicationContext(), Start_Up.class);
-//                    startActivity(splash);
-//                }
-//            }
-//        };
-//        timer.start();
-//        splashImageView.post(new Runnable(){
-//            @Override
-//            public void run() {
-////                frameAnimation.start();
-//            }
-//        });
+        Thread timer= new Thread(){
+            public void run(){
+                try{
+                    sleep(splashTimeOut);
+                }catch(InterruptedException e){
+                    e.printStackTrace();
+                }finally {
+                    Intent splash =new Intent(getApplicationContext(), Start_Up.class);
+                    startActivity(splash);
+                    finish();
+                }
+            }
+        };
+        timer.start();
     }
 
     @Override
@@ -103,16 +92,15 @@ public class Splashscreen extends AppCompatActivity {
         finish();
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        animationDrawable.start();
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
-//    private void playProgress() {
-//        ObjectAnimator.ofInt(splashProgress, "progress", 100)
-//                .setDuration(5000)
-//                .start();
-//    }
+    private void playProgress() {
+        ObjectAnimator.ofInt(splashProgress, "progress", 100)
+                .setDuration(3500)
+                .start();
+    }
 
 }

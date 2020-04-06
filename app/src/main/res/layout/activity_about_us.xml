@@ -29,7 +29,7 @@
         android:layout_width="326dp"
         android:layout_height="596dp">
         <ImageView
-            android:id="@+id/txt_about"
+            android:id="@+id/img_text"
             android:src="@drawable/bokor_logo"
             android:layout_width="99dp"
             android:layout_marginTop="30dp"
@@ -49,6 +49,7 @@
             android:layout_marginTop="51dp"
             android:background="#3A3D5F">
             <TextView
+                android:id="@+id/text"
                 android:text="ក្នុងដំណាក់កាលដែលពិភពលោកទាំងមូលនិងកម្ពុជាកំពុងប្រយុទ្ធនឹងជម្ងឺរាតត្បាតកូវីដ១៩ឯកឧត្តមហង់ជួនណារ៉ុនរដ្ឋមន្ត្រីក្រសួងអប់រំបានធ្វើការផ្ញើសារដោយផ្ទាល់ជាក្រដាសដែលសរសេរដោយដៃជូនទៅដល់អស់លោកលោកស្រីដែលជាបុគ្គលិកអប់រំទាំងអស់អោយមានសុខភាពល្អ និង ចូលរួមទាំងអស់គ្នាដើម្បីបង្ការ ទប់ស្កាត់ រក្សាអនាម័យនិងសហការជាមួយអាជ្ញាធរសុខាភិបាលដើម្បីបន្តជួយដល់សិស្សានុសិស្ស។"
                 android:textSize="16sp"
                 android:gravity="start|center"
