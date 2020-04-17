@@ -13,7 +13,7 @@
         android:layout_centerInParent="true"
         android:text="ឧបត្ថម្ភដោយ"
         android:fontFamily="@font/battambang_regular"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         android:textSize="30sp"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
@@ -25,94 +25,92 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/rl_1"
+            android:gravity="center"
             android:layout_marginStart="93dp"
             android:layout_marginEnd="93dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="91dp"
-                android:layout_alignParentStart="true"
+                android:layout_width="93dp"
                 android:layout_height="91dp"
                 android:src="@drawable/sponsor_1"/>
             <ImageView
-                android:layout_width="91dp"
-                android:layout_height="91dp"
-                android:layout_alignParentEnd="true"
+                android:layout_width="96dp"
+                android:layout_height="105dp"
                 android:src="@drawable/sponsor_2"/>
-        </RelativeLayout>
-        <RelativeLayout
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/rl_2"
-            android:layout_marginTop="62dp"
+            android:layout_marginTop="34dp"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
-            android:layout_below="@+id/rl_1"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="91dp"
-                android:layout_alignParentStart="true"
+                android:layout_width="93dp"
                 android:layout_height="91dp"
+                android:layout_marginEnd="40dp"
                 android:src="@drawable/sponsor_3"/>
             <ImageView
-                android:layout_width="91dp"
-                android:layout_centerInParent="true"
+                android:layout_width="93dp"
                 android:layout_height="91dp"
+                android:layout_marginEnd="40dp"
                 android:src="@drawable/sponsor_4"/>
             <ImageView
-                android:layout_width="91dp"
+                android:layout_width="93dp"
                 android:layout_height="91dp"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/sponsor_5"/>
-        </RelativeLayout>
-        <RelativeLayout
+                android:src="@drawable/sponsor_11"/>
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/rl_3"
             android:layout_marginTop="34dp"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="26dp"
-            android:layout_below="@+id/rl_2"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="91dp"
-                android:layout_alignParentStart="true"
+                android:id="@+id/sp_f"
+                android:layout_width="93dp"
                 android:layout_height="91dp"
-                android:src="@drawable/sponsor_6"/>
+                android:layout_marginEnd="41dp"
+                android:src="@drawable/sponsor_9"/>
+
             <ImageView
-                android:layout_width="91dp"
-                android:layout_centerInParent="true"
-                android:layout_height="91dp"
-                android:src="@drawable/sponsor_7"/>
-            <ImageView
-                android:layout_width="91dp"
-                android:layout_height="91dp"
-                android:layout_alignParentEnd="true"
+                android:layout_width="144dp"
+                android:layout_height="142dp"
                 android:src="@drawable/sponsor_8"/>
-        </RelativeLayout>
-        <RelativeLayout
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/rl_4"
             android:layout_marginTop="34dp"
             android:layout_marginStart="26dp"
-            android:layout_marginEnd="26dp"
-            android:layout_below="@+id/rl_3"
+            android:gravity="center"
+            android:layout_marginEnd="19dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="91dp"
-                android:layout_alignParentStart="true"
-                android:layout_height="91dp"
-                android:src="@drawable/sponsor_9"/>
+                android:layout_width="73dp"
+                android:layout_height="71dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/sponsor_6"/>
             <ImageView
-                android:layout_width="91dp"
-                android:layout_centerInParent="true"
-                android:layout_height="91dp"
+                android:layout_width="74dp"
+                android:layout_height="71dp"
+                android:layout_marginEnd="24dp"
                 android:src="@drawable/sponsor_10"/>
             <ImageView
-                android:layout_width="91dp"
-                android:layout_height="91dp"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/sponsor_11"/>
-        </RelativeLayout>
+                android:layout_width="73dp"
+                android:layout_height="71dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/sponsor_5"/>
+            <ImageView
+                android:layout_width="74dp"
+                android:layout_height="71dp"
+                android:src="@drawable/sponsor_7"/>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

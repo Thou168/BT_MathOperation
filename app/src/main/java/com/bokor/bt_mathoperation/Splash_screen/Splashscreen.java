@@ -36,9 +36,9 @@ public class Splashscreen extends AppCompatActivity {
         setContentView(R.layout.activity_splashscreen);
 
         progress_view=findViewById(R.id.textView);
-        progress_view.setText("");
+        progress_view.setText("កំពុងដំណើរការ");
         splashProgress = findViewById(R.id.splashProgress);
-        splashProgress.setProgress(0);
+//        splashProgress.setProgress(0);
 //        splashProgress.getProgressDrawable().setColorFilter(Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
 //        final long period = 100;
 //        timer=new Timer();
@@ -99,8 +99,12 @@ public class Splashscreen extends AppCompatActivity {
 
     private void playProgress() {
         ObjectAnimator.ofInt(splashProgress, "progress", 100)
-                .setDuration(3500)
+                .setDuration(2500)
                 .start();
     }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(false);
+    }
 }

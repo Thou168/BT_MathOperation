@@ -7,8 +7,8 @@
 <!--    </item>-->
     <solid android:color="#F50057"/>
 
-    <stroke android:width="2dp"
-        android:color="@color/white" />
+    <stroke android:width="3dp"
+        android:color="#F50057" />
 
 <!--    <padding android:left="1dp"-->
 <!--        android:top="1dp"-->

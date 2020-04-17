@@ -11,8 +11,15 @@
         android:roundIcon="@drawable/learning"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".Lesson_learn.Learn_2"></activity>
-        <activity android:name=".Lesson_learn.Learn_3"></activity>
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_decimal"></activity>
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_capacity" />
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_weight" />
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_fraction" />
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_div" />
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_mul" />
+        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_sub" />
+        <activity android:name=".Lesson_learn.Learn_2" />
+        <activity android:name=".Lesson_learn.Learn_3" />
         <activity android:name=".Activity.Info_List.Sponsor_screen" />
         <activity
             android:name=".Activity.Symbol_Activity.Decimal_class"
@@ -27,10 +34,31 @@
             android:name=".Activity.Go_to.Select_your_lesson"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Activity.Go_to.Select_sub_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Select_mul_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Select_div_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Select_fraction_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Select_weight_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Select_capacity_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Select_decimal_lesson"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Activity.Symbol_Activity.Fraction_class"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Lets_start_lesson"
+            android:name=".Activity.Go_to.Lets_start.Lets_start_lesson"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Info_List.About_us"
@@ -42,12 +70,6 @@
             android:name=".List_Lesson.Display.Play_Display"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".List_Lesson.List_level.List_Level"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".List_Lesson.List_Lesson"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Activity.Info"
             android:screenOrientation="portrait" />
         <activity
@@ -55,6 +77,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Symbol_Activity.Sum_class"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Symbol_Activity.Sub_class"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Symbol_Activity.Sub_class"
@@ -70,7 +95,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Splash_screen.Splashscreen"
-            android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>

@@ -5,10 +5,10 @@
 <!--            <solid android:color="#106C4D"/>-->
 <!--        </shape>-->
 <!--    </item>-->
-    <solid android:color="#ffffffff"/>
+    <solid android:color="@color/success_stroke_color"/>
 
-    <stroke android:width="3dp"
-        android:color="@color/black" />
+<!--    <stroke android:width="3dp"-->
+<!--        android:color="#ffffffff" />-->
 
 <!--    <padding android:left="1dp"-->
 <!--        android:top="1dp"-->

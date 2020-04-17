@@ -2,15 +2,20 @@ package com.bokor.bt_mathoperation.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Size;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -20,9 +25,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bokor.bt_mathoperation.Activity.Info_List.Sponsor_screen;
-import com.bokor.bt_mathoperation.Lesson_learn.Learn_3;
 import com.bokor.bt_mathoperation.R;
+import com.facebook.shimmer.ShimmerFrameLayout;
+import com.romainpiel.shimmer.Shimmer;
+import com.romainpiel.shimmer.ShimmerTextView;
 import com.thekhaeng.pushdownanim.PushDownAnim;
+
+import nl.dionsegijn.konfetti.KonfettiView;
 
 public class Start_Up extends AppCompatActivity {
 
@@ -31,15 +40,27 @@ public class Start_Up extends AppCompatActivity {
     LinearLayout bk,sp;
     RelativeLayout rl;
     AlertDialog.Builder dialogBuilder;
-    AlertDialog alertDialog;
+    ShimmerTextView sm;
+    Shimmer shimmer;
+    ShimmerFrameLayout shimmerFrameLayout;
+    KonfettiView konfettiView;
+//    AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start__up);
+        shimmerFrameLayout=findViewById(R.id.shimmer_board);
+        shimmerFrameLayout.startShimmer();
+        sm=findViewById(R.id.shimmer_tv);
+        toggleAnimation(sm);
+
+
         rl=findViewById(R.id.rl_start_up);
         bk=findViewById(R.id.bk_click);
+        bk.setLongClickable(false);
         sp=findViewById(R.id.ln_sponsor);
+        sp.setLongClickable(false);
         PushDownAnim.setPushDownAnimTo(bk).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,40 +104,69 @@ public class Start_Up extends AppCompatActivity {
             }
         });
     }
+    public void toggleAnimation(View target) {
+        if (shimmer != null && shimmer.isAnimating()) {
+            shimmer.cancel();
+        } else {
+            shimmer = new Shimmer();
+            shimmer.start(sm);
+            shimmer.setDuration(3000);
+            shimmer.setStartDelay(2000);
+        }
+    }
+
     private void dialog_info_bokor(){
-        dialogBuilder = new AlertDialog.Builder(Start_Up.this);
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Start_Up.this);
+
         View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us, null);
+        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
         TextView textView = layoutView.findViewById(R.id.text);
-        ImageView img_view = layoutView.findViewById(R.id.img_text);
+        ImageView img_view = layoutView.findViewById(R.id.img_bokor);
+        img_view.setVisibility(View.VISIBLE);
         img_view.setImageDrawable(getDrawable(R.drawable.logo_bokor));
-        textView.setText("កក្នុងដំណាក់កាលដែលពិភពលោកទាំងមូលនិងកម្ពុជាកំពុងប្រយុទ្ធនឹងជម្ងឺរាតត្បាតកូវីដ១៩ឯកឧត្តមហង់ជួនណារ៉ុនរដ្ឋមន្ត្រីក្រសួងអប់រំបានធ្វើការផ្ញើសារដោយផ្ទាល់ជាក្រដាសដែលសរសេរដោយដៃជូនទៅដល់អស់លោកលោកស្រីដែលជាបុគ្គលិកអប់រំទាំងអស់អោយមានសុខភាពល្អ និង ចូលរួមទាំងអស់គ្នាដើម្បីបង្ការ ទប់ស្កាត់ រក្សាអនាម័យនិងសហការជាមួយអាជ្ញាធរសុខាភិបាលដើម្បីបន្តជួយដល់សិស្សានុសិស្ស។");
+        textView.setText("ស៊ីប៉ាគឺជាអង្គការសាមគ្គីភាពអន្តរជាតិមួយដែលត្រូវបានបង្កើតឡើងនៅឆ្នាំ១៩៨២នៅប្រទេសបារាំងដើម្បីជួយជនភៀសខ្លួនមកពីអាស៊ីអាគ្នេយ៍តាមរយៈកម្មវិធីអប់រំ។\n" +
+                "នៅឆ្នាំ១៩៩១ស៊ីប៉ាបានមកប្រទេសកម្ពុជាហើយចូលរួមក្នុងការស្តារនិងអភិវឌ្ឍប្រទេសដោយពង្រឹងប្រព័ន្ធអប់រំរបស់ខ្លួន។\n" +
+                "សព្វថ្ងៃស៊ីប៉ាគឺជាតួអង្គសំខាន់មួយក្នុងវិស័យអប់រំដោយប្រយុទ្ធប្រឆាំងនឹងអក្ខរកម្មក្នុងចំណោមយុវជននិងមនុស្សពេញវ័យតាមរយៈការផ្សព្វផ្សាយនិងការលើកកម្ពស់សៀវភៅនិងការអា\n" +
+                "ដូច្នេះតាំងពី២០ឆ្នាំមកស៊ីប៉ាបានបង្កើតបណ្តាញកន្លែងផ្សេងៗគ្នាសម្រាប់ការអានថេរនិងចល័តដើម្បីទ្រទ្រង់ការអភិវឌ្ឍន៍ការអាននៅកម្ពុជា៖បណ្ណាល័យថេរនៅសាលាបឋមសិក្សាឬក្នុងពន្ធនាគារបណ្ណល័យចល័តនៅតាមសហគមន៍សាលាមត្តេយ្យឬមណ្ឌលកុមារកំព្រានៅភ្នំពេញ។ កណ្តាលនិងកំពង់ស្ពឺជាមជ្ឈមណ្ឌលសម្រាប់ស្ត្រីនិងកុមារងាយរងគ្រោះឬសូម្បីតែមជ្ឈមណ្ឌលស្តារនីតិសម្បទាកុមារពិការ។\n");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
-        dialogBuilder.setCancelable(false);
+        img_back.setVisibility(View.GONE);
+        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back_bk);
+        img_back_bk.setVisibility(View.VISIBLE);
+//        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
-        alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimationFalse;
+        final AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.Slide_bokor;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(img_back_bk).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 alertDialog.cancel();
             }
         });
         alertDialog.show();
+
     }
     private void dialog_info_sipar(){
         dialogBuilder = new AlertDialog.Builder(Start_Up.this);
-        View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us, null);
+        View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us,null);
+        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
         TextView textView = layoutView.findViewById(R.id.text);
-        ImageView img_view = layoutView.findViewById(R.id.img_text);
+        ImageView img_view = layoutView.findViewById(R.id.img_sipar);
+        img_view.setVisibility(View.VISIBLE);
         img_view.setImageDrawable(getDrawable(R.drawable.logo_sipar));
-        textView.setText("ក្នុងដំណាក់កាលដែលពិភពលោកទាំងមូលនិងកម្ពុជាកំពុងប្រយុទ្ធនឹងជម្ងឺរាតត្បាតកូវីដ១៩ឯកឧត្តមហង់ជួនណារ៉ុនរដ្ឋមន្ត្រីក្រសួងអប់រំបានធ្វើការផ្ញើសារដោយផ្ទាល់ជាក្រដាសដែលសរសេរដោយដៃជូនទៅដល់អស់លោកលោកស្រីដែលជាបុគ្គលិកអប់រំទាំងអស់អោយមានសុខភាពល្អ និង ចូលរួមទាំងអស់គ្នាដើម្បីបង្ការ ទប់ស្កាត់ រក្សាអនាម័យនិងសហការជាមួយអាជ្ញាធរសុខាភិបាលដើម្បីបន្តជួយដល់សិស្សានុសិស្ស។");
+        textView.setText("ស៊ីប៉ាគឺជាអង្គការសាមគ្គីភាពអន្តរជាតិមួយដែលត្រូវបានបង្កើតឡើងនៅឆ្នាំ១៩៨២នៅប្រទេសបារាំងដើម្បីជួយជនភៀសខ្លួនមកពីអាស៊ីអាគ្នេយ៍តាមរយៈកម្មវិធីអប់រំ។\n" +
+                "នៅឆ្នាំ១៩៩១ស៊ីប៉ាបានមកប្រទេសកម្ពុជាហើយចូលរួមក្នុងការស្តារនិងអភិវឌ្ឍប្រទេសដោយពង្រឹងប្រព័ន្ធអប់រំរបស់ខ្លួន។\n" +
+                "សព្វថ្ងៃស៊ីប៉ាគឺជាតួអង្គសំខាន់មួយក្នុងវិស័យអប់រំដោយប្រយុទ្ធប្រឆាំងនឹងអក្ខរកម្មក្នុងចំណោមយុវជននិងមនុស្សពេញវ័យតាមរយៈការផ្សព្វផ្សាយនិងការលើកកម្ពស់សៀវភៅនិងការអា\n" +
+                "ដូច្នេះតាំងពី២០ឆ្នាំមកស៊ីប៉ាបានបង្កើតបណ្តាញកន្លែងផ្សេងៗគ្នាសម្រាប់ការអានថេរនិងចល័តដើម្បីទ្រទ្រង់ការអភិវឌ្ឍន៍ការអាននៅកម្ពុជា៖បណ្ណាល័យថេរនៅសាលាបឋមសិក្សាឬក្នុងពន្ធនាគារបណ្ណល័យចល័តនៅតាមសហគមន៍សាលាមត្តេយ្យឬមណ្ឌលកុមារកំព្រានៅភ្នំពេញ។ កណ្តាលនិងកំពង់ស្ពឺជាមជ្ឈមណ្ឌលសម្រាប់ស្ត្រីនិងកុមារងាយរងគ្រោះឬសូម្បីតែមជ្ឈមណ្ឌលស្តារនីតិសម្បទាកុមារពិការ។\n");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
-        dialogBuilder.setCancelable(false);
+        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back_bk);
+        img_back_bk.setVisibility(View.GONE);
+        img_back.setVisibility(View.VISIBLE);
+//        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
-        alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimationFalse;
+        final AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.Slide_sipar;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {

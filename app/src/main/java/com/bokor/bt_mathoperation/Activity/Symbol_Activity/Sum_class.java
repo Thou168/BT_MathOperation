@@ -3,12 +3,17 @@ package com.bokor.bt_mathoperation.Activity.Symbol_Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.BounceInterpolator;
@@ -16,6 +21,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
+import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_your_lesson;
 import com.bokor.bt_mathoperation.Lesson_learn.Learn;
@@ -34,7 +40,11 @@ public class Sum_class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sum_class);
         alert=findViewById(R.id.alert);
-        time_alert();
+        ViewFlipper simpleViewFlipper = findViewById(R.id.flipper);
+        Animation in = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        simpleViewFlipper.setInAnimation(in);
+        simpleViewFlipper.setAutoStart(true);
+//        time_alert();
 
         rl_play = findViewById(R.id.relativelayout_lesson);
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
@@ -69,33 +79,33 @@ public class Sum_class extends AppCompatActivity {
 
     }
 
-    public void time_alert(){
-        transAnim = new TranslateAnimation(0, 0, 0,
-                35);
-        transAnim.setStartOffset(0);
-        transAnim.setDuration(2000);
-        transAnim.setRepeatCount(1999999999);
-        transAnim.setFillAfter(true);
-        transAnim.setInterpolator(new BounceInterpolator());
-        transAnim.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                alert.clearAnimation();
-                final int left = alert.getLeft();
-                final int top = alert.getTop();
-                final int right = alert.getRight();
-                final int bottom = alert.getBottom();
-                alert.layout(left, top, right, bottom);
-            }
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        alert.startAnimation(transAnim);
-    }
+//    public void time_alert(){
+//        transAnim = new TranslateAnimation(0, 0, 0,
+//                35);
+//        transAnim.setStartOffset(0);
+//        transAnim.setDuration(2000);
+//        transAnim.setRepeatCount(1999999999);
+//        transAnim.setFillAfter(true);
+//        transAnim.setInterpolator(new BounceInterpolator());
+//        transAnim.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//            }
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                alert.clearAnimation();
+//                final int left = alert.getLeft();
+//                final int top = alert.getTop();
+//                final int right = alert.getRight();
+//                final int bottom = alert.getBottom();
+//                alert.layout(left, top, right, bottom);
+//            }
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//            }
+//        });
+//        alert.startAnimation(transAnim);
+//    }
 
     @Override
     public void onBackPressed() {

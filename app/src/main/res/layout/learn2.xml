@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    android:background="#3A3D5F"
+    android:background="@color/white"
     tools:context=".Lesson_learn.Learn">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_alignParentBottom="true"
             android:src="@drawable/ic_close_black_24dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/button_state_rating"
+            android:background="@drawable/button_state_red"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="42dp"
             android:layout_width="52dp"
@@ -33,7 +33,7 @@
             <TextView
                 android:id="@+id/img_level"
                 android:background="@drawable/background_negative"
-                android:text="កម្រិត 2"
+                android:text="កម្រិត 1"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:fontFamily="@font/battambang_regular"
@@ -193,14 +193,14 @@
                 android:layout_alignParentStart="true"
                 android:layout_width="145.12dp"
                 android:text="233"
-                android:background="@drawable/button_state_play"
+                android:background="@drawable/button_state_info"
                 android:textColor="@color/white"
                 android:textSize="64sp"
                 android:layout_height="113.05dp"/>
             <Button
                 android:id="@+id/btn_2"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/button_state_play"
+                android:background="@drawable/button_state_info"
                 android:layout_width="145.12dp"
                 android:text="234"
                 android:textColor="@color/white"
@@ -209,7 +209,7 @@
             <Button
                 android:id="@+id/btn_3"
                 android:layout_below="@+id/btn_1"
-                android:background="@drawable/button_state_play"
+                android:background="@drawable/button_state_info"
                 android:layout_marginTop="30dp"
                 android:text="244"
                 android:textColor="@color/white"
@@ -220,7 +220,7 @@
             <Button
                 android:id="@+id/btn_4"
                 android:layout_below="@id/btn_2"
-                android:background="@drawable/button_state_play"
+                android:background="@drawable/button_state_info"
                 android:layout_marginTop="30dp"
                 android:text="245"
                 android:textColor="@color/white"

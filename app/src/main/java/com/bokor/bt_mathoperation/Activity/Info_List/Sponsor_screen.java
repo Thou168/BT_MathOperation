@@ -64,6 +64,7 @@ public class Sponsor_screen extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+//        super.onBackPressed();
+        moveTaskToBack(false);
     }
 }

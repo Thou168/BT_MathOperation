@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ViewFlipper;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_weight_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_your_lesson;
 import com.bokor.bt_mathoperation.Lesson_learn.Learn;
 import com.bokor.bt_mathoperation.R;
@@ -27,7 +30,11 @@ public class Weight_class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight_class);
         alert=findViewById(R.id.alert);
-        time_alert();
+        ViewFlipper simpleViewFlipper = findViewById(R.id.flipper);
+        Animation in = AnimationUtils.loadAnimation(this, R.anim.bounce);
+        simpleViewFlipper.setInAnimation(in);
+        simpleViewFlipper.setAutoStart(true);
+//        time_alert();
 
         rl_play = findViewById(R.id.relativelayout_lesson);
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
@@ -36,7 +43,7 @@ public class Weight_class extends AppCompatActivity {
 //                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 //                rl_play.startAnimation(animFadein);
 
-                startActivity(new Intent(getApplicationContext(), Select_your_lesson.class));
+                startActivity(new Intent(getApplicationContext(), Select_weight_lesson.class));
             }
         });
         rl_practice=findViewById(R.id.relativelayout_game);
@@ -61,33 +68,33 @@ public class Weight_class extends AppCompatActivity {
         });
     }
 
-    public void time_alert(){
-        transAnim = new TranslateAnimation(0, 0, 0,
-                35);
-        transAnim.setStartOffset(0);
-        transAnim.setDuration(2000);
-        transAnim.setRepeatCount(1999999999);
-        transAnim.setFillAfter(true);
-        transAnim.setInterpolator(new BounceInterpolator());
-        transAnim.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                alert.clearAnimation();
-                final int left = alert.getLeft();
-                final int top = alert.getTop();
-                final int right = alert.getRight();
-                final int bottom = alert.getBottom();
-                alert.layout(left, top, right, bottom);
-            }
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        alert.startAnimation(transAnim);
-    }
+//    public void time_alert(){
+//        transAnim = new TranslateAnimation(0, 0, 0,
+//                35);
+//        transAnim.setStartOffset(0);
+//        transAnim.setDuration(2000);
+//        transAnim.setRepeatCount(1999999999);
+//        transAnim.setFillAfter(true);
+//        transAnim.setInterpolator(new BounceInterpolator());
+//        transAnim.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//            }
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                alert.clearAnimation();
+//                final int left = alert.getLeft();
+//                final int top = alert.getTop();
+//                final int right = alert.getRight();
+//                final int bottom = alert.getBottom();
+//                alert.layout(left, top, right, bottom);
+//            }
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//            }
+//        });
+//        alert.startAnimation(transAnim);
+//    }
 
     @Override
     public void onBackPressed() {

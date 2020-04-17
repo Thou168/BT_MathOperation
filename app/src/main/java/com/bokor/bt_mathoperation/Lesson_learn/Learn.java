@@ -39,6 +39,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
+import info.hoang8f.widget.FButton;
 import pl.droidsonroids.gif.GifImageView;
 
 public class Learn extends AppCompatActivity {
@@ -91,6 +92,7 @@ public class Learn extends AppCompatActivity {
             public void onClick(View view) {
 //                surprise_true();
                 showAlertDialogPositive();
+                btn2.setBackground(getDrawable(R.drawable.button_state_sound));
             }
         });
         PushDownAnim.setPushDownAnimTo(btn3).setOnClickListener(new View.OnClickListener() {
@@ -144,18 +146,17 @@ public class Learn extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        final Dialog dialogBuilder = new Dialog(Learn.this,R.style.DialogTheme);
+        final Dialog dialogBuilder = new Dialog(Learn.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
         Button yes = dialogBuilder.findViewById(R.id.yes);
-        dialogBuilder.setCancelable(false);
-        no.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
-        yes.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialogBuilder.cancel();
@@ -166,14 +167,13 @@ public class Learn extends AppCompatActivity {
 
     private void showAlertDialogNegative() {
         dialogBuilder = new AlertDialog.Builder(Learn.this);
-        View layoutView = getLayoutInflater().inflate(R.layout.dialog_negative, null);
+        View layoutView = getLayoutInflater().inflate(R.layout.dialog_new_fail, null);
         Button dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
         ImageButton home = layoutView.findViewById(R.id.home);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
-        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimationFalse;
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowFalse;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
@@ -195,15 +195,14 @@ public class Learn extends AppCompatActivity {
         surprise_true();
 
         dialogBuilder = new AlertDialog.Builder(Learn.this);
-        View layoutView = getLayoutInflater().inflate(R.layout.dialog_positive, null);
+        View layoutView = getLayoutInflater().inflate(R.layout.dialog_new, null);
         Button dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
         ImageButton home = layoutView.findViewById(R.id.home);
         ImageButton again = layoutView.findViewById(R.id.again);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
-        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimationTrue;
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
 
@@ -229,6 +228,7 @@ public class Learn extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(Learn.this,"Again",Toast.LENGTH_SHORT).show();
                 alertDialog.cancel();
+                btn2.setBackground(getDrawable(R.drawable.button_state_info));
             }
         });
     }

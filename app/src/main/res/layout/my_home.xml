@@ -22,18 +22,17 @@
         android:id="@+id/back"
         android:layout_marginStart="42dp"
         android:layout_marginTop="34dp"
-        android:background="@drawable/button_state_rating"
+        android:background="@drawable/button_state_back"
         android:src="@drawable/back_white"
         android:scaleType="fitCenter"
         android:layout_width="52dp"
         android:layout_height="42dp"/>
 
     <TextView
-        android:src="@drawable/content_show"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:text="មាតិកា"
-        android:textColor="@color/white"
+        android:textColor="#3A3D5F"
         android:gravity="center"
         android:fontFamily="@font/battambang_regular"
         android:textSize="24sp"
@@ -85,10 +84,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_add"
                     android:layout_marginStart="41dp"
                     android:text="វិធីបូក"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -96,9 +94,8 @@
                     android:layout_width="130dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_sub"
                     android:text="វិធីដក"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:layout_marginEnd="43dp"
                     android:fontFamily="@font/battambang_regular"
@@ -145,10 +142,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_mul"
                     android:layout_marginStart="41dp"
                     android:text="វិធីគុណ"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -156,9 +152,8 @@
                     android:layout_width="130dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_div"
                     android:text="វិធីចែក"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -193,7 +188,7 @@
                     android:background="@drawable/button_state_weight"
                     android:padding="29dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/weight"
+                    android:src="@drawable/icon_weight_white"
                     android:text="@string/div"
                     android:textColor="@color/colorF7" />
             </LinearLayout>
@@ -205,9 +200,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_fraction"
                     android:text="ប្រភាគ"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -216,9 +210,8 @@
                     android:layout_width="130dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_weight"
                     android:text="ទម្ងន់"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -243,7 +236,7 @@
                     android:padding="29dp"
                     android:layout_marginEnd="68.12dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/capacity1"
+                    android:src="@drawable/icon_capacity_white"
                     android:text="@string/div"
                     android:textColor="@color/colorF7" />
                 <ImageButton
@@ -253,7 +246,7 @@
                     android:background="@drawable/button_state_decimal"
                     android:padding="29dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/decimal"
+                    android:src="@drawable/icon_decimal_white"
                     android:text="@string/div"
                     android:textColor="@color/colorF7" />
             </LinearLayout>
@@ -265,9 +258,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_capacity"
                     android:text="ចំណុះ"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -276,9 +268,8 @@
                     android:layout_width="130dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_decimal"
                     android:text="ចំនួនទសភាគ"
-                    android:textColor="@color/white"
+                    android:textColor="#3A3D5F"
                     android:gravity="center"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"

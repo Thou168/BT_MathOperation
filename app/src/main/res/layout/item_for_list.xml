@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button_state_rating"
+    android:layout_marginBottom="20dp"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="103.05dp"
+    android:id="@+id/card_view">
     <LinearLayout
+        android:background="@drawable/button_state_rating"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
+        android:gravity="center|start"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/img_item"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_hello"
-            android:layout_gravity="start"
-            android:layout_width="120dp"
-            android:layout_height="match_parent"/>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/txt_title"
-                android:layout_margin="5dp"
-                android:textSize="25sp"
-                android:layout_centerInParent="true"
-                android:textColor="@color/black"
-                android:text="Joker is my favorite actor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:background="@drawable/gradient"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:text="01"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewVersion"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text=""
+            android:fontFamily="@font/battambang_regular"
+            android:textColor="#565E61" />
     </LinearLayout>
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

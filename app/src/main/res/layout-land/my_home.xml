@@ -22,14 +22,13 @@
         android:id="@+id/back"
         android:layout_marginStart="42dp"
         android:layout_marginTop="34dp"
-        android:background="@drawable/button_state_rating"
+        android:background="@drawable/button_state_back"
         android:src="@drawable/back_white"
         android:scaleType="fitCenter"
         android:layout_width="52dp"
         android:layout_height="42dp"/>
 
     <TextView
-        android:src="@drawable/content_show"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:text="មាតិកា"
@@ -87,7 +86,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_add"
                     android:layout_marginStart="41dp"
                     android:text="វិធីបូក"
                     android:textColor="@color/white"
@@ -98,7 +96,6 @@
                     android:layout_width="145dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_sub"
                     android:text="វិធីដក"
                     android:textColor="@color/white"
                     android:gravity="center"
@@ -149,7 +146,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_mul"
                     android:layout_marginStart="41dp"
                     android:text="វិធីគុណ"
                     android:textColor="@color/white"
@@ -160,7 +156,6 @@
                     android:layout_width="145dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_div"
                     android:text="វិធីចែក"
                     android:textColor="@color/white"
                     android:gravity="center"
@@ -211,7 +206,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_fraction"
                     android:text="ប្រភាគ"
                     android:textColor="@color/white"
                     android:gravity="center"
@@ -222,7 +216,6 @@
                     android:layout_width="145dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_weight"
                     android:text="ទម្ងន់"
                     android:textColor="@color/white"
                     android:gravity="center"
@@ -273,7 +266,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:src="@drawable/txt_capacity"
                     android:text="ចំណុះ"
                     android:textColor="@color/white"
                     android:gravity="center"
@@ -284,7 +276,6 @@
                     android:layout_width="145dp"
                     android:layout_height="34dp" />
                 <TextView
-                    android:src="@drawable/txt_decimal"
                     android:text="ចំនួនទសភាគ"
                     android:textColor="@color/white"
                     android:gravity="center"

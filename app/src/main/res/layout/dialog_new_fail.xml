@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="403.87dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/fail_body"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/success_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/gifImageView"
+                    android:src="@drawable/dear_sad"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:layout_width="122dp"
+                    android:layout_height="122dp"/>
+
+                <Button
+                    android:id="@+id/btnDialogNegative"
+                    android:layout_marginTop="43dp"
+                    android:layout_width="248.58dp"
+                    android:layout_height="55dp"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/battambang_regular"
+                    android:background="@drawable/button_state_red"
+                    android:text="ព្យាយាមម្តងទៀត"
+                    android:textColor="@color/white"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="31dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/home"
+                        android:background="@drawable/button_state_red"
+                        android:src="@drawable/ic_home"
+                        android:layout_width="55.48dp"
+                        android:layout_height="46dp"/>
+                    <!--        <ImageButton-->
+                    <!--            android:id="@+id/again"-->
+                    <!--            android:layout_marginStart="3.8dp"-->
+                    <!--            android:background="@drawable/button_state_rating"-->
+                    <!--            android:scaleType="fitCenter"-->
+                    <!--            android:src="@drawable/roundss"-->
+                    <!--            android:layout_width="55.48dp"-->
+                    <!--            android:layout_height="46dp"/>-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="289.72dp"
+            android:layout_height="81.65dp"
+            android:background="@drawable/fail_head"
+            android:id="@+id/linearLayout"
+            android:gravity="top|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"
+            android:elevation="4dp">
+            <TextView
+                android:text="ចំលើយមិនត្រឹមត្រូវ"
+                android:fontFamily="@font/battambang_regular"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:layout_width="202dp"
+                android:layout_height="wrap_content"/>
+<!--            <ImageView-->
+<!--                android:visibility="visible"-->
+<!--                android:id="@+id/textView"-->
+<!--                android:src="@drawable/success_head"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="1dp"-->
+<!--                android:gravity="center_horizontal" />-->
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

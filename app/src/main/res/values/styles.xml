@@ -92,23 +92,52 @@
     </style>
 
     //splashscreen
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
         <item name="android:windowBackground">@drawable/sp</item>
     </style>
 
     <style name="MyProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
-        <item name="android:progressBackgroundTint">#69f0ae</item>
-        <item name="android:progressTint">@color/white</item>
-        <item name="android:minWidth">200dp</item>
+        <item name="android:progressTint">#F50057</item>
+<!--        <item name="android:progressDrawable">@drawable/radious_color_normal</item>-->
     </style>
-    <style name="DialogTheme" parent="android:Theme.Dialog">
-
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
-        <!-- No backgrounds, titles or window float -->
-        <item name="android:windowBackground">@null</item>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">#ED442323</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowIsFloating">false</item>
     </style>
+
+    //dialog true
+
+    <style name="WindowTrue">
+        <item name="android:windowEnterAnimation">@anim/anim_in_true</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_false</item>
+    </style>
+    //dialog false
+
+    <style name="WindowFalse">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+    <style name="Slide_sipar" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+    <style name="Slide_bokor" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+<!--    <style name="PauseDialog" parent="@android:style/Theme.Dialog">-->
+<!--        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>-->
+<!--    </style>-->
+
+<!--    <style name="PauseDialogAnimation">-->
+<!--        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/slide_out_right</item>-->
+<!--    </style>-->
 
 </resources>

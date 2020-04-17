@@ -37,59 +37,68 @@
                 android:layout_width="52dp"
                 android:layout_height="46dp" />
         </LinearLayout>
-        <RelativeLayout
-            android:id="@+id/img_start_up"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/rl_1"
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_board"
             android:layout_marginTop="47dp"
             android:layout_marginStart="37dp"
             android:layout_marginEnd="35dp"
+            app:shimmer_duration="5000"
+            android:background="#F50057"
+            app:shimmer_base_alpha="@integer/config_navAnimTime"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
             android:layout_width="match_parent"
-            android:layout_height="207dp"
-            android:background="@drawable/board_start">
-            <TextView
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:text="2  +  2  =  4"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="27dp"
-                android:layout_width="117dp"
-                android:layout_height="wrap_content"/>
-            <ImageView
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:src="@drawable/learn_image"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="45dp"
-                android:layout_marginStart="70dp"
-                android:layout_width="60dp"
-                android:layout_height="50dp"/>
-            <ImageView
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:src="@drawable/math_image"
-                android:scaleType="centerCrop"
-                android:layout_marginBottom="40dp"
-                android:layout_marginStart="25dp"
-                android:layout_width="250dp"
-                android:layout_height="80dp"/>
-            <ImageView
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/pencle"
-                android:scaleType="centerCrop"
-                android:layout_marginEnd="30.4dp"
-                android:layout_marginBottom="30.30dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
-        </RelativeLayout>
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/img_start_up"
+                android:layout_below="@+id/rl_1"
+                android:layout_width="match_parent"
+                android:layout_height="207dp"
+                android:background="@drawable/board_start">
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="2  +  2  =  4"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/learn"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"/>
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/math_image"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"/>
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/pencle"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="30.4dp"
+                    android:layout_marginBottom="30.30dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </RelativeLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
         <ImageView
-            android:layout_below="@+id/img_start_up"
+            android:id="@+id/dialog_test"
+            android:layout_below="@+id/shimmer_board"
             android:background="@drawable/gradient_round_green"
             android:layout_marginTop="31dp"
             android:src="@drawable/reading_girl"
@@ -108,7 +117,7 @@
             android:gravity="center"
             android:layout_width="233dp"
             android:layout_height="78dp"
-            android:background="@drawable/button_state_div">
+            android:background="@drawable/button_state_music">
             <TextView
                 android:text="ចាប់ផ្តើម"
                 android:gravity="center"
@@ -118,41 +127,49 @@
                 android:layout_width="wrap_content"
                 android:layout_height="43dp"/>
             <ImageView
-                android:src="@drawable/play_true"
+                android:src="@drawable/pl"
                 android:layout_marginStart="9dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
         </LinearLayout>
         <LinearLayout
+            android:orientation="vertical"
             android:id="@+id/ln_sponsor_main"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="78dp"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView
+            <com.romainpiel.shimmer.ShimmerTextView
                 android:text="សហការផលិតដោយ"
+                android:id="@+id/shimmer_tv"
                 android:fontFamily="@font/battambang_regular"
-                android:textColor="@color/black"
+                android:textColor="#3A3D5F"
                 android:textSize="13sp"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"/>
+            <ImageView
+                android:id="@+id/img_view"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/below_text_about"
+                android:layout_width="120dp"
+                android:layout_height="2.52dp"/>
 
         </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_sponsor"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginStart="43dp"
-            android:layout_marginBottom="23dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="22.34dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/logo_sipar"
-                android:layout_width="49dp"
-                android:layout_height="58dp"/>
+                android:src="@drawable/sp_bg"
+                android:layout_width="56dp"
+                android:layout_height="54.66dp"/>
 <!--            <ImageView-->
 <!--                android:src="@drawable/show_bottom"-->
 <!--                android:layout_gravity="bottom|center"-->
@@ -163,17 +180,17 @@
         <LinearLayout
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="43dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="22.34dp"
             android:orientation="vertical"
             android:id="@+id/bk_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/sipar_pic"
-                android:src="@drawable/logo_bokor"
-                android:layout_width="71dp"
-                android:layout_height="35dp"
+                android:src="@drawable/bk_bg"
+                android:layout_width="56dp"
+                android:layout_height="54.56dp"
                 />
 
 <!--            <ImageView-->
@@ -210,12 +227,10 @@
             <ImageButton
                 android:id="@+id/music"
                 android:background="@drawable/button_state_rating"
-                android:src="@drawable/sound_on"
                 android:scaleType="centerCrop"
                 android:layout_width="52dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="11dp"/>
         </LinearLayout>
     </RelativeLayout>
-
 </RelativeLayout>
