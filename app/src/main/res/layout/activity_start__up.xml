@@ -108,29 +108,35 @@
             android:padding="3dp">
         </ImageView>
         <LinearLayout
+            android:id="@+id/crop_play"
             android:layout_above="@+id/ln_sponsor_main"
-            android:layout_marginTop="118dp"
-            android:orientation="horizontal"
+            android:layout_below="@id/dialog_test"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="62dp"
-            android:id="@+id/ln_play"
             android:gravity="center"
-            android:layout_width="233dp"
-            android:layout_height="78dp"
-            android:background="@drawable/button_state_music">
-            <TextView
-                android:text="ចាប់ផ្តើម"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:id="@+id/ln_play"
                 android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:fontFamily="@font/battambang_regular"
-                android:layout_width="wrap_content"
-                android:layout_height="43dp"/>
-            <ImageView
-                android:src="@drawable/pl"
-                android:layout_marginStart="9dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_width="233dp"
+                android:layout_height="78dp"
+                android:background="@drawable/button_state_music">
+                <TextView
+                    android:text="ចាប់ផ្តើម"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/battambang_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"/>
+                <ImageView
+                    android:src="@drawable/pl"
+                    android:layout_marginStart="9dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -208,7 +214,7 @@
 <!--                android:layout_height="16dp" />-->
         </LinearLayout>
         <LinearLayout
-            android:layout_below="@+id/ln_play"
+            android:layout_below="@+id/crop_play"
             android:gravity="center"
             android:visibility="gone"
             android:layout_marginBottom="85dp"

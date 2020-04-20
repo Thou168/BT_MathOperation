@@ -39,10 +39,10 @@
         android:layout_marginTop="36dp"
         android:layout_width="253dp"
         android:layout_height="39dp" />
-<!--    <ScrollView-->
-<!--        android:layout_below="@+id/back"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
+    <ScrollView
+        android:layout_below="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_below="@+id/back"
             android:layout_width="match_parent"
@@ -278,7 +278,7 @@
                     android:layout_height="34dp" />
             </LinearLayout>
         </RelativeLayout>
-<!--    </ScrollView>-->
+    </ScrollView>
     <Button
         android:id="@+id/btnNext"
         android:text="ចុចទៅសកម្មភាពសម្លេង"
