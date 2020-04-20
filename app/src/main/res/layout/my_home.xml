@@ -44,239 +44,253 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
-            android:layout_below="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="20dp">
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/ln_1"
+                android:paddingStart="41dp"
+                android:paddingEnd="41dp"
                 android:orientation="horizontal"
-                android:gravity="center"
                 android:layout_marginTop="45dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageButton
-                    android:id="@+id/btn_sum"
-                    android:background="@drawable/button_state_info"
-                    android:text="@string/sum"
-                    android:padding="29dp"
-                    android:src="@drawable/add_1"
-                    android:scaleType="fitCenter"
-                    android:layout_marginEnd="68.12dp"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"/>
-                <ImageButton
-                    android:id="@+id/btn_sub"
-                    android:background="@drawable/button_state_sub"
-                    android:padding="45dp"
-                    android:text="@string/div"
-                    android:src="@drawable/sub"
-                    android:scaleType="fitCenter"
-                    android:textColor="@color/colorF7"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ln_1_text"
-                android:orientation="horizontal"
-                android:layout_marginTop="2dp"
-                android:layout_below="@+id/ln_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_marginStart="41dp"
-                    android:text="វិធីបូក"
-                    android:textColor="#3A3D5F"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginEnd="68dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-                <TextView
-                    android:text="វិធីដក"
-                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_sum"
+                        android:background="@drawable/button_state_info"
+                        android:text="@string/sum"
+                        android:padding="29dp"
+                        android:src="@drawable/add_1"
+                        android:scaleType="fitCenter"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"/>
+                    <TextView
+                        android:text="វិធីបូក"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:layout_marginEnd="43dp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-            </LinearLayout>
-            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_sub"
+                        android:background="@drawable/button_state_sub"
+                        android:padding="45dp"
+                        android:text="@string/div"
+                        android:src="@drawable/sub"
+                        android:scaleType="fitCenter"
+                        android:textColor="@color/colorF7"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"/>
+                    <TextView
+                        android:text="វិធីដក"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/ln_2"
                 android:layout_marginTop="12dp"
-                android:layout_below="@+id/ln_1_text"
+                android:layout_below="@+id/ln_1"
                 android:orientation="horizontal"
+                android:paddingStart="41dp"
+                android:paddingEnd="41dp"
                 android:layout_centerInParent="true"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageButton
-                    android:id="@+id/btn_mul"
-                    android:background="@drawable/button_state_mul"
-                    android:padding="29dp"
-                    android:text="@string/mul"
-                    android:src="@drawable/mul"
-                    android:scaleType="fitCenter"
-                    android:layout_marginEnd="68.12dp"
-                    android:textColor="@color/colorF7"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"/>
-                <ImageButton
-                    android:id="@+id/btn_div"
-                    android:background="@drawable/button_state_div"
-                    android:padding="29dp"
-                    android:text="@string/div"
-                    android:src="@drawable/div"
-                    android:scaleType="fitCenter"
-                    android:textColor="@color/colorF7"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ln_2_text"
-                android:orientation="horizontal"
-                android:layout_marginTop="2dp"
-                android:layout_below="@+id/ln_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_marginStart="41dp"
-                    android:text="វិធីគុណ"
-                    android:textColor="#3A3D5F"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginEnd="68dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-                <TextView
-                    android:text="វិធីចែក"
-                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_mul"
+                        android:background="@drawable/button_state_mul"
+                        android:text="@string/sum"
+                        android:padding="29dp"
+                        android:src="@drawable/mul"
+                        android:scaleType="fitCenter"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"/>
+                    <TextView
+                        android:text="វិធីគុណ"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginEnd="41dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-            </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_div"
+                        android:background="@drawable/button_state_div"
+                        android:padding="45dp"
+                        android:text="@string/div"
+                        android:src="@drawable/div"
+                        android:scaleType="centerCrop"
+                        android:textColor="@color/colorF7"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"/>
+                    <TextView
+                        android:text="វិធីចែក"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/ln_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ln_2_text"
-                android:layout_marginTop="12dp"
-                android:gravity="center">
-
-                <ImageButton
-                    android:id="@+id/btn_fraction"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"
-                    android:background="@drawable/button_state_list_2"
-                    android:padding="29dp"
-                    android:layout_marginEnd="68.12dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/fraction"
-                    android:text="@string/div"
-                    android:textColor="@color/colorF7" />
-                <ImageButton
-                    android:id="@+id/btn_weight"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"
-                    android:background="@drawable/button_state_weight"
-                    android:padding="29dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icon_weight_white"
-                    android:text="@string/div"
-                    android:textColor="@color/colorF7" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ln_3_text"
-                android:orientation="horizontal"
-                android:layout_marginTop="2dp"
-                android:layout_below="@+id/ln_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:text="ប្រភាគ"
-                    android:textColor="#3A3D5F"
+                android:paddingStart="41dp"
+                android:paddingEnd="41dp"
+                android:layout_below="@+id/ln_2"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginStart="41dp"
-                    android:layout_marginEnd="68dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-                <TextView
-                    android:text="ទម្ងន់"
-                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_fraction"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"
+                        android:background="@drawable/button_state_list_2"
+                        android:padding="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/fraction"
+                        android:text="@string/div"
+                        android:textColor="@color/colorF7" />
+                    <TextView
+                        android:text="ប្រភាគ"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="130dp"
+                        android:layout_height="34dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginEnd="41dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-            </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_weight"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"
+                        android:background="@drawable/button_state_weight"
+                        android:padding="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_weight_white"
+                        android:text="@string/div"
+                        android:textColor="@color/colorF7" />
+                    <TextView
+                        android:text="ទម្ងន់"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="130dp"
+                        android:layout_height="34dp" />
+                </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/ln_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ln_3_text"
+                android:paddingStart="41dp"
+                android:paddingEnd="41dp"
+                android:layout_below="@+id/ln_3"
                 android:layout_marginTop="12dp"
                 android:gravity="center">
 
-                <ImageButton
-                    android:id="@+id/btn_capacity"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"
-                    android:background="@drawable/button_state_capacity"
-                    android:padding="29dp"
-                    android:layout_marginEnd="68.12dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icon_capacity_white"
-                    android:text="@string/div"
-                    android:textColor="@color/colorF7" />
-                <ImageButton
-                    android:id="@+id/btn_decimal"
-                    android:layout_width="130dp"
-                    android:layout_height="101.27dp"
-                    android:background="@drawable/button_state_decimal"
-                    android:padding="29dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icon_decimal_white"
-                    android:text="@string/div"
-                    android:textColor="@color/colorF7" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ln_4_text"
-                android:orientation="horizontal"
-                android:layout_marginTop="2dp"
-                android:layout_below="@+id/ln_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:text="ចំណុះ"
-                    android:textColor="#3A3D5F"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginStart="41dp"
-                    android:layout_marginEnd="68dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-                <TextView
-                    android:text="ចំនួនទសភាគ"
-                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_capacity"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"
+                        android:background="@drawable/button_state_capacity"
+                        android:padding="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_capacity_white"
+                        android:text="@string/div"
+                        android:textColor="@color/colorF7" />
+                    <TextView
+                        android:text="ចំណុះ"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="130dp"
+                        android:layout_height="34dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
                     android:gravity="center"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:layout_marginEnd="41dp"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp" />
-            </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/btn_decimal"
+                        android:layout_width="130dp"
+                        android:layout_height="101.27dp"
+                        android:background="@drawable/button_state_decimal"
+                        android:padding="29dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_decimal_white"
+                        android:text="@string/div"
+                        android:textColor="@color/colorF7" />
+                    <TextView
+                        android:text="ចំនួនទសភាគ"
+                        android:textColor="#3A3D5F"
+                        android:gravity="center"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="130dp"
+                        android:layout_height="34dp" />
+                </LinearLayout>
+            </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
     <Button
