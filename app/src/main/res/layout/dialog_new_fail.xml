@@ -21,10 +21,10 @@
             android:elevation="4dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingBottom="15dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp">
+            android:paddingStart="6.54dp"
+            android:paddingEnd="6.54dp"
+            android:paddingTop="7.62dp"
+            android:paddingBottom="5.44dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:gravity="center"
@@ -34,15 +34,14 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/gifImageView"
                     android:src="@drawable/dear_sad"
-                    android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:layout_width="122dp"
-                    android:layout_height="122dp"/>
-
+                    android:layout_marginTop="74.25dp"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"/>
                 <Button
-                    android:id="@+id/btnDialogNegative"
                     android:layout_marginTop="43dp"
                     android:layout_width="248.58dp"
+                    android:visibility="gone"
                     android:layout_height="55dp"
                     android:textSize="22sp"
                     android:fontFamily="@font/battambang_regular"
@@ -51,7 +50,7 @@
                     android:textColor="@color/white"/>
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_marginTop="31dp"
+                    android:layout_marginTop="87dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <ImageButton
@@ -60,14 +59,15 @@
                         android:src="@drawable/ic_home"
                         android:layout_width="55.48dp"
                         android:layout_height="46dp"/>
-                    <!--        <ImageButton-->
-                    <!--            android:id="@+id/again"-->
-                    <!--            android:layout_marginStart="3.8dp"-->
-                    <!--            android:background="@drawable/button_state_rating"-->
-                    <!--            android:scaleType="fitCenter"-->
-                    <!--            android:src="@drawable/roundss"-->
-                    <!--            android:layout_width="55.48dp"-->
-                    <!--            android:layout_height="46dp"/>-->
+                    <ImageButton
+                        android:id="@+id/btnDialogNegative"
+                        android:layout_marginStart="29dp"
+                        android:background="@drawable/button_state_red"
+                        android:padding="12dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/roundss"
+                        android:layout_width="55.48dp"
+                        android:layout_height="46dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -89,7 +89,7 @@
             android:layout_marginBottom="2dp"
             android:elevation="4dp">
             <TextView
-                android:text="ចំលើយមិនត្រឹមត្រូវ"
+                android:text="ចម្លើយមិនត្រឹមត្រូវ"
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/white"

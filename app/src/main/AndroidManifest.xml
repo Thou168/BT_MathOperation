@@ -11,15 +11,27 @@
         android:roundIcon="@drawable/learning"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_decimal"></activity>
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_capacity" />
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_weight" />
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_fraction" />
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_div" />
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_mul" />
-        <activity android:name=".Activity.Go_to.Lets_start.Lets_start_sub" />
-        <activity android:name=".Lesson_learn.Learn_2" />
-        <activity android:name=".Lesson_learn.Learn_3" />
+        <activity android:name=".Fragment_lesson.Addition.Learn_4" />
+        <activity android:name=".Fragment_lesson.Sub.Learn_Sub" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Weight.Lets_start_weight" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div_2" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div_3" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div_4" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul_2" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul_3" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul_4" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_1" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_2" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_3" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_4" />
+        <activity android:name=".Fragment_lesson.Addition.Learn_2" />
+        <activity android:name=".Fragment_lesson.Addition.Learn_3" />
         <activity android:name=".Activity.Info_List.Sponsor_screen" />
         <activity
             android:name=".Activity.Symbol_Activity.Decimal_class"
@@ -31,34 +43,43 @@
             android:name=".Activity.Symbol_Activity.Weight_class"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_your_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_your_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_sub_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_sub_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_mul_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_mul_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_div_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_div_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_fraction_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_fraction_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_weight_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_weight_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_capacity_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_capacity_lesson"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Select_decimal_lesson"
+            android:name=".Activity.Go_to.Select_Lesson.Select_decimal_lesson"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Symbol_Activity.Fraction_class"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Lets_start.Lets_start_lesson"
+            android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_4"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Info_List.About_us"
@@ -73,7 +94,7 @@
             android:name=".Activity.Info"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Lesson_learn.Learn"
+            android:name=".Fragment_lesson.Addition.Learn_1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Symbol_Activity.Sum_class"

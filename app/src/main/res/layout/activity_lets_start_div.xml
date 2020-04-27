@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activity.Go_to.Lets_start.Lets_start_mul">
+    tools:context=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul">
 
     <ImageView
         android:id="@+id/img_back"
@@ -20,15 +20,14 @@
 
     <ImageView
         android:id="@+id/sounds"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/button_state_sound"
-        android:src="@drawable/on"
+        android:src="@drawable/volume"
         android:scaleType="centerCrop"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="36dp"/>
     <ScrollView
         android:layout_below="@+id/img_back"
         android:layout_marginTop="39dp"
@@ -40,8 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៏1 ៖ គេមានស្វាយ 6ផ្លែចែកឪ្យក្មេងម្នាក់ៗ 2ផ្លែ។ តើគេចែកឪ្យក្មេងបានប៉ុន្មាននាក់? "
+                android:text="ឧទាហរណ៏ ៖ គេមានស្វាយ 6ផ្លែចែកឪ្យក្មេងម្នាក់ៗ 2ផ្លែ។ តើគេចែកឪ្យក្មេងបានប៉ុន្មាននាក់? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
@@ -172,6 +172,7 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"/>
                     <TextView
+                        android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
                         android:text="6 ជាតំណាងចែក"
                         android:layout_marginStart="12dp"
@@ -192,6 +193,7 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"/>
                     <TextView
+                        android:id="@+id/txt_explain_top_mid"
                         android:text="2 ជាតួចែក"
                         android:textColor="#3A3D5F"
                         android:layout_marginStart="12dp"
@@ -212,6 +214,7 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"/>
                     <TextView
+                        android:id="@+id/txt_explain_bottom_mid"
                         android:text="3 ជាផលចែក"
                         android:textColor="#3A3D5F"
                         android:layout_marginStart="12dp"
@@ -232,7 +235,31 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"/>
                     <TextView
+                        android:id="@+id/txt_explain_bottom"
                         android:text="÷ ជាសញ្ញាចែក"
+                        android:textColor="#3A3D5F"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ln_som_nol"
+                    android:layout_marginStart="20dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/dot"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"/>
+                    <TextView
+                        android:id="@+id/txt_explain_som_nol"
+                        android:text="2 ជាសំណល់"
                         android:textColor="#3A3D5F"
                         android:layout_marginStart="12dp"
                         android:fontFamily="@font/battambang_regular"
@@ -242,6 +269,7 @@
                 </LinearLayout>
             </LinearLayout>
             <TextView
+                android:id="@+id/such_as"
                 android:text="ដូចនេះ គេចែកផ្លែស្វាយឪ្យក្មេងបាន 3នាក់។"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"

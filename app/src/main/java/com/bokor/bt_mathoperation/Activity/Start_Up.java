@@ -129,16 +129,16 @@ public class Start_Up extends AppCompatActivity {
                 "សព្វថ្ងៃស៊ីប៉ាគឺជាតួអង្គសំខាន់មួយក្នុងវិស័យអប់រំដោយប្រយុទ្ធប្រឆាំងនឹងអក្ខរកម្មក្នុងចំណោមយុវជននិងមនុស្សពេញវ័យតាមរយៈការផ្សព្វផ្សាយនិងការលើកកម្ពស់សៀវភៅនិងការអា\n" +
                 "ដូច្នេះតាំងពី២០ឆ្នាំមកស៊ីប៉ាបានបង្កើតបណ្តាញកន្លែងផ្សេងៗគ្នាសម្រាប់ការអានថេរនិងចល័តដើម្បីទ្រទ្រង់ការអភិវឌ្ឍន៍ការអាននៅកម្ពុជា៖បណ្ណាល័យថេរនៅសាលាបឋមសិក្សាឬក្នុងពន្ធនាគារបណ្ណល័យចល័តនៅតាមសហគមន៍សាលាមត្តេយ្យឬមណ្ឌលកុមារកំព្រានៅភ្នំពេញ។ កណ្តាលនិងកំពង់ស្ពឺជាមជ្ឈមណ្ឌលសម្រាប់ស្ត្រីនិងកុមារងាយរងគ្រោះឬសូម្បីតែមជ្ឈមណ្ឌលស្តារនីតិសម្បទាកុមារពិការ។\n");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
-        img_back.setVisibility(View.GONE);
-        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back_bk);
-        img_back_bk.setVisibility(View.VISIBLE);
+        img_back.setVisibility(View.VISIBLE);
+//        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back);
+//        img_back_bk.setVisibility(View.VISIBLE);
 //        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         final AlertDialog alertDialog = dialogBuilder.create();
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.Slide_bokor;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        PushDownAnim.setPushDownAnimTo(img_back_bk).setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 alertDialog.cancel();
@@ -160,8 +160,8 @@ public class Start_Up extends AppCompatActivity {
                 "សព្វថ្ងៃស៊ីប៉ាគឺជាតួអង្គសំខាន់មួយក្នុងវិស័យអប់រំដោយប្រយុទ្ធប្រឆាំងនឹងអក្ខរកម្មក្នុងចំណោមយុវជននិងមនុស្សពេញវ័យតាមរយៈការផ្សព្វផ្សាយនិងការលើកកម្ពស់សៀវភៅនិងការអា\n" +
                 "ដូច្នេះតាំងពី២០ឆ្នាំមកស៊ីប៉ាបានបង្កើតបណ្តាញកន្លែងផ្សេងៗគ្នាសម្រាប់ការអានថេរនិងចល័តដើម្បីទ្រទ្រង់ការអភិវឌ្ឍន៍ការអាននៅកម្ពុជា៖បណ្ណាល័យថេរនៅសាលាបឋមសិក្សាឬក្នុងពន្ធនាគារបណ្ណល័យចល័តនៅតាមសហគមន៍សាលាមត្តេយ្យឬមណ្ឌលកុមារកំព្រានៅភ្នំពេញ។ កណ្តាលនិងកំពង់ស្ពឺជាមជ្ឈមណ្ឌលសម្រាប់ស្ត្រីនិងកុមារងាយរងគ្រោះឬសូម្បីតែមជ្ឈមណ្ឌលស្តារនីតិសម្បទាកុមារពិការ។\n");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
-        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back_bk);
-        img_back_bk.setVisibility(View.GONE);
+//        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back_bk);
+//        img_back_bk.setVisibility(View.GONE);
         img_back.setVisibility(View.VISIBLE);
 //        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);

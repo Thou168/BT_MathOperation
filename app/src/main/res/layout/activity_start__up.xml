@@ -167,15 +167,15 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginStart="35dp"
-            android:layout_marginBottom="22.34dp"
+            android:layout_marginBottom="25dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/sp_bg"
-                android:layout_width="56dp"
-                android:layout_height="54.66dp"/>
+                android:src="@drawable/logo_sipar"
+                android:layout_width="50dp"
+                android:layout_height="52dp"/>
 <!--            <ImageView-->
 <!--                android:src="@drawable/show_bottom"-->
 <!--                android:layout_gravity="bottom|center"-->
@@ -187,16 +187,16 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="35dp"
-            android:layout_marginBottom="22.34dp"
+            android:layout_marginBottom="30dp"
             android:orientation="vertical"
             android:id="@+id/bk_click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/sipar_pic"
-                android:src="@drawable/bk_bg"
-                android:layout_width="56dp"
-                android:layout_height="54.56dp"
+                android:src="@drawable/logo_bokor"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
                 />
 
 <!--            <ImageView-->

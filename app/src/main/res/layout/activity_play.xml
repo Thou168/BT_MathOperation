@@ -141,7 +141,7 @@
                 <Button
                     android:id="@+id/ans_3"
                     android:text="Answer 3"
-                    android:background="@drawable/background_aqua"
+                    android:background="@drawable/background_green"
                     android:layout_marginTop="@dimen/fab_margin"
                     android:layout_below="@+id/ans_1"
                     android:layout_centerInParent="true"

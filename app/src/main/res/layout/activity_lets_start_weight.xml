@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activity.Go_to.Lets_start.Lets_start_fraction">
+    tools:context=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction">
 
     <ImageView
         android:id="@+id/img_back"
@@ -20,15 +20,14 @@
 
     <ImageView
         android:id="@+id/sounds"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/button_state_sound"
-        android:src="@drawable/on"
+        android:src="@drawable/volume"
         android:scaleType="centerCrop"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="36dp"/>
     <ScrollView
         android:layout_below="@+id/img_back"
         android:layout_marginTop="39dp"

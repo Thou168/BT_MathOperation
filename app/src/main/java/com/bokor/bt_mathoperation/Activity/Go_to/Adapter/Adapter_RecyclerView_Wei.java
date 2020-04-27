@@ -9,8 +9,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.Lets_start_lesson;
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.Lets_start_weight;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Lets_start_weight;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 

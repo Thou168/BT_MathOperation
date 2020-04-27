@@ -5,10 +5,10 @@
 <!--            <solid android:color="#106C4D"/>-->
 <!--        </shape>-->
 <!--    </item>-->
-    <solid android:color="#F50057"/>
+    <solid android:color="#AE73FF"/>
 
     <stroke android:width="3dp"
-        android:color="#F50057" />
+        android:color="#AE73FF" />
 
 <!--    <padding android:left="1dp"-->
 <!--        android:top="1dp"-->

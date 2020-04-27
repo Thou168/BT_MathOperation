@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.BounceInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
-import com.bokor.bt_mathoperation.Activity.Go_to.Select_sub_lesson;
-import com.bokor.bt_mathoperation.Lesson_learn.Learn;
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
+import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -49,7 +47,7 @@ public class Sub_class extends AppCompatActivity {
 //                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 //                rl_practice.startAnimation(animFadein);
 
-                startActivity(new Intent(getApplicationContext(), Learn.class));
+                startActivity(new Intent(getApplicationContext(), Learn_Sub.class));
             }
         });
 //

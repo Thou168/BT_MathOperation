@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activity.Go_to.Lets_start.Lets_start_mul">
+    tools:context=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul">
 
     <ImageView
         android:id="@+id/img_back"
@@ -20,15 +20,14 @@
 
     <ImageView
         android:id="@+id/sounds"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/button_state_sound"
-        android:src="@drawable/on"
+        android:src="@drawable/volume"
         android:scaleType="centerCrop"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="36dp"/>
     <ScrollView
         android:layout_below="@+id/img_back"
         android:layout_marginTop="39dp"
@@ -40,12 +39,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៏1 ៖ 12 × 3 = ? "
+                android:text="ឧទាហរណ៏ ៖ 12 × 3 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
+                android:layout_marginEnd="41dp"
                 android:textColor="#3A3D5F"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <RelativeLayout
                 android:layout_marginStart="41dp"
@@ -133,6 +134,7 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"/>
                     <TextView
+                        android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
                         android:text="3 គុណនឹងលេខ 2 ខ្ទង់រាយ។ 3 × 2 = 6 សរសេរលេខ 6"
                         android:layout_marginStart="12dp"
@@ -153,6 +155,7 @@
                         android:layout_width="7dp"
                         android:layout_height="7dp"/>
                     <TextView
+                        android:id="@+id/txt_explain_bottom"
                         android:text="3 គុណនឹងលេខ 1 ខ្ទង់ដប់។ 3 × 1 = 3 សរសេរលេខ 3"
                         android:textColor="#3A3D5F"
                         android:layout_marginStart="12dp"
@@ -163,6 +166,7 @@
                 </LinearLayout>
             </LinearLayout>
             <TextView
+                android:id="@+id/such_as"
                 android:text="ដូចនេះ 12 × 3 = 36"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"
@@ -227,7 +231,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:id="@+id/num_2"
+                                android:id="@+id/two_char_top"
                                 android:text="1"
                                 android:layout_marginTop="7.74dp"
                                 android:layout_marginStart="75dp"
@@ -239,12 +243,24 @@
                             <TextView
                                 android:text="×"
                                 android:id="@+id/symbol_add"
-                                android:layout_below="@+id/num_2"
+                                android:layout_below="@+id/two_char_top"
                                 android:layout_marginStart="20dp"
                                 android:textSize="18sp"
                                 android:layout_marginTop="10dp"
                                 android:textColor="#3A3D5F"
                                 android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/two_char_bot"
+                                android:text="8"
+                                android:visibility="gone"
+                                android:layout_below="@+id/two_char_top"
+                                android:layout_marginTop="35.38dp"
+                                android:layout_marginStart="75dp"
+                                android:layout_alignParentStart="true"
+                                android:textSize="18sp"
+                                android:textColor="#3A3D5F"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <View
@@ -254,6 +270,7 @@
                                 android:layout_gravity="center"
                                 android:background="#3A3D5F" />
                             <TextView
+                                android:id="@+id/two_ans"
                                 android:text="3"
                                 android:layout_below="@+id/symbol_add"
                                 android:layout_marginStart="75dp"
@@ -264,7 +281,7 @@
                                 android:layout_height="wrap_content"/>
 
                             <TextView
-                                android:id="@+id/num_1"
+                                android:id="@+id/one_char_top"
                                 android:text="2"
                                 android:layout_marginTop="7.74dp"
                                 android:layout_marginEnd="80dp"
@@ -274,9 +291,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:id="@+id/num_8"
+                                android:id="@+id/one_char_bot"
                                 android:text="3"
-                                android:layout_below="@+id/num_1"
+                                android:layout_below="@+id/one_char_top"
                                 android:layout_marginTop="35.38dp"
                                 android:layout_marginEnd="80dp"
                                 android:layout_alignParentEnd="true"
@@ -286,8 +303,9 @@
                                 android:layout_height="wrap_content"/>
 
                             <TextView
+                                android:id="@+id/one_ans"
                                 android:text="6"
-                                android:layout_below="@+id/num_8"
+                                android:layout_below="@+id/one_char_bot"
                                 android:layout_marginTop="38dp"
                                 android:layout_marginEnd="80dp"
                                 android:layout_alignParentEnd="true"
