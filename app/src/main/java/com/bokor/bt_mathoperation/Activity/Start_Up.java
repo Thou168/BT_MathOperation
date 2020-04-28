@@ -119,7 +119,7 @@ public class Start_Up extends AppCompatActivity {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Start_Up.this);
 
         View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us, null);
-        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
+//        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
         TextView textView = layoutView.findViewById(R.id.text);
         ImageView img_view = layoutView.findViewById(R.id.img_bokor);
         img_view.setVisibility(View.VISIBLE);
@@ -150,7 +150,7 @@ public class Start_Up extends AppCompatActivity {
     private void dialog_info_sipar(){
         dialogBuilder = new AlertDialog.Builder(Start_Up.this);
         View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us,null);
-        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
+//        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
         TextView textView = layoutView.findViewById(R.id.text);
         ImageView img_view = layoutView.findViewById(R.id.img_sipar);
         img_view.setVisibility(View.VISIBLE);

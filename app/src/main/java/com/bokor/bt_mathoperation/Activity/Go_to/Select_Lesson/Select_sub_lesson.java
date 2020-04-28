@@ -32,16 +32,16 @@ public class Select_sub_lesson extends AppCompatActivity {
         id.clear();
         title.clear();
         id.add("01");
-        title.add("វិធីដកលេខពីរខ្ទុងនឹងមួយខ្ទង់គ្មានខ្ចី");
+        title.add("វិធីដកលេខពីរខ្ទង់នឹងមួយខ្ទង់គ្មានខ្ចី");
 
         id.add("02");
-        title.add("វិធីដកលេខពីរខ្ទុងនឹងមួយខ្ទង់មានខ្ចី");
+        title.add("វិធីដកលេខពីរខ្ទង់នឹងមួយខ្ទង់មានខ្ចី");
 
         id.add("03");
-        title.add("វិធីដកលេខពីរខ្ទុងនឹងពីរខ្ទង់គ្មានខ្ចី");
+        title.add("វិធីដកលេខពីរខ្ទង់នឹងពីរខ្ទង់គ្មានខ្ចី");
 
         id.add("04");
-        title.add("វិធីដកលេខពីរខ្ទុងនឹងពីរខ្ទង់មានខ្ចី");
+        title.add("វិធីដកលេខពីរខ្ទង់នឹងពីរខ្ទង់មានខ្ចី");
 
         rv = findViewById(R.id.my_recycler_view);
         rv.setHasFixedSize(true);

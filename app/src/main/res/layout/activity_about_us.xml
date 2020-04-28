@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingStart="42dp"
     android:paddingEnd="42dp"
+    android:paddingTop="42dp"
+    android:paddingBottom="42dp"
     android:id="@+id/rl_slide_down"
     android:background="#00000000">
     <LinearLayout
-        android:layout_marginTop="34dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="101dp"
+        android:layout_gravity="center"
         android:orientation="vertical">
         <RelativeLayout
             android:id="@+id/rl_top"
@@ -64,8 +65,7 @@
                 android:layout_marginTop="50dp"
                 android:visibility="visible"
                 android:layout_gravity="center"
-                android:layout_height="400dp"
-                android:background="@color/white">
+                android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/text"
                     android:text=""
@@ -78,11 +78,11 @@
                     android:layout_height="wrap_content" />
             </ScrollView>
             <ImageView
-                android:layout_gravity="bottom|center"
+                android:layout_gravity="center|bottom"
                 android:src="@drawable/below_text_about"
-                android:layout_marginBottom="47.5dp"
+                android:visibility="visible"
                 android:layout_width="226dp"
                 android:layout_height="3.5dp"/>
         </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

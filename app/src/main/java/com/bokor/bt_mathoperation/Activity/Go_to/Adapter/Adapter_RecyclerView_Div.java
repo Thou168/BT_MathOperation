@@ -84,22 +84,22 @@ public class Adapter_RecyclerView_Div extends RecyclerView.Adapter<Adapter_Recyc
                     Intent go = new Intent(context, Lets_start_div.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-                    Toast.makeText(context,"position 1",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"position 1",Toast.LENGTH_SHORT).show();
                 }else if (position == 1){
                     Intent go = new Intent(context, Lets_start_div_2.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-                    Toast.makeText(context,"position 2",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"position 2",Toast.LENGTH_SHORT).show();
                 }else if (position == 2){
                     Intent go = new Intent(context, Lets_start_div_3.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-                    Toast.makeText(context,"position 3",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"position 3",Toast.LENGTH_SHORT).show();
                 }else {
                     Intent go = new Intent(context, Lets_start_div_4.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-                    Toast.makeText(context,"position 4",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"position 4",Toast.LENGTH_SHORT).show();
                 }
             }
         });

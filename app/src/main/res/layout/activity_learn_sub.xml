@@ -303,6 +303,7 @@
             <LinearLayout
                 android:layout_marginTop="40dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:layout_marginStart="50dp"
                 android:layout_width="145.12dp"
                 android:layout_height="113.05dp">
