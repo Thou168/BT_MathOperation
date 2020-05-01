@@ -15,6 +15,9 @@ import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Div.Lets_start_d
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Div.Lets_start_div_3;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Div.Lets_start_div_4;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_2;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_3;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_4;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -83,19 +86,19 @@ public class Adapter_RecyclerView_Frac extends RecyclerView.Adapter<Adapter_Recy
                     context.startActivity(go);
 //                    Toast.makeText(context,"position 1",Toast.LENGTH_SHORT).show();
                 }else if (position == 1){
-//                    Intent go = new Intent(context, Lets_start_div_2.class);
-//                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    context.startActivity(go);
+                    Intent go = new Intent(context, Lets_start_fraction_2.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
 //                    Toast.makeText(context,"position 2",Toast.LENGTH_SHORT).show();
                 }else if (position == 2){
-//                    Intent go = new Intent(context, Lets_start_div_3.class);
-//                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    context.startActivity(go);
+                    Intent go = new Intent(context, Lets_start_fraction_3.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
 //                    Toast.makeText(context,"position 3",Toast.LENGTH_SHORT).show();
                 }else {
-//                    Intent go = new Intent(context, Lets_start_div_4.class);
-//                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    context.startActivity(go);
+                    Intent go = new Intent(context, Lets_start_fraction_4.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
 //                    Toast.makeText(context,"position 4",Toast.LENGTH_SHORT).show();
                 }
             }

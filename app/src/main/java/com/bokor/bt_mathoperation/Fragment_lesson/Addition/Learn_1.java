@@ -107,7 +107,7 @@ public class Learn_1 extends AppCompatActivity {
         });
 
         num_result=findViewById(R.id.num_result);
-        num_result.setText("?   ?");
+        num_result.setText("??");
 
         answer=findViewById(R.id.answer);
         answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);

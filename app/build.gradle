@@ -65,4 +65,5 @@ dependencies {
     implementation "com.mlsdev.animatedrv:library:1.0.1"
 
     implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    implementation 'xiaofei.library:grid-layout:1.0'
 }

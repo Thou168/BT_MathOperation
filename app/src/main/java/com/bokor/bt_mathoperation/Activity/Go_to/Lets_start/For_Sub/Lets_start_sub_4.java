@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
+import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Main_sub;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -29,7 +30,7 @@ public class Lets_start_sub_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_sub_4.this, Learn_Sub.class));
+                startActivity(new Intent(Lets_start_sub_4.this, Main_sub.class));
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -60,9 +61,9 @@ public class Lets_start_sub_4 extends AppCompatActivity {
         answer=findViewById(R.id.answer);
         answer.setText("4​​  7");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText("3 ដក 6 មិនបានទេ ខ្ចី 1 ពីខ្ទង់ដប់។ 83 គឺ 7 ដប់ 13 រាយ។ 13 ដក 6 នៅសល់ 7 សរសេរលេខ 7");
+        txt_explain_T.setText(". 3 ដក 6 មិនបានទេ ខ្ចី 1 ពីខ្ទង់ដប់។ 83 គឺ 7 ដប់ 13 រាយ។ 13 ដក 6 នៅសល់ 7 សរសេរលេខ 7");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText("7 ដក 3 នៅសល់ 4 សរសេរលេខ 4");
+        txt_explain_B.setText(". 7 ដក 3 នៅសល់ 4 សរសេរលេខ 4");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 83 - 36 = 47");
 

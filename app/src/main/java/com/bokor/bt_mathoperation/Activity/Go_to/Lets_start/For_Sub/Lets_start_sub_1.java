@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
+import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Main_sub;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -29,7 +30,7 @@ public class Lets_start_sub_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_sub_1.this, Learn_Sub.class));
+                startActivity(new Intent(Lets_start_sub_1.this, Main_sub.class));
             }
         });
         img_back=findViewById(R.id.img_back);

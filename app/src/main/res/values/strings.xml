@@ -53,8 +53,14 @@
     <string name="close">Close</string>
     <string name="home_second">Home Second</string>
     <string name="fraction_1"><![CDATA[យើងបាន 1 < 5 ឬ 5 > 1។ ដូចនេះ 1/6 តូចជាង 5/6 ឬ 5/6 ធំជាង 1/6 ។]]></string>
+    <string name="fraction_such_as"><![CDATA[ដោយ 1 < 2 < 3]]></string>
+    <string name="fraction_such_as_1"><![CDATA[យើងសរសេរ 1/4 < 2/4 < 3/4 ។]]></string>
     <string name="fraction_2"><![CDATA[យើងសរសេរ 1/6 < 5/6 ឬ 5/6 > 1/6 ។]]></string>
     <string name="jom_nam"><u>ចំណាំ</u></string>
+    <string name="fraction_add1"><![CDATA[ដោយ 1 < 2]]></string>
+    <string name="fraction_add2"><![CDATA[យើងបាន 1/4 + 2/4 = 3/4]]></string>
+    <string name="fraction_sub"><![CDATA[យើងបាន 2/4 - 1/4 = 1/4]]></string>
     <string name="jom_nam_title"><![CDATA[គីឡូក្រាម និងក្រាមជាឯកតារង្វាស់ទម្ងន់។ គីឡូក្រាម​ តាងដោយអក្សរ " គ.ក" ឬ " kg" ក្រាមតាងដោយអក្សរ " ក " ឬ "g" ។]]></string>
     <string name="doch_nis_decimal">ដូចនេះ ៖ 0.4 ជាចំនួនទសភាគ ភាគដប់ អានថា " សូន្យចុចបួន"។ </string>
+    <string name="doch_nis_decimal_2">ដូចនេះ ៖ 0.30 ជាចំនួនទសភាគ ភាគរយ អានថា " សូន្យចុចសាមសិប"។ </string>
 </resources>

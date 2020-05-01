@@ -3,9 +3,9 @@
 
     <stroke
         android:width="2dip"
-        android:color="@color/green_col" >
+        android:color="#AE73FF" >
     </stroke>
-    <solid android:color="#AE73FF"/>
+    <solid android:color="#FF5472"/>
 
     <corners android:radius="180px">
 

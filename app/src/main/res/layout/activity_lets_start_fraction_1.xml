@@ -43,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
+                    android:id="@+id/pic_1"
                     android:orientation="vertical"
                     android:layout_alignParentStart="true"
                     android:layout_width="wrap_content"
@@ -56,12 +57,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <ImageView
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/fravtion1"
+                        android:src="@drawable/frac_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/pic_2"
                     android:orientation="vertical"
                     android:layout_alignParentEnd="true"
                     android:layout_width="wrap_content"
@@ -75,8 +76,27 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <ImageView
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/fravtion2"
+                        android:src="@drawable/frac_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pic_3"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/pic_1"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="រូប គ"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:layout_gravity="center"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:src="@drawable/frac_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -174,13 +194,13 @@
 <!--                </LinearLayout>-->
 <!--            </LinearLayout>-->
             <RelativeLayout
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="រូបក បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៍មាន 1ចំណែកគឺ 1/6។"
+                    android:text="រូប​ក បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 2 ចំណែកគឺ 2/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"
@@ -190,20 +210,37 @@
                 <View
                     android:id="@+id/v_colume"
                     android:layout_width="1dp"
-                    android:layout_height="150dp"
+                    android:layout_height="140dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_gravity="center"
+                    android:layout_alignParentTop="true"
                     android:layout_centerInParent="true"
                     android:background="#3A3D5F" />
+                <View
+                    android:id="@+id/v_row"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/v_colume"
+                    android:layout_height="1dp"
+                    android:background="#3A3D5F" />
                 <TextView
-                    android:text="រូបខ បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៍មាន 5ចំណែកគឺ 5/6។"
+                    android:text="រូប​ខ បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 1 ចំណែកគឺ 1/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/v_colume"/>
+                <TextView
+                    android:text="រូប​គ បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 3 ចំណែកគឺ 3/4។"
+                    android:fontFamily="@font/battambang_regular"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:textColor="#3A3D5F"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_colume"/>
             </RelativeLayout>
             <LinearLayout
                 android:layout_marginTop="20dp"
@@ -215,14 +252,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="@string/fraction_1"
+                    android:text="@string/fraction_such_as"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="@string/fraction_2"
+                    android:text="@string/fraction_such_as_1"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
                     android:layout_marginTop="10dp"
@@ -230,23 +267,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-            <TextView
+            <LinearLayout
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="ដើម្បីប្រៀបធៀបប្រភាគមានភាគបែងដូចគ្នាយើងប្រៀបធៀបភាគយកនឹងភាគយក រីឯភាគបែងទុកនៅដដែល។"
-                android:layout_marginEnd="41dp"
-                android:textSize="18sp"
-                android:layout_marginStart="41dp"
-                android:fontFamily="@font/battambang_regular"
-                android:textColor="#3A3D5F"
+                android:orientation="vertical"
                 android:layout_marginTop="19dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_marginStart="41dp"
+                android:layout_marginEnd="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="_ ដូចនេះ រៀបលំដាប់ប្រភាគពីតូចទៅធំ 1/4 ; 2/4 ; 3/4"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/battambang_regular"
+                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="_ រៀបលំដាប់ប្រភាគពីធំទៅតូច 3/4 ; 2/4 ; 1/4"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/battambang_regular"
+                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
             <com.dd.ShadowLayout
                 android:id="@+id/shadow_id"
                 app:sl_shadowRadius="10dp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

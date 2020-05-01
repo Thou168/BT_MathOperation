@@ -44,16 +44,16 @@ public class Lets_start_decimal extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(sound).setScale( MODE_SCALE, 0.89f  ) .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isPlaying) {
-                    mediaPlayer.pause();
-                }else{
-                    if (mediaPlayer.isPlaying()){
-                        mediaPlayer.start();
-                    }else {
-                        mediaPlayer2.start();
-                    }
-                }
-                isPlaying = !isPlaying;
+//                if (isPlaying) {
+//                    mediaPlayer.pause();
+//                }else{
+//                    if (mediaPlayer.isPlaying()){
+//                        mediaPlayer.start();
+//                    }else {
+//                        mediaPlayer2.start();
+//                    }
+//                }
+//                isPlaying = !isPlaying;
             }
         });
     }

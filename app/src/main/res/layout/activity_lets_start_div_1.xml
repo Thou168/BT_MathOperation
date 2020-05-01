@@ -228,20 +228,19 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:src="@drawable/dot"
-                        android:layout_gravity="center"
-                        android:scaleType="centerCrop"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"/>
+<!--                    <ImageView-->
+<!--                        android:src="@drawable/dot"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:layout_width="7dp"-->
+<!--                        android:layout_height="7dp"/>-->
 
                     <TextView
                         android:id="@+id/txt_explain_top"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
                         android:fontFamily="@font/battambang_regular"
-                        android:text="324 ជាតំណាងចែក"
+                        android:text=". 324 ជាតំណាងចែក"
                         android:textColor="#3A3D5F"
                         android:textSize="18sp" />
                 </LinearLayout>
@@ -250,17 +249,16 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:src="@drawable/dot"
-                        android:layout_gravity="center"
-                        android:scaleType="centerCrop"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"/>
+<!--                    <ImageView-->
+<!--                        android:src="@drawable/dot"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:layout_width="7dp"-->
+<!--                        android:layout_height="7dp"/>-->
                     <TextView
                         android:id="@+id/txt_explain_top_mid"
-                        android:text="3 ជាតួចែក"
+                        android:text=". 3 ជាតួចែក"
                         android:textColor="#3A3D5F"
-                        android:layout_marginStart="12dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -271,17 +269,16 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:src="@drawable/dot"
-                        android:layout_gravity="center"
-                        android:scaleType="centerCrop"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"/>
+<!--                    <ImageView-->
+<!--                        android:src="@drawable/dot"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:layout_width="7dp"-->
+<!--                        android:layout_height="7dp"/>-->
                     <TextView
                         android:id="@+id/txt_explain_bottom_mid"
-                        android:text="108 ជាផលចែក"
+                        android:text=". 108 ជាផលចែក"
                         android:textColor="#3A3D5F"
-                        android:layout_marginStart="12dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -292,17 +289,16 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:src="@drawable/dot"
-                        android:layout_gravity="center"
-                        android:scaleType="centerCrop"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"/>
+<!--                    <ImageView-->
+<!--                        android:src="@drawable/dot"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:layout_width="7dp"-->
+<!--                        android:layout_height="7dp"/>-->
                     <TextView
                         android:id="@+id/txt_explain_bottom"
-                        android:text="÷ ជាសញ្ញាចែក"
+                        android:text=". ÷ ជាសញ្ញាចែក"
                         android:textColor="#3A3D5F"
-                        android:layout_marginStart="12dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -315,17 +311,16 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:src="@drawable/dot"
-                        android:layout_gravity="center"
-                        android:scaleType="centerCrop"
-                        android:layout_width="7dp"
-                        android:layout_height="7dp"/>
+<!--                    <ImageView-->
+<!--                        android:src="@drawable/dot"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:layout_width="7dp"-->
+<!--                        android:layout_height="7dp"/>-->
                     <TextView
                         android:id="@+id/txt_explain_som_nol"
-                        android:text="2 ជាសំណល់"
+                        android:text=". 2 ជាសំណល់"
                         android:textColor="#3A3D5F"
-                        android:layout_marginStart="12dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"

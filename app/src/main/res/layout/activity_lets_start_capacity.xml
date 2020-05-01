@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/img_back"
@@ -132,7 +131,23 @@
             <!--                </LinearLayout>-->
             <!--            </LinearLayout>-->
 
-
+            <ImageView
+                android:src="@drawable/bottle_500ml"
+                android:layout_width="200dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:layout_height="250dp"
+                android:layout_marginStart="41dp"
+                android:layout_marginEnd="41dp"/>
+            <TextView
+                android:text="ដបមួយមានចំនុះផ្នុកបានចំនួន 500មីលីលីត្រ ដោយគេបញ្ចូលទឹកទៅក្នុងដបនោះចំនួន 500មីលីលីត្រ ។​ ដូចនេះ ដបទឹកសុទ្ធមានចំណុះ 500មីលីលីត្រ​ ។"
+                android:layout_marginStart="41dp"
+                android:layout_marginEnd="41dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/battambang_regular"
+                android:textColor="#3A3D5F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="41dp"
@@ -148,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="ទឹកសុទ្ធមួយដបចាក់ចូលទៅក្នុងបំពង់កែវក្រិតបាន 750មីលីត្រ។ ដូចនេះ ដបទឹកសុទ្ធមានចំណុះ 750មីលីត្រ។"
+                    android:text="មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ml"
                     android:layout_marginStart="10dp"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
@@ -160,7 +175,7 @@
                 android:id="@+id/shadow_id"
                 app:sl_shadowRadius="10dp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -20,7 +20,7 @@ public class Lets_start_capacity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lets_start_capacity);
+        setContentView(R.layout.measuring_capacity_in_liters);
 
         shadowLayout=findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {

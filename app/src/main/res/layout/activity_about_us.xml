@@ -39,7 +39,7 @@
         </RelativeLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginTop="57dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_corners"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -77,12 +77,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </ScrollView>
-            <ImageView
-                android:layout_gravity="center|bottom"
-                android:src="@drawable/below_text_about"
-                android:visibility="visible"
-                android:layout_width="226dp"
-                android:layout_height="3.5dp"/>
+
         </LinearLayout>
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/below_text_about"
+            android:visibility="visible"
+            android:layout_width="226dp"
+            android:layout_height="3.5dp"/>
     </LinearLayout>
 </LinearLayout>

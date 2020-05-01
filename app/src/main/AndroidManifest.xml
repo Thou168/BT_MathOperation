@@ -13,10 +13,29 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         <activity android:name=".Fragment_lesson.Addition.Learn_4" />
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub" />
+
+<!--        //decimal-->
         <activity android:name=".Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal_2" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal_3" />
+
+<!--        //capacity-->
         <activity android:name=".Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity_2" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity_3" />
+<!--        //weight-->
         <activity android:name=".Activity.Go_to.Lets_start.For_Weight.Lets_start_weight" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Weight.Kilogram" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Weight.Change_scale_from_kilogram_to_gram"/>
+        <activity android:name=".Activity.Go_to.Lets_start.For_Weight.Change_scale_from_gram_to_kilogram"/>
+
+<!--        //fraction-->
         <activity android:name=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_2" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_3" />
+        <activity android:name=".Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_4" />
+
+<!--        //div-->
         <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div_2" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Div.Lets_start_div_3" />
@@ -88,9 +107,6 @@
             android:name=".Activity.Start_Up"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".List_Lesson.Display.Play_Display"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Activity.Info"
             android:screenOrientation="portrait" />
         <activity
@@ -114,6 +130,7 @@
         <activity
             android:name=".Activity.Home_Activity"
             android:screenOrientation="portrait" />
+        <activity android:name=".Fragment_lesson.Sub.Main_sub"/>
         <activity
             android:name=".Splash_screen.Splashscreen"
             android:screenOrientation="portrait"

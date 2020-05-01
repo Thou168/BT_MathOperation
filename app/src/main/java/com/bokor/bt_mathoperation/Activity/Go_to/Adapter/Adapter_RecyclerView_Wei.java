@@ -9,6 +9,13 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_2;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_3;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_4;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Change_scale_from_gram_to_kilogram;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Change_scale_from_kilogram_to_gram;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Kilogram;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Lets_start_weight;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -42,14 +49,14 @@ public class Adapter_RecyclerView_Wei extends RecyclerView.Adapter<Adapter_Recyc
             idTextView.setBackgroundResource(R.drawable.gradient_weight);
             titleTextView = itemView.findViewById(R.id.textViewVersion);
             cardView = itemView.findViewById(R.id.card_view);
-            PushDownAnim.setPushDownAnimTo(cardView).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent go = new Intent(context, Lets_start_weight.class);
-                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(go);
-                }
-            });
+//            PushDownAnim.setPushDownAnimTo(cardView).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent go = new Intent(context, Lets_start_weight.class);
+//                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    context.startActivity(go);
+//                }
+//            });
         }
     }
 
@@ -68,6 +75,34 @@ public class Adapter_RecyclerView_Wei extends RecyclerView.Adapter<Adapter_Recyc
 
         holder.idTextView.setText(id.get(position));
         holder.titleTextView.setText(title.get(position));
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                if (position == 0) {
+                    Intent go = new Intent(context, Kilogram.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
+//                    Toast.makeText(context,"position 1",Toast.LENGTH_SHORT).show();
+                } else if (position == 1) {
+                    Intent go = new Intent(context, Lets_start_weight.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
+//                    Toast.makeText(context,"position 2",Toast.LENGTH_SHORT).show();
+                } else if (position == 2) {
+                    Intent go = new Intent(context, Change_scale_from_kilogram_to_gram.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
+//                    Toast.makeText(context,"position 3",Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent go = new Intent(context, Change_scale_from_gram_to_kilogram.class);
+                    go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(go);
+//                    Toast.makeText(context,"position 4",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        PushDownAnim.setPushDownAnimTo(holder.cardView);
     }
 
     @Override
