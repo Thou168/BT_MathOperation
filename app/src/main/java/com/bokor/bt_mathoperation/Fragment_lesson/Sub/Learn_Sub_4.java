@@ -28,6 +28,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_your_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
@@ -276,7 +277,7 @@ public class Learn_Sub_4 extends Fragment {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), Select_your_lesson.class));
+                startActivity(new Intent(getActivity(), Select_sub_lesson.class));
                 getActivity().finish();
 
             }

@@ -52,6 +52,7 @@ public class Learn_Sub extends Fragment {
     private TextView numTop,numButtom;
     //second dialog alert
     static final int TIME_OUT = 3000;
+    Learn_Sub learn_sub = this;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -230,6 +231,7 @@ public class Learn_Sub extends Fragment {
                         .beginTransaction()
                         .replace(R.id.flContainer,new Learn_Sub_2())
                         .addToBackStack(null)
+                        .remove(learn_sub)
                         .commit();
                 alertDialog.cancel();
             }

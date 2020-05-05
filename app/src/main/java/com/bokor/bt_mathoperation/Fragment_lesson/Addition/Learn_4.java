@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_your_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Main_sub;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -233,7 +234,7 @@ public class Learn_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_4.this, Select_your_lesson.class));
+                startActivity(new Intent(Learn_4.this, Main_sub.class));
                 finish();
 
             }
