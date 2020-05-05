@@ -29,9 +29,10 @@
             android:layout_marginTop="5dp"
             android:layout_marginStart="16dp"
             android:textSize="18sp"
-            android:layout_width="match_parent"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:gravity="start|center"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="វិធី"
             android:fontFamily="@font/battambang_regular"
             android:textColor="#565E61" />

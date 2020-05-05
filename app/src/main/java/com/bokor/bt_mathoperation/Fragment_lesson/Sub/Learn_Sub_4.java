@@ -21,7 +21,6 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,15 +28,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_your_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_4;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class Learn_Sub_2 extends Fragment {
+public class Learn_Sub_4 extends Fragment {
     private ImageView img_dif;
     private Button btn1,btn2,btn3,btn4;
     private TextView symbol;
@@ -60,7 +61,7 @@ public class Learn_Sub_2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.learn2, container, false);
+        return inflater.inflate(R.layout.learn_4, container, false);
     }
 
     @Override
@@ -82,7 +83,9 @@ public class Learn_Sub_2 extends Fragment {
         PushDownAnim.setPushDownAnimTo(btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                surprise_wrong();
+
+                btn1.setBackground(getActivity().getDrawable(R.drawable.button_state_sound));
+                showAlertDialogEnd();
             }
         });
         PushDownAnim.setPushDownAnimTo(btn2).setOnClickListener(new View.OnClickListener() {
@@ -100,14 +103,13 @@ public class Learn_Sub_2 extends Fragment {
         PushDownAnim.setPushDownAnimTo(btn4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                surprise_wrong();
 
-                btn4.setBackground(getActivity().getDrawable(R.drawable.button_state_sound));
-                showAlertDialogPositive();
             }
         });
 
 
-        num_result.setText(" ?");
+        num_result.setText("???");
 
 
         answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
@@ -123,18 +125,18 @@ public class Learn_Sub_2 extends Fragment {
     }
     private void id(View view){
         numTop=view.findViewById(R.id.num_top);
-        numTop.setText("12");
+        numTop.setText("890");
         numButtom=view.findViewById(R.id.num_bottom);
-        numButtom.setText(" 6");
+        numButtom.setText("120");
 
         btn1=view.findViewById(R.id.btn_1);
-        btn1.setText("10");
+        btn1.setText("770");
         btn2=view.findViewById(R.id.btn_2);
-        btn2.setText("8");
+        btn2.setText("670");
         btn3=view.findViewById(R.id.btn_3);
-        btn3.setText("7");
+        btn3.setText("870");
         btn4=view.findViewById(R.id.btn_4);
-        btn4.setText("6");
+        btn4.setText("570");
 
         img_dif=view.findViewById(R.id.img_back);
 
@@ -205,7 +207,6 @@ public class Learn_Sub_2 extends Fragment {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(Learn.this,"Try again",Toast.LENGTH_SHORT).show();
                 alertDialog.cancel();
             }
         });
@@ -236,14 +237,8 @@ public class Learn_Sub_2 extends Fragment {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(getActivity(), Learn_Sub_3.class));
-//                getActivity().finish();
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.flContainer,new Learn_Sub_3())
-                        .addToBackStack(null)
-                        .commit();
-                alertDialog.cancel();
+                startActivity(new Intent(getActivity(), Learn_2.class));
+                getActivity().finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
@@ -259,7 +254,39 @@ public class Learn_Sub_2 extends Fragment {
             public void onClick(View view) {
                 Toast.makeText(getActivity(),"Again",Toast.LENGTH_SHORT).show();
                 alertDialog.cancel();
-                btn4.setBackground(getActivity().getDrawable(R.drawable.button_state_info));
+                btn3.setBackground(getActivity().getDrawable(R.drawable.button_state_info));
+            }
+        });
+    }
+    private void showAlertDialogEnd() {
+        surprise_true();
+
+        dialogBuilder = new AlertDialog.Builder(getContext());
+        View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
+        TextView con = layoutView.findViewById(R.id.con);
+        TextView back = layoutView.findViewById(R.id.back);
+        gifImageView = layoutView.findViewById(R.id.gifImageView);
+        dialogBuilder.setView(layoutView);
+        dialogBuilder.setCancelable(false);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+
+        PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Select_your_lesson.class));
+                getActivity().finish();
+
+            }
+        });
+        PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(),"Back",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), Home_Activity.class));
+                getActivity().finish();
             }
         });
     }
