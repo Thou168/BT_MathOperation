@@ -88,7 +88,7 @@ public class Learn_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(btn4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAlertDialogPositive();
+                showAlertDialogEnd();
                 btn4.setBackground(getDrawable(R.drawable.button_state_sound));
             }
         });
@@ -212,6 +212,38 @@ public class Learn_4 extends AppCompatActivity {
                 Toast.makeText(Learn_4.this,"Again",Toast.LENGTH_SHORT).show();
                 alertDialog.cancel();
                 btn4.setBackground(getDrawable(R.drawable.button_state_info));
+            }
+        });
+    }
+    private void showAlertDialogEnd() {
+        surprise_true();
+
+        dialogBuilder = new AlertDialog.Builder(Learn_4.this);
+        View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
+        Button con = layoutView.findViewById(R.id.con);
+        Button back = layoutView.findViewById(R.id.back);
+        gifImageView = layoutView.findViewById(R.id.gifImageView);
+        dialogBuilder.setView(layoutView);
+        dialogBuilder.setCancelable(false);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+
+        PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Learn_4.this, Select_your_lesson.class));
+                finish();
+
+            }
+        });
+        PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Learn_4.this,"Back",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Learn_4.this, Home_Activity.class));
+                finish();
             }
         });
     }
