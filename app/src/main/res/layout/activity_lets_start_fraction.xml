@@ -181,7 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="រូបក បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៍មាន 1ចំណែកគឺ 1/6។"
+                    android:text="រូបក បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 1ចំណែកគឺ 1/6។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"
@@ -198,7 +198,7 @@
                     android:layout_centerInParent="true"
                     android:background="#3A3D5F" />
                 <TextView
-                    android:text="រូបខ បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៍មាន 5ចំណែកគឺ 5/6។"
+                    android:text="រូបខ បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 5ចំណែកគឺ 5/6។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"

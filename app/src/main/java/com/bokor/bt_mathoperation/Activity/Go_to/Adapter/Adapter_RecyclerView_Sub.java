@@ -5,16 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson;
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_2;
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_3;
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_4;
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Sub.Lets_start_sub;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_1;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_2;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_3;

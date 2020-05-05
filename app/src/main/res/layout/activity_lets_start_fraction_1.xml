@@ -200,6 +200,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/txt_kor"
                     android:text="រូប​ក បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 2 ចំណែកគឺ 2/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
@@ -210,7 +211,7 @@
                 <View
                     android:id="@+id/v_colume"
                     android:layout_width="1dp"
-                    android:layout_height="140dp"
+                    android:layout_height="180dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_gravity="center"
@@ -224,6 +225,7 @@
                     android:layout_height="1dp"
                     android:background="#3A3D5F" />
                 <TextView
+                    android:id="@+id/txt_khor"
                     android:text="រូប​ខ បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 1 ចំណែកគឺ 1/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"

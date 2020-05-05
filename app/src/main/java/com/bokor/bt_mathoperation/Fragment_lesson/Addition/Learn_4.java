@@ -220,8 +220,8 @@ public class Learn_4 extends AppCompatActivity {
 
         dialogBuilder = new AlertDialog.Builder(Learn_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
-        Button con = layoutView.findViewById(R.id.con);
-        Button back = layoutView.findViewById(R.id.back);
+        TextView con = layoutView.findViewById(R.id.con);
+        TextView back = layoutView.findViewById(R.id.back);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
         dialogBuilder.setCancelable(false);

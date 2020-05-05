@@ -32,16 +32,16 @@ public class Select_weight_lesson extends AppCompatActivity {
         id.clear();
         title.clear();
         id.add("01");
-        title.add("គីឡូរក្រាម");
+        title.add("គីឡូក្រាម");
 
         id.add("02");
-        title.add("ការថ្លឹងទម្ងន់ជា គីឡូរក្រាម ក្រាម ឬខាំ");
+        title.add("ការថ្លឹងទម្ងន់ជា គីឡូក្រាម ក្រាម ឬខាំ");
 
         id.add("03");
-        title.add("ការប្តូរខ្នាតពី គីឡូរក្រាម ទៅ ក្រាម");
+        title.add("ការប្តូរខ្នាតពី គីឡូក្រាម ទៅ ក្រាម");
 
         id.add("04");
-        title.add("ការប្តូរទម្ងន់ពី ក្រាម ទៅ គីឡួរក្រាម និងក្រាម");
+        title.add("ការប្តូរទម្ងន់ពី ក្រាម ទៅ គីឡូក្រាម និងក្រាម");
 
         rv = findViewById(R.id.my_recycler_view);
         rv.setHasFixedSize(true);

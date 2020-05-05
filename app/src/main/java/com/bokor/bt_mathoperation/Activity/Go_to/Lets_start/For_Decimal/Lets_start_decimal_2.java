@@ -65,7 +65,7 @@ public class Lets_start_decimal_2 extends AppCompatActivity {
 
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍ ៖ ការេមួយបែងជា100ចំណែកស្មើគ្នា។ យើងផាត់ពណ៏ 30ចំណែក។ តាងដោយ 30/100 ឬ 0.30 ។");
+        example.setText("ឧទាហរណ៍ ៖ ការេមួយបែងជា100ចំណែកស្មើគ្នា។ យើងផាត់ពណ៌ 30ចំណែក។ តាងដោយ 30/100 ឬ 0.30 ។");
         such_as=findViewById(R.id.such_as);
         such_as.setText(R.string.doch_nis_decimal_2);
         img=findViewById(R.id.img);

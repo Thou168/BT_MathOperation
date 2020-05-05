@@ -22,6 +22,14 @@
 
     <item android:state_pressed="true">
         <layer-list>
+            <item android:top="5px">
+                <shape>
+                    <padding android:top="2dp" />
+                    <gradient android:angle="270" android:endColor="#F50057" android:startColor="#F50057" />
+                    <corners android:radius="4dp" />
+                    <padding android:bottom="5dp" android:left="5dp" android:right="5dp" android:top="5dp" />
+                </shape>
+            </item>
             <item>
                 <shape>
                     <solid android:color="#F50057" />

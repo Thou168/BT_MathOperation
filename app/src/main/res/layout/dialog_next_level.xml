@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="304dp">
         <TextView
-            android:text="អ្នកបានបញ្ចប់កម្រិត ១"
+            android:text="អ្នកបានបញ្ចប់ហ្គេមមេរៀនទី 1"
             android:gravity="center"
             android:textSize="21sp"
             android:textColor="#3A3D5F"
@@ -29,7 +29,7 @@
             android:gravity="center"
             android:textSize="18sp"
             android:fontFamily="@font/battambang_regular"
-            android:text="តើអ្នកចង់បន្តទៅកម្រិតបន្ទាប់ ឬ ត្រឡប់ទៅកាន់មាតិកាដើមវិញ?"
+            android:text="តើអ្នកចង់បន្តទៅហ្គេមមេរៀនបន្ទាប់ ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?"
             android:layout_width="match_parent"
             android:layout_marginStart="33dp"
             android:layout_marginEnd="33dp"
@@ -43,19 +43,22 @@
             android:layout_marginEnd="33dp"
             app:numColumns="2"
             app:numRows="1">
-            <Button
+
+            <TextView
                 android:id="@+id/con"
-                android:text="កម្រិតបន្ទាប់"
+                android:text="មេរៀនបន្ទាប់"
                 android:textColor="@color/white"
+                android:gravity="center"
                 android:fontFamily="@font/battambang_regular"
                 android:textSize="21sp"
                 android:background="@drawable/button_state_list_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
-            <Button
+            <TextView
                 android:id="@+id/back"
-                android:text="ត្រឡប់"
+                android:text="មាតិកាដើម"
                 android:textColor="@color/white"
+                android:gravity="center"
                 android:fontFamily="@font/battambang_regular"
                 android:textSize="21sp"
                 android:background="@drawable/button_state_red"

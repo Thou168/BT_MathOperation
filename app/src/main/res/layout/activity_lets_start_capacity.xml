@@ -140,7 +140,7 @@
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"/>
             <TextView
-                android:text="ដបមួយមានចំនុះផ្នុកបានចំនួន 500មីលីលីត្រ ដោយគេបញ្ចូលទឹកទៅក្នុងដបនោះចំនួន 500មីលីលីត្រ ។​ ដូចនេះ ដបទឹកសុទ្ធមានចំណុះ 500មីលីលីត្រ​ ។"
+                android:text="ដបមួយមានចំនុះផ្ទុកបានចំនួន 500មីលីលីត្រ ដោយគេបញ្ចូលទឹកទៅក្នុងដបនោះចំនួន 500មីលីលីត្រ ។​ ដូចនេះ ដបទឹកសុទ្ធមានចំណុះ 500មីលីលីត្រ​ ។"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"

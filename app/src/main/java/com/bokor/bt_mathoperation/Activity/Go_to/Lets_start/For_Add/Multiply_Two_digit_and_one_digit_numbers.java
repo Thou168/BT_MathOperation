@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
@@ -16,7 +16,7 @@ import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import static com.thekhaeng.pushdownanim.PushDownAnim.MODE_SCALE;
 
-public class Lets_start_lesson extends AppCompatActivity {
+public class Multiply_Two_digit_and_one_digit_numbers extends AppCompatActivity {
 
     TextView start;
     ImageView img_back,sound;
@@ -39,7 +39,7 @@ public class Lets_start_lesson extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_lesson.this, Learn_1.class));
+                startActivity(new Intent(Multiply_Two_digit_and_one_digit_numbers.this, Learn_1.class));
             }
         });
         img_back=findViewById(R.id.img_back);

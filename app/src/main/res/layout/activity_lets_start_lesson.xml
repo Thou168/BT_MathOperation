@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson">
+    tools:context=".Activity.Go_to.Lets_start.For_Add.Multiply_Two_digit_and_one_digit_numbers">
 
     <ImageView
         android:id="@+id/img_back"

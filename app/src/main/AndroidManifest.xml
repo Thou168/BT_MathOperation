@@ -89,10 +89,10 @@
             android:name=".Activity.Symbol_Activity.Fraction_class"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson"
+            android:name=".Activity.Go_to.Lets_start.For_Add.Multiply_Two_digit_and_one_digit_numbers"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_2"
+            android:name=".Activity.Go_to.Lets_start.For_Add.The_sum_of_two_digit_and_one_digit_numbers_is_a_factor"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_3"

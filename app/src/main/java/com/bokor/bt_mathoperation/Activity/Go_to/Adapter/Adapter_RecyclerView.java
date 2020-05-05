@@ -5,13 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson;
-import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_2;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Multiply_Two_digit_and_one_digit_numbers;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.The_sum_of_two_digit_and_one_digit_numbers_is_a_factor;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_3;
 import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.Lets_start_lesson_4;
 import com.bokor.bt_mathoperation.R;
@@ -77,12 +76,12 @@ public class Adapter_RecyclerView extends RecyclerView.Adapter<Adapter_RecyclerV
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 if (position == 0) {
-                    Intent go = new Intent(context, Lets_start_lesson.class);
+                    Intent go = new Intent(context, Multiply_Two_digit_and_one_digit_numbers.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
 //                    Toast.makeText(context,"position 1",Toast.LENGTH_SHORT).show();
                 }else if (position == 1){
-                    Intent go = new Intent(context, Lets_start_lesson_2.class);
+                    Intent go = new Intent(context, The_sum_of_two_digit_and_one_digit_numbers_is_a_factor.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
 //                    Toast.makeText(context,"position 2",Toast.LENGTH_SHORT).show();
