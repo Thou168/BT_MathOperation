@@ -52,7 +52,7 @@ public class Lets_start_div_3 extends AppCompatActivity {
     }
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៏  42 ៖ 5 = ?");
+        example.setText("ឧទាហរណ៍  42 ៖ 5 = ?");
         num_top=findViewById(R.id.top_num);
         num_top.setText("42");
         top_div=findViewById(R.id.top_div);

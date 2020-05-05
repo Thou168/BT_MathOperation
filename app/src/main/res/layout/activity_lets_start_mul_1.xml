@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៏ ៖ រោងចក្រកាត់ដេរខោអាវមួយកន្លែងដេរខោអាវបាន 213 សម្រាប់ក្នុងមួយថ្ងៃ។ តើរយះពេល 6 ថ្ងៃរោងចក្រកាត់ដេរខោអាវបានប៉ុន្មានសម្រាប់?​ 213 × 6 = ? "
+                android:text="ឧទាហរណ៍ ៖ រោងចក្រកាត់ដេរខោអាវមួយកន្លែងដេរខោអាវបាន 213 សម្រាប់ក្នុងមួយថ្ងៃ។ តើរយះពេល 6 ថ្ងៃរោងចក្រកាត់ដេរខោអាវបានប៉ុន្មានសម្រាប់?​ 213 × 6 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"

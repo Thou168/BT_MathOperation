@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៏  324 ៖ 3 = ? "
+                android:text="ឧទាហរណ៍  324 ៖ 3 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"

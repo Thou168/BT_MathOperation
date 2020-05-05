@@ -51,7 +51,7 @@ public class Lets_start_sub_2 extends AppCompatActivity {
     }
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៏ ៖ 32 - 8 = ?");
+        example.setText("ឧទាហរណ៍ ៖ 32 - 8 = ?");
         carry_on=findViewById(R.id.carry_on);
 //        carry_on.setVisibility(View.VISIBLE);
         top_num=findViewById(R.id.top_num);

@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៏ ៖ គេមានស្វាយ 6ផ្លែចែកឪ្យក្មេងម្នាក់ៗ 2ផ្លែ។ តើគេចែកឪ្យក្មេងបានប៉ុន្មាននាក់? "
+                android:text="ឧទាហរណ៍ ៖ គេមានស្វាយ 6ផ្លែចែកឪ្យក្មេងម្នាក់ៗ 2ផ្លែ។ តើគេចែកឪ្យក្មេងបានប៉ុន្មាននាក់? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"

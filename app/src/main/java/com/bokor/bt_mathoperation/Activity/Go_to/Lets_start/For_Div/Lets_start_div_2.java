@@ -50,7 +50,7 @@ public class Lets_start_div_2 extends AppCompatActivity {
     }
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៏  45 ៖ 9 = ?");
+        example.setText("ឧទាហរណ៍  45 ៖ 9 = ?");
         num_top=findViewById(R.id.top_num);
         num_top.setText("45");
         top_div=findViewById(R.id.top_div);

@@ -93,7 +93,7 @@ public class Lets_start_lesson_2 extends AppCompatActivity {
 
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៏ ៖ 47 + 5 = ?");
+        example.setText("ឧទាហរណ៍ ៖ 47 + 5 = ?");
         carry_on=findViewById(R.id.carry_on);
         carry_on.setVisibility(View.VISIBLE);
         top_num=findViewById(R.id.top_num);

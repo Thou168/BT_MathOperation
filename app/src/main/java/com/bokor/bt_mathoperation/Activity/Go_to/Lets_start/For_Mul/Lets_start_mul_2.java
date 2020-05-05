@@ -50,7 +50,7 @@ public class Lets_start_mul_2 extends AppCompatActivity {
     }
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៏ ៖ ស្វាយមួយឡូមាន 12 ផ្លែ។ តើស្វាយ 6 ឡូមានប៉ុន្មានផ្លែ? 12 × 6 = ?");
+        example.setText("ឧទាហរណ៍ ៖ ស្វាយមួយឡូមាន 12 ផ្លែ។ តើស្វាយ 6 ឡូមានប៉ុន្មានផ្លែ? 12 × 6 = ?");
 //        carry_on=findViewById(R.id.carry_on);
 //        carry_on.setVisibility(View.GONE);
         top_num=findViewById(R.id.top_num);

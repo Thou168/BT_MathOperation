@@ -65,7 +65,8 @@
                 android:layout_marginTop="50dp"
                 android:visibility="visible"
                 android:layout_gravity="center"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
                 <TextView
                     android:id="@+id/text"
                     android:text=""

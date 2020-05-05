@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៏ ៖ 21 + 8 = ? "
+                android:text="ឧទាហរណ៍ ៖ 21 + 8 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:textColor="#3A3D5F"
