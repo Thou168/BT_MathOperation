@@ -54,7 +54,7 @@ public class Fraction_class extends AppCompatActivity {
         });
 
         back_fraction = findViewById(R.id.back_fraction);
-        back_fraction.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_fraction).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

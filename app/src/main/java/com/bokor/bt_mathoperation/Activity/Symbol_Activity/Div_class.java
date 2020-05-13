@@ -54,7 +54,7 @@ public class Div_class extends AppCompatActivity {
             }
         });
         back_div = findViewById(R.id.back_div);
-        back_div.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_div).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

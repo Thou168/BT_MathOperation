@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_3;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -41,7 +42,7 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_lesson_3.this, Learn_1.class));
+                startActivity(new Intent(Lets_start_lesson_3.this, Learn_3.class));
             }
         });
         img_back=findViewById(R.id.img_back);

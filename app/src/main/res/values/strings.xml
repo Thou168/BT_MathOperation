@@ -57,6 +57,7 @@
     <string name="fraction_such_as_1"><![CDATA[យើងសរសេរ 1/4 < 2/4 < 3/4 ។]]></string>
     <string name="fraction_2"><![CDATA[យើងសរសេរ 1/6 < 5/6 ឬ 5/6 > 1/6 ។]]></string>
     <string name="jom_nam"><u>ចំណាំ</u></string>
+    <string name="jom_nout"><u>ចំណោទ</u></string>
     <string name="fraction_add1"><![CDATA[ដោយ 1 < 2]]></string>
     <string name="fraction_add2"><![CDATA[យើងបាន 1/4 + 2/4 = 3/4]]></string>
     <string name="fraction_sub"><![CDATA[យើងបាន 2/4 - 1/4 = 1/4]]></string>

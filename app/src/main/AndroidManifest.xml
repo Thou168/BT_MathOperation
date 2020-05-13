@@ -13,6 +13,10 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         <activity android:name=".Fragment_lesson.Addition.Learn_4" />
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub" />
+        <activity android:name=".Fragment_lesson.Sub.Learn_Sub_2" />
+        <activity android:name=".Fragment_lesson.Sub.Learn_Sub_3" />
+        <activity android:name=".Fragment_lesson.Sub.Learn_Sub_4" />
+        <activity android:name=".Fragment_lesson.Sub.Learn_Sub_Question" />
 
 <!--        //decimal-->
         <activity android:name=".Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal" />
@@ -130,7 +134,6 @@
         <activity
             android:name=".Activity.Home_Activity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Fragment_lesson.Sub.Main_sub"/>
         <activity
             android:name=".Splash_screen.Splashscreen"
             android:screenOrientation="portrait"

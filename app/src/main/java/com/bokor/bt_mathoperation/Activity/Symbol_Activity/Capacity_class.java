@@ -54,7 +54,7 @@ public class Capacity_class extends AppCompatActivity {
         });
 
         back_capacity = findViewById(R.id.back_capacity);
-        back_capacity.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_capacity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

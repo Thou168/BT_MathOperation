@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -40,7 +41,7 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(The_sum_of_two_digit_and_one_digit_numbers_is_a_factor.this, Learn_1.class));
+                startActivity(new Intent(The_sum_of_two_digit_and_one_digit_numbers_is_a_factor.this, Learn_2.class));
             }
         });
         img_back=findViewById(R.id.img_back);

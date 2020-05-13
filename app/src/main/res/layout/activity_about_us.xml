@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="42dp"
-    android:paddingEnd="42dp"
-    android:paddingTop="42dp"
-    android:paddingBottom="42dp"
-    android:id="@+id/rl_slide_down"
-    android:background="#00000000">
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:id="@+id/rl_slide_down">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,26 +20,16 @@
             android:layout_height="wrap_content">
             <ImageButton
                 android:id="@+id/img_back"
-                android:src="@drawable/exit_img"
-                android:scaleType="fitCenter"
                 android:visibility="visible"
-                android:background="@drawable/button_state_back"
+                android:background="@drawable/back_red_new"
                 android:layout_width="52dp"
                 android:layout_height="42dp"/>
-<!--            <ImageButton-->
-<!--                android:id="@+id/img_back_bk"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:src="@drawable/exit_img"-->
-<!--                android:scaleType="fitCenter"-->
-<!--                android:visibility="visible"-->
-<!--                android:background="@drawable/button_state_back"-->
-<!--                android:layout_width="52dp"-->
-<!--                android:layout_height="42dp"/>-->
         </RelativeLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_corners"
+            android:weightSum="3"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
@@ -54,37 +43,37 @@
             <ImageView
                 android:id="@+id/img_sipar"
                 android:layout_gravity="top|center"
+                android:layout_marginTop="20dp"
                 android:visibility="gone"
                 android:src="@drawable/logo_sipar"
                 android:layout_width="87dp"
                 android:layout_height="90dp"/>
-            <ScrollView
-                android:id="@+id/sv"
+            <RelativeLayout
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
-                android:scrollbars="none"
-                android:layout_marginTop="50dp"
-                android:visibility="visible"
-                android:layout_gravity="center"
-                android:layout_height="match_parent"
-                android:paddingBottom="20dp">
+                android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/text"
                     android:text=""
                     android:textSize="16sp"
+                    android:layout_marginBottom="25dp"
+                    android:paddingBottom="20dp"
+                    android:scrollbars="vertical|none"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/battambang_regular"
                     android:textColor="#3A3D5F"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-            </ScrollView>
-
+                <ImageView
+                    android:id="@+id/img_below"
+                    android:src="@drawable/below_text_about"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="226dp"
+                    android:layout_height="3.5dp"/>
+            </RelativeLayout>
         </LinearLayout>
-        <ImageView
-            android:layout_gravity="center"
-            android:src="@drawable/below_text_about"
-            android:visibility="visible"
-            android:layout_width="226dp"
-            android:layout_height="3.5dp"/>
     </LinearLayout>
 </LinearLayout>

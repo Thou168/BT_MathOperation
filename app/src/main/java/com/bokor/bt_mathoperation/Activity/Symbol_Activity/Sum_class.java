@@ -54,7 +54,7 @@ public class Sum_class extends AppCompatActivity {
         });
 
         back_sum=findViewById(R.id.back_sum);
-        back_sum.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_sum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

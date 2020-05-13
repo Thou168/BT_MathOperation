@@ -56,7 +56,7 @@ public class Decimal_class extends AppCompatActivity {
         });
 
         back_decimal = findViewById(R.id.back_decimal);
-        back_decimal.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_decimal).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

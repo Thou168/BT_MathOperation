@@ -54,7 +54,7 @@ public class Select_weight_lesson extends AppCompatActivity {
         bk.setBackgroundColor(getResources().getColor(R.color.bg_weight));
 
         back=findViewById(R.id.back);
-        back.setImageResource(R.drawable.back_weight);
+        back.setImageResource(R.drawable.back_white_new);
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

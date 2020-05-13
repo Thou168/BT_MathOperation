@@ -42,9 +42,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="359dp"
-                android:layout_height="233dp"
-                android:src="@drawable/center_pic"/>
+                android:layout_width="93dp"
+                android:layout_height="91dp"
+                android:src="@drawable/sponsor_3"/>
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp"/>
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="91dp"
+                android:src="@drawable/sponsor_4"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+            <ImageView
+                android:layout_width="119dp"
+                android:layout_height="116dp"
+                android:src="@drawable/sponsor_11"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rl_3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="93dp"
+                android:layout_height="91dp"
+                android:src="@drawable/sponsor_9"/>
+            <View
+                android:layout_width="41dp"
+                android:layout_height="1dp"/>
+            <ImageView
+                android:layout_width="144dp"
+                android:layout_height="142dp"
+                android:src="@drawable/sponsor_8"/>
         </LinearLayout>
 
         <LinearLayout
@@ -56,22 +87,21 @@
             <ImageView
                 android:layout_width="73dp"
                 android:layout_height="71dp"
-                android:layout_marginEnd="20dp"
                 android:src="@drawable/sponsor_6"/>
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"/>
             <ImageView
                 android:layout_width="74dp"
                 android:layout_height="71dp"
-                android:layout_marginEnd="20dp"
                 android:src="@drawable/sponsor_10"/>
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"/>
             <ImageView
                 android:layout_width="73dp"
                 android:layout_height="71dp"
-                android:layout_marginEnd="20dp"
                 android:src="@drawable/sponsor_5"/>
-            <ImageView
-                android:layout_width="74dp"
-                android:layout_height="71dp"
-                android:src="@drawable/sponsor_7"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
-import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Main_sub;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -27,7 +26,7 @@ public class Lets_start_sub extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_sub.this, Main_sub.class));
+                startActivity(new Intent(Lets_start_sub.this, Learn_Sub.class));
             }
         });
         img_back=findViewById(R.id.img_back);

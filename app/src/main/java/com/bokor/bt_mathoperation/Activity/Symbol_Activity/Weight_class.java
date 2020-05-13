@@ -56,7 +56,7 @@ public class Weight_class extends AppCompatActivity {
         });
 
         back_weight = findViewById(R.id.back_weight);
-        back_weight.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_weight).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

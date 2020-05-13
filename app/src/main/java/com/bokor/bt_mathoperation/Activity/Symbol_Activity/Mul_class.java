@@ -54,7 +54,7 @@ public class Mul_class extends AppCompatActivity {
             }
         });
         back_mul=findViewById(R.id.back_mul);
-        back_mul.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_mul).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

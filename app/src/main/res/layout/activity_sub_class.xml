@@ -9,8 +9,7 @@
 
     <ImageView
         android:id="@+id/back_sub"
-        android:src="@drawable/back_sub"
-        android:background="@drawable/button_state_rating"
+        android:src="@drawable/back_white_new"
         android:scaleType="fitCenter"
         android:layout_marginTop="32dp"
         android:layout_marginStart="42dp"

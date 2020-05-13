@@ -79,7 +79,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
 
     private void call_id(){
         back=findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                onBackPressed();

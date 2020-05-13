@@ -53,7 +53,7 @@ public class Select_sub_lesson extends AppCompatActivity {
         bk=findViewById(R.id.bk_id);
         bk.setBackgroundColor(getResources().getColor(R.color.bg_sub));
         back=findViewById(R.id.back);
-        back.setImageResource(R.drawable.back_sub);
+        back.setImageResource(R.drawable.back_white_new);
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

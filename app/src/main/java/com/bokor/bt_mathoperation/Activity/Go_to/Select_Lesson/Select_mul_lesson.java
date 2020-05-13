@@ -53,7 +53,7 @@ public class Select_mul_lesson extends AppCompatActivity {
         bk.setBackgroundColor(getResources().getColor(R.color.bg_mul));
 
         back=findViewById(R.id.back);
-        back.setImageResource(R.drawable.back_mul);
+        back.setImageResource(R.drawable.back_white_new);
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

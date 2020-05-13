@@ -23,10 +23,10 @@ public class About_us extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        rl=findViewById(R.id.rl_slide_down);
+//        rl=findViewById(R.id.rl_slide_down);
 
-        sv=findViewById(R.id.sv);
-        sv.setScrollbarFadingEnabled(false);
+//        sv=findViewById(R.id.sv);
+//        sv.setScrollbarFadingEnabled(false);
 
 //        img_back=findViewById(R.id.img_back);
 //        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {

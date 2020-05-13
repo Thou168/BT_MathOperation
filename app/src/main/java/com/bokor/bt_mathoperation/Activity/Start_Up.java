@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -40,6 +42,7 @@ public class Start_Up extends AppCompatActivity {
     LinearLayout bk,sp;
     RelativeLayout rl;
     AlertDialog.Builder dialogBuilder;
+    Dialog dialog;
     ShimmerTextView sm;
     Shimmer shimmer;
     ShimmerFrameLayout shimmerFrameLayout;
@@ -116,63 +119,56 @@ public class Start_Up extends AppCompatActivity {
     }
 
     private void dialog_info_bokor(){
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Start_Up.this);
-
+//        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Start_Up.this,R.style.CustomDialog);
+        dialog = new Dialog(this,R.style.CustomDialog);
         View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us, null);
-//        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
         TextView textView = layoutView.findViewById(R.id.text);
         ImageView img_view = layoutView.findViewById(R.id.img_bokor);
         img_view.setVisibility(View.VISIBLE);
         img_view.setImageDrawable(getDrawable(R.drawable.logo_bokor));
+        textView.setMovementMethod(new ScrollingMovementMethod());
         textView.setText("BOKOR Technology Co., Ltd. is a professional software development, network infrastructure integration and IT consulting service company. We understand the gap between technology and business and their correlations. We ensure quality service and solution delivery to meet customers’ need, budget and time. We have strong passion in serving software service sector and commit to provide best-fit technology which is seamlessly integrated into customer working environment.");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
         img_back.setVisibility(View.VISIBLE);
-//        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back);
-//        img_back_bk.setVisibility(View.VISIBLE);
 //        dialogBuilder.setCancelable(false);
-        dialogBuilder.setView(layoutView);
-        final AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.Slide_bokor;
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        dialog.setContentView(layoutView);
+//        final AlertDialog alertDialog = dialogBuilder.create();
+//
+        PushDownAnim.setPushDownAnimTo(img_back).setScale(PushDownAnim.MODE_SCALE,0.80f).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                alertDialog.cancel();
+                dialog.dismiss();
             }
         });
-        alertDialog.show();
-
+        dialog.show();
     }
     private void dialog_info_sipar(){
-        dialogBuilder = new AlertDialog.Builder(Start_Up.this);
+//        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Start_Up.this,R.style.CustomDialog);
+        dialog = new Dialog(this,R.style.CustomDialog);
         View layoutView = getLayoutInflater().inflate(R.layout.activity_about_us,null);
 //        RelativeLayout rl = layoutView.findViewById(R.id.rl_slide_down);
         TextView textView = layoutView.findViewById(R.id.text);
         ImageView img_view = layoutView.findViewById(R.id.img_sipar);
         img_view.setVisibility(View.VISIBLE);
         img_view.setImageDrawable(getDrawable(R.drawable.logo_sipar));
+        textView.setMovementMethod(new ScrollingMovementMethod());
         textView.setText("ស៊ីប៉ាគឺជាអង្គការសាមគ្គីភាពអន្តរជាតិមួយដែលត្រូវបានបង្កើតឡើងនៅឆ្នាំ១៩៨២នៅប្រទេសបារាំងដើម្បីជួយជនភៀសខ្លួនមកពីអាស៊ីអាគ្នេយ៍តាមរយៈកម្មវិធីអប់រំ។\n" +
                 "នៅឆ្នាំ១៩៩១ស៊ីប៉ាបានមកប្រទេសកម្ពុជាហើយចូលរួមក្នុងការស្តារនិងអភិវឌ្ឍប្រទេសដោយពង្រឹងប្រព័ន្ធអប់រំរបស់ខ្លួន។\n" +
                 "សព្វថ្ងៃស៊ីប៉ាគឺជាតួអង្គសំខាន់មួយក្នុងវិស័យអប់រំដោយប្រយុទ្ធប្រឆាំងនឹងអក្ខរកម្មក្នុងចំណោមយុវជននិងមនុស្សពេញវ័យតាមរយៈការផ្សព្វផ្សាយនិងការលើកកម្ពស់សៀវភៅនិងការអា\n" +
                 "ដូច្នេះតាំងពី២០ឆ្នាំមកស៊ីប៉ាបានបង្កើតបណ្តាញកន្លែងផ្សេងៗគ្នាសម្រាប់ការអានថេរនិងចល័តដើម្បីទ្រទ្រង់ការអភិវឌ្ឍន៍ការអាននៅកម្ពុជា៖បណ្ណាល័យថេរនៅសាលាបឋមសិក្សាឬក្នុងពន្ធនាគារបណ្ណល័យចល័តនៅតាមសហគមន៍សាលាមត្តេយ្យឬមណ្ឌលកុមារកំព្រានៅភ្នំពេញ។ កណ្តាលនិងកំពង់ស្ពឺជាមជ្ឈមណ្ឌលសម្រាប់ស្ត្រីនិងកុមារងាយរងគ្រោះឬសូម្បីតែមជ្ឈមណ្ឌលស្តារនីតិសម្បទាកុមារពិការ។\n");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
-//        ImageButton img_back_bk = layoutView.findViewById(R.id.img_back_bk);
-//        img_back_bk.setVisibility(View.GONE);
         img_back.setVisibility(View.VISIBLE);
 //        dialogBuilder.setCancelable(false);
-        dialogBuilder.setView(layoutView);
-        final AlertDialog alertDialog = dialogBuilder.create();
-        alertDialog.getWindow().getAttributes().windowAnimations = R.style.Slide_sipar;
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(layoutView);
+//        final AlertDialog alertDialog = dialogBuilder.create();
 
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(img_back).setScale(PushDownAnim.MODE_SCALE,0.80f).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                alertDialog.cancel();
+                dialog.cancel();
             }
         });
-        alertDialog.show();
+        dialog.show();
     }
 
     @Override

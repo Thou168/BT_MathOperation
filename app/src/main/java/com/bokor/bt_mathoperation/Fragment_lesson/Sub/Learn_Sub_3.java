@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
@@ -34,125 +35,226 @@ import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
 import pl.droidsonroids.gif.GifImageView;
 
-public class Learn_Sub_3 extends Fragment {
-    private ImageView img_dif;
-    private Button btn1,btn2,btn3,btn4;
-    private TextView symbol;
-    private AlertDialog.Builder dialogBuilder;
-    private AlertDialog alertDialog;
-    private GifImageView gifImageView;
-    private TextView num_result,answer;
-    private EmojiRainLayout container;
-    private ImageView img_hand;
-    private Vibrator vibe;
-    private MediaPlayer mp1;
-    private TextView numTop,numButtom;
-//    second dialog alert
-    static final int TIME_OUT = 3000;
+public class Learn_Sub_3 extends AppCompatActivity {
+    TextView qt_top,qt_bottom,qt_result;
+    TextView symbol;
+    TextView txt_level_current;
+    int level_plus = 1;
+    TextView current_lv1,current_lv2,current_lv3,current_lv4;
+    Random random;
+
+    ImageView img_back;
+    Button btn1,btn2,btn3,btn4;
+    AlertDialog.Builder dialogBuilder;
+    AlertDialog alertDialog;
+    GifImageView gifImageView;
+    TextView num_result,answer;
+    EmojiRainLayout container;
+
+    Vibrator vibe;
+    MediaPlayer mp1,game_over;
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+        setContentView(R.layout.learn);
+        symbol = findViewById(R.id.symbol);
+        symbol.setText("-");
+        qt_top=findViewById(R.id.num_top);
+        qt_bottom=findViewById(R.id.num_bottom);
+        qt_result=findViewById(R.id.num_result);
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.learn3, container, false);
-    }
+        current_lv1=findViewById(R.id.current_level1);
+        current_lv2=findViewById(R.id.current_level2);
+        current_lv3=findViewById(R.id.current_level3);
+        current_lv4=findViewById(R.id.current_level4);
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        id(view);
-        //onClick
-        PushDownAnim.setPushDownAnimTo(img_dif).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
-                exit_dialog();
-            }
-        });
+        txt_level_current=findViewById(R.id.txt_level_current);
 
-        mp1=MediaPlayer.create(getActivity(), R.raw.hand_clap);
-        vibe = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-        PushDownAnim.setPushDownAnimTo(btn1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                surprise_wrong();
-            }
-        });
-        PushDownAnim.setPushDownAnimTo(btn2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                surprise_wrong();
-            }
-        });
-        PushDownAnim.setPushDownAnimTo(btn3).setOnClickListener(new View.OnClickListener() {
+
+        img_back=findViewById(R.id.img_back);
+        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                btn3.setBackground(getActivity().getDrawable(R.drawable.button_state_sound));
-                showAlertDialogPositive();
+                onBackPressed();
             }
         });
-        PushDownAnim.setPushDownAnimTo(btn4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                surprise_wrong();
-
-            }
-        });
-
-
-        num_result.setText("???");
-
-
-        answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
-        Animation animation2 = AnimationUtils.loadAnimation(getActivity(), R.anim.alpha_scale_animation);
+        btn1=findViewById(R.id.btn_1);
+        btn2=findViewById(R.id.btn_2);
+        btn3=findViewById(R.id.btn_3);
+        btn4=findViewById(R.id.btn_4);
+        PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
+        ImageView img_hand = findViewById(R.id.img_hand);
+        Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
         animation2.setInterpolator(new LinearInterpolator());
         img_hand.startAnimation(animation2);
         img_hand.setVisibility(View.VISIBLE);
-//        LinearLayout ln_hand = view.findViewById(R.id.ln_hand);
-//        ln_hand.setVisibility(View.GONE);
+
+        container=findViewById(R.id.container);
+
+        //sound game
+        mp1=MediaPlayer.create(this, R.raw.hand_clap);
+        game_over=MediaPlayer.create(this,R.raw.game_over);
 
 
+        vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+        answer=findViewById(R.id.answer);
+        answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        showNextQuiz();
 
     }
-    private void id(View view){
-        numTop=view.findViewById(R.id.num_top);
-        numTop.setText("160");
-        numButtom=view.findViewById(R.id.num_bottom);
-        numButtom.setText(" 60");
+    private void showNextQuiz(){
+        txt_level_current.setText("កម្រិត "+level_plus);
 
-        btn1=view.findViewById(R.id.btn_1);
-        btn1.setText("110");
-        btn2=view.findViewById(R.id.btn_2);
-        btn2.setText("108");
-        btn3=view.findViewById(R.id.btn_3);
-        btn3.setText("100");
-        btn4=view.findViewById(R.id.btn_4);
-        btn4.setText("90");
+        if (level_plus==1){
+            current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+        }else if (level_plus==2){
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+        }else if (level_plus==3){
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+        }else if (level_plus==4){
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+        }
 
-        img_dif=view.findViewById(R.id.img_back);
+        random = new Random();
+        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
+        String str_bottom = String.valueOf(random.nextInt(99 - 10) + 10);
+//        String letter = Character.toString(str.charAt(1));
+//        int in = Integer.parseInt(letter);
+//        int int2 = random.nextInt((9-in) - 0 + 1) + 0;
+//        final int result = Integer.parseInt(str) - int2;
 
-        answer=view.findViewById(R.id.answer);
-        num_result=view.findViewById(R.id.num_result);
-        container=view.findViewById(R.id.container);
-        img_hand = view.findViewById(R.id.img_hand);
-        symbol=view.findViewById(R.id.symbol);
-        symbol.setText("-");
+        int a = Math.max(Integer.parseInt(str), Integer.parseInt(str_bottom));
+        int b = Math.min(Integer.parseInt(str), Integer.parseInt(str_bottom));
+        final int result = a - b;
+
+        //Question
+        qt_top.setText(String.valueOf(a));
+        qt_bottom.setText(String.valueOf(b));
+        qt_result.setText(String.valueOf(result));
+        //
+
+        System.out.println("-------- "+result);
+//       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
+//        System.out.println("======"+a+"==="+in);
+        ArrayList<Integer> nelist = new ArrayList<>();
+        while (nelist.size()<4){
+            int num = random.nextInt((result+2) - (result-2)) + (result-2);
+            if (!nelist.contains(num)){
+                nelist.add(num);
+            }
+        }
+        ArrayList<Integer> btnList = new ArrayList<>();
+        nelist.add(result);
+        ArrayList<Button> tv_list = new ArrayList<Button>();
+        tv_list.add(btn1);
+        tv_list.add(btn2);
+        tv_list.add(btn3);
+        tv_list.add(btn4);
+        while (btnList.size()<4){
+            for (int i = 0;i<nelist.size();i++){
+                if (!btnList.contains(nelist.get(i))){
+                    btnList.add(nelist.get(i));
+                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
+                    System.out.println("======"+btnList.get(i));
+                }
+            }
+            Collections.sort(btnList);
+        }
+        String value = btn1.getText().toString();
+        final int num1 = Integer.parseInt(value);
+        String value2 = btn2.getText().toString();
+        final int num2 = Integer.parseInt(value2);
+        String value3 = btn3.getText().toString();
+        final int num3 = Integer.parseInt(value3);
+        String value4 = btn4.getText().toString();
+        final int num4 = Integer.parseInt(value4);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(num1 == result){
+                    qt_result.setVisibility(View.VISIBLE);
+                    if (level_plus==4){
+                        showAlertDialogEnd();
+                    }else {
+                        showAlertDialogPositive();
+                    }
+                }else{
+                    surprise_wrong();
+                }
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(num2 == result){
+                    qt_result.setVisibility(View.VISIBLE);
+                    if (level_plus==4){
+                        showAlertDialogEnd();
+//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
+                    }else {
+                        showAlertDialogPositive();
+//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
+                    }
+                }else{
+                    surprise_wrong();
+                }
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(num3 == result){
+                    qt_result.setVisibility(View.VISIBLE);
+                    if (level_plus==4){
+                        showAlertDialogEnd();
+//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
+                    }else {
+                        showAlertDialogPositive();
+//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
+                    }
+                }else{
+                    surprise_wrong();
+                }
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(num4 == result){
+                    qt_result.setVisibility(View.VISIBLE);
+                    if (level_plus==4){
+                        showAlertDialogEnd();
+//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
+                    }else {
+                        showAlertDialogPositive();
+//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
+                    }
+                }else{
+                    surprise_wrong();
+                }
+            }
+        });
     }
 
     private void surprise_wrong(){
         container.stopDropping();
         showAlertDialogNegative();
         vibe.vibrate(200);
+        game_over.start();
+//        game_over.setLooping(true);
     }
+
     private void surprise_true(){
         mp1.start();
+//        mp1.setLooping(true);
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
@@ -172,15 +274,17 @@ public class Learn_Sub_3 extends Fragment {
         container.setDropFrequency(500);
         //end
     }
-    private void exit_dialog(){
-        final Dialog dialogBuilder = new Dialog(getActivity(),R.style.CustomDialog);
+
+    @Override
+    public void onBackPressed() {
+        final Dialog dialogBuilder = new Dialog(Learn_Sub_3.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
         Button yes = dialogBuilder.findViewById(R.id.yes);
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().finish();
+                finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
@@ -191,13 +295,15 @@ public class Learn_Sub_3 extends Fragment {
         });
         dialogBuilder.show();
     }
+
     private void showAlertDialogNegative() {
-        dialogBuilder = new AlertDialog.Builder(getActivity());
+        dialogBuilder = new AlertDialog.Builder(Learn_Sub_3.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new_fail, null);
         ImageButton dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
         ImageButton home = layoutView.findViewById(R.id.home);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
+//        dialogBuilder.setCancelable(false);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowFalse;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -205,27 +311,27 @@ public class Learn_Sub_3 extends Fragment {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                bk_normal();
                 alertDialog.cancel();
             }
         });
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"Home",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(), Home_Activity.class));
-                getActivity().finish();
+                startActivity(new Intent(Learn_Sub_3.this, Home_Activity.class));
+                finish();
             }
         });
     }
     private void showAlertDialogPositive() {
         surprise_true();
-
-        dialogBuilder = new AlertDialog.Builder(getActivity());
+        dialogBuilder = new AlertDialog.Builder(Learn_Sub_3.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new, null);
         ImageButton dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
         ImageButton home = layoutView.findViewById(R.id.home);
         ImageButton again = layoutView.findViewById(R.id.again);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
+//        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
@@ -235,31 +341,67 @@ public class Learn_Sub_3 extends Fragment {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(getActivity(), Learn_2.class));
-//                getActivity().finish();
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.flContainer,new Learn_Sub_4())
-                        .addToBackStack(null)
-                        .commit();
+                level_plus++;
+                qt_result.setVisibility(View.INVISIBLE);
+                showNextQuiz();
+                bk_normal();
                 alertDialog.cancel();
             }
         });
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"Home",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(), Home_Activity.class));
-                getActivity().finish();
+                startActivity(new Intent(Learn_Sub_3.this, Home_Activity.class));
+                finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"Again",Toast.LENGTH_SHORT).show();
+                bk_normal();
                 alertDialog.cancel();
-                btn3.setBackground(getActivity().getDrawable(R.drawable.button_state_info));
             }
         });
+    }
+
+    private void showAlertDialogEnd() {
+        surprise_true();
+
+        dialogBuilder = new AlertDialog.Builder(Learn_Sub_3.this);
+        View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
+        TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
+        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
+        TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
+        lesson_exit_lv.setText("វិធីដកលេខពីរខ្ទង់នឹងពីរខ្ទង់គ្មានខ្ចី");
+        TextView con = layoutView.findViewById(R.id.con);
+        TextView back = layoutView.findViewById(R.id.back);
+        gifImageView = layoutView.findViewById(R.id.gifImageView);
+        dialogBuilder.setView(layoutView);
+//        dialogBuilder.setCancelable(false);
+        alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
+
+        PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Learn_Sub_3.this, Learn_Sub_4.class));
+                finish();
+
+            }
+        });
+        PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Learn_Sub_3.this, Home_Activity.class));
+                finish();
+            }
+        });
+    }
+
+    private void bk_normal(){
+        container.stopDropping();
+        qt_result.setVisibility(View.INVISIBLE);
     }
 }

@@ -13,7 +13,6 @@ import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
-import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Main_sub;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -48,13 +47,13 @@ public class Sub_class extends AppCompatActivity {
 //                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 //                rl_practice.startAnimation(animFadein);
 
-                startActivity(new Intent(getApplicationContext(), Main_sub.class));
+                startActivity(new Intent(getApplicationContext(), Learn_Sub.class));
 //                finish();
             }
         });
 //
         back_sub=findViewById(R.id.back_sub);
-        back_sub.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(back_sub).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

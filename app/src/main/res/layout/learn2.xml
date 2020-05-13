@@ -62,7 +62,6 @@
                 <com.dd.ShadowLayout
                     app:sl_shadowRadius="5dp"
                     app:sl_cornerRadius="100dp"
-                    app:sl_shadowColor="@color/green_col"
                     android:layout_marginStart="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -227,8 +226,9 @@
                         android:layout_height="113.05dp"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:textSize="64sp"
+                        android:textSize="50sp"
                         android:background="@drawable/button_state_info"
+                        android:fontFamily="@font/battambang_regular"
                         android:lines="2"
                         android:text="242"
                         android:textColor="@color/white" />
@@ -238,8 +238,9 @@
                         android:layout_height="113.05dp"
                         android:layout_margin="4dp"
                         android:layout_weight="1 "
-                        android:textSize="64sp"
+                        android:textSize="50sp"
                         android:background="@drawable/button_state_info"
+                        android:fontFamily="@font/battambang_regular"
                         android:lines="2"
                         android:text="243"
                         android:textColor="@color/white" />
@@ -254,8 +255,9 @@
                         android:layout_height="113.05dp"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:textSize="64sp"
+                        android:textSize="50sp"
                         android:background="@drawable/button_state_info"
+                        android:fontFamily="@font/battambang_regular"
                         android:lines="2"
                         android:text="244"
                         android:textColor="@color/white" />
@@ -265,8 +267,9 @@
                         android:layout_height="113.05dp"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:textSize="64sp"
+                        android:textSize="50sp"
                         android:background="@drawable/button_state_info"
+                        android:fontFamily="@font/battambang_regular"
                         android:lines="2"
                         android:text="245"
                         android:textColor="@color/white" />

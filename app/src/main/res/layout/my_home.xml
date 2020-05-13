@@ -22,8 +22,7 @@
         android:id="@+id/back"
         android:layout_marginStart="42dp"
         android:layout_marginTop="34dp"
-        android:background="@drawable/button_state_back"
-        android:src="@drawable/back_white"
+        android:src="@drawable/back_red_new"
         android:scaleType="fitCenter"
         android:layout_width="52dp"
         android:layout_height="42dp"/>
@@ -266,7 +265,7 @@
                     android:layout_width="130dp"
                     android:layout_height="101.27dp"
                     android:background="@drawable/button_state_decimal"
-                    android:padding="32dp"
+                    android:padding="34dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/one_point_eight"
                     android:text="@string/div"

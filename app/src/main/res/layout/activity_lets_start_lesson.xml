@@ -9,10 +9,8 @@
 
     <ImageView
         android:id="@+id/img_back"
-        android:src="@drawable/back_white"
-        android:padding="10dp"
+        android:src="@drawable/back_red_new"
         android:scaleType="fitCenter"
-        android:background="@drawable/button_state_red"
         android:layout_marginTop="32dp"
         android:layout_marginStart="42dp"
         android:layout_width="52dp"
@@ -191,7 +189,7 @@
                 android:layout_width="match_parent"
                 android:paddingBottom="5dp"
                 android:layout_marginTop="19dp"
-                android:layout_height="280dp">
+                android:layout_height="290dp">
                 <RelativeLayout
                     android:background="@drawable/gradient_around_pink"
                     android:layout_width="wrap_content"
@@ -342,7 +340,6 @@
                     android:layout_height="wrap_content"
                     app:sl_cornerRadius="4dp"
                     app:sl_shadowColor="#F50057">
-
                     <TextView
                         android:id="@+id/start"
                         android:layout_width="wrap_content"
