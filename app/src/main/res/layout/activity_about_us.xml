@@ -37,7 +37,7 @@
                 android:visibility="gone"
                 android:layout_marginTop="41dp"
                 android:layout_gravity="top|center"
-                android:src="@drawable/logo_bokor"
+                android:src="@drawable/bokor"
                 android:layout_width="116dp"
                 android:layout_height="57dp"/>
             <ImageView
@@ -45,7 +45,7 @@
                 android:layout_gravity="top|center"
                 android:layout_marginTop="20dp"
                 android:visibility="gone"
-                android:src="@drawable/logo_sipar"
+                android:src="@drawable/sipar"
                 android:layout_width="87dp"
                 android:layout_height="90dp"/>
             <RelativeLayout

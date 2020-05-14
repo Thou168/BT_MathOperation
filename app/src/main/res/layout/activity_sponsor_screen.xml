@@ -53,12 +53,12 @@
                 android:layout_height="91dp"
                 android:src="@drawable/sponsor_4"/>
             <View
-                android:layout_width="0dp"
+                android:layout_width="10dp"
                 android:layout_height="1dp"/>
             <ImageView
-                android:layout_width="119dp"
-                android:layout_height="116dp"
-                android:src="@drawable/sponsor_11"/>
+                android:layout_width="108dp"
+                android:layout_height="69dp"
+                android:src="@drawable/logo_afd"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/rl_3"

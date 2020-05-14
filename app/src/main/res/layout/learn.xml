@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    android:background="@color/white"
+    android:background="#F0EFF0"
     tools:context=".Fragment_lesson.Addition.Learn_1">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -152,7 +152,7 @@
                 <TextView
                     android:id="@+id/num_top"
                     android:textColor="@color/white"
-                    android:text="110"
+                    android:text="11"
                     android:layout_toEndOf="@+id/symbol"
                     android:textSize="36sp"
                     android:layout_width="wrap_content"
@@ -174,7 +174,6 @@
                     android:layout_below="@+id/num_top"
                     android:layout_alignEnd="@+id/num_top"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="0dp"
                     android:textAlignment="textEnd"
                     android:layout_toEndOf="@id/symbol"
                     android:text="12"
@@ -188,15 +187,16 @@
                     android:layout_below="@+id/num_bottom"
                     android:layout_alignEnd="@+id/num_top"
                     android:background="@color/white" />
+
                 <TextView
                     android:id="@+id/num_result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/line_equal"
-                    android:layout_alignEnd="@+id/num_top"
+                    android:layout_alignEnd="@+id/num_bottom"
+                    android:text="22"
                     android:textAlignment="textEnd"
                     android:textColor="@color/white"
-                    android:text="22"
                     android:textSize="36sp"
                     android:visibility="invisible" />
             </RelativeLayout>

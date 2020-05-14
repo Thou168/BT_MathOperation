@@ -9,7 +9,7 @@
         android:gravity="center"
         android:background="@drawable/button_state_rating"
         android:layout_width="match_parent"
-        android:layout_height="304dp">
+        android:layout_height="343dp">
         <TextView
             android:id="@+id/txt_level_exit"
             android:text="អ្នកបានបញ្ចប់ហ្គេមមេរៀន"
@@ -22,6 +22,7 @@
         <TextView
             android:id="@+id/lesson_level_exit"
             android:text="វិធីបូកលេខពីរខ្ទង់នឹងមួយខ្ទង់ គ្មានត្រាទុក"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:textSize="16sp"
             android:textColor="#3A3D5F"
@@ -46,9 +47,9 @@
             android:layout_height="wrap_content"/>
         <xiaofei.library.gridlayout.GridLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="34dp"
             android:layout_height="wrap_content"
-            app:horizontalSpacing="45dp"
+            android:layout_marginTop="31dp"
+            app:horizontalSpacing="43dp"
             android:layout_marginStart="33dp"
             android:layout_marginEnd="33dp"
             app:numColumns="2"
@@ -59,7 +60,7 @@
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:fontFamily="@font/battambang_regular"
-                android:textSize="21sp"
+                android:textSize="18sp"
                 android:background="@drawable/button_state_red_new"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -69,7 +70,7 @@
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:fontFamily="@font/battambang_regular"
-                android:textSize="21sp"
+                android:textSize="18sp"
                 android:background="@drawable/button_state_list_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>

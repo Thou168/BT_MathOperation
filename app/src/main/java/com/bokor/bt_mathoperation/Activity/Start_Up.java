@@ -125,7 +125,7 @@ public class Start_Up extends AppCompatActivity {
         TextView textView = layoutView.findViewById(R.id.text);
         ImageView img_view = layoutView.findViewById(R.id.img_bokor);
         img_view.setVisibility(View.VISIBLE);
-        img_view.setImageDrawable(getDrawable(R.drawable.logo_bokor));
+        img_view.setImageDrawable(getDrawable(R.drawable.bokor));
         textView.setMovementMethod(new ScrollingMovementMethod());
         textView.setText("BOKOR Technology Co., Ltd. is a professional software development, network infrastructure integration and IT consulting service company. We understand the gap between technology and business and their correlations. We ensure quality service and solution delivery to meet customers’ need, budget and time. We have strong passion in serving software service sector and commit to provide best-fit technology which is seamlessly integrated into customer working environment.");
         ImageButton img_back = layoutView.findViewById(R.id.img_back);
@@ -150,7 +150,7 @@ public class Start_Up extends AppCompatActivity {
         TextView textView = layoutView.findViewById(R.id.text);
         ImageView img_view = layoutView.findViewById(R.id.img_sipar);
         img_view.setVisibility(View.VISIBLE);
-        img_view.setImageDrawable(getDrawable(R.drawable.logo_sipar));
+        img_view.setImageDrawable(getDrawable(R.drawable.sipar));
         textView.setMovementMethod(new ScrollingMovementMethod());
         textView.setText("ស៊ីប៉ាគឺជាអង្គការសាមគ្គីភាពអន្តរជាតិមួយដែលត្រូវបានបង្កើតឡើងនៅឆ្នាំ១៩៨២នៅប្រទេសបារាំងដើម្បីជួយជនភៀសខ្លួនមកពីអាស៊ីអាគ្នេយ៍តាមរយៈកម្មវិធីអប់រំ។\n" +
                 "នៅឆ្នាំ១៩៩១ស៊ីប៉ាបានមកប្រទេសកម្ពុជាហើយចូលរួមក្នុងការស្តារនិងអភិវឌ្ឍប្រទេសដោយពង្រឹងប្រព័ន្ធអប់រំរបស់ខ្លួន។\n" +
