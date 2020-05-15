@@ -23,7 +23,6 @@ public class Sum_class extends AppCompatActivity {
     ImageView back_sum,alert;
     LinearLayout rl_play,rl_practice;
     TranslateAnimation transAnim;
-    public int choice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +47,9 @@ public class Sum_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
 
-//                startActivity(new Intent(getApplicationContext(), Learn_1.class));
-                choice = 1;
-                Intent intent = new Intent(Sum_class.this, Learn_1.class);
-                intent.putExtra("choice", choice);
+                Intent intent = new Intent(getApplicationContext(), Learn_1.class);
+                intent.putExtra("sample_add", "addition");
                 startActivity(intent);
             }
         });

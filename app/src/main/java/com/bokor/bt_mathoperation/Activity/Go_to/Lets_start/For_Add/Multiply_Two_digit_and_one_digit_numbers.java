@@ -42,7 +42,6 @@ public class Multiply_Two_digit_and_one_digit_numbers extends AppCompatActivity 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Multiply_Two_digit_and_one_digit_numbers.this, Learn_1.class);
-                intent.putExtra("choice", 2);
                 startActivity(intent);
 
             }

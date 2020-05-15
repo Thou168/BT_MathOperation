@@ -65,37 +65,8 @@ public class Mul_class extends AppCompatActivity {
         });
     }
 
-//    public void time_alert(){
-//        transAnim = new TranslateAnimation(0, 0, 0,
-//                35);
-//        transAnim.setStartOffset(0);
-//        transAnim.setDuration(2000);
-//        transAnim.setRepeatCount(1999999999);
-//        transAnim.setFillAfter(true);
-//        transAnim.setInterpolator(new BounceInterpolator());
-//        transAnim.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//            }
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                alert.clearAnimation();
-//                final int left = alert.getLeft();
-//                final int top = alert.getTop();
-//                final int right = alert.getRight();
-//                final int bottom = alert.getBottom();
-//                alert.layout(left, top, right, bottom);
-//            }
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//        });
-//        alert.startAnimation(transAnim);
-//    }
-
     @Override
     public void onBackPressed() {
         finish();
-//        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }

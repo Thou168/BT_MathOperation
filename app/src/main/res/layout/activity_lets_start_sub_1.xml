@@ -189,7 +189,7 @@
                 android:layout_width="match_parent"
                 android:paddingBottom="5dp"
                 android:layout_marginTop="19dp"
-                android:layout_height="290dp">
+                android:layout_height="285dp">
                 <RelativeLayout
                     android:background="@drawable/gradient_around_pink"
                     android:layout_width="wrap_content"

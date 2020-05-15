@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_your_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
@@ -54,6 +55,8 @@ public class Learn_4 extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
+    Bundle extras;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -172,11 +175,17 @@ public class Learn_4 extends AppCompatActivity {
                 if(num1 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -189,11 +198,17 @@ public class Learn_4 extends AppCompatActivity {
                 if(num2 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -206,11 +221,17 @@ public class Learn_4 extends AppCompatActivity {
                 if(num3 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -223,11 +244,17 @@ public class Learn_4 extends AppCompatActivity {
                 if(num4 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -360,9 +387,9 @@ public class Learn_4 extends AppCompatActivity {
         dialogBuilder = new AlertDialog.Builder(Learn_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
         TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
-        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
+        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេម");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
-        lesson_exit_lv.setText("វិធីបូកលេខពីរខ្ទង់នឹងពីរខ្ទង់មានត្រាទុក");
+        lesson_exit_lv.setText("វិធីបូក");
         TextView ask_next = layoutView.findViewById(R.id.ask_next);
         ask_next.setText("តើអ្នកចង់បន្តទៅហ្គេមបន្ទាប់ទៀត ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?");
         TextView con = layoutView.findViewById(R.id.con);
@@ -379,7 +406,7 @@ public class Learn_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_4.this, Select_your_lesson.class));
+                startActivity(new Intent(Learn_4.this, Select_sub_lesson.class));
                 finish();
             }
         });

@@ -42,7 +42,6 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(The_sum_of_two_digit_and_one_digit_numbers_is_a_factor.this, Learn_2.class);
-                intent.putExtra("choice", 2);
                 startActivity(intent);
             }
         });

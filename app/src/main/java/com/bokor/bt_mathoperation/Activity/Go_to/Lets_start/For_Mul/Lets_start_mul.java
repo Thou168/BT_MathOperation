@@ -20,8 +20,6 @@ public class Lets_start_mul extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
 
-    TextView example,carry_on,top_num,bottom_num,answer,txt_explain_T,txt_explain_B,such_as;
-    TextView two_char_top,one_char_top,one_char_bot,two_ans,one_ans;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

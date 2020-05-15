@@ -186,13 +186,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
             public void onClick(View v) {
                 if(num1 == result){
                     qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }else {
-                        showAlertDialogPositive();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }
+                    showAlertDialogPositive();
                 }else{
                     surprise_wrong();
                 }
@@ -203,13 +197,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
             public void onClick(View v) {
                 if(num2 == result){
                     qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }else {
-                        showAlertDialogPositive();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }
+                    showAlertDialogPositive();
                 }else{
                     surprise_wrong();
                 }
@@ -220,13 +208,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
             public void onClick(View v) {
                 if(num3 == result){
                     qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }else {
-                        showAlertDialogPositive();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }
+                    showAlertDialogPositive();
                 }else{
                     surprise_wrong();
                 }
@@ -237,13 +219,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
             public void onClick(View v) {
                 if(num4 == result){
                     qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }else {
-                        showAlertDialogPositive();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
-                    }
+                    showAlertDialogPositive();
                 }else{
                     surprise_wrong();
                 }
@@ -350,7 +326,9 @@ public class Learn_Sub_4 extends AppCompatActivity {
             public void onClick(View view) {
                 level_plus++;
                 if (level_plus==3){
-                    startActivity(new Intent(Learn_Sub_4.this,Learn_Sub_Question.class));
+                    Intent intent = new Intent(getApplicationContext(), Learn_Sub_Question.class);
+                    intent.putExtra("sample_sub", "learn_sub_4");
+                    startActivity(intent);
                     finish();
                 }else {
                     qt_result.setVisibility(View.INVISIBLE);

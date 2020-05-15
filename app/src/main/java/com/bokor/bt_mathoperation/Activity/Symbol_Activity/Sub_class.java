@@ -44,11 +44,9 @@ public class Sub_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
-
-                startActivity(new Intent(getApplicationContext(), Learn_Sub.class));
-//                finish();
+                Intent intent = new Intent(getApplicationContext(), Learn_Sub.class);
+                intent.putExtra("sample_sub", "sub_class");
+                startActivity(intent);
             }
         });
 //

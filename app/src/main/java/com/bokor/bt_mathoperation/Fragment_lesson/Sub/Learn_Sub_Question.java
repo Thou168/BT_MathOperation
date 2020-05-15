@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_mul_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Item.Question;
@@ -49,6 +50,8 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
     MediaPlayer mp1,game_over;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
+    Bundle extras;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +98,15 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
             case R.id.btn_one:
                 if (btn_one.getText() == answer) {
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -108,7 +119,15 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
             case R.id.btn_two:
                 if (btn_two.getText() == answer) {
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -121,7 +140,15 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
             case R.id.btn_three:
                 if (btn_three.getText() == answer) {
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -134,7 +161,15 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
             case R.id.btn_four:
                 if (btn_four.getText() == answer) {
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogEnd();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -282,9 +317,9 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         dialogBuilder = new AlertDialog.Builder(Learn_Sub_Question.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
         TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
-        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
+        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេម");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
-        lesson_exit_lv.setText("វិធីដកលេខពីរខ្ទង់នឹងពីរខ្ទង់មានខ្ចី");
+        lesson_exit_lv.setText("វិធីគុណ");
         TextView ask_next = layoutView.findViewById(R.id.ask_next);
         ask_next.setText("តើអ្នកចង់បន្តទៅហ្គេមបន្ទាប់ទៀត ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?");
         TextView con = layoutView.findViewById(R.id.con);
@@ -300,7 +335,7 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_Sub_Question.this, Select_sub_lesson.class));
+                startActivity(new Intent(Learn_Sub_Question.this, Select_mul_lesson.class));
                 finish();
 
             }

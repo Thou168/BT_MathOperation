@@ -59,6 +59,8 @@ public class Learn_Sub_3 extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
+    Bundle extras;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -182,7 +184,15 @@ public class Learn_Sub_3 extends AppCompatActivity {
                 if(num1 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -197,11 +207,17 @@ public class Learn_Sub_3 extends AppCompatActivity {
                 if(num2 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -214,11 +230,17 @@ public class Learn_Sub_3 extends AppCompatActivity {
                 if(num3 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -231,11 +253,17 @@ public class Learn_Sub_3 extends AppCompatActivity {
                 if(num4 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -341,10 +369,23 @@ public class Learn_Sub_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus++;
-                qt_result.setVisibility(View.INVISIBLE);
-                showNextQuiz();
-                bk_normal();
+                if (level_plus!=4) {
+                    level_plus++;
+                    qt_result.setVisibility(View.INVISIBLE);
+                    showNextQuiz();
+                    bk_normal();
+                }else {
+                    extras = getIntent().getExtras();
+                    if (extras != null) {
+                        userName = extras.getString("sample_sub");
+                        if (userName != null) {
+                            Intent intent = new Intent(getApplicationContext(), Learn_Sub_4.class);
+                            intent.putExtra("sample_sub", "learn_sub_3");
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                }
                 alertDialog.cancel();
             }
         });

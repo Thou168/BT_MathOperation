@@ -189,7 +189,7 @@
                 android:layout_width="match_parent"
                 android:paddingBottom="5dp"
                 android:layout_marginTop="19dp"
-                android:layout_height="290dp">
+                android:layout_height="285dp">
                 <RelativeLayout
                     android:background="@drawable/gradient_around_pink"
                     android:layout_width="wrap_content"
@@ -277,16 +277,19 @@
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:background="#3A3D5F" />
+
                             <TextView
                                 android:id="@+id/two_ans"
-                                android:text="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_below="@+id/symbol_add"
+                                android:layout_alignEnd="@+id/two_char_top"
                                 android:layout_marginStart="75dp"
                                 android:layout_marginTop="63dp"
-                                android:textSize="18sp"
+                                android:layout_marginEnd="0dp"
+                                android:text="2"
                                 android:textColor="#3A3D5F"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:id="@+id/one_char_top"
@@ -312,15 +315,15 @@
 
                             <TextView
                                 android:id="@+id/one_ans"
-                                android:text="9"
-                                android:layout_below="@+id/one_char_bot"
-                                android:layout_marginTop="38dp"
-                                android:layout_marginEnd="80dp"
-                                android:layout_alignParentEnd="true"
-                                android:textSize="18sp"
-                                android:textColor="#3A3D5F"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/one_char_bot"
+                                android:layout_alignEnd="@+id/one_char_top"
+                                android:layout_marginTop="38dp"
+                                android:layout_marginEnd="0dp"
+                                android:text="9"
+                                android:textColor="#3A3D5F"
+                                android:textSize="18sp" />
                         </RelativeLayout>
 
                     </LinearLayout>

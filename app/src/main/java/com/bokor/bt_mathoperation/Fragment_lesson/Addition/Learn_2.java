@@ -54,6 +54,8 @@ public class Learn_2 extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
+    Bundle extras;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,8 +121,7 @@ public class Learn_2 extends AppCompatActivity {
         String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
         String letter = Character.toString(str.charAt(1));
         int in = Integer.parseInt(letter);
-        int letter_plus = in + 1;
-        int int2 = random.nextInt((9 - letter_plus) + 1) + letter_plus;
+        int int2 = random.nextInt((9-in) + 1) + 1;
         final int result = Integer.parseInt(str) + int2;
 
         //Question
@@ -170,11 +171,17 @@ public class Learn_2 extends AppCompatActivity {
                 if(num1 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -187,11 +194,17 @@ public class Learn_2 extends AppCompatActivity {
                 if(num2 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -204,11 +217,17 @@ public class Learn_2 extends AppCompatActivity {
                 if(num3 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
-                        showAlertDialogPositive();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
+                        showAlertDialogPositive();;
                     }
                 }else{
                     surprise_wrong();
@@ -221,11 +240,17 @@ public class Learn_2 extends AppCompatActivity {
                 if(num4 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_add");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -331,10 +356,23 @@ public class Learn_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus++;
-                qt_result.setVisibility(View.INVISIBLE);
-                showNextQuiz();
-                bk_normal();
+                if (level_plus!=4) {
+                    level_plus++;
+                    qt_result.setVisibility(View.INVISIBLE);
+                    showNextQuiz();
+                    bk_normal();
+                }else {
+                    extras = getIntent().getExtras();
+                    if (extras != null) {
+                        userName = extras.getString("sample_add");
+                        if (userName != null) {
+                            Intent intent = new Intent(getApplicationContext(), Learn_3.class);
+                            intent.putExtra("sample_add", "learn2");
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                }
                 alertDialog.cancel();
             }
         });

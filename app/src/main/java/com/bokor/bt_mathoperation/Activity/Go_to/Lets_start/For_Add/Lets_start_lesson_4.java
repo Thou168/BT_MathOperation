@@ -43,7 +43,6 @@ public class Lets_start_lesson_4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Lets_start_lesson_4.this, Learn_4.class);
-                intent.putExtra("choice", 2);
                 startActivity(intent);
             }
         });

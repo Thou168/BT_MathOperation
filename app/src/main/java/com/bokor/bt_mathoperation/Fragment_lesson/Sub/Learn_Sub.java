@@ -61,7 +61,8 @@ public class Learn_Sub extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
-
+    Bundle extras;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,7 +131,7 @@ public class Learn_Sub extends AppCompatActivity {
         String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
         String letter = Character.toString(str.charAt(1));
         int in = Integer.parseInt(letter);
-        int int2 = random.nextInt((9-in) - 0 + 1) + 0;
+        int int2 = random.nextInt((9-in) + 1) + 1;
         final int result = Integer.parseInt(str) - int2;
 
         //Question
@@ -180,7 +181,15 @@ public class Learn_Sub extends AppCompatActivity {
                 if(num1 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -195,7 +204,15 @@ public class Learn_Sub extends AppCompatActivity {
                 if(num2 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -210,7 +227,15 @@ public class Learn_Sub extends AppCompatActivity {
                 if(num3 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -225,7 +250,15 @@ public class Learn_Sub extends AppCompatActivity {
                 if(num4 == result){
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
-                        showAlertDialogEnd();
+                        extras = getIntent().getExtras();
+                        if (extras != null) {
+                            userName = extras.getString("sample_sub");
+                            if (userName!=null){
+                                showAlertDialogPositive();
+                            }
+                        }else {
+                            showAlertDialogEnd();
+                        }
                     }else {
                         showAlertDialogPositive();
                     }
@@ -333,10 +366,23 @@ public class Learn_Sub extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus++;
-                qt_result.setVisibility(View.INVISIBLE);
-                showNextQuiz();
-                bk_normal();
+                if (level_plus!=4) {
+                    level_plus++;
+                    qt_result.setVisibility(View.INVISIBLE);
+                    showNextQuiz();
+                    bk_normal();
+                }else {
+                    extras = getIntent().getExtras();
+                    if (extras != null) {
+                        userName = extras.getString("sample_sub");
+                        if (userName != null) {
+                            Intent intent = new Intent(getApplicationContext(), Learn_Sub_2.class);
+                            intent.putExtra("sample_sub", "learn_sub_1");
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                }
                 alertDialog.cancel();
             }
         });
