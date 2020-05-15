@@ -141,7 +141,7 @@ public class Learn_2 extends AppCompatActivity {
         }
         ArrayList<Integer> btnList = new ArrayList<>();
         nelist.add(result);
-        ArrayList<Button> tv_list = new ArrayList<Button>();
+        ArrayList<Button> tv_list = new ArrayList<>();
         tv_list.add(btn1);
         tv_list.add(btn2);
         tv_list.add(btn3);
@@ -393,10 +393,5 @@ public class Learn_2 extends AppCompatActivity {
 
     private void bk_normal(){
         container.stopDropping();
-//        qt_result.setVisibility(View.VISIBLE);
-//        btn1.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn2.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn3.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn4.setBackground(getDrawable(R.drawable.button_state_info));
     }
 }

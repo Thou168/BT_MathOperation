@@ -14,6 +14,7 @@ import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_your_lesson;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -22,6 +23,8 @@ public class Sum_class extends AppCompatActivity {
     ImageView back_sum,alert;
     LinearLayout rl_play,rl_practice;
     TranslateAnimation transAnim;
+    public int choice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +41,6 @@ public class Sum_class extends AppCompatActivity {
             public void onClick(View view) {
 //                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 //                rl_play.startAnimation(animFadein);
-
                 startActivity(new Intent(getApplicationContext(), Select_your_lesson.class));
             }
         });
@@ -49,7 +51,11 @@ public class Sum_class extends AppCompatActivity {
 //                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 //                rl_practice.startAnimation(animFadein);
 
-                startActivity(new Intent(getApplicationContext(), Learn_1.class));
+//                startActivity(new Intent(getApplicationContext(), Learn_1.class));
+                choice = 1;
+                Intent intent = new Intent(Sum_class.this, Learn_1.class);
+                intent.putExtra("choice", choice);
+                startActivity(intent);
             }
         });
 
@@ -58,40 +64,10 @@ public class Sum_class extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
-//                back_sum.startAnimation(animFadein);
             }
         });
 
     }
-
-//    public void time_alert(){
-//        transAnim = new TranslateAnimation(0, 0, 0,
-//                35);
-//        transAnim.setStartOffset(0);
-//        transAnim.setDuration(2000);
-//        transAnim.setRepeatCount(1999999999);
-//        transAnim.setFillAfter(true);
-//        transAnim.setInterpolator(new BounceInterpolator());
-//        transAnim.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//            }
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                alert.clearAnimation();
-//                final int left = alert.getLeft();
-//                final int top = alert.getTop();
-//                final int right = alert.getRight();
-//                final int bottom = alert.getBottom();
-//                alert.layout(left, top, right, bottom);
-//            }
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//        });
-//        alert.startAnimation(transAnim);
-//    }
 
     @Override
     public void onBackPressed() {

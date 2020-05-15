@@ -363,7 +363,10 @@ public class Learn_4 extends AppCompatActivity {
         txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
         lesson_exit_lv.setText("វិធីបូកលេខពីរខ្ទង់នឹងពីរខ្ទង់មានត្រាទុក");
+        TextView ask_next = layoutView.findViewById(R.id.ask_next);
+        ask_next.setText("តើអ្នកចង់បន្តទៅហ្គេមបន្ទាប់ទៀត ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?");
         TextView con = layoutView.findViewById(R.id.con);
+        con.setText("ហ្គេមបន្ទាប់");
         TextView back = layoutView.findViewById(R.id.back);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
@@ -392,9 +395,5 @@ public class Learn_4 extends AppCompatActivity {
     private void bk_normal(){
         container.stopDropping();
 //        qt_result.setVisibility(View.VISIBLE);
-//        btn1.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn2.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn3.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn4.setBackground(getDrawable(R.drawable.button_state_info));
     }
 }

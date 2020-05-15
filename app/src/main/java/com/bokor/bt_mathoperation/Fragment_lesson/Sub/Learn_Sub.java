@@ -61,6 +61,7 @@ public class Learn_Sub extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -180,10 +181,8 @@ public class Learn_Sub extends AppCompatActivity {
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
                         showAlertDialogEnd();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
                     }else {
                         showAlertDialogPositive();
-//                        btn1.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -197,10 +196,8 @@ public class Learn_Sub extends AppCompatActivity {
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
                         showAlertDialogEnd();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
                     }else {
                         showAlertDialogPositive();
-//                        btn2.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -214,10 +211,8 @@ public class Learn_Sub extends AppCompatActivity {
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
                         showAlertDialogEnd();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
                     }else {
                         showAlertDialogPositive();
-//                        btn3.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();
@@ -231,10 +226,8 @@ public class Learn_Sub extends AppCompatActivity {
                     qt_result.setVisibility(View.VISIBLE);
                     if (level_plus==4){
                         showAlertDialogEnd();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
                     }else {
                         showAlertDialogPositive();
-//                        btn4.setBackground(getDrawable(R.drawable.button_state_sound));
                     }
                 }else{
                     surprise_wrong();

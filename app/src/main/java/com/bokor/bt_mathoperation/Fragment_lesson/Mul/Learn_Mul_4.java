@@ -1,6 +1,4 @@
-package com.bokor.bt_mathoperation.Fragment_lesson.Addition;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.bokor.bt_mathoperation.Fragment_lesson.Mul;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -23,9 +20,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_div_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -36,7 +36,7 @@ import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class Learn_1 extends AppCompatActivity {
+public class Learn_Mul_4 extends AppCompatActivity {
     TextView qt_top,qt_bottom,qt_result;
     TextView txt_level_current;
     int level_plus = 1;
@@ -53,11 +53,14 @@ public class Learn_1 extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
+    TextView symbol;
     //second dialog alert
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        symbol=findViewById(R.id.symbol);
+        symbol.setText("×");
         qt_top=findViewById(R.id.num_top);
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
@@ -116,26 +119,48 @@ public class Learn_1 extends AppCompatActivity {
         }
 
         random = new Random();
-        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
-        String letter = Character.toString(str.charAt(1));
-        int in = Integer.parseInt(letter);
-        int int2 = random.nextInt((9-in) - 0 + 1) + 0;
-        final int result = Integer.parseInt(str) + int2;
+        int num = 10,max=9;
+        int ran = random.nextInt(num);
+        if (ran==0){
+            ran= ran+1;
+        }
+        //
+        max = random.nextInt(max);
+        if (max==0){
+            max=max+1;
+        }
+        String num_ran = String.valueOf(ran);
+
+        String str = String.valueOf(random.nextInt((999 - 100) + 1) + 100);
+        if (str.charAt(str.length()-1)=='0'){
+            str = str.replace(str.substring(str.length()-1), num_ran);
+        }
+        str = str.replace(str.substring(str.length()-1), num_ran);
+        int full_in = Integer.parseInt(str);
+
+        //last_digit
+        int num_int = Integer.parseInt(num_ran);
+
+        //mul_below
+        int min = random.nextInt(max)+1 ;
+
+        //result
+        final int result = full_in * min;
 
         //Question
-        qt_top.setText(String.valueOf(Integer.parseInt(str)));
-        qt_bottom.setText(String.valueOf(int2));
+        qt_top.setText(String.valueOf(full_in));
+        qt_bottom.setText(String.valueOf(min));
         qt_result.setText(String.valueOf(result));
         //
 
         System.out.println("-------- "+result);
 //       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-        System.out.println("======"+str+"==="+in);
+        System.out.println("======"+str+"==="+num_int);
         ArrayList<Integer> nelist = new ArrayList<>();
         while (nelist.size()<4){
-            int num = random.nextInt((result+2) - (result-2)) + (result-2);
-            if (!nelist.contains(num)){
-                nelist.add(num);
+            int num_button = random.nextInt((result+2) - (result-2)) + (result-2);
+            if (!nelist.contains(num_button)){
+                nelist.add(num_button);
             }
         }
         ArrayList<Integer> btnList = new ArrayList<>();
@@ -258,7 +283,7 @@ public class Learn_1 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        final Dialog dialogBuilder = new Dialog(Learn_1.this,R.style.CustomDialog);
+        final Dialog dialogBuilder = new Dialog(Learn_Mul_4.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
         Button yes = dialogBuilder.findViewById(R.id.yes);
@@ -278,7 +303,7 @@ public class Learn_1 extends AppCompatActivity {
     }
 
     private void showAlertDialogNegative() {
-        dialogBuilder = new AlertDialog.Builder(Learn_1.this);
+        dialogBuilder = new AlertDialog.Builder(Learn_Mul_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new_fail, null);
         ImageButton dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
         ImageButton home = layoutView.findViewById(R.id.home);
@@ -299,14 +324,14 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_1.this, Home_Activity.class));
+                startActivity(new Intent(Learn_Mul_4.this, Home_Activity.class));
                 finish();
             }
         });
     }
     private void showAlertDialogPositive() {
         surprise_true();
-        dialogBuilder = new AlertDialog.Builder(Learn_1.this);
+        dialogBuilder = new AlertDialog.Builder(Learn_Mul_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new, null);
         ImageButton dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
         ImageButton home = layoutView.findViewById(R.id.home);
@@ -333,7 +358,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_1.this, Home_Activity.class));
+                startActivity(new Intent(Learn_Mul_4.this, Home_Activity.class));
                 finish();
             }
         });
@@ -349,7 +374,7 @@ public class Learn_1 extends AppCompatActivity {
     private void showAlertDialogEnd() {
         surprise_true();
 
-        dialogBuilder = new AlertDialog.Builder(Learn_1.this);
+        dialogBuilder = new AlertDialog.Builder(Learn_Mul_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
         TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
         txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
@@ -368,14 +393,14 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_1.this, Learn_2.class));
+                startActivity(new Intent(Learn_Mul_4.this, Select_div_lesson.class));
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_1.this, Home_Activity.class));
+                startActivity(new Intent(Learn_Mul_4.this, Home_Activity.class));
                 finish();
             }
         });

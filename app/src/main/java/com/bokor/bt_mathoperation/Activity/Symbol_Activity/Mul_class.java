@@ -14,6 +14,7 @@ import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_mul_lesson;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Mul.Learn_Mul_1;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -50,7 +51,7 @@ public class Mul_class extends AppCompatActivity {
 //                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
 //                rl_practice.startAnimation(animFadein);
 
-                startActivity(new Intent(getApplicationContext(), Learn_1.class));
+                startActivity(new Intent(getApplicationContext(), Learn_Mul_1.class));
             }
         });
         back_mul=findViewById(R.id.back_mul);

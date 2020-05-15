@@ -285,7 +285,10 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
         lesson_exit_lv.setText("វិធីដកលេខពីរខ្ទង់នឹងពីរខ្ទង់មានខ្ចី");
+        TextView ask_next = layoutView.findViewById(R.id.ask_next);
+        ask_next.setText("តើអ្នកចង់បន្តទៅហ្គេមបន្ទាប់ទៀត ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?");
         TextView con = layoutView.findViewById(R.id.con);
+        con.setText("ហ្គេមបន្ទាប់");
         TextView back = layoutView.findViewById(R.id.back);
         dialogBuilder.setView(layoutView);
 //        dialogBuilder.setCancelable(false);

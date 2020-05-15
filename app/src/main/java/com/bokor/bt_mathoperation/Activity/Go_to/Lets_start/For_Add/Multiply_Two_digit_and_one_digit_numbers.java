@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sum_class;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
@@ -23,6 +24,7 @@ public class Multiply_Two_digit_and_one_digit_numbers extends AppCompatActivity 
     ShadowLayout shadowLayout;
     MediaPlayer mediaPlayer,mediaPlayer2;
     boolean isPlaying = false;
+    int choice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,10 @@ public class Multiply_Two_digit_and_one_digit_numbers extends AppCompatActivity 
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Multiply_Two_digit_and_one_digit_numbers.this, Learn_1.class));
+                Intent intent = new Intent(Multiply_Two_digit_and_one_digit_numbers.this, Learn_1.class);
+                intent.putExtra("choice", 2);
+                startActivity(intent);
+
             }
         });
         img_back=findViewById(R.id.img_back);

@@ -42,7 +42,9 @@ public class Lets_start_lesson_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_lesson_4.this, Learn_4.class));
+                Intent intent = new Intent(Lets_start_lesson_4.this, Learn_4.class);
+                intent.putExtra("choice", 2);
+                startActivity(intent);
             }
         });
         img_back=findViewById(R.id.img_back);

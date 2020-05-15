@@ -35,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"/>
         <TextView
+            android:id="@+id/ask_next"
             android:textColor="#3A3D5F"
             android:layout_marginTop="30dp"
             android:gravity="center"
