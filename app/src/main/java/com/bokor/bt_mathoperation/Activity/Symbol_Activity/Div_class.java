@@ -14,6 +14,8 @@ import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_div_lesson;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Mul.Learn_Mul_1;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -37,9 +39,6 @@ public class Div_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_play.startAnimation(animFadein);
-
                 startActivity(new Intent(getApplicationContext(), Select_div_lesson.class));
             }
         });
@@ -47,10 +46,9 @@ public class Div_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
-
-                startActivity(new Intent(getApplicationContext(), Learn_1.class));
+                Intent intent = new Intent(getApplicationContext(), Learn_Div_1.class);
+                intent.putExtra("sample_div", "div");
+                startActivity(intent);
             }
         });
         back_div = findViewById(R.id.back_div);
@@ -58,8 +56,6 @@ public class Div_class extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
-//                back_div.startAnimation(animFadein);
             }
         });
     }

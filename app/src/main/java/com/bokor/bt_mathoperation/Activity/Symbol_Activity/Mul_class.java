@@ -38,9 +38,6 @@ public class Mul_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_play.startAnimation(animFadein);
-
                 startActivity(new Intent(getApplicationContext(), Select_mul_lesson.class));
             }
         });
@@ -48,10 +45,9 @@ public class Mul_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
-
-                startActivity(new Intent(getApplicationContext(), Learn_Mul_1.class));
+                Intent intent = new Intent(getApplicationContext(), Learn_Mul_1.class);
+                intent.putExtra("sample_mul", "multiply");
+                startActivity(intent);
             }
         });
         back_mul=findViewById(R.id.back_mul);

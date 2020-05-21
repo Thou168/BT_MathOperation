@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Weight.Learn_weight_3;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -26,7 +27,7 @@ public class Change_scale_from_kilogram_to_gram extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Change_scale_from_kilogram_to_gram.this, Learn_1.class));
+                startActivity(new Intent(Change_scale_from_kilogram_to_gram.this, Learn_weight_3.class));
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -39,9 +40,16 @@ public class Change_scale_from_kilogram_to_gram extends AppCompatActivity {
         });
         sound=findViewById(R.id.sounds);
         PushDownAnim.setPushDownAnimTo(sound).setScale( MODE_SCALE, 0.89f  ).setOnClickListener(new View.OnClickListener() {
+            private boolean isPlaying = false;
             @Override
             public void onClick(View view) {
-
+                if(isPlaying) {
+                    sound.setImageResource(R.drawable.sound_on);
+                    isPlaying=false;
+                } else {
+                    sound.setImageResource(R.drawable.sound_off);
+                    isPlaying=true;
+                }
             }
         });
     }

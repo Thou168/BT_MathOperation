@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/let_start_bg"
     tools:context=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul">
 
     <ImageView
         android:id="@+id/img_back"
         android:src="@drawable/back_red_new"
         android:scaleType="fitCenter"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="42dp"
+        android:layout_marginTop="29.84dp"
+        android:layout_marginStart="19.7dp"
         android:layout_width="52dp"
         android:layout_height="44dp"/>
 
@@ -20,12 +20,12 @@
         android:id="@+id/sounds"
         android:visibility="visible"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/volume"
+        android:src="@drawable/sound_on"
         android:scaleType="centerCrop"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginTop="36dp"/>
+        android:layout_width="68dp"
+        android:layout_height="52.09dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="26dp"/>
     <ScrollView
         android:layout_below="@+id/img_back"
         android:layout_marginTop="39dp"
@@ -68,16 +68,18 @@
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
+
                 <TextView
                     android:id="@+id/bottom_num"
-                    android:text="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/top_num"
                     android:layout_marginStart="5dp"
-                    android:textSize="21sp"
                     android:layout_marginTop="60dp"
                     android:layout_toEndOf="@id/symbol"
+                    android:text="6"
                     android:textColor="#3A3D5F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="21sp" />
                 <!--                <ImageView-->
                 <!--                    android:id="@+id/ruler"-->
                 <!--                    android:layout_below="@+id/bottom_num"-->
@@ -98,16 +100,19 @@
                     android:layout_marginTop="70dp"
                     android:layout_width="63dp"
                     android:layout_height="100dp"/>
+
                 <TextView
                     android:id="@+id/answer"
-                    android:textSize="21sp"
-                    android:text="0"
-                    android:layout_toEndOf="@+id/symbol"
-                    android:layout_marginStart="5dp"
-                    android:textColor="#3A3D5F"
-                    android:layout_below="@+id/ruler"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ruler"
+                    android:layout_alignEnd="@+id/top_num"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/symbol"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textColor="#3A3D5F"
+                    android:textSize="21sp" />
                 <View
                     android:id="@+id/ruler_colume"
                     android:layout_toEndOf="@+id/top_num"
@@ -135,17 +140,19 @@
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
+
                 <TextView
                     android:id="@+id/bottom_div"
-                    android:text="3"
-                    android:textSize="21sp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_toEndOf="@id/ruler_colume"
-                    android:layout_below="@+id/ruler_row"
-                    android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ruler_row"
+                    android:layout_alignEnd="@+id/top_div"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/ruler_colume"
+                    android:text="3"
+                    android:textColor="#3A3D5F"
+                    android:textSize="21sp" />
             </RelativeLayout>
             <LinearLayout
                 android:background="@drawable/gradient_around_pink"

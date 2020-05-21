@@ -23,7 +23,6 @@ public class Multiply_Two_digit_and_one_digit_numbers extends AppCompatActivity 
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
     MediaPlayer mediaPlayer,mediaPlayer2;
-    boolean isPlaying = false;
     int choice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +55,16 @@ public class Multiply_Two_digit_and_one_digit_numbers extends AppCompatActivity 
         });
         sound=findViewById(R.id.sounds);
         PushDownAnim.setPushDownAnimTo(sound).setScale( MODE_SCALE, 0.89f  ) .setOnClickListener(new View.OnClickListener() {
+            private boolean isPlaying = false;
             @Override
             public void onClick(View view) {
+                if(isPlaying) {
+                    sound.setImageResource(R.drawable.sound_on);
+                    isPlaying=false;
+                } else {
+                    sound.setImageResource(R.drawable.sound_off);
+                    isPlaying=true;
+                }
 //                if (isPlaying) {
 //                    if (mediaPlayer.isPlaying()) {
 //                        mediaPlayer.pause();

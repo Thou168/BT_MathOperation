@@ -5,7 +5,7 @@
 <!--            <solid android:color="#106C4D"/>-->
 <!--        </shape>-->
 <!--    </item>-->
-    <solid android:color="@color/white"/>
+    <solid android:color="@color/let_start_bg"/>
 
     <stroke android:width="2dp"
         android:color="#3A3D5F" />

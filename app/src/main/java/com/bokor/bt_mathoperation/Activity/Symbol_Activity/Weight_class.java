@@ -14,6 +14,7 @@ import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_weight_lesson;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Weight.Learn_weight_1;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -38,9 +39,6 @@ public class Weight_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_play.startAnimation(animFadein);
-
                 startActivity(new Intent(getApplicationContext(), Select_weight_lesson.class));
             }
         });
@@ -48,10 +46,10 @@ public class Weight_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
 
-                startActivity(new Intent(getApplicationContext(), Learn_1.class));
+                Intent intent = new Intent(getApplicationContext(), Learn_weight_1.class);
+                intent.putExtra("sample_weight", "weight");
+                startActivity(intent);
             }
         });
 
@@ -60,8 +58,6 @@ public class Weight_class extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
-//                back_div.startAnimation(animFadein);
             }
         });
     }

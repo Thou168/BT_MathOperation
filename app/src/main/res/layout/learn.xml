@@ -152,7 +152,7 @@
                 <TextView
                     android:id="@+id/num_top"
                     android:textColor="@color/white"
-                    android:text="11"
+                    android:text="14"
                     android:layout_toEndOf="@+id/symbol"
                     android:textSize="36sp"
                     android:layout_width="wrap_content"
@@ -160,7 +160,7 @@
                 <TextView
                     android:id="@+id/symbol"
                     android:layout_below="@+id/num_top"
-                    android:layout_marginTop="-20dp"
+                    android:layout_marginTop="-16dp"
                     android:text="+"
                     android:textColor="@color/white"
                     android:textSize="36sp"
@@ -176,13 +176,13 @@
                     android:layout_marginTop="10dp"
                     android:textAlignment="textEnd"
                     android:layout_toEndOf="@id/symbol"
-                    android:text="12"
+                    android:text="2"
                     android:textColor="@color/white"
                     android:textSize="36sp" />
 
                 <View
                     android:id="@+id/line_equal"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="3dp"
                     android:layout_below="@+id/num_bottom"
                     android:layout_alignEnd="@+id/num_top"
@@ -190,15 +190,14 @@
 
                 <TextView
                     android:id="@+id/num_result"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/line_equal"
-                    android:layout_alignEnd="@+id/num_bottom"
-                    android:text="22"
+                    android:layout_alignEnd="@+id/num_top"
+                    android:text="2"
                     android:textAlignment="textEnd"
                     android:textColor="@color/white"
-                    android:textSize="36sp"
-                    android:visibility="invisible" />
+                    android:textSize="36sp" />
             </RelativeLayout>
         </RelativeLayout>
 
@@ -242,7 +241,7 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="22"
+                        android:text="21"
                         android:textColor="@color/white" />
                     <Button
                         android:id="@+id/btn_2"
@@ -253,7 +252,7 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="23"
+                        android:text="22"
                         android:textColor="@color/white"/>
                 </TableRow>
                 <TableRow
@@ -271,7 +270,7 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="13"
+                        android:text="24"
                         android:textColor="@color/white" />
                     <Button
                         android:id="@+id/btn_4"
@@ -282,7 +281,7 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="35"
+                        android:text="23"
                         android:textColor="@color/white" />
                 </TableRow>
             </TableLayout>

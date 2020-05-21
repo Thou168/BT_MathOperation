@@ -56,8 +56,16 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
         });
         sound=findViewById(R.id.sounds);
         PushDownAnim.setPushDownAnimTo(sound).setScale( MODE_SCALE, 0.89f  ) .setOnClickListener(new View.OnClickListener() {
+            private boolean isPlaying = false;
             @Override
             public void onClick(View view) {
+                if(isPlaying) {
+                    sound.setImageResource(R.drawable.sound_on);
+                    isPlaying=false;
+                } else {
+                    sound.setImageResource(R.drawable.sound_off);
+                    isPlaying=true;
+                }
 //                if (isPlaying) {
 //                    if (mediaPlayer.isPlaying()) {
 //                        mediaPlayer.pause();

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Frac.Learn_Frac_3;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -29,7 +30,7 @@ public class Lets_start_fraction_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Lets_start_fraction_3.this, Learn_1.class));
+                startActivity(new Intent(Lets_start_fraction_3.this, Learn_Frac_3.class));
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -42,9 +43,16 @@ public class Lets_start_fraction_3 extends AppCompatActivity {
         });
         sound=findViewById(R.id.sounds);
         PushDownAnim.setPushDownAnimTo(sound).setScale( MODE_SCALE, 0.89f  ) .setOnClickListener(new View.OnClickListener() {
+            private boolean isPlaying = false;
             @Override
             public void onClick(View view) {
-
+                if(isPlaying) {
+                    sound.setImageResource(R.drawable.sound_on);
+                    isPlaying=false;
+                } else {
+                    sound.setImageResource(R.drawable.sound_off);
+                    isPlaying=true;
+                }
             }
         });
     }

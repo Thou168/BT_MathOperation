@@ -200,26 +200,7 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         });
         dialogBuilder.show();
     }
-//    private void GameOver(){
-//        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Learn_Sub_Question.this);
-//        alertDialogBuilder
-//                .setMessage("Game Over")
-//                .setCancelable(false)
-//                .setPositiveButton("New Game", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        startActivity(new Intent(getApplicationContext(), Learn_Sub_Question.class));
-//                    }
-//                })
-//                .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        System.exit(0);
-//                    }
-//                });
-//        alertDialogBuilder.show();
-//
-//    }
+
     private void surprise_wrong(){
         container.stopDropping();
         showAlertDialogNegative();

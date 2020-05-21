@@ -27,6 +27,7 @@
 
     <color name="end_color">#4FC3F7</color>
     <color name="white">#FFFFFF</color>
+    <color name="let_start_bg">#F0EFF0</color>
     <color name="colorSubmitButton">#007ABE</color>
     <color name="gray_light">#F0EFF5</color>
     <color name="gray_while">#F9F9F9</color>

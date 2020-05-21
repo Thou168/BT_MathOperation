@@ -140,7 +140,7 @@
             android:layout_width="match_parent"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="19dp"
-            android:background="@drawable/board"
+            android:background="@drawable/board_new"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_height="237dp">

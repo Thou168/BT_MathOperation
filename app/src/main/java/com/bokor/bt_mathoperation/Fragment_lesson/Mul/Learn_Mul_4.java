@@ -54,6 +54,8 @@ public class Learn_Mul_4 extends AppCompatActivity {
     Vibrator vibe;
     MediaPlayer mp1,game_over;
     TextView symbol;
+    Bundle extras;
+    String userName;
     //second dialog alert
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,147 +109,288 @@ public class Learn_Mul_4 extends AppCompatActivity {
     }
     private void showNextQuiz(){
         txt_level_current.setText("កម្រិត "+level_plus);
+        qt_result.setText("???");
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+            qt_top.setText("112");
+            qt_bottom.setText("5");
+
+            //btn
+            btn1.setText("559");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn2.setText("560");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogPositive();
+                    qt_result.setText("560");
+                }
+            });
+            btn3.setText("561");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("562");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+            qt_top.setText("257");
+            qt_bottom.setText("4");
+
+            //btn
+            btn1.setText("1028");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogPositive();
+                    qt_result.setText("1028");
+                }
+            });
+            btn2.setText("1029");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn3.setText("1030");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("1031");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-        }else if (level_plus==4){
+            qt_top.setText("457");
+            qt_bottom.setText("3");
+
+            //btn
+            btn1.setText("1369");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn2.setText("1370");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn3.setText("1371");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogPositive();
+                    qt_result.setText("1371");
+                }
+            });
+            btn4.setText("1372");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+        }else if (level_plus==4) {
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-        }
+            qt_top.setText("672");
+            qt_bottom.setText("4");
 
-        random = new Random();
-        int num = 10,max=9;
-        int ran = random.nextInt(num);
-        if (ran==0){
-            ran= ran+1;
-        }
-        //
-        max = random.nextInt(max);
-        if (max==0){
-            max=max+1;
-        }
-        String num_ran = String.valueOf(ran);
-
-        String str = String.valueOf(random.nextInt((999 - 100) + 1) + 100);
-        if (str.charAt(str.length()-1)=='0'){
-            str = str.replace(str.substring(str.length()-1), num_ran);
-        }
-        str = str.replace(str.substring(str.length()-1), num_ran);
-        int full_in = Integer.parseInt(str);
-
-        //last_digit
-        int num_int = Integer.parseInt(num_ran);
-
-        //mul_below
-        int min = random.nextInt(max)+1 ;
-
-        //result
-        final int result = full_in * min;
-
-        //Question
-        qt_top.setText(String.valueOf(full_in));
-        qt_bottom.setText(String.valueOf(min));
-        qt_result.setText(String.valueOf(result));
-        //
-
-        System.out.println("-------- "+result);
-//       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-        System.out.println("======"+str+"==="+num_int);
-        ArrayList<Integer> nelist = new ArrayList<>();
-        while (nelist.size()<4){
-            int num_button = random.nextInt((result+2) - (result-2)) + (result-2);
-            if (!nelist.contains(num_button)){
-                nelist.add(num_button);
-            }
-        }
-        ArrayList<Integer> btnList = new ArrayList<>();
-        nelist.add(result);
-        ArrayList<Button> tv_list = new ArrayList<Button>();
-        tv_list.add(btn1);
-        tv_list.add(btn2);
-        tv_list.add(btn3);
-        tv_list.add(btn4);
-        while (btnList.size()<4){
-            for (int i = 0;i<nelist.size();i++){
-                if (!btnList.contains(nelist.get(i))){
-                    btnList.add(nelist.get(i));
-                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
-                    System.out.println("======"+btnList.get(i));
-                }
-            }
-            Collections.sort(btnList);
-        }
-        String value = btn1.getText().toString();
-        final int num1 = Integer.parseInt(value);
-        String value2 = btn2.getText().toString();
-        final int num2 = Integer.parseInt(value2);
-        String value3 = btn3.getText().toString();
-        final int num3 = Integer.parseInt(value3);
-        String value4 = btn4.getText().toString();
-        final int num4 = Integer.parseInt(value4);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num1 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        showAlertDialogEnd();
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
+            //btn
+            btn1.setText("2685");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     surprise_wrong();
                 }
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num2 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
+            });
+            btn2.setText("2686");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn3.setText("2687");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("2688");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    qt_result.setText("2688");
+                    extras = getIntent().getExtras();
+                    if (extras != null) {
+                        userName = extras.getString("sample_mul");
+                        if (userName != null) {
                             showAlertDialogEnd();
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
-                    surprise_wrong();
-                }
-            }
-        });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num3 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
+                        }
+                    } else {
                         showAlertDialogEnd();
-                    }else {
-                        showAlertDialogPositive();
                     }
-                }else{
-                    surprise_wrong();
                 }
-            }
-        });
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num4 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        showAlertDialogEnd();
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
-                    surprise_wrong();
-                }
-            }
-        });
+            });
+        }
+
+//        random = new Random();
+//        int num = 10,max=9;
+//        int ran = random.nextInt(num);
+//        if (ran==0){
+//            ran= ran+1;
+//        }
+//        //
+//        max = random.nextInt(max);
+//        if (max==0){
+//            max=max+1;
+//        }
+//        String num_ran = String.valueOf(ran);
+//
+//        String str = String.valueOf(random.nextInt((999 - 100) + 1) + 100);
+//        if (str.charAt(str.length()-1)=='0'){
+//            str = str.replace(str.substring(str.length()-1), num_ran);
+//        }
+//        str = str.replace(str.substring(str.length()-1), num_ran);
+//        int full_in = Integer.parseInt(str);
+//
+//        //last_digit
+//        int num_int = Integer.parseInt(num_ran);
+//
+//        //mul_below
+//        int min = random.nextInt(max)+1 ;
+//
+//        //result
+//        final int result = full_in * min;
+//
+//        //Question
+//        qt_top.setText(String.valueOf(full_in));
+//        qt_bottom.setText(String.valueOf(min));
+//        qt_result.setText(String.valueOf(result));
+//        //
+//
+//        System.out.println("-------- "+result);
+////       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
+//        System.out.println("======"+str+"==="+num_int);
+//        ArrayList<Integer> nelist = new ArrayList<>();
+//        while (nelist.size()<4){
+//            int num_button = random.nextInt((result+2) - (result-2)) + (result-2);
+//            if (!nelist.contains(num_button)){
+//                nelist.add(num_button);
+//            }
+//        }
+//        ArrayList<Integer> btnList = new ArrayList<>();
+//        nelist.add(result);
+//        ArrayList<Button> tv_list = new ArrayList<Button>();
+//        tv_list.add(btn1);
+//        tv_list.add(btn2);
+//        tv_list.add(btn3);
+//        tv_list.add(btn4);
+//        while (btnList.size()<4){
+//            for (int i = 0;i<nelist.size();i++){
+//                if (!btnList.contains(nelist.get(i))){
+//                    btnList.add(nelist.get(i));
+//                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
+//                    System.out.println("======"+btnList.get(i));
+//                }
+//            }
+//            Collections.sort(btnList);
+//        }
+//        String value = btn1.getText().toString();
+//        final int num1 = Integer.parseInt(value);
+//        String value2 = btn2.getText().toString();
+//        final int num2 = Integer.parseInt(value2);
+//        String value3 = btn3.getText().toString();
+//        final int num3 = Integer.parseInt(value3);
+//        String value4 = btn4.getText().toString();
+//        final int num4 = Integer.parseInt(value4);
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num1 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        showAlertDialogEnd();
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
+//        btn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num2 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                            showAlertDialogEnd();
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
+//        btn3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num3 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        showAlertDialogEnd();
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
+//        btn4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num4 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        showAlertDialogEnd();
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
     }
 
     private void surprise_wrong(){
@@ -318,6 +461,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bk_normal();
+                showNextQuiz();
                 alertDialog.cancel();
             }
         });
@@ -348,10 +492,8 @@ public class Learn_Mul_4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 level_plus++;
-                qt_result.setVisibility(View.INVISIBLE);
                 showNextQuiz();
                 bk_normal();
-
                 alertDialog.cancel();
             }
         });
@@ -366,6 +508,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bk_normal();
+                showNextQuiz();
                 alertDialog.cancel();
             }
         });
@@ -377,9 +520,9 @@ public class Learn_Mul_4 extends AppCompatActivity {
         dialogBuilder = new AlertDialog.Builder(Learn_Mul_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
         TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
-        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
+        txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេម");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
-        lesson_exit_lv.setText("វិធីបូកលេខពីរខ្ទង់នឹងមួយខ្ទង់គ្មានត្រាទុក");
+        lesson_exit_lv.setText("វិធីគុណ");
         TextView ask_next = layoutView.findViewById(R.id.ask_next);
         ask_next.setText("តើអ្នកចង់បន្តទៅហ្គេមបន្ទាប់ទៀត ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?");
         TextView con = layoutView.findViewById(R.id.con);
@@ -411,7 +554,6 @@ public class Learn_Mul_4 extends AppCompatActivity {
 
     private void bk_normal(){
         container.stopDropping();
-//        qt_result.setVisibility(View.VISIBLE);
     }
 
 }

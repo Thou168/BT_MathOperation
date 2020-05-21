@@ -116,157 +116,299 @@ public class Learn_Sub extends AppCompatActivity {
     }
     private void showNextQuiz(){
         txt_level_current.setText("កម្រិត "+level_plus);
+        qt_result.setText("??");
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+            qt_top.setText("12");
+            qt_bottom.setText("2");
+
+            //btn
+            btn1.setText("9");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn2.setText("10");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogPositive();
+                    qt_result.setText("10");
+                }
+            });
+            btn3.setText("11");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("12");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+            qt_top.setText("18");
+            qt_bottom.setText("6");
+
+            //btn
+            btn1.setText("12");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogPositive();
+                    qt_result.setText("12");
+                }
+            });
+            btn2.setText("13");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn3.setText("14");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("15");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+            qt_top.setText("49");
+            qt_bottom.setText("8");
+
+            //btn
+            btn1.setText("39");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn2.setText("40");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn3.setText("41");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showAlertDialogPositive();
+                    qt_result.setText("41");
+                }
+            });
+            btn4.setText("42");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+            qt_top.setText("89");
+            qt_bottom.setText("2");
+
+            //btn
+            btn1.setText("84");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn2.setText("85");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn3.setText("86");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("87");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    qt_result.setText("87");
+                    extras = getIntent().getExtras();
+                    if (extras != null) {
+                        userName = extras.getString("sample_sub");
+                        if (userName!=null){
+                            showAlertDialogPositive();
+                        }
+                    }else {
+                        showAlertDialogEnd();
+                    }
+                }
+            });
+
         }
 
-        random = new Random();
-        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
-        String letter = Character.toString(str.charAt(1));
-        int in = Integer.parseInt(letter);
-        int int2 = random.nextInt((9-in) + 1) + 1;
-        final int result = Integer.parseInt(str) - int2;
-
-        //Question
-        qt_top.setText(String.valueOf(Integer.parseInt(str)));
-        qt_bottom.setText(String.valueOf(int2));
-        qt_result.setText(String.valueOf(result));
-        //
-
-        System.out.println("-------- "+result);
-//       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-        System.out.println("======"+str+"==="+in);
-        ArrayList<Integer> nelist = new ArrayList<>();
-        while (nelist.size()<4){
-            int num = random.nextInt((result+2) - (result-2)) + (result-2);
-            if (!nelist.contains(num)){
-                nelist.add(num);
-            }
-        }
-        ArrayList<Integer> btnList = new ArrayList<>();
-        nelist.add(result);
-        ArrayList<Button> tv_list = new ArrayList<Button>();
-        tv_list.add(btn1);
-        tv_list.add(btn2);
-        tv_list.add(btn3);
-        tv_list.add(btn4);
-        while (btnList.size()<4){
-            for (int i = 0;i<nelist.size();i++){
-                if (!btnList.contains(nelist.get(i))){
-                    btnList.add(nelist.get(i));
-                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
-                    System.out.println("======"+btnList.get(i));
-                }
-            }
-            Collections.sort(btnList);
-        }
-        String value = btn1.getText().toString();
-        final int num1 = Integer.parseInt(value);
-        String value2 = btn2.getText().toString();
-        final int num2 = Integer.parseInt(value2);
-        String value3 = btn3.getText().toString();
-        final int num3 = Integer.parseInt(value3);
-        String value4 = btn4.getText().toString();
-        final int num4 = Integer.parseInt(value4);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num1 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        extras = getIntent().getExtras();
-                        if (extras != null) {
-                            userName = extras.getString("sample_sub");
-                            if (userName!=null){
-                                showAlertDialogPositive();
-                            }
-                        }else {
-                            showAlertDialogEnd();
-                        }
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
-                    surprise_wrong();
-                }
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num2 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        extras = getIntent().getExtras();
-                        if (extras != null) {
-                            userName = extras.getString("sample_sub");
-                            if (userName!=null){
-                                showAlertDialogPositive();
-                            }
-                        }else {
-                            showAlertDialogEnd();
-                        }
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
-                    surprise_wrong();
-                }
-            }
-        });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num3 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        extras = getIntent().getExtras();
-                        if (extras != null) {
-                            userName = extras.getString("sample_sub");
-                            if (userName!=null){
-                                showAlertDialogPositive();
-                            }
-                        }else {
-                            showAlertDialogEnd();
-                        }
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
-                    surprise_wrong();
-                }
-            }
-        });
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(num4 == result){
-                    qt_result.setVisibility(View.VISIBLE);
-                    if (level_plus==4){
-                        extras = getIntent().getExtras();
-                        if (extras != null) {
-                            userName = extras.getString("sample_sub");
-                            if (userName!=null){
-                                showAlertDialogPositive();
-                            }
-                        }else {
-                            showAlertDialogEnd();
-                        }
-                    }else {
-                        showAlertDialogPositive();
-                    }
-                }else{
-                    surprise_wrong();
-                }
-            }
-        });
+//        random = new Random();
+//        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
+//        String letter = Character.toString(str.charAt(1));
+//        int in = Integer.parseInt(letter);
+//        int int2 = random.nextInt((9-in) + 1) + 1;
+//        final int result = Integer.parseInt(str) - int2;
+//
+//        //Question
+//        qt_top.setText(String.valueOf(Integer.parseInt(str)));
+//        qt_bottom.setText(String.valueOf(int2));
+//        qt_result.setText(String.valueOf(result));
+//        //
+//
+//        System.out.println("-------- "+result);
+////       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
+//        System.out.println("======"+str+"==="+in);
+//        ArrayList<Integer> nelist = new ArrayList<>();
+//        while (nelist.size()<4){
+//            int num = random.nextInt((result+2) - (result-2)) + (result-2);
+//            if (!nelist.contains(num)){
+//                nelist.add(num);
+//            }
+//        }
+//        ArrayList<Integer> btnList = new ArrayList<>();
+//        nelist.add(result);
+//        ArrayList<Button> tv_list = new ArrayList<Button>();
+//        tv_list.add(btn1);
+//        tv_list.add(btn2);
+//        tv_list.add(btn3);
+//        tv_list.add(btn4);
+//        while (btnList.size()<4){
+//            for (int i = 0;i<nelist.size();i++){
+//                if (!btnList.contains(nelist.get(i))){
+//                    btnList.add(nelist.get(i));
+//                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
+//                    System.out.println("======"+btnList.get(i));
+//                }
+//            }
+//            Collections.sort(btnList);
+//        }
+//        String value = btn1.getText().toString();
+//        final int num1 = Integer.parseInt(value);
+//        String value2 = btn2.getText().toString();
+//        final int num2 = Integer.parseInt(value2);
+//        String value3 = btn3.getText().toString();
+//        final int num3 = Integer.parseInt(value3);
+//        String value4 = btn4.getText().toString();
+//        final int num4 = Integer.parseInt(value4);
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num1 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        extras = getIntent().getExtras();
+//                        if (extras != null) {
+//                            userName = extras.getString("sample_sub");
+//                            if (userName!=null){
+//                                showAlertDialogPositive();
+//                            }
+//                        }else {
+//                            showAlertDialogEnd();
+//                        }
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
+//        btn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num2 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        extras = getIntent().getExtras();
+//                        if (extras != null) {
+//                            userName = extras.getString("sample_sub");
+//                            if (userName!=null){
+//                                showAlertDialogPositive();
+//                            }
+//                        }else {
+//                            showAlertDialogEnd();
+//                        }
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
+//        btn3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num3 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        extras = getIntent().getExtras();
+//                        if (extras != null) {
+//                            userName = extras.getString("sample_sub");
+//                            if (userName!=null){
+//                                showAlertDialogPositive();
+//                            }
+//                        }else {
+//                            showAlertDialogEnd();
+//                        }
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
+//        btn4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(num4 == result){
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    if (level_plus==4){
+//                        extras = getIntent().getExtras();
+//                        if (extras != null) {
+//                            userName = extras.getString("sample_sub");
+//                            if (userName!=null){
+//                                showAlertDialogPositive();
+//                            }
+//                        }else {
+//                            showAlertDialogEnd();
+//                        }
+//                    }else {
+//                        showAlertDialogPositive();
+//                    }
+//                }else{
+//                    surprise_wrong();
+//                }
+//            }
+//        });
     }
 
     private void surprise_wrong(){
@@ -337,6 +479,7 @@ public class Learn_Sub extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bk_normal();
+                showNextQuiz();
                 alertDialog.cancel();
             }
         });
@@ -368,7 +511,6 @@ public class Learn_Sub extends AppCompatActivity {
             public void onClick(View view) {
                 if (level_plus!=4) {
                     level_plus++;
-                    qt_result.setVisibility(View.INVISIBLE);
                     showNextQuiz();
                     bk_normal();
                 }else {
@@ -397,6 +539,7 @@ public class Learn_Sub extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bk_normal();
+                showNextQuiz();
                 alertDialog.cancel();
             }
         });
@@ -440,10 +583,5 @@ public class Learn_Sub extends AppCompatActivity {
 
     private void bk_normal(){
         container.stopDropping();
-//        qt_result.setVisibility(View.VISIBLE);
-//        btn1.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn2.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn3.setBackground(getDrawable(R.drawable.button_state_info));
-//        btn4.setBackground(getDrawable(R.drawable.button_state_info));
     }
 }

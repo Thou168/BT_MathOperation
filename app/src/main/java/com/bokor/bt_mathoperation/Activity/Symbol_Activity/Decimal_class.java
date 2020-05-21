@@ -14,6 +14,8 @@ import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_decimal_lesson;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Deci.Learn_Decimal_1;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -38,8 +40,6 @@ public class Decimal_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_play.startAnimation(animFadein);
 
                 startActivity(new Intent(getApplicationContext(), Select_decimal_lesson.class));
             }
@@ -48,10 +48,9 @@ public class Decimal_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_practice.startAnimation(animFadein);
-
-                startActivity(new Intent(getApplicationContext(), Learn_1.class));
+                Intent intent = new Intent(getApplicationContext(), Learn_Decimal_1.class);
+                intent.putExtra("sample_deci", "deci");
+                startActivity(intent);
             }
         });
 
@@ -60,39 +59,9 @@ public class Decimal_class extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
-//                back_div.startAnimation(animFadein);
             }
         });
     }
-
-//    public void time_alert(){
-//        transAnim = new TranslateAnimation(0, 0, 0,
-//                35);
-//        transAnim.setStartOffset(0);
-//        transAnim.setDuration(2000);
-//        transAnim.setRepeatCount(1999999999);
-//        transAnim.setFillAfter(true);
-//        transAnim.setInterpolator(new BounceInterpolator());
-//        transAnim.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//            }
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                alert.clearAnimation();
-//                final int left = alert.getLeft();
-//                final int top = alert.getTop();
-//                final int right = alert.getRight();
-//                final int bottom = alert.getBottom();
-//                alert.layout(left, top, right, bottom);
-//            }
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//        });
-//        alert.startAnimation(transAnim);
-//    }
 
     @Override
     public void onBackPressed() {

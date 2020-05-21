@@ -5,12 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    android:background="@color/white"
-    tools:context=".Fragment_lesson.Sub.Learn_Sub">
+    android:background="#F0EFF0"
+    tools:context=".Fragment_lesson.Addition.Learn_1">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+<!--        <ImageView-->
+<!--            android:id="@+id/img_back"-->
+<!--            android:visibility="visible"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:src="@drawable/ic_close_black_24dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:background="@drawable/button_state_red"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginStart="42dp"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="44dp"/>-->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_marginTop="31dp"
@@ -20,13 +31,13 @@
             android:layout_width="wrap_content"
             android:layout_height="46dp">
             <TextView
-                android:id="@+id/img_level"
-                android:background="@drawable/background_negative"
+                android:id="@+id/txt_level_current"
+                android:background="@drawable/bg_new_level"
                 android:text="កម្រិត 1"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:fontFamily="@font/battambang_regular"
-                android:textColor="@color/white"
+                android:textColor="#555555"
                 android:layout_width="85dp"
                 android:layout_height="46dp"/>
             <LinearLayout
@@ -37,16 +48,16 @@
                 <com.dd.ShadowLayout
                     app:sl_shadowRadius="5dp"
                     app:sl_cornerRadius="100dp"
-                    app:sl_shadowColor="@color/green_col"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/current_level1"
                         android:layout_width="35dp"
                         android:text="1"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="19sp"
-                        android:background="@drawable/gradient_current_level"
+                        android:background="@drawable/gradient_level_not_complete"
                         android:layout_height="35dp"/>
                 </com.dd.ShadowLayout>
                 <com.dd.ShadowLayout
@@ -56,6 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/current_level2"
                         android:text="2"
                         android:textColor="@color/white"
                         android:gravity="center"
@@ -71,6 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/current_level3"
                         android:text="3"
                         android:textColor="@color/white"
                         android:gravity="center"
@@ -86,6 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/current_level4"
                         android:text="4"
                         android:textColor="@color/white"
                         android:gravity="center"
@@ -96,91 +110,75 @@
                 </com.dd.ShadowLayout>
             </LinearLayout>
         </LinearLayout>
-        <!--        <TextView-->
-        <!--            android:id="@+id/level_row"-->
-        <!--            android:text="1 / 4"-->
-        <!--            android:visibility="gone"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="21sp"-->
-        <!--            android:textStyle="bold"-->
-        <!--            android:layout_below="@+id/img_level"-->
-        <!--            android:layout_centerInParent="true"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/level_row"-->
+<!--            android:text="1 / 4"-->
+<!--            android:visibility="gone"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="21sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_below="@+id/img_level"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
 
-        <!--        <ImageView-->
-        <!--            android:id="@+id/sounds"-->
-        <!--            android:layout_alignParentEnd="true"-->
-        <!--            android:visibility="gone"-->
-        <!--            android:background="@drawable/button_state_sound"-->
-        <!--            android:src="@drawable/on"-->
-        <!--            android:scaleType="centerCrop"-->
-        <!--            android:layout_width="52dp"-->
-        <!--            android:layout_height="44dp"-->
-        <!--            android:layout_marginEnd="42dp"-->
-        <!--            android:layout_marginTop="32dp"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/sounds"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:visibility="gone"-->
+<!--            android:background="@drawable/button_state_sound"-->
+<!--            android:src="@drawable/on"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="44dp"-->
+<!--            android:layout_marginEnd="42dp"-->
+<!--            android:layout_marginTop="32dp"/>-->
 
         <RelativeLayout
             android:id="@+id/rl_board"
             android:layout_marginTop="100dp"
-            android:layout_width="351dp"
-            android:background="@drawable/board"
+            android:layout_width="match_parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="19dp"
+            android:background="@drawable/board_new"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_height="237dp">
-            <RelativeLayout
-                android:layout_centerInParent="true"
-                android:gravity="center"
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/num_top"
-                    android:textColor="@color/white"
-                    android:layout_marginStart="5dp"
-                    android:text="8"
-                    android:layout_toEndOf="@+id/symbol"
-                    android:textSize="36sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/symbol"
-                    android:text="-"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="36sp"
+                    android:id="@+id/txt_ask"
+                    android:text="តើរូបខាងក្រោមនេះមានទម្ងន់ប៉ុន្មានគីឡូក្រាម?"
+                    android:textSize="15sp"
                     android:gravity="center"
                     android:textColor="@color/white"
-                    android:layout_below="@+id/num_top"
-                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/battambang_regular"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/num_bottom"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/num_top"
-                    android:layout_toEndOf="@id/symbol"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="5dp"
-                    android:text="4"
-                    android:textSize="36sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <View
-                    android:id="@+id/line_equal"
-                    android:layout_toEndOf="@id/symbol"
-                    android:layout_width="30dp"
-                    android:layout_height="3dp"
-                    android:layout_below="@+id/num_bottom"
-                    android:background="@color/white" />
-                <TextView
-                    android:id="@+id/num_result"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/line_equal"
-                    android:layout_marginStart="5dp"
-                    android:layout_toEndOf="@id/symbol"
-                    android:text=""
-                    android:textSize="36sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_change"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:layout_width="80dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/img_change_new"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"/>
+                </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
 
         <TextView
@@ -198,118 +196,81 @@
             android:layout_height="43dp"/>
         <RelativeLayout
             android:layout_below="@+id/answer"
-            android:layout_marginTop="57dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_marginEnd="35dp"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_height="wrap_content">
                 <TableRow
                     android:id="@+id/rowOneAnswerButtons"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="373dp"
+                    android:layout_height="wrap_content">
                     <Button
                         android:id="@+id/btn_1"
-                        android:layout_width="145.12dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
-                        android:layout_margin="4dp"
+                        android:layout_marginEnd="47dp"
                         android:layout_weight="1"
-                        android:textSize="50sp"
+                        android:gravity="center"
+                        android:textSize="36sp"
+                        android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
-                        android:background="@drawable/button_state_info"
                         android:lines="2"
-                        android:text="4"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white" />
                     <Button
                         android:id="@+id/btn_2"
-                        android:layout_width="145.12dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
-                        android:layout_margin="4dp"
-                        android:layout_weight="1 "
-                        android:textSize="50sp"
+                        android:layout_weight="1"
+                        android:textSize="36sp"
+                        android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
-                        android:background="@drawable/button_state_info"
                         android:lines="2"
-                        android:text="6"
-                        android:textColor="@color/white" />
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"/>
                 </TableRow>
                 <TableRow
                     android:id="@+id/rowTwoAnswerButtons"
-                    android:layout_width="match_parent"
+                    android:layout_width="373dp"
+                    android:layout_marginTop="20dp"
                     android:layout_height="match_parent">
                     <Button
                         android:id="@+id/btn_3"
-                        android:layout_width="145.12dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
-                        android:layout_margin="4dp"
+                        android:layout_marginEnd="47dp"
                         android:layout_weight="1"
-                        android:textSize="50sp"
-                        android:background="@drawable/button_state_info"
+                        android:textSize="36sp"
+                        android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="3"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white" />
                     <Button
                         android:id="@+id/btn_4"
-                        android:layout_width="145.12dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
-                        android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:textSize="50sp"
-                        android:background="@drawable/button_state_info"
+                        android:textSize="36sp"
+                        android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="5"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white" />
                 </TableRow>
             </TableLayout>
-<!--                <Button-->
-<!--                    android:id="@+id/btn_1"-->
-<!--                    android:layout_alignParentStart="true"-->
-<!--                    android:layout_width="145.12dp"-->
-<!--                    android:text="4"-->
-<!--                    android:background="@drawable/button_state_info"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="64sp"-->
-<!--                    android:layout_height="113.05dp"/>-->
 
-<!--                <Button-->
-<!--                    android:id="@+id/btn_2"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:background="@drawable/button_state_info"-->
-<!--                    android:layout_width="145.12dp"-->
-<!--                    android:text="6"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="64sp"-->
-<!--                    android:layout_height="113.05dp"/>-->
-<!--                <Button-->
-<!--                    android:id="@+id/btn_3"-->
-<!--                    android:layout_below="@+id/btn_1"-->
-<!--                    android:background="@drawable/button_state_info"-->
-<!--                    android:layout_marginTop="30dp"-->
-<!--                    android:text="3"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="64sp"-->
-<!--                    android:layout_alignParentStart="true"-->
-<!--                    android:layout_width="145.12dp"-->
-<!--                    android:layout_height="113.05dp"/>-->
-<!--                <Button-->
-<!--                    android:id="@+id/btn_4"-->
-<!--                    android:layout_below="@id/btn_2"-->
-<!--                    android:background="@drawable/button_state_info"-->
-<!--                    android:layout_marginTop="30dp"-->
-<!--                    android:text="5"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="64sp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:layout_width="145.12dp"-->
-<!--                    android:layout_height="113.05dp"/>-->
             <LinearLayout
-                android:id="@+id/ln_hand"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:visibility="gone"
@@ -329,11 +290,76 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerInParent="true"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_close_black_24dp"
+                android:src="@drawable/exit_new"
                 android:scaleType="centerCrop"
-                android:background="@drawable/button_state_red"
                 android:layout_width="52dp"
                 android:layout_height="44dp"/>
         </RelativeLayout>
+<!--        <RelativeLayout-->
+<!--            android:layout_below="@+id/answer"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/number_picker"-->
+<!--                android:layout_width="328dp"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <Button-->
+<!--                    android:id="@+id/btn_1"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_width="145.12dp"-->
+<!--                    android:text="22"-->
+<!--                    android:background="@drawable/button_state_info"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="64sp"-->
+<!--                    android:layout_height="113.05dp"/>-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_2"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:background="@drawable/button_state_info"-->
+<!--                    android:layout_width="145.12dp"-->
+<!--                    android:text="23"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="64sp"-->
+<!--                    android:layout_height="113.05dp"/>-->
+<!--                <Button-->
+<!--                    android:id="@+id/btn_3"-->
+<!--                    android:layout_below="@+id/btn_1"-->
+<!--                    android:background="@drawable/button_state_info"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:text="13"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="64sp"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_width="145.12dp"-->
+<!--                    android:layout_height="113.05dp"/>-->
+<!--                <Button-->
+<!--                    android:id="@+id/btn_4"-->
+<!--                    android:layout_below="@id/btn_2"-->
+<!--                    android:background="@drawable/button_state_info"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:text="35"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="64sp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_width="145.12dp"-->
+<!--                    android:layout_height="113.05dp"/>-->
+<!--            </RelativeLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="145.12dp"-->
+<!--                android:layout_height="113.05dp">-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/img_hand"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:visibility="visible"-->
+<!--                    android:src="@drawable/img_hand_pink"/>-->
+<!--            </LinearLayout>-->
+<!--        </RelativeLayout>-->
     </RelativeLayout>
 </com.luolc.emojirain.EmojiRainLayout>

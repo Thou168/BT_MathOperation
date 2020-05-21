@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +24,6 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
     MediaPlayer mediaPlayer,mediaPlayer2;
-    boolean isPlaying = false;
 
     TextView example,carry_on,top_num,bottom_num,answer,txt_explain_T,txt_explain_B,such_as;
     TextView two_char_top,one_char_top,one_char_bot,two_ans,one_ans;
@@ -55,8 +55,17 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
         });
         sound=findViewById(R.id.sounds);
         PushDownAnim.setPushDownAnimTo(sound).setScale( MODE_SCALE, 0.89f  ) .setOnClickListener(new View.OnClickListener() {
+            private boolean isPlaying = false;
             @Override
             public void onClick(View view) {
+                if(isPlaying) {
+                    sound.setImageResource(R.drawable.sound_on);
+                    isPlaying=false;
+                } else {
+                    sound.setImageResource(R.drawable.sound_off);
+                    isPlaying=true;
+                }
+
 //                if (isPlaying) {
 //                    if (mediaPlayer.isPlaying()) {
 //                        mediaPlayer.pause();
@@ -65,6 +74,7 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
 //                    }
 //                    Toast.makeText(getApplicationContext(),"សម្លេងត្រូវបានផ្អាក",Toast.LENGTH_SHORT).show();
 //                }else{
+
 //                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 //                        @Override
 //                        public void onCompletion(MediaPlayer mp) {
@@ -95,11 +105,11 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
         carry_on=findViewById(R.id.carry_on);
         carry_on.setVisibility(View.VISIBLE);
         top_num=findViewById(R.id.top_num);
-        top_num.setText("4​​  7");
+        top_num.setText("47");
         bottom_num=findViewById(R.id.bottom_num);
-        bottom_num.setText(" ​​   5");
+        bottom_num.setText("5");
         answer=findViewById(R.id.answer);
-        answer.setText("5​​  2");
+        answer.setText("52");
         txt_explain_T=findViewById(R.id.txt_explain_top);
         txt_explain_T.setText(". 7 បូក 5 ស្មើរនឹង 12 សរសេរលេខ 2 ត្រាទុក 1");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
@@ -123,5 +133,4 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
     public void onBackPressed() {
         finish();
     }
-
 }
