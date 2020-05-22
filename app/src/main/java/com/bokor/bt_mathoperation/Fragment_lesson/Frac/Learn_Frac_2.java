@@ -37,6 +37,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class Learn_Frac_2 extends AppCompatActivity {
     TextView first_q,second_q,third_q,fourth_q;
     TextView t1,t2,t3,t4;
+    TextView txt_ask;
     TextView txt_level_current;
     int level_plus = 1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
@@ -59,25 +60,28 @@ public class Learn_Frac_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn_fraction);
+        txt_ask=findViewById(R.id.txt_ask);
+        txt_ask.setText("ជ្រើសរើសការរៀបលំដាប់ប្រភាគដែលត្រឹមត្រូវ របស់ប្រភាគខាងក្រោម:");
+        txt_ask.setTextSize(18);
         t1=findViewById(R.id.txt1);
-        t1.setTextSize(20);
+        t1.setTextSize(15);
         t2=findViewById(R.id.txt2);
-        t2.setTextSize(20);
+        t2.setTextSize(15);
         t3=findViewById(R.id.txt3);
-        t3.setTextSize(20);
+        t3.setTextSize(15);
         t4=findViewById(R.id.txt4);
-        t4.setTextSize(20);
+        t4.setTextSize(15);
 //        qt_top=findViewById(R.id.num_top);
 //        qt_bottom=findViewById(R.id.num_bottom);
 //        qt_result=findViewById(R.id.num_result);
         first_q=findViewById(R.id.first_q);
-        first_q.setTextSize(20);
+        first_q.setTextSize(15);
         second_q=findViewById(R.id.second_q);
-        second_q.setTextSize(20);
+        second_q.setTextSize(15);
         third_q=findViewById(R.id.third_q);
-        third_q.setTextSize(20);
+        third_q.setTextSize(15);
         fourth_q=findViewById(R.id.fourth_q);
-        fourth_q.setTextSize(20);
+        fourth_q.setTextSize(15);
 
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -577,7 +581,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_Frac_2.this, Learn_2.class));
+                startActivity(new Intent(Learn_Frac_2.this, Learn_Frac_3.class));
                 finish();
             }
         });

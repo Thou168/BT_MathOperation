@@ -35,6 +35,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_weight_2 extends AppCompatActivity {
     ImageView img_change;
+    ImageView img_change_new;
     TextView txt_ask;
     TextView txt_level_current;
     int level_plus = 1;
@@ -60,14 +61,16 @@ public class Learn_weight_2 extends AppCompatActivity {
         setContentView(R.layout.learn_kilogram);
         img_change=findViewById(R.id.img_change);
         img_change.setVisibility(View.GONE);
+        img_change_new=findViewById(R.id.img_change_new);
+        img_change_new.setVisibility(View.GONE);
         txt_ask=findViewById(R.id.txt_ask);
+        txt_ask.setTextSize(20);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
         current_lv4=findViewById(R.id.current_level4);
 
         txt_level_current=findViewById(R.id.txt_level_current);
-
 
         img_back=findViewById(R.id.img_back);
         PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
@@ -107,31 +110,31 @@ public class Learn_weight_2 extends AppCompatActivity {
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl1);
-            txt_ask.setText("វិធីខ្លីមួយគីឡូក្រាមគឺ៖");
+            txt_ask.setText("សម្រាប់ 1 គីឡូក្រាម តើយើងគួរសរសេរយ៉ាងដូចម្តេច?៖");
 
             //btn
-            btn1.setText("K");
+            btn1.setText("1 K");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("Kg");
+            btn2.setText("1 Kg");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("Kgm");
+            btn3.setText("1 Kgm");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("Km");
+            btn4.setText("1 Km");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -175,7 +178,7 @@ public class Learn_weight_2 extends AppCompatActivity {
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl3);
-            txt_ask.setText("ប្រសិនបើរូបមន្តបញ្ជាក់ថាអ្នកត្រូវការម្សៅ 1/2 គីឡូក្រាម។ តើស្មើប៉ុន្មានក្រាមនៃចម្លើយខាងក្រោម:");
+            txt_ask.setText("ប្រសិនបើរូបមន្តបញ្ជាក់ថាអ្នកត្រូវការអំបិល 1/2 គីឡូក្រាម។ តើស្មើប៉ុន្មានក្រាមនៃចម្លើយខាងក្រោម:");
 
             //btn
             btn1.setText("5g");
@@ -209,7 +212,7 @@ public class Learn_weight_2 extends AppCompatActivity {
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl4);
-            txt_ask.setText("តើចម្លើលណាមួយក្នុងចំណោមចម្លើយទាំង4ខាងក្រោម ដែលមានទម្ងន់ស្រាលបំផុត?");
+            txt_ask.setText("តើចម្លើយណាមួយក្នុងចំណោមចម្លើយទាំង4ខាងក្រោម ដែលមានទម្ងន់ស្រាលបំផុត?");
             //btn
             btn1.setText("1Kg");
             btn1.setOnClickListener(new View.OnClickListener() {

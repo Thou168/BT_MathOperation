@@ -63,7 +63,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         img_change_new=findViewById(R.id.img_change_new);
         img_change.setVisibility(View.GONE);
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែរត្រឹមត្រូវ:");
+        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ:");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);

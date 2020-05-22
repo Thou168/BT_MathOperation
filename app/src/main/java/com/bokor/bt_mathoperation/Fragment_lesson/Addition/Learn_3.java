@@ -542,7 +542,7 @@ public class Learn_3 extends AppCompatActivity {
         TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
         txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេមមេរៀន");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
-        lesson_exit_lv.setText("វិធីដកលេខពីរខ្ទង់នឹងពីរខ្ទង់គ្មានខ្ចី");
+        lesson_exit_lv.setText("វិធីបូកលេខពីរខ្ទង់នឹងពីរខ្ទង់គ្មានត្រាទុក");
         TextView con = layoutView.findViewById(R.id.con);
         TextView back = layoutView.findViewById(R.id.back);
         gifImageView = layoutView.findViewById(R.id.gifImageView);

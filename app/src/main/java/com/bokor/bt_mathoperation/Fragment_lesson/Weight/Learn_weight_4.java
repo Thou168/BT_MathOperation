@@ -65,6 +65,7 @@ public class Learn_weight_4 extends AppCompatActivity {
         img_change_new=findViewById(R.id.img_change_new);
         img_change_new.setVisibility(View.GONE);
         txt_ask=findViewById(R.id.txt_ask);
+        txt_ask.setTextSize(20);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -217,7 +218,7 @@ public class Learn_weight_4 extends AppCompatActivity {
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl4);
-            txt_ask.setText("តើ 1.75 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
+            txt_ask.setText("តើ 1750 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
             btn1.setText("1kg 50g");

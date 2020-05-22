@@ -82,6 +82,10 @@ public class Learn_capa_1 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
+        btn1.setTextSize(30);
+        btn2.setTextSize(30);
+        btn3.setTextSize(30);
+        btn4.setTextSize(30);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -109,31 +113,31 @@ public class Learn_capa_1 extends AppCompatActivity {
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.lit_q_1);
             img_change_new.setVisibility(View.GONE);
-            txt_ask.setText("ម៉ាកបាននាំយកដបទឹក 1 លីត្រចំនួន 2 ដបទៅហាត់បាល់បោះ។ គាត់បានផឹកទឹកចំនួន 1000 មីល្លីលីត្រក្នុងពេលអនុវត្តន៍។ តើគាត់ទុកទឹកប៉ុន្មានលីត្រ?");
+            txt_ask.setText("រស្មីបាននាំយកដបទឹក 2 លីត្រចំនួន 2 ដបទៅហាត់បាល់បោះ។ គាត់បានផឹកទឹកចំនួន 1 លីត្រ។ តើគាត់ទុកទឹកប៉ុន្មានលីត្រ?");
 
             //btn
-            btn1.setText("1 mL");
+            btn1.setText("3 mL");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("1 L");
+            btn2.setText("3 L");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("2 L");
+            btn3.setText("30 L");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("2 mL");
+            btn4.setText("300 mL");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -181,7 +185,7 @@ public class Learn_capa_1 extends AppCompatActivity {
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("បំលែង 5,743 mL = _______ L?");
+            txt_ask.setText("តើ 5,743 mL = _______ L?");
 
             //btn
             btn1.setText("57.43");
@@ -217,7 +221,7 @@ public class Learn_capa_1 extends AppCompatActivity {
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("បំលែង 8,567 mL = _______ L?");
+            txt_ask.setText("តើ 8,567 mL = _______ L?");
 
             //btn
             btn1.setText("85.67");

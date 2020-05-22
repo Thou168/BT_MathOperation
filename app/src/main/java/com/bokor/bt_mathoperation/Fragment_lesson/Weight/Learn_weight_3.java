@@ -36,6 +36,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class Learn_weight_3 extends AppCompatActivity {
     TextView txt_ask;
     ImageView img_change;
+    ImageView img_change_new;
     TextView txt_level_current;
     int level_plus = 1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
@@ -59,8 +60,11 @@ public class Learn_weight_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn_kilogram);
         txt_ask=findViewById(R.id.txt_ask);
+        txt_ask.setTextSize(20);
         img_change=findViewById(R.id.img_change);
         img_change.setVisibility(View.GONE);
+        img_change_new=findViewById(R.id.img_change_new);
+        img_change_new.setVisibility(View.GONE);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -81,6 +85,10 @@ public class Learn_weight_3 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
+        btn1.setTextSize(30);
+        btn2.setTextSize(30);
+        btn3.setTextSize(30);
+        btn4.setTextSize(30);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -211,28 +219,28 @@ public class Learn_weight_3 extends AppCompatActivity {
             txt_ask.setText("សារ៉ាមានម៉ាស 32 គីឡូក្រាម។ ចនគឺធ្ងន់ជាង 7 គីឡូក្រាម។ តើចនមានម៉ាសចំនួនប៉ុន្មានក្រាម(g)?");
 
             //btn
-            btn1.setText("3.700g");
+            btn1.setText("3.900g");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("370g");
+            btn2.setText("390g");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("3700g");
+            btn3.setText("3900g");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("37000g");
+            btn4.setText("39000g");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

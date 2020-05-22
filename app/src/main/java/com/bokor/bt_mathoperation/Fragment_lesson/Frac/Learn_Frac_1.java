@@ -72,7 +72,6 @@ public class Learn_Frac_1 extends AppCompatActivity {
 
         txt_level_current=findViewById(R.id.txt_level_current);
 
-
         img_back=findViewById(R.id.img_back);
         PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -563,7 +562,7 @@ public class Learn_Frac_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_Frac_1.this, Learn_2.class));
+                startActivity(new Intent(Learn_Frac_1.this, Learn_Frac_2.class));
                 finish();
             }
         });

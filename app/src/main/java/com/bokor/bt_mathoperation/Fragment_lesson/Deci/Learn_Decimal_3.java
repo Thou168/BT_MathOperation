@@ -32,6 +32,7 @@ import com.thekhaeng.pushdownanim.PushDownAnim;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
+import xiaofei.library.gridlayout.GridLayout;
 
 public class Learn_Decimal_3 extends AppCompatActivity {
     ImageView img_change;
@@ -113,7 +114,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
 
             //btn
 
-            btn1.setText("ខ្បៀស");
+            btn1.setText("ក្បៀស");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -127,7 +128,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("ខាន់");
+            btn3.setText("ខណ្ឌ");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -525,15 +526,13 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         surprise_true();
 
         dialogBuilder = new AlertDialog.Builder(Learn_Decimal_3.this);
-        View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level, null);
+        View layoutView = getLayoutInflater().inflate(R.layout.dialog_next_level_end, null);
         TextView txt_exit_lv = layoutView.findViewById(R.id.txt_level_exit);
         txt_exit_lv.setText("អ្នកបានបញ្ចប់ហ្គេម");
         TextView lesson_exit_lv = layoutView.findViewById(R.id.lesson_level_exit);
         lesson_exit_lv.setText("ចំនួនទសភាគ");
         TextView ask_next = layoutView.findViewById(R.id.ask_next);
-        ask_next.setText("តើអ្នកចង់បន្តទៅហ្គេមបន្ទាប់ទៀត ឬត្រឡប់ទៅកាន់មាតិកាដើមវិញ?");
-        TextView con = layoutView.findViewById(R.id.con);
-        con.setText("ហ្គេមបន្ទាប់");
+        ask_next.setText("ត្រលប់ទៅមាតិកាដើមវិញ");
         TextView back = layoutView.findViewById(R.id.back);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
@@ -542,14 +541,6 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
-
-        PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Learn_Decimal_3.this, Select_decimal_lesson.class));
-                finish();
-            }
-        });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

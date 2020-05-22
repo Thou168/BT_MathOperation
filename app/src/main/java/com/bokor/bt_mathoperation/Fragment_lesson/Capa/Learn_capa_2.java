@@ -179,7 +179,7 @@ public class Learn_capa_2 extends AppCompatActivity {
 //            img_change.setImageResource(R.drawable.kl3);
             img_change.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("បំលែង 6 L = ______ mL?");
+            txt_ask.setText("តើ 6 L = ______ mL?");
 
             //btn
             btn1.setText("60");
@@ -215,7 +215,7 @@ public class Learn_capa_2 extends AppCompatActivity {
 //            img_change.setImageResource(R.drawable.kl4);
             img_change.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("បំលែង 64.99 L = _______ mL");
+            txt_ask.setText("តើ 64.99 L = _______ mL");
             //btn
             btn1.setText("64,999");
             btn1.setOnClickListener(new View.OnClickListener() {
