@@ -210,8 +210,8 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
     private void showAlertDialogNegative() {
         dialogBuilder = new AlertDialog.Builder(Learn_Sub_Question.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new_fail, null);
-        ImageButton dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
-        ImageButton home = layoutView.findViewById(R.id.home);
+        ImageView dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
+        ImageView home = layoutView.findViewById(R.id.home);
         dialogBuilder.setView(layoutView);
 //        dialogBuilder.setCancelable(false);
         alertDialog = dialogBuilder.create();
@@ -258,9 +258,9 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         surprise_true();
         dialogBuilder = new AlertDialog.Builder(Learn_Sub_Question.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new, null);
-        ImageButton dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
-        ImageButton home = layoutView.findViewById(R.id.home);
-        ImageButton again = layoutView.findViewById(R.id.again);
+        ImageView dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
+        ImageView home = layoutView.findViewById(R.id.home);
+        ImageView again = layoutView.findViewById(R.id.again);
 //        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();

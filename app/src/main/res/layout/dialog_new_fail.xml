@@ -1,176 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="452dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:orientation="vertical">-->
-<!--        <LinearLayout-->
-<!--            android:orientation="vertical"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:background="@drawable/main_false"-->
-<!--            android:layout_marginBottom="19.74dp"-->
-<!--            android:layout_height="wrap_content">-->
-<!--            <LinearLayout-->
-<!--                android:gravity="center"-->
-<!--                android:background="@drawable/success_false"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="35.15dp"-->
-<!--                android:layout_marginStart="19.24dp"-->
-<!--                android:layout_marginEnd="19.24dp"-->
-<!--                android:paddingTop="55dp"-->
-<!--                android:paddingBottom="39.97dp">-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:gravity="center"-->
-<!--                    android:background="@drawable/center_false"-->
-<!--                    android:layout_height="wrap_content">-->
-<!--                    <pl.droidsonroids.gif.GifImageView-->
-<!--                        android:id="@+id/gifImageView"-->
-<!--                        android:src="@drawable/dear_sad"-->
-<!--                        android:scaleType="fitCenter"-->
-<!--                        android:layout_width="155dp"-->
-<!--                        android:layout_height="155dp"/>-->
-<!--                </LinearLayout>-->
-<!--            </LinearLayout>-->
-<!--        </LinearLayout>-->
-<!--        <xiaofei.library.gridlayout.GridLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="77.47dp"-->
-<!--            android:layout_gravity="bottom"-->
-<!--            app:horizontalSpacing="32dp"-->
-<!--            android:layout_marginStart="100dp"-->
-<!--            android:layout_marginEnd="100dp"-->
-<!--            app:numColumns="2"-->
-<!--            app:numRows="1">-->
-<!--            <ImageView-->
-<!--                android:id="@+id/home"-->
-<!--                android:src="@drawable/home_false"-->
-<!--                android:scaleType="fitCenter"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--            <ImageView-->
-<!--                android:id="@+id/btnDialogNegative"-->
-<!--                android:src="@drawable/again_false"-->
-<!--                android:scaleType="fitCenter"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"/>-->
-<!--        </xiaofei.library.gridlayout.GridLayout>-->
-<!--    </FrameLayout>-->
-<!--</RelativeLayout>-->
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="452dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="40dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="10dp">
-
+        android:gravity="center_vertical"
+        android:orientation="vertical">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="403.87dp"
-            android:layout_marginBottom="25dp"
-            android:background="@drawable/fail_body"
-            android:elevation="4dp"
-            android:gravity="center"
             android:orientation="vertical"
-            android:paddingStart="6.54dp"
-            android:paddingEnd="6.54dp"
-            android:paddingTop="7.62dp"
-            android:paddingBottom="5.44dp">
+            android:layout_width="match_parent"
+            android:background="@drawable/main_false"
+            android:layout_marginBottom="19.74dp"
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:orientation="vertical"
                 android:gravity="center"
-                android:background="@drawable/success_fail"
+                android:background="@drawable/success_false"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <pl.droidsonroids.gif.GifImageView
-                    android:id="@+id/gifImageView"
-                    android:src="@drawable/dear_sad"
-                    android:scaleType="fitCenter"
-                    android:layout_marginTop="74.25dp"
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"/>
-                <Button
-                    android:layout_marginTop="43dp"
-                    android:layout_width="248.58dp"
-                    android:visibility="gone"
-                    android:layout_height="55dp"
-                    android:textSize="22sp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:background="@drawable/button_state_red"
-                    android:text="ព្យាយាមម្តងទៀត"
-                    android:textColor="@color/white"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35.15dp"
+                android:layout_marginStart="19.24dp"
+                android:layout_marginEnd="19.24dp"
+                android:paddingTop="55dp"
+                android:paddingBottom="39.97dp">
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_marginTop="87dp"
                     android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/center_false"
                     android:layout_height="wrap_content">
-                    <ImageButton
-                        android:id="@+id/home"
-                        android:background="@drawable/button_state_red"
-                        android:src="@drawable/ic_home"
-                        android:layout_width="55.48dp"
-                        android:layout_height="46dp"/>
-                    <ImageButton
-                        android:id="@+id/btnDialogNegative"
-                        android:layout_marginStart="29dp"
-                        android:background="@drawable/button_state_red"
-                        android:padding="12dp"
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/gifImageView"
+                        android:src="@drawable/dear_sad"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/roundss"
-                        android:layout_width="55.48dp"
-                        android:layout_height="46dp"/>
+                        android:layout_width="155dp"
+                        android:layout_height="155dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="289.72dp"
-            android:layout_height="81.65dp"
-            android:background="@drawable/fail_head"
-            android:id="@+id/linearLayout"
-            android:gravity="top|center_horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="2dp"
-            android:elevation="4dp">
-            <TextView
-                android:text="ចម្លើយមិនត្រឹមត្រូវ"
-                android:fontFamily="@font/battambang_regular"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:textSize="26sp"
-                android:layout_width="202dp"
+        <xiaofei.library.gridlayout.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="77.47dp"
+            android:layout_gravity="bottom"
+            app:horizontalSpacing="32dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            app:numColumns="2"
+            app:numRows="1">
+            <ImageView
+                android:id="@+id/home"
+                android:src="@drawable/home_false"
+                android:scaleType="fitCenter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-<!--            <ImageView-->
-<!--                android:visibility="visible"-->
-<!--                android:id="@+id/textView"-->
-<!--                android:src="@drawable/success_head"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="1dp"-->
-<!--                android:gravity="center_horizontal" />-->
-        </LinearLayout>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/btnDialogNegative"
+                android:src="@drawable/again_false"
+                android:scaleType="fitCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </xiaofei.library.gridlayout.GridLayout>
+    </FrameLayout>
 </RelativeLayout>
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="10dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="403.87dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:background="@drawable/fail_body"-->
+<!--            android:elevation="4dp"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingStart="6.54dp"-->
+<!--            android:paddingEnd="6.54dp"-->
+<!--            android:paddingTop="7.62dp"-->
+<!--            android:paddingBottom="5.44dp">-->
+<!--            <LinearLayout-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/success_fail"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+<!--                <pl.droidsonroids.gif.GifImageView-->
+<!--                    android:id="@+id/gifImageView"-->
+<!--                    android:src="@drawable/dear_sad"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:layout_marginTop="74.25dp"-->
+<!--                    android:layout_width="155dp"-->
+<!--                    android:layout_height="155dp"/>-->
+<!--                <Button-->
+<!--                    android:layout_marginTop="43dp"-->
+<!--                    android:layout_width="248.58dp"-->
+<!--                    android:visibility="gone"-->
+<!--                    android:layout_height="55dp"-->
+<!--                    android:textSize="22sp"-->
+<!--                    android:fontFamily="@font/battambang_regular"-->
+<!--                    android:background="@drawable/button_state_red"-->
+<!--                    android:text="ព្យាយាមម្តងទៀត"-->
+<!--                    android:textColor="@color/white"/>-->
+<!--                <LinearLayout-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="87dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/home"-->
+<!--                        android:background="@drawable/button_state_red"-->
+<!--                        android:src="@drawable/ic_home"-->
+<!--                        android:layout_width="55.48dp"-->
+<!--                        android:layout_height="46dp"/>-->
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/btnDialogNegative"-->
+<!--                        android:layout_marginStart="29dp"-->
+<!--                        android:background="@drawable/button_state_red"-->
+<!--                        android:padding="12dp"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:src="@drawable/roundss"-->
+<!--                        android:layout_width="55.48dp"-->
+<!--                        android:layout_height="46dp"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </FrameLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_horizontal">-->
+
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="289.72dp"-->
+<!--            android:layout_height="81.65dp"-->
+<!--            android:background="@drawable/fail_head"-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:gravity="top|center_horizontal"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            android:elevation="4dp">-->
+<!--            <TextView-->
+<!--                android:text="ចម្លើយមិនត្រឹមត្រូវ"-->
+<!--                android:fontFamily="@font/battambang_regular"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="26sp"-->
+<!--                android:layout_width="202dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:visibility="visible"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/textView"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@drawable/success_head"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginTop="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:gravity="center_horizontal" />&ndash;&gt;-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+<!--</RelativeLayout>-->

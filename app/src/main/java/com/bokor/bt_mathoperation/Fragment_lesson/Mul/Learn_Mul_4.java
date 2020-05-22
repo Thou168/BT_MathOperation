@@ -448,8 +448,8 @@ public class Learn_Mul_4 extends AppCompatActivity {
     private void showAlertDialogNegative() {
         dialogBuilder = new AlertDialog.Builder(Learn_Mul_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new_fail, null);
-        ImageButton dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
-        ImageButton home = layoutView.findViewById(R.id.home);
+        ImageView dialogButtonNegative = layoutView.findViewById(R.id.btnDialogNegative);
+        ImageView home = layoutView.findViewById(R.id.home);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
 //        dialogBuilder.setCancelable(false);
@@ -477,9 +477,9 @@ public class Learn_Mul_4 extends AppCompatActivity {
         surprise_true();
         dialogBuilder = new AlertDialog.Builder(Learn_Mul_4.this);
         View layoutView = getLayoutInflater().inflate(R.layout.dialog_new, null);
-        ImageButton dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
-        ImageButton home = layoutView.findViewById(R.id.home);
-        ImageButton again = layoutView.findViewById(R.id.again);
+        ImageView dialogButtonPositive = layoutView.findViewById(R.id.btnDialogPositive);
+        ImageView home = layoutView.findViewById(R.id.home);
+        ImageView again = layoutView.findViewById(R.id.again);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
 //        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
