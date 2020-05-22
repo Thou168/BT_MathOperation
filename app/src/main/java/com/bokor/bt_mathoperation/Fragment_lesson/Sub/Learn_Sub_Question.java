@@ -86,9 +86,6 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
 
         tv_question = (TextView)findViewById(R.id.tv_question);
 
-        current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-        current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-
         NextQuestion(random.nextInt(questionLength));
     }
 
@@ -335,7 +332,38 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
     }
 
     private void NextQuestion(int num){
-        txt_level_current.setText("កម្រិត "+ level_plus);
+        current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+        current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            userName = extras.getString("sample_sub");
+            if (userName != null) {
+                //text current level
+                current_lv1.setText("13");
+                current_lv2.setText("14");
+                current_lv3.setText("15");
+                current_lv4.setText("16");
+                if (level_plus==1){
+                    current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 13");
+                }else if (level_plus==2){
+                    current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 14");
+                }else if (level_plus==3){
+                    current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 15");
+                }else if (level_plus==4){
+                    current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 16");
+                }
+            }
+        }else {
+            txt_level_current.setText("កម្រិត "+level_plus);
+            current_lv1.setText("1");
+            current_lv2.setText("2");
+            current_lv3.setText("3");
+            current_lv4.setText("4");
+        }
         if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
         }else if (level_plus==4){

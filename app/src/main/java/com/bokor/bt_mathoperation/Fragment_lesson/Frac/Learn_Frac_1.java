@@ -69,6 +69,11 @@ public class Learn_Frac_1 extends AppCompatActivity {
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
         current_lv4=findViewById(R.id.current_level4);
+        //text current level
+        current_lv1.setText("1");
+        current_lv2.setText("2");
+        current_lv3.setText("3");
+        current_lv4.setText("4");
 
         txt_level_current=findViewById(R.id.txt_level_current);
 

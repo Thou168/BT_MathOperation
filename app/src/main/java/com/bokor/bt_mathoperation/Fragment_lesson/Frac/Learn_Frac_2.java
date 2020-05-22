@@ -124,7 +124,36 @@ public class Learn_Frac_2 extends AppCompatActivity {
         showNextQuiz();
     }
     private void showNextQuiz(){
-        txt_level_current.setText("កម្រិត "+level_plus);
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            userName = extras.getString("sample_frac");
+            if (userName != null) {
+                //text current level
+                current_lv1.setText("5");
+                current_lv2.setText("6");
+                current_lv3.setText("7");
+                current_lv4.setText("8");
+                if (level_plus==1){
+                    current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 5");
+                }else if (level_plus==2){
+                    current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 6");
+                }else if (level_plus==3){
+                    current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 7");
+                }else if (level_plus==4){
+                    current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 8");
+                }
+            }
+        }else {
+            txt_level_current.setText("កម្រិត "+level_plus);
+            current_lv1.setText("1");
+            current_lv2.setText("2");
+            current_lv3.setText("3");
+            current_lv4.setText("4");
+        }
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));

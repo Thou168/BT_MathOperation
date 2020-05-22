@@ -62,6 +62,8 @@ public class Learn_Sub_4 extends AppCompatActivity {
 
     Vibrator vibe;
     MediaPlayer mp1,game_over;
+    Bundle extras;
+    String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,7 +116,36 @@ public class Learn_Sub_4 extends AppCompatActivity {
 
     }
     private void showNextQuiz(){
-        txt_level_current.setText("កម្រិត "+level_plus);
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            userName = extras.getString("sample_sub");
+            if (userName != null) {
+                //text current level
+                current_lv1.setText("13");
+                current_lv2.setText("14");
+                current_lv3.setText("15");
+                current_lv4.setText("16");
+                if (level_plus==1){
+                    current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 13");
+                }else if (level_plus==2){
+                    current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 140");
+                }else if (level_plus==3){
+                    current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 15");
+                }else if (level_plus==4){
+                    current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+                    txt_level_current.setText("កម្រិត 16");
+                }
+            }
+        }else {
+            txt_level_current.setText("កម្រិត "+level_plus);
+            current_lv1.setText("1");
+            current_lv2.setText("2");
+            current_lv3.setText("3");
+            current_lv4.setText("4");
+        }
         qt_result.setText("??");
 
         if (level_plus==1){
@@ -158,7 +189,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
             qt_bottom.setText("29");
 
             //btn
-            btn1.setText("48");
+            btn1.setText("19");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
