@@ -418,17 +418,18 @@ public class Learn_2 extends AppCompatActivity {
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
 
-        container.addEmoji(R.drawable.star1);
-        container.addEmoji(R.drawable.star2);
-        container.addEmoji(R.drawable.star3);
-        container.addEmoji(R.drawable.star4);
-        container.addEmoji(R.drawable.star5);
-        container.startDropping();
-        //container.stopDropping();
-        container.setPer(10);
-        container.setDuration(7200);
-        container.setDropDuration(2400);
-        container.setDropFrequency(500);
+        //star drop
+//        container.addEmoji(R.drawable.star1);
+//        container.addEmoji(R.drawable.star2);
+//        container.addEmoji(R.drawable.star3);
+//        container.addEmoji(R.drawable.star4);
+//        container.addEmoji(R.drawable.star5);
+//        container.startDropping();
+//        //container.stopDropping();
+//        container.setPer(10);
+//        container.setDuration(7200);
+//        container.setDropDuration(2400);
+//        container.setDropFrequency(500);
         //end
     }
 
