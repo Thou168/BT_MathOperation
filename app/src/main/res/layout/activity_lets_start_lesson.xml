@@ -151,7 +151,7 @@
                     <TextView
                         android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
-                        android:text=". 1 បូក 8 ស្មើរនឹង 9 សរសេរលេខ 9"
+                        android:text=". 1 បូក 8 ស្មើនឹង 9 សរសេរលេខ 9"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -207,7 +207,7 @@
                         <LinearLayout
                             android:background="@drawable/background_exit_dialog"
                             android:layout_width="match_parent"
-                            android:layout_height="46.43dp">
+                            android:layout_height="wrap_content">
                             <RelativeLayout
                                 android:layout_width="0dp"
                                 android:gravity="center"

@@ -61,9 +61,10 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         setContentView(R.layout.learn_kilogram);
         img_change=findViewById(R.id.img_change);
         img_change_new=findViewById(R.id.img_change_new);
+        img_change_new.setVisibility(View.GONE);
         img_change.setVisibility(View.GONE);
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ:");
+//        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ:");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -114,8 +115,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_1_q);
-//            txt_ask.setText("ម៉ាកបាននាំយកដបទឹក 1 លីត្រចំនួន 2 ដបទៅហាត់បាល់បោះ។ គាត់បានផឹកទឹកចំនួន 1000 មីល្លីលីត្រក្នុងពេលអនុវត្តន៍។ តើគាត់ទុកទឹកប៉ុន្មានលីត្រ?");
+            txt_ask.setText("ដោយក្រណាត់មួយដុំ មាន10ផ្ទាំងដោយក្នុងនោះមានក្រណាត់ 5ផ្ទាំងលាបពណ៌។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
 
             //btn
             btn1.setText("0.25");
@@ -148,8 +148,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_2_q);
-//            txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10L ដោយធុងទឹកខាងស្តាំមានចំនុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំនុះប៉ុន្មាន?");
+            txt_ask.setText("គេមាន ឃ្លី10 ដោយ 2 ឃ្លីមានពណ៌ខ្មៅ។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។ ");
 
             //btn
             btn1.setText("0.2");
@@ -182,8 +181,8 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_3_q);
-//            txt_ask.setText("បំលែង 5,743 mL = _______ L?");
+//            img_change_new.setImageResource(R.drawable.deci_3_q);
+            txt_ask.setText("អង្គការមួយមានក្មេងចំនួន 10នាក់ ដោយ 8នាក់មានសម្បុលស។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
 
             //btn
             btn1.setText("0.85");
@@ -217,31 +216,31 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change_new.setImageResource(R.drawable.deci_4_q);
-//            txt_ask.setText("បំលែង 8,567 mL = _______ L?");
+            txt_ask.setText("ធូមានបងប្អូនចំនួន 10នាក់ ដោយនៅសល់តែកូនម្នាក់ដែលមិនបានចិញ្ចឹមម្តាយ។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
 
             //btn
-            btn1.setText("5/5");
+            btn1.setText("0.4");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("4/10");
+            btn2.setText("0.9");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("10/10");
+            btn3.setText("0.01");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("5/10");
+            btn4.setText("0.1");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

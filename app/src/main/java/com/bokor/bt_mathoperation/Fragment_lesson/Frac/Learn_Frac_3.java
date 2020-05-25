@@ -19,6 +19,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,15 +36,15 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Frac_3 extends AppCompatActivity {
     TextView txt_ask;
-    ImageView img_change;
-    ImageView img_change_new;
     TextView txt_level_current;
     int level_plus = 1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
 
     ImageView img_back;
-    Button btn1,btn2,btn3,btn4;
+    RelativeLayout btn1,btn2,btn3,btn4;
+    TextView txt_front_1,txt_bot_1,txt_front_2,txt_bot_2;
+    TextView btn_1_top,btn_1_bot,btn_2_top,btn_2_bot,btn_3_top,btn_3_bot,btn_4_top,btn_4_bot;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
     GifImageView gifImageView;
@@ -58,12 +59,9 @@ public class Learn_Frac_3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.learn_kilogram);
+        setContentView(R.layout.learn_relative_frac);
         txt_ask=findViewById(R.id.txt_ask);
         txt_ask.setText("ចូរគណនាការបូកប្រភាគខាងក្រោម:");
-        img_change=findViewById(R.id.img_change);
-        img_change.setVisibility(View.GONE);
-        img_change_new=findViewById(R.id.img_change_new);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -84,6 +82,23 @@ public class Learn_Frac_3 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
+
+        //id answer button
+        btn_1_top=findViewById(R.id.btn_1_top);
+        btn_1_bot=findViewById(R.id.btn_1_bot);
+        btn_2_top=findViewById(R.id.btn_2_top);
+        btn_2_bot=findViewById(R.id.btn_2_bot);
+        btn_3_top=findViewById(R.id.btn_3_top);
+        btn_3_bot=findViewById(R.id.btn_3_bot);
+        btn_4_top=findViewById(R.id.btn_4_top);
+        btn_4_bot=findViewById(R.id.btn_4_bot);
+
+        //txt add fraction
+        txt_front_1=findViewById(R.id.txt_1_front);
+        txt_bot_1=findViewById(R.id.txt_1_bot);
+        txt_front_2=findViewById(R.id.txt_2_front);
+        txt_bot_2=findViewById(R.id.txt_2_bot);
+
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -138,30 +153,44 @@ public class Learn_Frac_3 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.frac_g3_1);
-            //btn
-            btn1.setText("3/8");
+            //front
+            txt_front_1.setText("1");
+            txt_bot_1.setText("4");
+            //end
+            txt_front_2.setText("2");
+            txt_bot_2.setText("4");
+
+            //btn txt
+            btn_1_top.setText("2");
+            btn_1_bot.setText("4");
+
+            btn_2_top.setText("3");
+            btn_2_bot.setText("4");
+
+            btn_3_top.setText("4");
+            btn_3_bot.setText("4");
+
+            btn_4_top.setText("5");
+            btn_4_bot.setText("4");
+
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("3/4");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("4/3");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("4/4");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -170,30 +199,43 @@ public class Learn_Frac_3 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.frac_g3_2);
-            //btn
-            btn1.setText("5/6");
+            //front
+            txt_front_1.setText("2");
+            txt_bot_1.setText("6");
+            //end
+            txt_front_2.setText("3");
+            txt_bot_2.setText("6");
+
+            //btn txt
+            btn_1_top.setText("5");
+            btn_1_bot.setText("6");
+
+            btn_2_top.setText("4");
+            btn_2_bot.setText("6");
+
+            btn_3_top.setText("3");
+            btn_3_bot.setText("6");
+
+            btn_4_top.setText("2");
+            btn_4_bot.setText("6");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("5/5");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("5/12");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("6/6");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -202,30 +244,43 @@ public class Learn_Frac_3 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.frac_g3_3);
-            //btn
-            btn1.setText("9/7");
+            //front
+            txt_front_1.setText("3");
+            txt_bot_1.setText("9");
+            //end
+            txt_front_2.setText("4");
+            txt_bot_2.setText("9");
+
+            //btn txt
+            btn_1_top.setText("5");
+            btn_1_bot.setText("9");
+
+            btn_2_top.setText("6");
+            btn_2_bot.setText("9");
+
+            btn_3_top.setText("7");
+            btn_3_bot.setText("9");
+
+            btn_4_top.setText("8");
+            btn_4_bot.setText("9");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("7/18");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("7/9");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("9/9");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -234,30 +289,43 @@ public class Learn_Frac_3 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.frac_g3_4);
-            //btn
-            btn1.setText("5/9");
+            //front
+            txt_front_1.setText("5");
+            txt_bot_1.setText("9");
+            //end
+            txt_front_2.setText("4");
+            txt_bot_2.setText("9");
+
+            //btn txt
+            btn_1_top.setText("6");
+            btn_1_bot.setText("9");
+
+            btn_2_top.setText("7");
+            btn_2_bot.setText("9");
+
+            btn_3_top.setText("8");
+
+
+            btn_4_top.setText("9");
+            btn_4_bot.setText("9");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("6/9");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("7/7");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("7/9");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

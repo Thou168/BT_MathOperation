@@ -5,23 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container"
-    android:background="#F0EFF0"
-    tools:context=".Fragment_lesson.Addition.Learn_1">
+    android:background="#F0EFF0">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<!--        <ImageView-->
-<!--            android:id="@+id/img_back"-->
-<!--            android:visibility="visible"-->
-<!--            android:layout_centerInParent="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:src="@drawable/ic_close_black_24dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:background="@drawable/button_state_red"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            android:layout_marginStart="42dp"-->
-<!--            android:layout_width="52dp"-->
-<!--            android:layout_height="44dp"/>-->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_marginTop="31dp"
@@ -144,241 +131,106 @@
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_height="237dp">
-            <RelativeLayout
-                android:layout_centerInParent="true"
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/txt_ask"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:textSize="18sp"
+                    android:text="ចូរជ្រើសរើសចម្លើយមួយដែលអ្នកគិតថាត្រឹមត្រូវ :"
+                    android:textSize="20sp"
+                    android:gravity="center"
                     android:textColor="@color/white"
                     android:fontFamily="@font/battambang_regular"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginTop="20dp"
-                    android:text="ជ្រើសរើសលេខដែលធំជាងគេ របស់ប្រភាគខាងក្រោម:"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:id="@+id/ln_crop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_ask"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="top"
-                    android:layout_centerInParent="true"
-                    android:layout_centerHorizontal="true">
-
-                    <RelativeLayout
-                        android:id="@+id/rl_start"
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+                    <LinearLayout
+                        android:id="@+id/rl_first"
+                        android:orientation="vertical"
+                        android:gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="20dp"
-                        android:gravity="center">
-
-                        <LinearLayout
-                            android:id="@+id/ln_1"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_1_front"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/num_top"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="true">
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:background="@color/white"/>
 
-                            <TextView
-                                android:id="@+id/txt1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="ក. "
-                                android:textColor="@color/white"
-                                android:textSize="25sp" />
-                            <RelativeLayout
-                                android:gravity="center"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:id="@+id/first_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="2"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                                <View
-                                    android:id="@+id/row_first"
-                                    android:layout_width="20dp"
-                                    android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/first_q"/>
-
-                                <TextView
-                                    android:id="@+id/first_below"
-                                    android:layout_centerInParent="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/row_first"
-                                    android:text="5"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/txt_1_bot"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/ln_1"
-                            android:layout_centerInParent="true">
-
-                            <TextView
-                                android:id="@+id/txt3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="គ. "
-                                android:textColor="@color/white"
-                                android:textSize="25sp" />
-                            <RelativeLayout
-                                android:gravity="center"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:id="@+id/third_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="4"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                                <View
-                                    android:id="@+id/row_third"
-                                    android:layout_width="20dp"
-                                    android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/third_q"/>
-
-                                <TextView
-                                    android:id="@+id/third_below"
-                                    android:layout_centerInParent="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/row_third"
-                                    android:text="5"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/rl_end"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/symbol"
+                        android:layout_toEndOf="@+id/rl_first"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:gravity="center">
-
-                        <LinearLayout
-                            android:id="@+id/ln_2"
+                        android:layout_centerInParent="true"
+                        android:text="+"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/rl_second"
+                        android:layout_toEndOf="@+id/symbol"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_2_front"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/num_top"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="true">
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                        <View
+                            android:id="@+id/row_2"
+                            android:layout_width="20dp"
+                            android:layout_height="2dp"
+                            android:background="@color/white"/>
 
-                            <TextView
-                                android:id="@+id/txt2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="ខ. "
-                                android:textColor="@color/white"
-                                android:textSize="25sp" />
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:id="@+id/second_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="3"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                                <View
-                                    android:id="@+id/row_second"
-                                    android:layout_width="20dp"
-                                    android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/second_q"/>
-
-                                <TextView
-                                    android:id="@+id/second_below"
-                                    android:layout_centerInParent="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/row_second"
-                                    android:text="5"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/txt_2_bot"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/ln_2"
-                            android:layout_centerInParent="true">
-
-                            <TextView
-                                android:id="@+id/txt4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="ឃ. "
-                                android:textColor="@color/white"
-                                android:textSize="25sp" />
-                            <RelativeLayout
-                                android:gravity="center"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:id="@+id/fourth_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="5"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                                <View
-                                    android:id="@+id/row_fourth"
-                                    android:layout_width="20dp"
-                                    android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/fourth_q"/>
-
-                                <TextView
-                                    android:id="@+id/fourth_below"
-                                    android:layout_centerInParent="true"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/row_fourth"
-                                    android:text="5"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </RelativeLayout>
-                </LinearLayout>
-            </RelativeLayout>
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/equal"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/rl_second"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="="
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
 
         <TextView
@@ -410,59 +262,161 @@
                     android:id="@+id/rowOneAnswerButtons"
                     android:layout_width="373dp"
                     android:layout_height="wrap_content">
-                    <Button
+                    <RelativeLayout
                         android:id="@+id/btn_1"
                         android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
                         android:layout_marginEnd="47dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:textSize="36sp"
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text=""
-                        android:textColor="@color/white" />
-                    <Button
+                        android:textColor="@color/white" >
+                        <TextView
+                            android:id="@+id/btn_1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_first"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_1_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_1_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_first"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
                         android:id="@+id/btn_2"
                         android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
                         android:layout_weight="1"
-                        android:textSize="36sp"
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text=""
-                        android:textColor="@color/white"/>
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white">
+                        <TextView
+                            android:id="@+id/btn_2_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_second"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_2_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_2_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_second"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
                 </TableRow>
                 <TableRow
                     android:id="@+id/rowTwoAnswerButtons"
                     android:layout_width="373dp"
                     android:layout_marginTop="20dp"
                     android:layout_height="match_parent">
-                    <Button
+                    <RelativeLayout
                         android:id="@+id/btn_3"
                         android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
                         android:layout_marginEnd="47dp"
                         android:layout_weight="1"
-                        android:textSize="36sp"
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text=""
-                        android:textColor="@color/white" />
-                    <Button
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" >
+                        <TextView
+                            android:id="@+id/btn_3_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_third"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_3_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_3_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_third"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
                         android:id="@+id/btn_4"
                         android:layout_width="wrap_content"
                         android:layout_height="113.05dp"
                         android:layout_weight="1"
-                        android:textSize="36sp"
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text=""
-                        android:textColor="@color/white" />
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white">
+                        <TextView
+                            android:id="@+id/btn_4_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_fourth"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_4_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_4_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_fourth"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
                 </TableRow>
             </TableLayout>
 

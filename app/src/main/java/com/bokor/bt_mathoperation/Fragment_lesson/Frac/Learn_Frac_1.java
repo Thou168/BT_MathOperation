@@ -35,6 +35,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Frac_1 extends AppCompatActivity {
     TextView first_q,second_q,third_q,fourth_q;
+    TextView first_below,second_below,third_below,fourth_below;
     TextView txt_level_current;
     int level_plus = 1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
@@ -64,6 +65,11 @@ public class Learn_Frac_1 extends AppCompatActivity {
         second_q=findViewById(R.id.second_q);
         third_q=findViewById(R.id.third_q);
         fourth_q=findViewById(R.id.fourth_q);
+        //below
+        first_below=findViewById(R.id.first_below);
+        second_below=findViewById(R.id.second_below);
+        third_below=findViewById(R.id.third_below);
+        fourth_below=findViewById(R.id.fourth_below);
 
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -114,10 +120,10 @@ public class Learn_Frac_1 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("1/5");
-            second_q.setText("4/5");
-            third_q.setText("2/5");
-            fourth_q.setText("3/5");
+            first_q.setText("1");
+            second_q.setText("4");
+            third_q.setText("2");
+            fourth_q.setText("3");
 
             //btn
             btn1.setText("ក");
@@ -150,10 +156,17 @@ public class Learn_Frac_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("6/7");
-            second_q.setText("5/7");
-            third_q.setText("4/7");
-            fourth_q.setText("3/7");
+            //top
+            first_q.setText("6");
+            second_q.setText("5");
+            third_q.setText("4");
+            fourth_q.setText("3");
+            //bottom
+            first_below.setText("7");
+            second_below.setText("7");
+            third_below.setText("7");
+            fourth_below.setText("7");
+
             //btn
             btn1.setText("ក");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -185,10 +198,16 @@ public class Learn_Frac_1 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("5/8");
-            second_q.setText("6/8");
-            third_q.setText("8/8");
-            fourth_q.setText("7/8");
+            //top
+            first_q.setText("5");
+            second_q.setText("6");
+            third_q.setText("8");
+            fourth_q.setText("7");
+            //bottom
+            first_below.setText("8");
+            second_below.setText("8");
+            third_below.setText("8");
+            fourth_below.setText("8");
 
             //btn
             btn1.setText("ក");
@@ -221,10 +240,16 @@ public class Learn_Frac_1 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("6/10");
-            second_q.setText("8/10");
-            third_q.setText("7/10");
-            fourth_q.setText("9/10");
+            //top
+            first_q.setText("6");
+            second_q.setText("8");
+            third_q.setText("7");
+            fourth_q.setText("9");
+            //bottom
+            first_below.setText("10");
+            second_below.setText("10");
+            third_below.setText("10");
+            fourth_below.setText("10");
             //btn
             btn1.setText("ក");
             btn1.setOnClickListener(new View.OnClickListener() {

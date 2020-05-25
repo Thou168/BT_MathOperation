@@ -118,31 +118,31 @@ public class Learn_capa_1 extends AppCompatActivity {
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.lit_q_1);
             img_change_new.setVisibility(View.GONE);
-            txt_ask.setText("រស្មីបាននាំយកដបទឹក 2 លីត្រចំនួន 2 ដបទៅហាត់បាល់បោះ។ គាត់បានផឹកទឹកចំនួន 1 លីត្រ។ តើគាត់ទុកទឹកប៉ុន្មានលីត្រ?");
+            txt_ask.setText("រស្មីមានទឹក 2 លីត្រចំនួន 2 ដបទៅហាត់បាល់បោះ។ គាត់បានផឹកទឹកចំនួន 1 លីត្រ។ តើគាត់ទុកទឹកប៉ុន្មានលីត្រ?");
 
             //btn
-            btn1.setText("3 mL");
+            btn1.setText("3 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("3 L");
+            btn2.setText("3 ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("30 L");
+            btn3.setText("30 ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("300 mL");
+            btn4.setText("300 មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -154,31 +154,31 @@ public class Learn_capa_1 extends AppCompatActivity {
             img_change_new.setVisibility(View.VISIBLE);
             img_change_new.setImageResource(R.drawable.lit_q_2);
             img_change.setVisibility(View.GONE);
-            txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10L ដោយធុងទឹកខាងស្តាំមានចំនុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំនុះប៉ុន្មាន?");
+            txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10លីត្រ ដោយធុងទឹកខាងស្តាំមានចំនុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំនុះប៉ុន្មាន?");
 
             //btn
-            btn1.setText("5 L");
+            btn1.setText("5 ល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("0.5 mL");
+            btn2.setText("0.5 ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("5 mL");
+            btn3.setText("5 ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("0.5 L");
+            btn4.setText("0.5 ល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -190,31 +190,31 @@ public class Learn_capa_1 extends AppCompatActivity {
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 5,743 mL = _______ L?");
+            txt_ask.setText("តើ 14000 មីលីលីត្រ = _______ លីត្រ?");
 
             //btn
-            btn1.setText("57.43");
+            btn1.setText("144 ល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("574.3");
+            btn2.setText("15​ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("5.743");
+            btn3.setText("14​ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("574,300");
+            btn4.setText("144​ល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -226,31 +226,31 @@ public class Learn_capa_1 extends AppCompatActivity {
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 8,567 mL = _______ L?");
+            txt_ask.setText("តើ 8000 មីលីត្រ = _______ លីត្រ?");
 
             //btn
-            btn1.setText("85.67");
+            btn1.setText("8000 ល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("8,567");
+            btn2.setText("8500​ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText(".8567");
+            btn3.setText("0850​ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("8.567");
+            btn4.setText("8​ល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

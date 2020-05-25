@@ -61,6 +61,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         setContentView(R.layout.learn_kilogram);
         img_change=findViewById(R.id.img_change);
         img_change_new=findViewById(R.id.img_change_new);
+        img_change_new.setVisibility(View.GONE);
         img_change.setVisibility(View.GONE);
         txt_ask=findViewById(R.id.txt_ask);
         txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែរត្រឹមត្រូវ:");
@@ -142,31 +143,31 @@ public class Learn_Decimal_2 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_g2_1);
+            txt_ask.setText("ដូរ៉ាបានផឹកសូកូឡាក្តៅមួយកែវ ដោយនាងបានដាក់ស្ករចំនួន 55%។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
 
             //btn
-            btn1.setText("0.19");
+            btn1.setText("0.50");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("0.18");
+            btn2.setText("0.55");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("0.81");
+            btn3.setText("5.5");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("0.181");
+            btn4.setText("5.0");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -175,31 +176,31 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_g2_2);
+            txt_ask.setText("កុសលបានយកក្រណាត់មួយផ្ទាំង 100ដុំ គាត់បានចែកក្រណាត់ចំនួន 44ដុំទៅអ្នកជិតខាងរបស់គាត់។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
 
             //btn
-            btn1.setText("0.63");
+            btn1.setText("0.44");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("63/10");
+            btn2.setText("44.0");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("0.36");
+            btn3.setText("0.4");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("0.60");
+            btn4.setText("4.0");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -208,7 +209,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_g2_3);
+            txt_ask.setText("ម៉េងលីស្វែងរកបានកង្កែបមួយរយ ដោយគេនឹងគ្រួសារបានញាំអស់ចំនួន 76 ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
 
             //btn
             btn1.setText("76/10");
@@ -241,30 +242,30 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_g2_4);
+            txt_ask.setText("រោងការមួយកន្លែងមានតុចំនួន 100 ដោយគេតុចំនួន 2បានយកទៅអោយខាងអ្នកធ្វើម្ហូប។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
             //btn
-            btn1.setText("0.88");
+            btn1.setText("2.2");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("0.98");
+            btn2.setText("0.20");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("89/1000");
+            btn3.setText("0.22");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("89/100");
+            btn4.setText("0.02");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

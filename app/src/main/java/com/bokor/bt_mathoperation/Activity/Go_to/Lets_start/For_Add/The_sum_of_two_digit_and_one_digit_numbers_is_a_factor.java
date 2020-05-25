@@ -111,9 +111,9 @@ public class The_sum_of_two_digit_and_one_digit_numbers_is_a_factor extends AppC
         answer=findViewById(R.id.answer);
         answer.setText("52");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(". 7 បូក 5 ស្មើរនឹង 12 សរសេរលេខ 2 ត្រាទុក 1");
+        txt_explain_T.setText(". 7 បូក 5 ស្មើនឹង 12 សរសេរលេខ 2 ត្រាទុក 1");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(". 1 បូក 4 ស្មើរនឹង 5 សរសេរលេខ 5");
+        txt_explain_B.setText(". 1 បូក 4 ស្មើនឹង 5 សរសេរលេខ 5");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 47 + 5 = 52");
 

@@ -83,6 +83,10 @@ public class Learn_capa_2 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
+        btn1.setTextSize(30);
+        btn2.setTextSize(30);
+        btn3.setTextSize(30);
+        btn4.setTextSize(30);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -138,31 +142,31 @@ public class Learn_capa_2 extends AppCompatActivity {
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.mili_1);
-            txt_ask.setText("តើអ្នកដាក់ប៊ីចេងមានបរិមាណប៉ុន្មាន?");
+            txt_ask.setText("តើអ្នកដាក់ទឹកមានបរិមាណប៉ុន្មានមីលីលីត្រ?");
 
             //btn
-            btn1.setText("10 mL");
+            btn1.setText("10 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("20 mL");
+            btn2.setText("20 មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("5 mL");
+            btn3.setText("5 មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("50 mL");
+            btn4.setText("50 មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -172,31 +176,31 @@ public class Learn_capa_2 extends AppCompatActivity {
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.mili_2);
-            txt_ask.setText("តើអ្នកដាក់ប៊ីចេងមានបរិមាណប៉ុន្មាន?");
+            txt_ask.setText("តើអ្នកដាក់ទឹកមានបរិមាណប៉ុន្មានមីលីលីត្រ?");
 
             //btn
-            btn1.setText("43 mL");
+            btn1.setText("43 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("55 mL");
+            btn2.setText("55 មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("20 mL");
+            btn3.setText("20 មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("100 mL");
+            btn4.setText("100 មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -208,31 +212,31 @@ public class Learn_capa_2 extends AppCompatActivity {
 //            img_change.setImageResource(R.drawable.kl3);
             img_change.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 6 L = ______ mL?");
+            txt_ask.setText("តើ 6 លីត្រ = ______ មីលីលីត្រ?");
 
             //btn
-            btn1.setText("60");
+            btn1.setText("60 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("600");
+            btn2.setText("600​មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("6000");
+            btn3.setText("6000​មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("6");
+            btn4.setText("6​មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -244,30 +248,30 @@ public class Learn_capa_2 extends AppCompatActivity {
 //            img_change.setImageResource(R.drawable.kl4);
             img_change.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 64.99 L = _______ mL");
+            txt_ask.setText("តើ 64 លីត្រ = _______ មីលីលីត្រ");
             //btn
-            btn1.setText("64,999");
+            btn1.setText("64999 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("649.09");
+            btn2.setText("64909 មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("6.4990");
+            btn3.setText("64900​មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("64,990");
+            btn4.setText("64000​មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

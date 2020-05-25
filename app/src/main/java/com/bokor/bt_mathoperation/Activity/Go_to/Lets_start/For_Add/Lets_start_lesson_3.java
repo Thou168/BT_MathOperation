@@ -110,9 +110,9 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
         answer=findViewById(R.id.answer);
         answer.setText("7​​  6");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(". 2 បូក 4 ស្មើរនឹង 6 សរសេរលេខ 6");
+        txt_explain_T.setText(". 2 បូក 4 ស្មើនឹង 6 សរសេរលេខ 6");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(". 4 បូក 3 ស្មើរនឹង 7 សរសេរលេខ 7");
+        txt_explain_B.setText(". 4 បូក 3 ស្មើនឹង 7 សរសេរលេខ 7");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 42 + 34 = 76");
 

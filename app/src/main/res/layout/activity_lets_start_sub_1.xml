@@ -205,7 +205,7 @@
                         <LinearLayout
                             android:background="@drawable/background_exit_dialog"
                             android:layout_width="match_parent"
-                            android:layout_height="46.43dp">
+                            android:layout_height="wrap_content">
                             <RelativeLayout
                                 android:layout_width="0dp"
                                 android:gravity="center"

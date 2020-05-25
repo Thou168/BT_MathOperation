@@ -35,8 +35,8 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Frac_2 extends AppCompatActivity {
-    TextView first_q,second_q,third_q,fourth_q;
     TextView t1,t2,t3,t4;
+    ImageView img_g2_1,img_g2_2,img_g2_3,img_g2_4;
     TextView txt_ask;
     TextView txt_level_current;
     int level_plus = 1;
@@ -59,7 +59,12 @@ public class Learn_Frac_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.learn_fraction);
+        setContentView(R.layout.learn_fraction_denominator);
+        img_g2_1=findViewById(R.id.img_g2_1);
+        img_g2_2=findViewById(R.id.img_g2_2);
+        img_g2_3=findViewById(R.id.img_g2_3);
+        img_g2_4=findViewById(R.id.img_g2_4);
+
         txt_ask=findViewById(R.id.txt_ask);
         txt_ask.setText("ជ្រើសរើសការរៀបលំដាប់ប្រភាគដែលត្រឹមត្រូវ របស់ប្រភាគខាងក្រោម:");
         txt_ask.setTextSize(18);
@@ -71,17 +76,6 @@ public class Learn_Frac_2 extends AppCompatActivity {
         t3.setTextSize(15);
         t4=findViewById(R.id.txt4);
         t4.setTextSize(15);
-//        qt_top=findViewById(R.id.num_top);
-//        qt_bottom=findViewById(R.id.num_bottom);
-//        qt_result=findViewById(R.id.num_result);
-        first_q=findViewById(R.id.first_q);
-        first_q.setTextSize(15);
-        second_q=findViewById(R.id.second_q);
-        second_q.setTextSize(15);
-        third_q=findViewById(R.id.third_q);
-        third_q.setTextSize(15);
-        fourth_q=findViewById(R.id.fourth_q);
-        fourth_q.setTextSize(15);
 
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -89,7 +83,6 @@ public class Learn_Frac_2 extends AppCompatActivity {
         current_lv4=findViewById(R.id.current_level4);
 
         txt_level_current=findViewById(R.id.txt_level_current);
-
 
         img_back=findViewById(R.id.img_back);
         PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
@@ -157,10 +150,10 @@ public class Learn_Frac_2 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("5/7<4/7<6/7");
-            second_q.setText("4/7<5/7<6/7");
-            third_q.setText("6/5<4/7<5/7");
-            fourth_q.setText("6/5<5/7<4/7");
+            img_g2_1.setImageResource(R.drawable.frac_g2_1_1);
+            img_g2_2.setImageResource(R.drawable.frac_g2_1_2);
+            img_g2_3.setImageResource(R.drawable.frac_g2_1_3);
+            img_g2_4.setImageResource(R.drawable.frac_g2_1_4);
 
             //btn
             btn1.setText("ក");
@@ -193,10 +186,10 @@ public class Learn_Frac_2 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("6/9<8/9<9/9");
-            second_q.setText("8/9<9/9<6/9");
-            third_q.setText("6/9<9/9<8/9");
-            fourth_q.setText("9/9<8/9<6/9");
+            img_g2_1.setImageResource(R.drawable.frac_g2_2_3);
+            img_g2_2.setImageResource(R.drawable.frac_g2_2_2);
+            img_g2_3.setImageResource(R.drawable.frac_g2_2_1);
+            img_g2_4.setImageResource(R.drawable.frac_g2_2_4);
             //btn
             btn1.setText("ក");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -228,11 +221,10 @@ public class Learn_Frac_2 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("7/11<6/11<3/11");
-            second_q.setText("3/11<7/11<6/11");
-            third_q.setText("3/11<6/11<7/11");
-            fourth_q.setText("7/11<3/11<6/11");
-
+            img_g2_1.setImageResource(R.drawable.frac_g2_3_1);
+            img_g2_2.setImageResource(R.drawable.frac_g2_3_2);
+            img_g2_3.setImageResource(R.drawable.frac_g2_3_3);
+            img_g2_4.setImageResource(R.drawable.frac_g2_3_4);
             //btn
             btn1.setText("ក");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -264,10 +256,10 @@ public class Learn_Frac_2 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-            first_q.setText("3/15<2/15<4/15");
-            second_q.setText("2/15<4/15<3/15");
-            third_q.setText("4/15<3/15<2/15");
-            fourth_q.setText("2/15<3/15<4/15");
+            img_g2_1.setImageResource(R.drawable.frac_g2_4_1);
+            img_g2_2.setImageResource(R.drawable.frac_g2_4_2);
+            img_g2_3.setImageResource(R.drawable.frac_g2_4_3);
+            img_g2_4.setImageResource(R.drawable.frac_g2_4_4);
             //btn
             btn1.setText("ក");
             btn1.setOnClickListener(new View.OnClickListener() {
