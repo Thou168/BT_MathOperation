@@ -169,14 +169,16 @@
 
                 <TextView
                     android:id="@+id/num_bottom"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/num_top"
                     android:layout_alignEnd="@+id/num_top"
+                    android:layout_marginStart="1dp"
                     android:layout_marginTop="10dp"
-                    android:textAlignment="textEnd"
+                    android:layout_marginEnd="-2dp"
                     android:layout_toEndOf="@id/symbol"
-                    android:text="2"
+                    android:text="12"
+                    android:textAlignment="textEnd"
                     android:textColor="@color/white"
                     android:textSize="36sp" />
 
@@ -194,6 +196,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/line_equal"
                     android:layout_alignEnd="@+id/num_top"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="-2dp"
                     android:text="2"
                     android:textAlignment="textEnd"
                     android:textColor="@color/white"

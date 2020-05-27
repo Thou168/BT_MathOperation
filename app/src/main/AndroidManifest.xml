@@ -17,29 +17,29 @@
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub_3" />
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub_4" />
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub_Question" />
-        //div
+
         <activity android:name=".Fragment_lesson.Div.Learn_Div_1"/>
         <activity android:name=".Fragment_lesson.Div.Learn_Div_2"/>
         <activity android:name=".Fragment_lesson.Div.Learn_Div_3"/>
         <activity android:name=".Fragment_lesson.Div.Learn_Div_4"/>
-        //fraction
+<!--        //fraction-->
         <activity android:name=".Fragment_lesson.Frac.Learn_Frac_1"/>
         <activity android:name=".Fragment_lesson.Frac.Learn_Frac_2"/>
         <activity android:name=".Fragment_lesson.Frac.Learn_Frac_3"/>
         <activity android:name=".Fragment_lesson.Frac.Learn_Frac_4"/>
 
-        //decimal
+<!--        //decimal-->
         <activity android:name=".Fragment_lesson.Deci.Learn_Decimal_1"/>
         <activity android:name=".Fragment_lesson.Deci.Learn_Decimal_2"/>
         <activity android:name=".Fragment_lesson.Deci.Learn_Decimal_3"/>
 
-        //weight
+<!--        //weight-->
         <activity android:name=".Fragment_lesson.Weight.Learn_weight_1"/>
         <activity android:name=".Fragment_lesson.Weight.Learn_weight_2"/>
         <activity android:name=".Fragment_lesson.Weight.Learn_weight_3"/>
         <activity android:name=".Fragment_lesson.Weight.Learn_weight_4"/>
 
-        //capacity
+
         <activity android:name=".Fragment_lesson.Capa.Learn_capa_1"/>
         <activity android:name=".Fragment_lesson.Capa.Learn_capa_2"/>
         <activity android:name=".Fragment_lesson.Capa.Learn_capa_3"/>
@@ -148,9 +148,9 @@
         <activity
             android:name=".Activity.Symbol_Activity.Sub_class"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Activity.Symbol_Activity.Sub_class"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".Activity.Symbol_Activity.Sub_class"-->
+<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".Activity.Symbol_Activity.Mul_class"
             android:screenOrientation="portrait" />

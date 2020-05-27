@@ -112,28 +112,28 @@ public class Learn_weight_1 extends AppCompatActivity {
             img_change.setImageResource(R.drawable.kl1);
 
             //btn
-            btn1.setText("0.5Kg");
+            btn1.setText("0.5គ.ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("1Kg");
+            btn2.setText("1គ.ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("2Kg");
+            btn3.setText("2គ.ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("3Kg");
+            btn4.setText("3គ.ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -145,28 +145,28 @@ public class Learn_weight_1 extends AppCompatActivity {
             img_change.setImageResource(R.drawable.kl2);
 
             //btn
-            btn1.setText("4Kg");
+            btn1.setText("4គ.ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("5Kg");
+            btn2.setText("5គ.ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("6Kg");
+            btn3.setText("6គ.ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("7Kg");
+            btn4.setText("7គ.ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -178,28 +178,28 @@ public class Learn_weight_1 extends AppCompatActivity {
             img_change.setImageResource(R.drawable.kl3);
 
             //btn
-            btn1.setText("4Kg");
+            btn1.setText("4គ.ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("3Kg");
+            btn2.setText("3គ.ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("2Kg");
+            btn3.setText("2គ.ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("1Kg");
+            btn4.setText("1គ.ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -211,28 +211,28 @@ public class Learn_weight_1 extends AppCompatActivity {
             img_change.setImageResource(R.drawable.kl4);
 
             //btn
-            btn1.setText("2Kg");
+            btn1.setText("2គ.ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("3Kg");
+            btn2.setText("3គ.ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("4Kg");
+            btn3.setText("4គ.ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("5Kg");
+            btn4.setText("5គ.ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -145,10 +145,13 @@ public class Learn_capa_3 extends AppCompatActivity {
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl1);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 9076 មីលីលីត្រ = _____ លីត្រ នឹង _____ មីលីលីត្រ");
+            txt_ask.setText("តើ 9700 មីលីលីត្រ = _____ លីត្រ នឹង _____ មីលីលីត្រ");
 
             //btn
-
+            btn1.setTextSize(20f);
+            btn2.setTextSize(20f);
+            btn3.setTextSize(20f);
+            btn4.setTextSize(20f);
             btn1.setText("9ល 760មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -156,7 +159,7 @@ public class Learn_capa_3 extends AppCompatActivity {
                     surprise_wrong();
                 }
             });
-            btn2.setText("9ល 76មល");
+            btn2.setText("9ល 700មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -181,7 +184,7 @@ public class Learn_capa_3 extends AppCompatActivity {
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl2);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើមួយណាមានចំនុះធំជាងរវាង 11000 មីលីលីត្រឬ 10 លីត្រ?");
+            txt_ask.setText("តើសូមជ្រើសរើសចម្លើយខាងក្រោម តើមួយណាមានចំណុះច្រើនជាងគេ?");
 
             //btn
             btn1.setText("11000 មល");
@@ -191,7 +194,7 @@ public class Learn_capa_3 extends AppCompatActivity {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("10 មល");
+            btn2.setText("10 ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -216,7 +219,7 @@ public class Learn_capa_3 extends AppCompatActivity {
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl3);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("ទឹកក្រូចមួយដបមានចំណុះ 1​លីត្រ។ តើចំនួនទឹកក្រូច 5​កំប៉ុងមានចំណុះប៉ុន្មានមីលីត្រ?");
+            txt_ask.setText("ទឹកក្រូចមួយដបមានចំណុះ 1​លីត្រ។ តើចំនួនទឹកក្រូច 5​ដបមានចំណុះប៉ុន្មានមីលីត្រ?");
 
             //btn
             btn1.setText("5500 មល");
@@ -268,7 +271,7 @@ public class Learn_capa_3 extends AppCompatActivity {
                     surprise_wrong();
                 }
             });
-            btn3.setText("1000 មល");
+            btn3.setText("100 មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

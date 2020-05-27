@@ -142,31 +142,33 @@ public class Learn_capa_2 extends AppCompatActivity {
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.mili_1);
-            txt_ask.setText("តើអ្នកដាក់ទឹកមានបរិមាណប៉ុន្មានមីលីលីត្រ?");
+            img_change.setVisibility(View.GONE);
+            txt_ask.setTextSize(20f);
+            txt_ask.setText("មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរអ្វី?");
 
             //btn
-            btn1.setText("10 មល");
+            btn1.setText("ល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("20 មល");
+            btn2.setText("មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("5 មល");
+            btn3.setText("ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("50 មល");
+            btn4.setText("គក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -176,7 +178,8 @@ public class Learn_capa_2 extends AppCompatActivity {
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.mili_2);
-            txt_ask.setText("តើអ្នកដាក់ទឹកមានបរិមាណប៉ុន្មានមីលីលីត្រ?");
+            img_change.setVisibility(View.VISIBLE);
+            txt_ask.setText("តតើទឹកនៅក្នុងបំពង់កែវក្រិតមានចំណុះប៉ុន្មានមល?");
 
             //btn
             btn1.setText("43 មល");
@@ -250,6 +253,10 @@ public class Learn_capa_2 extends AppCompatActivity {
             txt_ask.setTextSize(20f);
             txt_ask.setText("តើ 64 លីត្រ = _______ មីលីលីត្រ");
             //btn
+            btn1.setTextSize(25);
+            btn2.setTextSize(25);
+            btn3.setTextSize(25);
+            btn4.setTextSize(25);
             btn1.setText("64999 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override

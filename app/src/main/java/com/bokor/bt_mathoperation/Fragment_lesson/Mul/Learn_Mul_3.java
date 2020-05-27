@@ -276,6 +276,7 @@ public class Learn_Mul_3 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     qt_result.setText("240");
+                    qt_result.setTextSize(30f);
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_mul");

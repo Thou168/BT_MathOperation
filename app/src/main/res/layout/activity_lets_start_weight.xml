@@ -133,7 +133,7 @@
             <TextView
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="ប៉េងប៉ោះមានទម្ងន់ 300ក្រាមឬ 3ខាំ យើងអាចសរសេរ 300ក្រាម ឬ 3ខាំ"
+                android:text="ប៉េងប៉ោះមានទម្ងន់ 300ក្រាមឬ 3ខាំ យើងអាចសរសេរ 300ក ឬ 300g"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"
@@ -146,7 +146,7 @@
             <TextView
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="ត្រីមានទម្ងន់ 1គីឡូក្រាមឬ 10ខាំ យើងអាចសរសេរ 1គីឡូក្រាម ឬ 1kg"
+                android:text="ត្រីមានទម្ងន់ 1គីឡូក្រាមឬ 10ខាំ យើងអាចសរសេរ 1គ.ក ឬ 1kg"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"

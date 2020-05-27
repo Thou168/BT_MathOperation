@@ -112,10 +112,10 @@ public class Learn_Decimal_1 extends AppCompatActivity {
     }
     private void showNextQuiz(){
         txt_level_current.setText("កម្រិត "+level_plus);
-
+        txt_ask.setTextSize(36f);
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("ដោយក្រណាត់មួយដុំ មាន10ផ្ទាំងដោយក្នុងនោះមានក្រណាត់ 5ផ្ទាំងលាបពណ៌។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("5/10=_____");
 
             //btn
             btn1.setText("0.25");
@@ -148,7 +148,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("គេមាន ឃ្លី10 ដោយ 2 ឃ្លីមានពណ៌ខ្មៅ។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។ ");
+            txt_ask.setText("2/10=_____");
 
             //btn
             btn1.setText("0.2");
@@ -182,7 +182,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change_new.setImageResource(R.drawable.deci_3_q);
-            txt_ask.setText("អង្គការមួយមានក្មេងចំនួន 10នាក់ ដោយ 8នាក់មានសម្បុលស។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("8/10=_____");
 
             //btn
             btn1.setText("0.85");
@@ -216,7 +216,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change_new.setImageResource(R.drawable.deci_4_q);
-            txt_ask.setText("ធូមានបងប្អូនចំនួន 10នាក់ ដោយនៅសល់តែកូនម្នាក់ដែលមិនបានចិញ្ចឹមម្តាយ។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("1/10=_____");
 
             //btn
             btn1.setText("0.4");

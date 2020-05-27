@@ -86,10 +86,10 @@ public class Learn_weight_4 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
-        btn1.setTextSize(30);
-        btn2.setTextSize(30);
-        btn3.setTextSize(30);
-        btn4.setTextSize(30);
+        btn1.setTextSize(25);
+        btn2.setTextSize(25);
+        btn3.setTextSize(25);
+        btn4.setTextSize(25);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -148,28 +148,28 @@ public class Learn_weight_4 extends AppCompatActivity {
             txt_ask.setText("តើ 4300 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង​ក្រាម?");
 
             //btn
-            btn1.setText("3Kg 400g");
+            btn1.setText("3គក400ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("4Kg 300g");
+            btn2.setText("4គក300ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("4Kg 430g");
+            btn3.setText("4គក430ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("4Kg 30g");
+            btn4.setText("4គក30ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -182,28 +182,28 @@ public class Learn_weight_4 extends AppCompatActivity {
             txt_ask.setText("តើ 5550 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
-            btn1.setText("5kg 550g");
+            btn1.setText("5គក550ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("5kg 0.5g");
+            btn2.setText("5គក5ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("50kg 50g");
+            btn3.setText("50គក50ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("55kg 00g");
+            btn4.setText("55គក500ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -216,28 +216,28 @@ public class Learn_weight_4 extends AppCompatActivity {
             txt_ask.setText("តើ 2340 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
-            btn1.setText("2kg 3g");
+            btn1.setText("2គក3ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("2kg 3.40g");
+            btn2.setText("2គក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("2kg 340g");
+            btn3.setText("2គក340ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("2kg 34g");
+            btn4.setText("2គក34ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -250,28 +250,28 @@ public class Learn_weight_4 extends AppCompatActivity {
             txt_ask.setText("តើ 1750 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
-            btn1.setText("1kg 50g");
+            btn1.setText("1គក50ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("1kg 7g");
+            btn2.setText("1គក7ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("1kg 75g");
+            btn3.setText("1គក75ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("1kg 750g");
+            btn4.setText("1គក750ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

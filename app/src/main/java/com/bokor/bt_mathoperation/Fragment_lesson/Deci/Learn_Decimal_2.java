@@ -140,10 +140,10 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             current_lv3.setText("3");
             current_lv4.setText("4");
         }
-
+        txt_ask.setTextSize(36f);
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("ដូរ៉ាបានផឹកសូកូឡាក្តៅមួយកែវ ដោយនាងបានដាក់ស្ករចំនួន 55%។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("55/100=_____");
 
             //btn
             btn1.setText("0.50");
@@ -176,7 +176,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("កុសលបានយកក្រណាត់មួយផ្ទាំង 100ដុំ គាត់បានចែកក្រណាត់ចំនួន 44ដុំទៅអ្នកជិតខាងរបស់គាត់។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("44/100=_____");
 
             //btn
             btn1.setText("0.44");
@@ -209,7 +209,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("ម៉េងលីស្វែងរកបានកង្កែបមួយរយ ដោយគេនឹងគ្រួសារបានញាំអស់ចំនួន 76 ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("76/100=_____");
 
             //btn
             btn1.setText("76/10");
@@ -242,7 +242,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("រោងការមួយកន្លែងមានតុចំនួន 100 ដោយគេតុចំនួន 2បានយកទៅអោយខាងអ្នកធ្វើម្ហូប។ ចូរជ្រើសរើសចម្លើយត្រឹមត្រូវ។");
+            txt_ask.setText("2/100=_____");
             //btn
             btn1.setText("2.2");
             btn1.setOnClickListener(new View.OnClickListener() {

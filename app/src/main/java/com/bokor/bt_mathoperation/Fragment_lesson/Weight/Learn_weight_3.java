@@ -147,28 +147,28 @@ public class Learn_weight_3 extends AppCompatActivity {
             txt_ask.setText("តើ85គីឡូក្រាម ស្មើនឹងចំនួនប៉ុន្មានក្រាម?");
 
             //btn
-            btn1.setText("8g");
+            btn1.setText("8ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("85000g");
+            btn2.setText("85000ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("85g");
+            btn3.setText("85ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("850g");
+            btn4.setText("850ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -181,28 +181,28 @@ public class Learn_weight_3 extends AppCompatActivity {
             txt_ask.setText("តើ0.31គីឡូក្រាម ស្មើនឹងចំនួនប៉ុន្មានក្រាម?");
 
             //btn
-            btn1.setText("310g");
+            btn1.setText("310ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("3.1g");
+            btn2.setText("3.1ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("31g");
+            btn3.setText("31ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("3100g");
+            btn4.setText("3100ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -212,30 +212,30 @@ public class Learn_weight_3 extends AppCompatActivity {
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl3);
-            txt_ask.setText("តើ12Kg 200g ស្មើនឹងប៉ុន្មានក្រាម?");
+            txt_ask.setText("តើ12គ.ក 200ក ស្មើនឹងប៉ុន្មានក្រាម?");
             //btn
-            btn1.setText("10200g");
+            btn1.setText("10200ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("12220g");
+            btn2.setText("12220ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("12200g");
+            btn3.setText("12200ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("21200g");
+            btn4.setText("21200ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -245,31 +245,31 @@ public class Learn_weight_3 extends AppCompatActivity {
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl4);
-            txt_ask.setText("សារ៉ាមានម៉ាស 32 គីឡូក្រាម។ ចនគឺធ្ងន់ជាង 7 គីឡូក្រាម។ តើចនមានម៉ាសចំនួនប៉ុន្មានក្រាម(g)?");
+            txt_ask.setText("មីងសនទិញសាច់គោ2គ.ក 500ក្រាម និងសាច់មាន់ 3គ.ក។ តើមីងសនទិញសាច់ទាំងអស់ទម្ងន់ប៉ុន្មានគ.ក?");
 
             //btn
-            btn1.setText("3.900g");
+            btn1.setText("3គក​50ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("390g");
+            btn2.setText("5គ.ក");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("3900g");
+            btn3.setText("5000ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("39000g");
+            btn4.setText("5គក500ក");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

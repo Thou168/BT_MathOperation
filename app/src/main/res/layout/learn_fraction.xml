@@ -152,11 +152,11 @@
                     android:id="@+id/txt_ask"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/battambang_regular"
                     android:layout_marginTop="20dp"
-                    android:text="ជ្រើសរើសលេខដែលធំជាងគេ របស់ប្រភាគខាងក្រោម:"
+                    android:text="ចូរជ្រើសរើសប្រភាគដែលធំជាងគេក្នុងចំណោមប្រភាគខាងក្រោម៖"
                     android:gravity="center"
                     android:layout_centerInParent="true"
                     android:layout_alignParentTop="true"
@@ -185,7 +185,6 @@
                             android:id="@+id/ln_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/num_top"
                             android:layout_alignParentTop="true"
                             android:layout_centerInParent="true">
 
@@ -288,7 +287,6 @@
                             android:id="@+id/ln_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/num_top"
                             android:layout_alignParentTop="true"
                             android:layout_centerInParent="true">
 

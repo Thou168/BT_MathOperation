@@ -116,33 +116,33 @@ public class Learn_capa_1 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change.setImageResource(R.drawable.lit_q_1);
+            //img_change.setImageResource(R.drawable.lit_q_1);
             img_change_new.setVisibility(View.GONE);
-            txt_ask.setText("រស្មីមានទឹក 2 លីត្រចំនួន 2 ដបទៅហាត់បាល់បោះ។ គាត់បានផឹកទឹកចំនួន 1 លីត្រ។ តើគាត់ទុកទឹកប៉ុន្មានលីត្រ?");
+            txt_ask.setText("លីត្រជាឯកតាចំណុះតាងដោយអក្សរអ្វី?");
 
             //btn
-            btn1.setText("3 មល");
+            btn1.setText("ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("3 ល");
+            btn2.setText("ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("30 ល");
+            btn3.setText("គក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("300 មល");
+            btn4.setText("មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -164,14 +164,14 @@ public class Learn_capa_1 extends AppCompatActivity {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("0.5 ល");
+            btn2.setText("10 ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("5 ល");
+            btn3.setText("15 ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -214,7 +214,7 @@ public class Learn_capa_1 extends AppCompatActivity {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("144​ល");
+            btn4.setText("140​ល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -243,7 +243,7 @@ public class Learn_capa_1 extends AppCompatActivity {
                     surprise_wrong();
                 }
             });
-            btn3.setText("0850​ល");
+            btn3.setText("850​ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

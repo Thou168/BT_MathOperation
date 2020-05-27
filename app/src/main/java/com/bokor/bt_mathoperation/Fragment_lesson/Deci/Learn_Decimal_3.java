@@ -139,32 +139,32 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change_new.setImageResource(R.drawable.deci_g3_2);
-            txt_ask.setText("តើមួយណាស្ថិតក្នុងខ្ទង់ភាគដប់?");
+            txt_ask.setText("តើលេខមួយណាស្ថិតនៅខ្ទង់ភាគដប់?");
 
             //btn
 
-            btn1.setText("7");
+            btn1.setText("1");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("8");
+            btn2.setText("3");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn3.setText("3");
+            btn3.setText("0");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("83");
+            btn4.setText("10");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

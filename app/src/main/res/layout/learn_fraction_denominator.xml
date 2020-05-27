@@ -156,7 +156,7 @@
                     android:textColor="@color/white"
                     android:fontFamily="@font/battambang_regular"
                     android:layout_marginTop="20dp"
-                    android:text="ជ្រើសរើសលេខដែលធំជាងគេ របស់ប្រភាគខាងក្រោម:"
+                    android:text="ជ្រើសរើសការរៀបលំដាប់ប្រភាគពីតូចទៅធំដែលត្រឹមត្រូវរបស់ប្រភាគខាងក្រោម៖"
                     android:gravity="center"
                     android:layout_centerInParent="true"
                     android:layout_alignParentTop="true"
@@ -185,7 +185,6 @@
                             android:id="@+id/ln_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/num_top"
                             android:layout_alignParentTop="true"
                             android:layout_centerInParent="true">
 
@@ -298,7 +297,6 @@
                             android:id="@+id/ln_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/num_top"
                             android:layout_alignParentTop="true"
                             android:layout_centerInParent="true">
 
