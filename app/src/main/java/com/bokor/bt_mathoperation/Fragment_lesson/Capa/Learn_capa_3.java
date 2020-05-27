@@ -201,7 +201,7 @@ public class Learn_capa_3 extends AppCompatActivity {
                     surprise_wrong();
                 }
             });
-            btn3.setText("ស្មើគ្នា");
+            btn3.setText("1000 មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

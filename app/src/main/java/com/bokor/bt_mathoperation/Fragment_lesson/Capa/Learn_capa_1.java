@@ -153,7 +153,7 @@ public class Learn_capa_1 extends AppCompatActivity {
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change_new.setVisibility(View.VISIBLE);
             img_change_new.setImageResource(R.drawable.lit_q_2);
-            txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10លីត្រ ដោយធុងទឹកខាងស្តាំមានចំនុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំនុះប៉ុន្មាន?");
+            txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10លីត្រ ដោយធុងទឹកខាងស្តាំមានចំណុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំណុះប៉ុន្មាន?");
 
             //btn
             btn1.setText("5 ល");

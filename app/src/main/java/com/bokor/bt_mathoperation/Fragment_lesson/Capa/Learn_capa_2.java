@@ -177,33 +177,34 @@ public class Learn_capa_2 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change.setImageResource(R.drawable.mili_2);
+            img_change.setImageResource(R.drawable.litre_mili);
             img_change.setVisibility(View.VISIBLE);
-            txt_ask.setText("តើទឹកនៅក្នុងបំពង់កែវក្រិតមានចំណុះប៉ុន្មានមល?");
+            txt_ask.setTextSize(18f);
+            txt_ask.setText("តើទឹកនៅក្នុងបំពង់កែវនេះមានចំណុះប៉ុន្មានមល? បើក្នុងមួយកាំមានចំណុះ 200មល។");
 
             //btn
-            btn1.setText("43 មល");
+            btn1.setText("800 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("55 មល");
+            btn2.setText("850 មល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("20 មល");
+            btn3.setText("900 មល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("100 មល");
+            btn4.setText("1000 មល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
