@@ -179,7 +179,7 @@ public class Learn_capa_2 extends AppCompatActivity {
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.litre_mili);
             img_change.setVisibility(View.VISIBLE);
-            txt_ask.setTextSize(18f);
+            txt_ask.setTextSize(15f);
             txt_ask.setText("តើទឹកនៅក្នុងបំពង់កែវនេះមានចំណុះប៉ុន្មានមល? បើក្នុងមួយកាំមានចំណុះ 200មល។");
 
             //btn

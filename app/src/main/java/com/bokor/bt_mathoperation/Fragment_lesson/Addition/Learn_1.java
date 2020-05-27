@@ -525,7 +525,7 @@ public class Learn_1 extends AppCompatActivity {
                         }
                     }
                 }
-                alertDialog.cancel();
+                alertDialog.dismiss();
             }
         });
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {

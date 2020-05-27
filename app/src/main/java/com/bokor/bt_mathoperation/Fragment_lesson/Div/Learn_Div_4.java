@@ -58,7 +58,7 @@ public class Learn_Div_4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.learn);
+        setContentView(R.layout.learn_div);
         symbol=findViewById(R.id.symbol);
         symbol.setText("÷");
         qt_top=findViewById(R.id.num_top);

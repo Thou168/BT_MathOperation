@@ -145,7 +145,7 @@ public class Learn_Sub_3 extends AppCompatActivity {
             current_lv4.setText("4");
         }
         qt_result.setText("??");
-qt_bottom.setTextSize(30f);
+//qt_bottom.setTextSize(30f);
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("15");

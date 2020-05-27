@@ -152,32 +152,32 @@ public class Learn_capa_1 extends AppCompatActivity {
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change_new.setVisibility(View.VISIBLE);
-            img_change_new.setImageResource(R.drawable.lit_q_2);
-            txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10លីត្រ ដោយធុងទឹកខាងស្តាំមានចំណុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំណុះប៉ុន្មាន?");
+            img_change_new.setImageResource(R.drawable.litre_tank);
+            txt_ask.setText("ធុងទឹកនេះមានចំណុះ500លីត្រ ដោយធុងទឹកមួយទៀតមានចំណុះពាក់កណ្តាលនៃធុងទឹកនេះ។ តើធុងទឹកមួយទៀតមានចំណុះប៉ុន្មានលីត្រ?");
 
             //btn
-            btn1.setText("5 ល");
+            btn1.setText("250 ល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("10 ល");
+            btn2.setText("260 ល");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("15 ល");
+            btn3.setText("270 ល");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("0.5 ល");
+            btn4.setText("280 ល");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

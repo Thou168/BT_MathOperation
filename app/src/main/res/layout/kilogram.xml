@@ -130,7 +130,7 @@
             <!--                </LinearLayout>-->
             <!--            </LinearLayout>-->
             <ImageView
-                android:src="@drawable/all_fruit"
+                android:src="@drawable/all_vegetable"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="41dp"
