@@ -138,7 +138,7 @@
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"/>
             <TextView
-                android:text="ដបមួយមានចំនុះផ្ទុកបានចំនួន 500មីលីលីត្រ ដោយគេបញ្ចូលទឹកទៅក្នុងដបនោះចំនួន 500មីលីលីត្រ ។​ ដូចនេះ ដបទឹកសុទ្ធមានចំណុះ 500មីលីលីត្រ​ ។"
+                android:text="គេច្រកទឹកក្នុងដបមួយដែលមានចំណុះ៥០០មីលីលីត្រ ដូចនេះដបនោះមានចំណុះ៥០០មីលីលីត្រ។"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ml"
+                    android:text="មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ mL"
                     android:layout_marginStart="10dp"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"

@@ -167,19 +167,22 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
-                        android:text=". 6 ជាតំណាងចែក"
+                        android:text=" 6 ជាតំណាងចែក"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -187,18 +190,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_top_mid"
-                        android:text=". 2 ជាតួចែក"
+                        android:text=" 2 ជាតួចែក"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
@@ -207,18 +213,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom_mid"
-                        android:text=". 3 ជាផលចែក"
+                        android:text=" 3 ជាផលចែក"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
@@ -227,18 +236,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom"
-                        android:text=". ÷ ជាសញ្ញាចែក"
+                        android:text=" ÷ ជាសញ្ញាចែក"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
@@ -247,20 +259,23 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/ln_som_nol"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
                     android:visibility="gone"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_som_nol"
-                        android:text=". 2 ជាសំណល់"
+                        android:text=" 2 ជាសំណល់"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
@@ -270,7 +285,7 @@
             </LinearLayout>
             <TextView
                 android:id="@+id/such_as"
-                android:text="ដូចនេះ គេចែកផ្លែស្វាយឲ្យក្មេងបាន 3នាក់។"
+                android:text="ដូចនេះ ស្វាយ6ផ្លែចែកឱ្យក្មេងៗបាន3នាក់។"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"
                 android:fontFamily="@font/battambang_regular"

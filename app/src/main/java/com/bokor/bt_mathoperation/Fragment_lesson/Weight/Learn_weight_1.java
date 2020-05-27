@@ -37,6 +37,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class Learn_weight_1 extends AppCompatActivity {
     ImageView img_change;
     TextView txt_level_current;
+    TextView txt_ask;
     int level_plus = 1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
@@ -63,6 +64,7 @@ public class Learn_weight_1 extends AppCompatActivity {
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
         current_lv4=findViewById(R.id.current_level4);
+        txt_ask=findViewById(R.id.txt_ask);
         //text current level
         current_lv1.setText("1");
         current_lv2.setText("2");
@@ -109,6 +111,7 @@ public class Learn_weight_1 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+            txt_ask.setText("តើសៀវភៅនេះមានទម្ងន់ប៉ុន្មាន?");
             img_change.setImageResource(R.drawable.kl1);
 
             //btn
@@ -142,6 +145,7 @@ public class Learn_weight_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+            txt_ask.setText("តើឪឡឹកនេះមានទម្ងន់ប៉ុន្មាន?");
             img_change.setImageResource(R.drawable.kl2);
 
             //btn
@@ -175,6 +179,7 @@ public class Learn_weight_1 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+            txt_ask.setText("តើកែវស្ករគ្រាប់នេះមានទម្ងន់ប៉ុន្មាន?");
             img_change.setImageResource(R.drawable.kl3);
 
             //btn
@@ -208,6 +213,7 @@ public class Learn_weight_1 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+            txt_ask.setText("តើថង់កញ្ចប់ដំឡូងនេះមានទម្ងន់ប៉ុន្មាន?");
             img_change.setImageResource(R.drawable.kl4);
 
             //btn

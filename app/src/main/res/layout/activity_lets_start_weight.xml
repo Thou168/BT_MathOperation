@@ -133,7 +133,7 @@
             <TextView
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="ប៉េងប៉ោះមានទម្ងន់ 300ក្រាមឬ 3ខាំ យើងអាចសរសេរ 300ក ឬ 300g"
+                android:text="ប៉េងប៉ោះមានទម្ងន់ 300ក្រាមឬ 3ខាំ យើងអាចសរសេរ 300ក ឬ 300g។"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"

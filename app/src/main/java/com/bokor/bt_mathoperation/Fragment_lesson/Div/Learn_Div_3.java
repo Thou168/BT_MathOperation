@@ -62,7 +62,7 @@ public class Learn_Div_3 extends AppCompatActivity {
         qt_top=findViewById(R.id.num_top);
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
-
+//        qt_result.setTextSize(30);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -142,29 +142,29 @@ public class Learn_Div_3 extends AppCompatActivity {
             qt_bottom.setText("4");
 
             //btn
-            btn1.setText("1");
+            btn1.setText("1,5");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("2");
+            btn2.setText("2,5");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
-                    qt_result.setText("2");
+                    qt_result.setText("2,5");
                 }
             });
-            btn3.setText("3");
+            btn3.setText("3,5");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("4");
+            btn4.setText("4,5");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -174,32 +174,32 @@ public class Learn_Div_3 extends AppCompatActivity {
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("19");
-            qt_bottom.setText("4");
+            qt_bottom.setText("5");
 
             //btn
-            btn1.setText("4");
+            btn1.setText("3,8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
-                    qt_result.setText("4");
+                    qt_result.setText("3,8");
                 }
             });
-            btn2.setText("5");
+            btn2.setText("3,8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("6");
+            btn3.setText("3,8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("7");
+            btn4.setText("3,8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -209,32 +209,32 @@ public class Learn_Div_3 extends AppCompatActivity {
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("59");
-            qt_bottom.setText("9");
+            qt_bottom.setText("5");
 
             //btn
-            btn1.setText("4");
+            btn1.setText("9,8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("5");
+            btn2.setText("10,8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("6");
+            btn3.setText("11,8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
-                    qt_result.setText("6");
+                    qt_result.setText("11,8");
                 }
             });
-            btn4.setText("7");
+            btn4.setText("12,8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -244,35 +244,35 @@ public class Learn_Div_3 extends AppCompatActivity {
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("98");
-            qt_bottom.setText("6");
+            qt_bottom.setText("10");
 
             //btn
-            btn1.setText("13");
+            btn1.setText("6,8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("14");
+            btn2.setText("7,8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("15");
+            btn3.setText("8,8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("16");
+            btn4.setText("9,8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    qt_result.setText("16");
+                    qt_result.setText("9,8");
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_div");

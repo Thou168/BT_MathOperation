@@ -40,7 +40,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៍ ៖ រោងចក្រកាត់ដេរខោអាវមួយកន្លែងដេរខោអាវបាន 213 សម្រាប់ក្នុងមួយថ្ងៃ។ តើរយៈពេលពេល 6 ថ្ងៃរោងចក្រកាត់ដេរខោអាវបានប៉ុន្មានសម្រាប់?​ 213 × 6 = ? "
+                android:text="ឧទាហរណ៍ ៖ រោងចក្រមួយកន្លែងអាចដេរខោអាវបាន213សម្រាប់ក្នុងមួយថ្ងៃ។ តើរយៈពេល6ថ្ងៃរោងចក្រនោះអាចដេរខោអាវបានប៉ុន្មានសម្រាប់? \n213 × 6 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
@@ -126,19 +126,22 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
-                        android:text=". 6 គុណនឹង 3 ស្មើនឹង 18 សរសេរលេខ 8 ត្រាទុក 1"
+                        android:text=" 6 គុណនឹង 3 ស្មើនឹង 18 សរសេរលេខ 8 ត្រាទុក 1"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -146,18 +149,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_mid"
-                        android:text=". 6 គុណនឹង 1 ស្មើនឹង 6 រួចបូកនឹង 1 ស្មើ 7 សរសេរលេខ 7"
+                        android:text=" 6 គុណនឹង 1 ស្មើនឹង 6 រួចបូកនឹង 1 ស្មើ 7 សរសេរលេខ 7"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
@@ -166,18 +172,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom"
-                        android:text=". 6 គុណនឹង 2 ស្មើនឹង 12  សរសេរលេខ 12"
+                        android:text=" 6 គុណនឹង 2 ស្មើនឹង 12  សរសេរលេខ 12"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"

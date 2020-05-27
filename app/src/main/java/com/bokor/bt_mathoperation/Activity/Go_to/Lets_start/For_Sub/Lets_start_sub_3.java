@@ -62,15 +62,15 @@ public class Lets_start_sub_3 extends AppCompatActivity {
         carry_on=findViewById(R.id.carry_on);
 //        carry_on.setVisibility(View.VISIBLE);
         top_num=findViewById(R.id.top_num);
-        top_num.setText("6​​  5");
+        top_num.setText("65");
         bottom_num=findViewById(R.id.bottom_num);
-        bottom_num.setText("2​​  1");
+        bottom_num.setText("21");
         answer=findViewById(R.id.answer);
-        answer.setText("4​​  4");
+        answer.setText("44");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(". 5 ដក 1 នៅសល់ 4 សរសេរលេខ 4");
+        txt_explain_T.setText(" 5 ដក 1 នៅសល់ 4 សរសេរលេខ 4");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(". 6 ដក 2 នៅសល់ 4 សរសេរលេខ 4");
+        txt_explain_B.setText(" 6 ដក 2 នៅសល់ 4 សរសេរលេខ 4");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 65 - 21 = 44");
 

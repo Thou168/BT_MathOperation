@@ -81,14 +81,12 @@
 
                 <TextView
                     android:id="@+id/bottom_num"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/top_num"
-                    android:layout_marginStart="5dp"
                     android:layout_marginTop="60dp"
-                    android:textAlignment="textEnd"
-                    android:layout_toEndOf="@id/symbol"
                     android:text="8"
+                    android:textAlignment="textEnd"
                     android:textColor="#3A3D5F"
                     android:textSize="21sp" />
 <!--                <ImageView-->
@@ -114,14 +112,12 @@
 
                 <TextView
                     android:id="@+id/answer"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ruler"
                     android:layout_alignEnd="@+id/top_num"
-                    android:layout_marginStart="5dp"
-                    android:textAlignment="textEnd"
-                    android:layout_toEndOf="@+id/symbol"
                     android:text="29"
+                    android:textAlignment="textEnd"
                     android:textColor="#3A3D5F"
                     android:textSize="21sp" />
             </RelativeLayout>
@@ -138,20 +134,22 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_marginStart="20dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
-                        android:text=". 1 បូក 8 ស្មើនឹង 9 សរសេរលេខ 9"
+                        android:text=" 1 បូក 8 ស្មើនឹង 9 សរសេរលេខ 9"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -159,18 +157,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom"
-                        android:text=". 2 ទម្លាក់ចុះ សរសេរលេខ 2"
+                        android:text=" 2 ទម្លាក់ចុះ សរសេរលេខ 2"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"

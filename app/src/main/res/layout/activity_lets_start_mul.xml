@@ -125,19 +125,22 @@
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
-                        android:text=". 3 គុណនឹងលេខ 2 ខ្ទង់រាយ។ 3 × 2 = 6 សរសេរលេខ 6"
+                        android:text=" 3 គុណនឹងលេខ 2 ខ្ទង់រាយ។ 3 × 2 = 6 សរសេរលេខ 6"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -145,18 +148,21 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-<!--                    <ImageView-->
-<!--                        android:src="@drawable/dot"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        android:layout_width="7dp"-->
-<!--                        android:layout_height="7dp"/>-->
+                    <TextView
+                        android:textColor="#3A3D5F"
+                        android:text="."
+                        android:fontFamily="@font/battambang_regular"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom"
-                        android:text=". 3 គុណនឹងលេខ 1 ខ្ទង់ដប់។ 3 × 1 = 3 សរសេរលេខ 3"
+                        android:text=" 3 គុណនឹងលេខ 1 ខ្ទង់ដប់។ 3 × 1 = 3 សរសេរលេខ 3"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"

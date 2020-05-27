@@ -219,7 +219,7 @@ public class Learn_capa_3 extends AppCompatActivity {
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
 //            img_change.setImageResource(R.drawable.kl3);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("ទឹកក្រូចមួយដបមានចំណុះ 1​លីត្រ។ តើចំនួនទឹកក្រូច 5​ដបមានចំណុះប៉ុន្មានមីលីត្រ?");
+            txt_ask.setText("ទឹកក្រូច1ដបមានចំណុះ 1លីត្រ។ តើទឹកក្រូច 5ដបមានចំណុះប៉ុន្មានមីលីលីត្រ?");
 
             //btn
             btn1.setText("5500 មល");

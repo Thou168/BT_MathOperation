@@ -130,7 +130,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
                     txt_level_current.setText("កម្រិត 13");
                 }else if (level_plus==2){
                     current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-                    txt_level_current.setText("កម្រិត 140");
+                    txt_level_current.setText("កម្រិត 14");
                 }else if (level_plus==3){
                     current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
                     txt_level_current.setText("កម្រិត 15");
@@ -420,10 +420,20 @@ public class Learn_Sub_4 extends AppCompatActivity {
             public void onClick(View view) {
                 level_plus++;
                 if (level_plus==3){
-                    Intent intent = new Intent(getApplicationContext(), Learn_Sub_Question.class);
-                    intent.putExtra("sample_sub", "learn_sub_4");
-                    startActivity(intent);
-                    finish();
+                    extras = getIntent().getExtras();
+                    if (extras != null) {
+                        userName = extras.getString("sample_sub");
+                        if (userName != null) {
+                            Intent intent = new Intent(getApplicationContext(), Learn_Sub_Question.class);
+                            intent.putExtra("sample_sub", "learn_sub_4");
+                            startActivity(intent);
+                            finish();
+                        }
+                    }else {
+                        Intent intent = new Intent(getApplicationContext(), Learn_Sub_Question.class);
+                        startActivity(intent);
+                        finish();
+                    }
                 }else {
                     showNextQuiz();
                     bk_normal();

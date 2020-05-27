@@ -34,8 +34,7 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Decimal_1 extends AppCompatActivity {
-    ImageView img_change;
-    ImageView img_change_new;
+    TextView txt_top,txt_bot,result;
     TextView txt_ask;
     TextView txt_level_current;
     int level_plus = 1;
@@ -58,12 +57,11 @@ public class Learn_Decimal_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.learn_kilogram);
-        img_change=findViewById(R.id.img_change);
-        img_change_new=findViewById(R.id.img_change_new);
-        img_change_new.setVisibility(View.GONE);
-        img_change.setVisibility(View.GONE);
+        setContentView(R.layout.learn_decimal);
         txt_ask=findViewById(R.id.txt_ask);
+        txt_top=findViewById(R.id.first_q);
+        txt_bot=findViewById(R.id.first_below);
+        result=findViewById(R.id.result);
 //        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ:");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -112,10 +110,14 @@ public class Learn_Decimal_1 extends AppCompatActivity {
     }
     private void showNextQuiz(){
         txt_level_current.setText("កម្រិត "+level_plus);
-        txt_ask.setTextSize(36f);
+        result.setText("??");
+        txt_ask.setTextSize(18f);
+        txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគភាគដប់ដែលត្រឹមត្រូវ:");
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("5/10=_____");
+//            txt_ask.setText("5/10=_____");
+            txt_top.setText("5");
+            txt_bot.setText("10");
 
             //btn
             btn1.setText("0.25");
@@ -129,6 +131,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    result.setText("0.5");
                     showAlertDialogPositive();
                 }
             });
@@ -148,13 +151,15 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
-            txt_ask.setText("2/10=_____");
-
+//            txt_ask.setText("2/10=_____");
+            txt_top.setText("2");
+            txt_bot.setText("10");
             //btn
             btn1.setText("0.2");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    result.setText("0.2");
                     showAlertDialogPositive();
                 }
             });
@@ -181,9 +186,9 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
-//            img_change_new.setImageResource(R.drawable.deci_3_q);
-            txt_ask.setText("8/10=_____");
-
+//            txt_ask.setText("8/10=_____");
+            txt_top.setText("8");
+            txt_bot.setText("10");
             //btn
             btn1.setText("0.85");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -203,6 +208,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    result.setText("0.8");
                     showAlertDialogPositive();
                 }
             });
@@ -215,9 +221,9 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
-            img_change_new.setImageResource(R.drawable.deci_4_q);
-            txt_ask.setText("1/10=_____");
-
+//            txt_ask.setText("1/10=_____");
+            txt_top.setText("1");
+            txt_bot.setText("10");
             //btn
             btn1.setText("0.4");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -244,6 +250,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    result.setText("0.1");
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_deci");

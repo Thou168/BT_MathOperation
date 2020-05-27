@@ -116,7 +116,7 @@ public class Learn_capa_1 extends AppCompatActivity {
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
-            //img_change.setImageResource(R.drawable.lit_q_1);
+            img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             txt_ask.setText("លីត្រជាឯកតាចំណុះតាងដោយអក្សរអ្វី?");
 
@@ -153,7 +153,6 @@ public class Learn_capa_1 extends AppCompatActivity {
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change_new.setVisibility(View.VISIBLE);
             img_change_new.setImageResource(R.drawable.lit_q_2);
-            img_change.setVisibility(View.GONE);
             txt_ask.setText("ធុងទឹកខាងឆ្វេងមានចំណុះ 10លីត្រ ដោយធុងទឹកខាងស្តាំមានចំនុះតិចជាងពាក់កណ្តាល។ តើធុងទឹកខាងស្តាំមានចំនុះប៉ុន្មាន?");
 
             //btn

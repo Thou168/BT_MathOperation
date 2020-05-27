@@ -235,7 +235,7 @@ public class Learn_4 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
-                    qt_result.setText("60");
+                    qt_result.setText("102");
                 }
             });
             btn4.setText("103");

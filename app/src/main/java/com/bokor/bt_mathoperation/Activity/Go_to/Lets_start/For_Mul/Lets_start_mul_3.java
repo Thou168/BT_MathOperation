@@ -58,19 +58,19 @@ public class Lets_start_mul_3 extends AppCompatActivity {
     }
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍ ៖ ចន្ថាមានដូង 3 ធ្លាយដែលក្នុងមួយធ្លាយមាន 10 ផ្លែ។ តើដូងទាំងអស់មានប៉ុន្មានផ្លែ? 10 × 3 = ?");
+        example.setText("ឧទាហរណ៍ ៖ ចន្ថាមានដូង 3 ធ្លាយដែលក្នុងមួយធ្លាយមាន 10 ផ្លែ។ តើដូងទាំងអស់មានប៉ុន្មានផ្លែ? \n10 × 3 = ?");
 //        carry_on=findViewById(R.id.carry_on);
 //        carry_on.setVisibility(View.GONE);
         top_num=findViewById(R.id.top_num);
-        top_num.setText("1​​  0");
+        top_num.setText("10");
         bottom_num=findViewById(R.id.bottom_num);
-        bottom_num.setText(" ​​   3");
+        bottom_num.setText("3");
         answer=findViewById(R.id.answer);
-        answer.setText("3​​  0");
+        answer.setText("30");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(". 3 គុណនឹង 0 ស្មើ 0 សរសេរលេខ 0");
+        txt_explain_T.setText(" 3 គុណនឹង 0 ស្មើ 0 សរសេរលេខ 0");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(". 3 គុណនឹង 1 ស្មើ សរសេរលេខ 3");
+        txt_explain_B.setText(" 3 គុណនឹង 1 ស្មើ សរសេរលេខ 3");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ ដូងទាំងអស់មាន30ផ្លែ។");
 

@@ -76,13 +76,13 @@ public class Lets_start_div_3 extends AppCompatActivity {
         ln_somnol.setVisibility(View.VISIBLE);
         //box
         txt_explain_top=findViewById(R.id.txt_explain_top);
-        txt_explain_top.setText(". 42 ជាតំណាងចែក");
+        txt_explain_top.setText(" 42 ជាតំណាងចែក");
         txt_explain_top_mid=findViewById(R.id.txt_explain_top_mid);
-        txt_explain_top_mid.setText(". 5 ជាតួចែក");
+        txt_explain_top_mid.setText(" 5 ជាតួចែក");
         txt_explain_bottom_mid=findViewById(R.id.txt_explain_bottom_mid);
-        txt_explain_bottom_mid.setText(". 8 ជាផលចែក");
+        txt_explain_bottom_mid.setText(" 8 ជាផលចែក");
         txt_explain_bottom=findViewById(R.id.txt_explain_bottom);
-        txt_explain_bottom.setText(". ÷ ជាសញ្ញាចែក");
+        txt_explain_bottom.setText(" ÷ ជាសញ្ញាចែក");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 42 ៖ 5 = 8 សំណល់ 2");
     }

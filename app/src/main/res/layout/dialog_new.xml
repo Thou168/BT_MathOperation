@@ -34,10 +34,10 @@
                     android:layout_height="wrap_content">
                     <pl.droidsonroids.gif.GifImageView
                         android:id="@+id/gifImageView"
-                        android:src="@drawable/dear_hapy"
+                        android:src="@drawable/jek_happy"
                         android:scaleType="fitCenter"
-                        android:layout_width="155dp"
-                        android:layout_height="155dp"/>
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

@@ -71,13 +71,13 @@ public class Lets_start_div_2 extends AppCompatActivity {
         answer.setText("0");
         //box
         txt_explain_top=findViewById(R.id.txt_explain_top);
-        txt_explain_top.setText(". 45 ជាតំណាងចែក");
+        txt_explain_top.setText(" 45 ជាតំណាងចែក");
         txt_explain_top_mid=findViewById(R.id.txt_explain_top_mid);
-        txt_explain_top_mid.setText(". 9 ជាតួចែក");
+        txt_explain_top_mid.setText(" 9 ជាតួចែក");
         txt_explain_bottom_mid=findViewById(R.id.txt_explain_bottom_mid);
-        txt_explain_bottom_mid.setText(". 5 ជាផលចែក");
+        txt_explain_bottom_mid.setText(" 5 ជាផលចែក");
         txt_explain_bottom=findViewById(R.id.txt_explain_bottom);
-        txt_explain_bottom.setText(". ÷ ជាសញ្ញាចែក");
+        txt_explain_bottom.setText(" ÷ ជាសញ្ញាចែក");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 45 ៖ 9 = 5");
     }

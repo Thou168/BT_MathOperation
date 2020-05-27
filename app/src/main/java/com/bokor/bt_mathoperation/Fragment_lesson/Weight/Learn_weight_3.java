@@ -85,10 +85,10 @@ public class Learn_weight_3 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
-        btn1.setTextSize(30);
-        btn2.setTextSize(30);
-        btn3.setTextSize(30);
-        btn4.setTextSize(30);
+        btn1.setTextSize(28);
+        btn2.setTextSize(28);
+        btn3.setTextSize(28);
+        btn4.setTextSize(28);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);

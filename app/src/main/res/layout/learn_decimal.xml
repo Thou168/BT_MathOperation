@@ -53,7 +53,7 @@
                     <TextView
                         android:id="@+id/current_level1"
                         android:layout_width="35dp"
-                        android:text=""
+                        android:text="1"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="19sp"
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/current_level2"
-                        android:text=""
+                        android:text="2"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="19sp"
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/current_level3"
-                        android:text=""
+                        android:text="3"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="19sp"
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:id="@+id/current_level4"
-                        android:text=""
+                        android:text="4"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="19sp"
@@ -144,62 +144,77 @@
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_height="237dp">
-            <RelativeLayout
-                android:gravity="center"
-                android:layout_centerInParent="true"
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/num_top"
+                    android:id="@+id/txt_ask"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:gravity="center"
                     android:textColor="@color/white"
-                    android:text="14"
-                    android:layout_toEndOf="@+id/symbol"
-                    android:textSize="36sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/symbol"
-                    android:layout_below="@+id/num_top"
-                    android:layout_marginTop="-16dp"
-                    android:text="+"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="5dp"
-                    android:textSize="36sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/num_bottom"
+                    android:fontFamily="@font/battambang_regular"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/num_top"
-                    android:layout_alignEnd="@+id/num_top"
-                    android:layout_marginTop="10dp"
-                    android:text="12"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="36sp" />
-
-                <View
-                    android:id="@+id/line_equal"
-                    android:layout_width="70dp"
-                    android:layout_height="3dp"
-                    android:layout_below="@+id/num_bottom"
-                    android:layout_alignEnd="@+id/num_top"
-                    android:background="@color/white" />
-
-                <TextView
-                    android:id="@+id/num_result"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/line_equal"
-                    android:layout_alignEnd="@+id/num_top"
-                    android:layout_marginTop="-3dp"
-                    android:text="2"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/white"
-                    android:textSize="36sp" />
-            </RelativeLayout>
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/first_q"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                        <View
+                            android:id="@+id/row_first"
+                            android:layout_width="40dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            android:layout_below="@+id/first_q"/>
+
+                        <TextView
+                            android:id="@+id/first_below"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_first"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:text="="
+                        android:layout_marginStart="5dp"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/result"
+                        android:text="12"
+                        android:layout_marginStart="5dp"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
 
         <TextView
@@ -242,7 +257,8 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="21"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white" />
                     <Button
                         android:id="@+id/btn_2"
@@ -253,7 +269,8 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="22"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white"/>
                 </TableRow>
                 <TableRow
@@ -271,7 +288,8 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="24"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white" />
                     <Button
                         android:id="@+id/btn_4"
@@ -282,7 +300,8 @@
                         android:background="@drawable/btn_new"
                         android:fontFamily="@font/battambang_regular"
                         android:lines="2"
-                        android:text="23"
+                        android:text=""
+                        android:textAllCaps="false"
                         android:textColor="@color/white" />
                 </TableRow>
             </TableLayout>

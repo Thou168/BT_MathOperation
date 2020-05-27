@@ -66,8 +66,8 @@ public class Learn_Frac_2 extends AppCompatActivity {
         img_g2_4=findViewById(R.id.img_g2_4);
 
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("ជ្រើសរើសការរៀបលំដាប់ប្រភាគពីតូចទៅធំដែលត្រឹមត្រូវរបស់ប្រភាគខាងក្រោម៖");
-        txt_ask.setTextSize(18);
+        txt_ask.setText("ក្នុងចំណោមចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
+        txt_ask.setTextSize(15);
         t1=findViewById(R.id.txt1);
         t1.setTextSize(15);
         t2=findViewById(R.id.txt2);

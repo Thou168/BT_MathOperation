@@ -53,6 +53,7 @@ public class Learn_Frac_1 extends AppCompatActivity {
     MediaPlayer mp1,game_over;
     Bundle extras;
     String userName;
+    TextView txt_ask;
     //second dialog alert
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,9 @@ public class Learn_Frac_1 extends AppCompatActivity {
         second_q=findViewById(R.id.second_q);
         third_q=findViewById(R.id.third_q);
         fourth_q=findViewById(R.id.fourth_q);
+
+        txt_ask=findViewById(R.id.txt_ask);
+        txt_ask.setText("តើប្រភាគមួយណាដែលធំជាគេ?");
         //below
         first_below=findViewById(R.id.first_below);
         second_below=findViewById(R.id.second_below);

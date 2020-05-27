@@ -52,7 +52,7 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="home_second">Home Second</string>
-    <string name="fraction_1"><![CDATA[យើងបាន 1 < 5 ឬ 5 > 1។ ដូចនេះ 1/6 តូចជាង 5/6 ឬ 5/6 ធំជាង 1/6 ។]]></string>
+    <string name="fraction_1"><![CDATA[យើងមាន 1 < 5 ឬ 5 > 1។ ដូចនេះ 1/6 តូចជាង 5/6 ឬ 5/6 ធំជាង 1/6 ។]]></string>
     <string name="fraction_such_as"><![CDATA[ដោយ 1 < 2 < 3]]></string>
     <string name="fraction_such_as_1"><![CDATA[យើងសរសេរ 1/4 < 2/4 < 3/4 ។]]></string>
     <string name="fraction_2"><![CDATA[យើងសរសេរ 1/6 < 5/6 ឬ 5/6 > 1/6 ។]]></string>

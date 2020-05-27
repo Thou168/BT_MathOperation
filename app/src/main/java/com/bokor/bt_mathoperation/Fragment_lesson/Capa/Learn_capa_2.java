@@ -179,7 +179,7 @@ public class Learn_capa_2 extends AppCompatActivity {
             current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             img_change.setImageResource(R.drawable.mili_2);
             img_change.setVisibility(View.VISIBLE);
-            txt_ask.setText("តតើទឹកនៅក្នុងបំពង់កែវក្រិតមានចំណុះប៉ុន្មានមល?");
+            txt_ask.setText("តើទឹកនៅក្នុងបំពង់កែវក្រិតមានចំណុះប៉ុន្មានមល?");
 
             //btn
             btn1.setText("43 មល");
@@ -253,10 +253,10 @@ public class Learn_capa_2 extends AppCompatActivity {
             txt_ask.setTextSize(20f);
             txt_ask.setText("តើ 64 លីត្រ = _______ មីលីលីត្រ");
             //btn
-            btn1.setTextSize(25);
-            btn2.setTextSize(25);
-            btn3.setTextSize(25);
-            btn4.setTextSize(25);
+            btn1.setTextSize(23);
+            btn2.setTextSize(23);
+            btn3.setTextSize(23);
+            btn4.setTextSize(23);
             btn1.setText("64999 មល");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
