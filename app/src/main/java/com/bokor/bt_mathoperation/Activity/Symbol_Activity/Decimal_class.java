@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_decimal_lesson;
+import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Deci.Learn_Decimal_1;
@@ -23,7 +24,8 @@ public class Decimal_class extends AppCompatActivity {
 
     ImageView back_decimal,alert;
     LinearLayout rl_play,rl_practice;
-    TranslateAnimation transAnim;
+    Bundle extras;
+    String put_extra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,6 @@ public class Decimal_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startActivity(new Intent(getApplicationContext(), Select_decimal_lesson.class));
             }
         });
@@ -65,7 +66,17 @@ public class Decimal_class extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
-//        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            put_extra = extras.getString("add_to");
+            if (put_extra != null) {
+                Intent intent = new Intent(getApplicationContext(), Home_Activity.class);
+                intent.putExtra("add_to","class");
+                startActivity(intent);
+                finish();
+            }
+        }else {
+            finish();
+        }
     }
 }

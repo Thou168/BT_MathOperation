@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -20,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,10 +39,12 @@ public class Learn_Div_3 extends AppCompatActivity {
     TextView qt_top,qt_bottom,qt_result;
     TextView txt_level_current;
     int level_plus = 1;
+    int status=1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
 
     ImageView img_back;
+    ImageView previous,next;
     Button btn1,btn2,btn3,btn4;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
@@ -72,11 +76,27 @@ public class Learn_Div_3 extends AppCompatActivity {
 
 
         img_back=findViewById(R.id.img_back);
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        previous=findViewById(R.id.img_previous);
+        next=findViewById(R.id.img_next);
+        PushDownAnim.setPushDownAnimTo(img_back,previous,next).setScale(PushDownAnim.MODE_SCALE,0.80f);
+        img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
+            }
+        });
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level_plus--;
+                showNextQuiz();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level_plus++;
+                showNextQuiz();
             }
         });
         btn1=findViewById(R.id.btn_1);
@@ -109,6 +129,11 @@ public class Learn_Div_3 extends AppCompatActivity {
             userName = extras.getString("sample_div");
             if (userName != null) {
                 //text current level
+//                previous.setVisibility(View.VISIBLE);
+//                if (level_plus==status){
+//                    next.setVisibility(View.INVISIBLE);
+//                }else next.setVisibility(View.VISIBLE);
+
                 current_lv1.setText("9");
                 current_lv2.setText("10");
                 current_lv3.setText("11");
@@ -133,11 +158,33 @@ public class Learn_Div_3 extends AppCompatActivity {
             current_lv2.setText("2");
             current_lv3.setText("3");
             current_lv4.setText("4");
+            //previous and next
+            if (level_plus>1){
+                previous.setVisibility(View.VISIBLE);
+            }else previous.setVisibility(View.INVISIBLE);
+
+            if (level_plus==status){
+                next.setVisibility(View.INVISIBLE);
+            }else next.setVisibility(View.VISIBLE);
         }
         qt_result.setText("??");
-
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==2){
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==3){
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==4){
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+        }
+
+        if (level_plus==1){
             qt_top.setText("10");
             qt_bottom.setText("4");
 
@@ -172,7 +219,6 @@ public class Learn_Div_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("19");
             qt_bottom.setText("5");
 
@@ -185,21 +231,21 @@ public class Learn_Div_3 extends AppCompatActivity {
                     qt_result.setText("3,8");
                 }
             });
-            btn2.setText("3,8");
+            btn2.setText("4,8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("3,8");
+            btn3.setText("5,8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("3,8");
+            btn4.setText("6,8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -207,7 +253,6 @@ public class Learn_Div_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("59");
             qt_bottom.setText("5");
 
@@ -242,7 +287,6 @@ public class Learn_Div_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("98");
             qt_bottom.setText("10");
 
@@ -529,7 +573,12 @@ public class Learn_Div_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (level_plus!=4) {
+                    if (level_plus==status){
+                        status++;
+                    }
                     level_plus++;
+                    Log.d("status level", String.valueOf(status));
+                    Log.d("current level", String.valueOf(level_plus));
                     showNextQuiz();
                     bk_normal();
                 }else {

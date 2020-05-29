@@ -34,8 +34,8 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
     ImageButton btn_sub;
     Context context;
     ImageView back;
-//    Button gif;
-//    GifImageView img_gif;
+    Bundle extras;
+    String home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,8 +82,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                onBackPressed();
-                startActivity(new Intent(Home_Activity.this,Start_Up.class));
+                onBackPressed();
             }
         });
 
@@ -160,17 +159,14 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onBackPressed() {
-//        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-//            drawerLayout.closeDrawer(GravityCompat.START);
-//        } else {
-            finish();
-//        }
+        this.finish();
+        Intent int1= new Intent(this, Start_Up.class);
+        int1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(int1);
+        super.onBackPressed();
     }
 
     @Override
     public void onClick(View view) {
-//        if(view.getId() == R.id.btn_show_gif){
-//            img_gif.setImageResource(R.drawable.gif2);
-//        }
     }
 }

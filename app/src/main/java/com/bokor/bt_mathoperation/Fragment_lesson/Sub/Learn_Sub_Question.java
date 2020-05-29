@@ -35,6 +35,7 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
     Button btn_one, btn_two, btn_three, btn_four;
     TextView tv_question;
     int level_plus = 3;
+    int status=1;
     TextView txt_level_current;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
 
@@ -43,6 +44,7 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
     private String answer;
     private int questionLength = question.questions.length;
     ImageView img_back;
+    ImageView previous,next;
     Random random;
     EmojiRainLayout container;
 
@@ -70,11 +72,25 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         PushDownAnim.setPushDownAnimTo(btn_one,btn_two,btn_three,btn_four).setScale(PushDownAnim.MODE_SCALE,0.80f).setOnClickListener(this);
 
         img_back=findViewById(R.id.img_back);
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        previous=findViewById(R.id.img_previous);
+        next=findViewById(R.id.img_next);
+        PushDownAnim.setPushDownAnimTo(img_back,previous,next).setScale(PushDownAnim.MODE_SCALE,0.80f);
+        img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
+            }
+        });
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Previous",Toast.LENGTH_SHORT).show();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Next",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -314,9 +330,10 @@ public class Learn_Sub_Question extends AppCompatActivity implements View.OnClic
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_Sub_Question.this, Select_mul_lesson.class));
+                Intent i_to = new Intent(getApplicationContext(),Select_mul_lesson.class);
+                i_to.putExtra("add_to","learn");
+                startActivity(i_to);
                 finish();
-
             }
         });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {

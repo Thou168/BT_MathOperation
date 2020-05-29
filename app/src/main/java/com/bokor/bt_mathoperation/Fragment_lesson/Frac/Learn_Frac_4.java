@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -21,10 +22,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_capacity_lesson;
+import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_fraction_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_weight_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.R;
@@ -41,10 +44,12 @@ public class Learn_Frac_4 extends AppCompatActivity {
     TextView txt_ask;
     TextView txt_level_current;
     int level_plus = 1;
+    int status=1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
 
     ImageView img_back;
+    ImageView previous,next;
     RelativeLayout btn1,btn2,btn3,btn4;
     TextView txt_front_1,txt_bot_1,txt_front_2,txt_bot_2;
     TextView btn_1_top,btn_1_bot,btn_2_top,btn_2_bot,btn_3_top,btn_3_bot,btn_4_top,btn_4_bot;
@@ -75,11 +80,27 @@ public class Learn_Frac_4 extends AppCompatActivity {
 
 
         img_back=findViewById(R.id.img_back);
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        previous=findViewById(R.id.img_previous);
+        next=findViewById(R.id.img_next);
+        PushDownAnim.setPushDownAnimTo(img_back,previous,next).setScale(PushDownAnim.MODE_SCALE,0.80f);
+        img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
+            }
+        });
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level_plus--;
+                showNextQuiz();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level_plus++;
+                showNextQuiz();
             }
         });
         btn1=findViewById(R.id.btn_1);
@@ -132,6 +153,11 @@ public class Learn_Frac_4 extends AppCompatActivity {
             userName = extras.getString("sample_frac");
             if (userName != null) {
                 //text current level
+//                previous.setVisibility(View.VISIBLE);
+//                if (level_plus==status){
+//                    next.setVisibility(View.INVISIBLE);
+//                }else next.setVisibility(View.VISIBLE);
+
                 current_lv1.setText("13");
                 current_lv2.setText("14");
                 current_lv3.setText("15");
@@ -156,10 +182,32 @@ public class Learn_Frac_4 extends AppCompatActivity {
             current_lv2.setText("2");
             current_lv3.setText("3");
             current_lv4.setText("4");
+            //previous and next
+            if (level_plus>1){
+                previous.setVisibility(View.VISIBLE);
+            }else previous.setVisibility(View.INVISIBLE);
+
+            if (level_plus==status){
+                next.setVisibility(View.INVISIBLE);
+            }else next.setVisibility(View.VISIBLE);
+        }
+        if (level_plus==1){
+            current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==2){
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==3){
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==4){
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
         }
 
         if (level_plus==1){
-            current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             //front
             txt_front_1.setText("2");
             txt_bot_1.setText("6");
@@ -205,7 +253,6 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             //front
             txt_front_1.setText("4");
             txt_bot_1.setText("7");
@@ -251,7 +298,6 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
             //front
             txt_front_1.setText("5");
             txt_bot_1.setText("8");
@@ -297,7 +343,6 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             //front
             txt_front_1.setText("7");
             txt_bot_1.setText("9");
@@ -598,7 +643,12 @@ public class Learn_Frac_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (level_plus==status){
+                    status++;
+                }
                 level_plus++;
+                Log.d("status level", String.valueOf(status));
+                Log.d("current level", String.valueOf(level_plus));
                 showNextQuiz();
                 bk_normal();
                 alertDialog.cancel();
@@ -646,7 +696,9 @@ public class Learn_Frac_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Learn_Frac_4.this, Select_weight_lesson.class));
+                Intent i_to = new Intent(getApplicationContext(), Select_weight_lesson.class);
+                i_to.putExtra("add_to","learn");
+                startActivity(i_to);
                 finish();
             }
         });

@@ -44,6 +44,7 @@ public class Lets_start_lesson_4 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Lets_start_lesson_4.this, Learn_4.class);
                 startActivity(intent);
+                finish();
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -110,9 +111,9 @@ public class Lets_start_lesson_4 extends AppCompatActivity {
         answer=findViewById(R.id.answer);
         answer.setText("84");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(" 6 បូក 8 ស្មើនឹង 14 សរសេរលេខ 4 ត្រាទុក 1");
+        txt_explain_T.setText("6 បូក 8 ស្មើនឹង 14 សរសេរលេខ 4 ត្រាទុក 1");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(" 1 បូក 3 ស្មើនឹង 4 បូកនឹង 4 ស្មើនឹង 8 សរសេរលេខ 8");
+        txt_explain_B.setText("1 បូក 3 ស្មើនឹង 4 បូកនឹង 4 ស្មើនឹង 8 សរសេរលេខ 8");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 36 + 48 = 84");
 

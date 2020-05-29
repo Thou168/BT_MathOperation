@@ -1,5 +1,6 @@
 package com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Adapter.Adapter_RecyclerView;
 import com.bokor.bt_mathoperation.Activity.Go_to.Adapter.Adapter_RecyclerView_Capa;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Capacity_class;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Decimal_class;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Mul_class;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -25,6 +29,8 @@ public class Select_capacity_lesson extends AppCompatActivity {
 
     ArrayList<String> id = new ArrayList<>();
     ArrayList<String> title = new ArrayList<>();
+    Bundle extras;
+    String select_lesson;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +68,17 @@ public class Select_capacity_lesson extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            select_lesson = extras.getString("add_to");
+            if (select_lesson != null) {
+                Intent intent = new Intent(getApplicationContext(), Capacity_class.class);
+                intent.putExtra("add_to","select_lesson");
+                startActivity(intent);
+                finish();
+            }
+        }else {
+            finish();
+        }
     }
 }

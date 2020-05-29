@@ -49,10 +49,12 @@ public class Learn_Sub_4 extends AppCompatActivity {
     TextView symbol;
     TextView txt_level_current;
     int level_plus = 1;
+    int status=1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
 
     ImageView img_back;
+    ImageView previous,next;
     Button btn1,btn2,btn3,btn4;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
@@ -83,11 +85,25 @@ public class Learn_Sub_4 extends AppCompatActivity {
 
 
         img_back=findViewById(R.id.img_back);
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        previous=findViewById(R.id.img_previous);
+        next=findViewById(R.id.img_next);
+        PushDownAnim.setPushDownAnimTo(img_back,previous,next).setScale(PushDownAnim.MODE_SCALE,0.80f);
+        img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
+            }
+        });
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Previous",Toast.LENGTH_SHORT).show();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Next",Toast.LENGTH_SHORT).show();
             }
         });
         btn1=findViewById(R.id.btn_1);

@@ -68,9 +68,9 @@ public class Lets_start_mul_3 extends AppCompatActivity {
         answer=findViewById(R.id.answer);
         answer.setText("30");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(" 3 គុណនឹង 0 ស្មើ 0 សរសេរលេខ 0");
+        txt_explain_T.setText("3 គុណនឹង 0 ស្មើ 0 សរសេរលេខ 0");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(" 3 គុណនឹង 1 ស្មើ សរសេរលេខ 3");
+        txt_explain_B.setText("3 គុណនឹង 1 ស្មើ សរសេរលេខ 3");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ ដូងទាំងអស់មាន30ផ្លែ។");
 

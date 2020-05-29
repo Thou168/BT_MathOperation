@@ -232,7 +232,7 @@
             <TextView
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="ដើម្បីប្រៀបធៀបប្រភាគដែលមានភាគបែងដូចគ្នា យើងប្រៀបធៀបភាគយកនឹងភាគយក។ ប្រភាគដែលធំគឹមានប្រភាគដែលមានភាគយកធំជាងគេ។"
+                android:text="ដើម្បីប្រៀបធៀបប្រភាគដែលមានភាគបែងដូចគ្នា យើងប្រៀបធៀបភាគយកនឹងភាគយក។ ប្រភាគដែលធំគឺប្រភាគដែលមានភាគយកធំជាងគេ។"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"

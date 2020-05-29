@@ -67,14 +67,12 @@ public class Start_Up extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(bk).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(Start_Up.this, About_us.class));
                 dialog_info_bokor();
             }
         });
         PushDownAnim.setPushDownAnimTo(sp).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(Start_Up.this, About_us.class));
                 dialog_info_sipar();
             }
         });
@@ -96,14 +94,6 @@ public class Start_Up extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Start_Up.this, Info.class));
-            }
-        });
-
-        sound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sound.setImageDrawable(getDrawable(R.drawable.off_sound));
-                Toast.makeText(getApplicationContext(),"បិទសម្លេង",Toast.LENGTH_SHORT).show();
             }
         });
     }

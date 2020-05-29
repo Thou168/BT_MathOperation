@@ -24,7 +24,6 @@
                 android:layout_gravity="start"
                 android:visibility="gone"
                 android:background="@drawable/button_state_sound"
-                android:src="@drawable/on"
                 android:scaleType="centerCrop"
                 android:layout_width="50dp"
                 android:layout_height="50dp"/>
@@ -73,7 +72,7 @@
                     android:src="@drawable/learn"
                     android:scaleType="centerCrop"
                     android:layout_marginTop="45dp"
-                    android:layout_marginStart="70dp"
+                    android:layout_marginStart="67dp"
                     android:layout_width="60dp"
                     android:layout_height="50dp"/>
                 <ImageView
@@ -222,7 +221,6 @@
             <ImageButton
                 android:id="@+id/rating"
                 android:background="@drawable/button_state_music"
-                android:src="@drawable/star_rate"
                 android:scaleType="centerCrop"
                 android:layout_width="52dp"
                 android:layout_height="50dp"

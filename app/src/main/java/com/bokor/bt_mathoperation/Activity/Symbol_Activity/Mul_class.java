@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_mul_lesson;
+import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Mul.Learn_Mul_1;
 import com.bokor.bt_mathoperation.R;
@@ -22,7 +23,8 @@ public class Mul_class extends AppCompatActivity {
 
     ImageView back_mul,alert;
     LinearLayout rl_play,rl_practice;
-    TranslateAnimation transAnim;
+    Bundle extras;
+    String put_extra;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +65,17 @@ public class Mul_class extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            put_extra = extras.getString("add_to");
+            if (put_extra != null) {
+                Intent intent = new Intent(getApplicationContext(), Home_Activity.class);
+                intent.putExtra("add_to","class");
+                startActivity(intent);
+                finish();
+            }
+        }else {
+            finish();
+        }
     }
 }

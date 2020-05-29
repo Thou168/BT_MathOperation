@@ -1,4 +1,5 @@
 package com.bokor.bt_mathoperation.Activity.Go_to.Adapter;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -41,13 +42,10 @@ public class Adapter_RecyclerView extends RecyclerView.Adapter<Adapter_RecyclerV
 
         public ViewHolder(final View itemView) {
             super(itemView);
-
             idTextView = itemView.findViewById(R.id.textViewName);
             idTextView.setBackgroundResource(R.drawable.gradient_add);
             titleTextView = itemView.findViewById(R.id.textViewVersion);
             cardView = itemView.findViewById(R.id.card_view);
-
-
         }
 
         @Override
@@ -79,22 +77,18 @@ public class Adapter_RecyclerView extends RecyclerView.Adapter<Adapter_RecyclerV
                     Intent go = new Intent(context, Multiply_Two_digit_and_one_digit_numbers.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-//                    Toast.makeText(context,"position 1",Toast.LENGTH_SHORT).show();
                 }else if (position == 1){
                     Intent go = new Intent(context, The_sum_of_two_digit_and_one_digit_numbers_is_a_factor.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-//                    Toast.makeText(context,"position 2",Toast.LENGTH_SHORT).show();
                 }else if (position == 2){
                     Intent go = new Intent(context, Lets_start_lesson_3.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-//                    Toast.makeText(context,"position 3",Toast.LENGTH_SHORT).show();
                 }else {
                     Intent go = new Intent(context, Lets_start_lesson_4.class);
                     go.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(go);
-//                    Toast.makeText(context,"position 4",Toast.LENGTH_SHORT).show();
                 }
             }
         });

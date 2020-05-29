@@ -38,8 +38,6 @@ public class Sum_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_play.startAnimation(animFadein);
                 startActivity(new Intent(getApplicationContext(), Select_your_lesson.class));
             }
         });
@@ -47,7 +45,6 @@ public class Sum_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(getApplicationContext(), Learn_1.class);
                 intent.putExtra("sample_add", "addition");
                 startActivity(intent);

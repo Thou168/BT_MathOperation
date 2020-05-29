@@ -69,9 +69,9 @@ public class Lets_start_mul_2 extends AppCompatActivity {
         answer=findViewById(R.id.answer);
         answer.setText("72");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(" 6 គុណនឹង 2 ស្មើ 12 សរសេរលេខ 2 ត្រាទុក 1");
+        txt_explain_T.setText("6 គុណនឹង 2 ស្មើ 12 សរសេរលេខ 2 ត្រាទុក 1");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(" 6 គុណនឹង 1 ស្មើ 6 រួចបូកនឹង 1 ស្មើ 7 សរសេរលេខ 7");
+        txt_explain_B.setText("6 គុណនឹង 1 ស្មើ 6 រួចបូកនឹង 1 ស្មើ 7 សរសេរលេខ 7");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ ស្វាយទាំងអស់មាន72ផ្លែ។");
 

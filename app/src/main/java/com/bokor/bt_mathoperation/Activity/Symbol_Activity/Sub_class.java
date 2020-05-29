@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
+import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -20,6 +21,8 @@ public class Sub_class extends AppCompatActivity {
 
     ImageView back_sub,alert;
     LinearLayout rl_play,rl_practice;
+    Bundle extras;
+    String put_extra;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +37,6 @@ public class Sub_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                rl_play.startAnimation(animFadein);
 
                 startActivity(new Intent(getApplicationContext(), Select_sub_lesson.class));
             }
@@ -63,7 +64,17 @@ public class Sub_class extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
-//        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            put_extra = extras.getString("add_to");
+            if (put_extra != null) {
+                Intent intent = new Intent(getApplicationContext(), Home_Activity.class);
+                intent.putExtra("add_to","class");
+                startActivity(intent);
+                finish();
+            }
+        }else {
+            finish();
+        }
     }
 }

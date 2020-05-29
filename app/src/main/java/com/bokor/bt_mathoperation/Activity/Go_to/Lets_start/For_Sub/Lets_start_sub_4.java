@@ -68,9 +68,9 @@ public class Lets_start_sub_4 extends AppCompatActivity {
         answer=findViewById(R.id.answer);
         answer.setText("47");
         txt_explain_T=findViewById(R.id.txt_explain_top);
-        txt_explain_T.setText(" 3 ដក 6 មិនបានទេ ខ្ចី 1 ពីខ្ទង់ដប់។ 83 គឺ 7 ដប់ 13 រាយ។ 13 ដក 6 នៅសល់ 7 សរសេរលេខ 7");
+        txt_explain_T.setText("3 ដក 6 មិនបានទេ ខ្ចី 1 ពីខ្ទង់ដប់។ 83 គឺ 7 ដប់ 13 រាយ។ 13 ដក 6 នៅសល់ 7 សរសេរលេខ 7");
         txt_explain_B=findViewById(R.id.txt_explain_bottom);
-        txt_explain_B.setText(" 7 ដក 3 នៅសល់ 4 សរសេរលេខ 4");
+        txt_explain_B.setText("7 ដក 3 នៅសល់ 4 សរសេរលេខ 4");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 83 - 36 = 47");
 

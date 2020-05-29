@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,10 +49,12 @@ public class Learn_Sub extends AppCompatActivity {
     TextView symbol;
     TextView txt_level_current;
     int level_plus = 1;
+    int status=1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
 
     ImageView img_back;
+    ImageView previous,next;
     Button btn1,btn2,btn3,btn4;
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
@@ -87,11 +90,41 @@ public class Learn_Sub extends AppCompatActivity {
 
 
         img_back=findViewById(R.id.img_back);
-        PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
+        previous=findViewById(R.id.img_previous);
+        next=findViewById(R.id.img_next);
+        PushDownAnim.setPushDownAnimTo(img_back,previous,next).setScale(PushDownAnim.MODE_SCALE,0.80f);
+        img_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
+            }
+        });
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level_plus--;
+                showNextQuiz();
+                Log.d("previous plus", String.valueOf(level_plus));
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level_plus++;
+                showNextQuiz();
+                Log.d("next plus", String.valueOf(level_plus));
+
+//                extras = getIntent().getExtras();
+//                if (extras!=null){
+//                    userName=extras.getString("back");
+//                    if (userName!=null){
+//                        if (level_plus==4) {
+//                            Intent i = new Intent(getApplicationContext(),Learn_2.class);
+//                            i.putExtra("next","this");
+//                            startActivity(i);
+//                        }
+//                    }
+//                }
             }
         });
         btn1=findViewById(R.id.btn_1);
@@ -122,9 +155,32 @@ public class Learn_Sub extends AppCompatActivity {
     private void showNextQuiz(){
         txt_level_current.setText("កម្រិត "+level_plus);
         qt_result.setText("??");
+        //prevoious and next
+        if (level_plus>1){
+            previous.setVisibility(View.VISIBLE);
+        }else previous.setVisibility(View.INVISIBLE);
+
+        if (level_plus==status){
+            next.setVisibility(View.INVISIBLE);
+        }else next.setVisibility(View.VISIBLE);
 
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==2){
+            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==3){
+            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
+        }else if (level_plus==4){
+            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+        }
+
+        if (level_plus==1){
             qt_top.setText("12");
             qt_bottom.setText("2");
 
@@ -159,7 +215,6 @@ public class Learn_Sub extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-            current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("18");
             qt_bottom.setText("6");
 
@@ -194,7 +249,6 @@ public class Learn_Sub extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("49");
             qt_bottom.setText("8");
 
@@ -229,7 +283,6 @@ public class Learn_Sub extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-            current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             qt_top.setText("89");
             qt_bottom.setText("2");
 
@@ -516,7 +569,12 @@ public class Learn_Sub extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (level_plus!=4) {
+                    if (level_plus==status){
+                        status++;
+                    }
                     level_plus++;
+                    Log.d("status level", String.valueOf(status));
+                    Log.d("current level", String.valueOf(level_plus));
                     showNextQuiz();
                     bk_normal();
                 }else {

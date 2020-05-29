@@ -1,5 +1,6 @@
 package com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Adapter.Adapter_RecyclerView;
 import com.bokor.bt_mathoperation.Activity.Go_to.Adapter.Adapter_RecyclerView_Sub;
+import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sub_class;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.R;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
@@ -25,6 +28,8 @@ public class Select_sub_lesson extends AppCompatActivity {
 
     ArrayList<String> id = new ArrayList<>();
     ArrayList<String> title = new ArrayList<>();
+    Bundle extras;
+    String sub_select;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,10 +59,10 @@ public class Select_sub_lesson extends AppCompatActivity {
         bk.setBackgroundColor(getResources().getColor(R.color.bg_sub));
         back=findViewById(R.id.back);
         back.setImageResource(R.drawable.back_white_new);
+
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
             }
         });
@@ -65,6 +70,17 @@ public class Select_sub_lesson extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            sub_select = extras.getString("add_to");
+            if (sub_select != null) {
+                Intent intent = new Intent(getApplicationContext(), Sub_class.class);
+                intent.putExtra("add_to","select_lesson");
+                startActivity(intent);
+                finish();
+            }
+        }else {
+            finish();
+        }
     }
 }

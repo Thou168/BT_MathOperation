@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_weight_lesson;
+import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Weight.Learn_weight_1;
 import com.bokor.bt_mathoperation.R;
@@ -22,7 +23,8 @@ public class Weight_class extends AppCompatActivity {
 
     ImageView back_weight,alert;
     LinearLayout rl_play,rl_practice;
-    TranslateAnimation transAnim;
+    Bundle extras;
+    String put_extra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,37 +64,19 @@ public class Weight_class extends AppCompatActivity {
         });
     }
 
-//    public void time_alert(){
-//        transAnim = new TranslateAnimation(0, 0, 0,
-//                35);
-//        transAnim.setStartOffset(0);
-//        transAnim.setDuration(2000);
-//        transAnim.setRepeatCount(1999999999);
-//        transAnim.setFillAfter(true);
-//        transAnim.setInterpolator(new BounceInterpolator());
-//        transAnim.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//            }
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                alert.clearAnimation();
-//                final int left = alert.getLeft();
-//                final int top = alert.getTop();
-//                final int right = alert.getRight();
-//                final int bottom = alert.getBottom();
-//                alert.layout(left, top, right, bottom);
-//            }
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//        });
-//        alert.startAnimation(transAnim);
-//    }
-
     @Override
     public void onBackPressed() {
-        finish();
-//        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        extras = getIntent().getExtras();
+        if (extras != null) {
+            put_extra = extras.getString("add_to");
+            if (put_extra != null) {
+                Intent intent = new Intent(getApplicationContext(), Home_Activity.class);
+                intent.putExtra("add_to","class");
+                startActivity(intent);
+                finish();
+            }
+        }else {
+            finish();
+        }
     }
 }
