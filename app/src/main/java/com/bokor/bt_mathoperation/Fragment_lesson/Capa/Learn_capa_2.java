@@ -297,7 +297,7 @@ public class Learn_capa_2 extends AppCompatActivity {
 //            img_change.setImageResource(R.drawable.kl4);
             img_change.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 64 លីត្រ = _______ មីលីលីត្រ");
+            txt_ask.setText("តើ 64 លីត្រ = _______ មីលីលីត្រ?");
             //btn
             btn1.setTextSize(23);
             btn2.setTextSize(23);

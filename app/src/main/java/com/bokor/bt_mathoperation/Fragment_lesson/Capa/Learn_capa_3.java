@@ -196,7 +196,7 @@ public class Learn_capa_3 extends AppCompatActivity {
         if (level_plus==1){
 //            img_change.setImageResource(R.drawable.kl1);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 9700 មីលីលីត្រ = _____ លីត្រ នឹង _____ មីលីលីត្រ");
+            txt_ask.setText("តើ 9700 មីលីលីត្រ = _____ លីត្រ នឹង _____ មីលីលីត្រ?");
 
             //btn
             btn1.setTextSize(20f);

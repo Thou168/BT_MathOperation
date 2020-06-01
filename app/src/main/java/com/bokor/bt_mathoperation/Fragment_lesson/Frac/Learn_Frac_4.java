@@ -72,7 +72,7 @@ public class Learn_Frac_4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn_relative_frac);
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("ចូរគណនាការដកប្រភាគខាងក្រោម:");
+        txt_ask.setText("ចូរគណនាការដកប្រភាគខាងក្រោម៖");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);

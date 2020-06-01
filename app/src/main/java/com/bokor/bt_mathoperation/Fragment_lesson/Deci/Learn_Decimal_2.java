@@ -204,7 +204,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             ln_view1.setVisibility(View.VISIBLE);
             txt_top.setText("55");
             txt_bot.setText("100");
-            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
+            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ៖");
 
             //btn
             btn1.setText("0.50");
@@ -242,7 +242,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             ln_view1.setVisibility(View.VISIBLE);
             txt_top.setText("44");
             txt_bot.setText("100");
-            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
+            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ៖");
             //btn
             btn1.setText("0.44");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -279,7 +279,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
 //            txt_bot.setText("100");
             ln_view1.setVisibility(View.GONE);
             ln_view2.setVisibility(View.VISIBLE);
-            txt_ask.setText("ចូរជ្រើសរើចំនួនទសភាគដែលធំជាងគេ។");
+            txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគដែលធំជាងគេ៖");
             //btn
             btn1.setText("0.75");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -316,7 +316,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             ln_view1.setVisibility(View.VISIBLE);
             txt_top.setText("2");
             txt_bot.setText("100");
-            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
+            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ៖");
             //btn
             btn1.setText("2.2");
             btn1.setOnClickListener(new View.OnClickListener() {
