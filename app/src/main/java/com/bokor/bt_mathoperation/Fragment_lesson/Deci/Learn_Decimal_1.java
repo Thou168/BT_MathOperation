@@ -132,7 +132,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         txt_level_current.setText("កម្រិត "+level_plus);
         result.setText("??");
         txt_ask.setTextSize(18f);
-        txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគភាគដប់ដែលត្រឹមត្រូវ:");
+//        txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគភាគដប់ដែលត្រឹមត្រូវ:");
 
         if (level_plus>1){
             previous.setVisibility(View.VISIBLE);
@@ -162,6 +162,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
 //            txt_ask.setText("5/10=_____");
             txt_top.setText("5");
             txt_bot.setText("10");
+            txt_ask.setText("តើចំនួនទសភាគមួយណាដែលមានតម្លៃស្មើនឹងប្រភាគ5/10?");
 
             //btn
             btn1.setText("0.25");
@@ -197,6 +198,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
 //            txt_ask.setText("2/10=_____");
             txt_top.setText("2");
             txt_bot.setText("10");
+            txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ");
             //btn
             btn1.setText("0.2");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -231,6 +233,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
 //            txt_ask.setText("8/10=_____");
             txt_top.setText("8");
             txt_bot.setText("10");
+            txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគដែលមានតម្លៃស្មើ8/10");
             //btn
             btn1.setText("0.85");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -265,6 +268,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
 //            txt_ask.setText("1/10=_____");
             txt_top.setText("1");
             txt_bot.setText("10");
+            txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ");
             //btn
             btn1.setText("0.4");
             btn1.setOnClickListener(new View.OnClickListener() {

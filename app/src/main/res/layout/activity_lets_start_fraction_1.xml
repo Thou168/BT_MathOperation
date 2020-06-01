@@ -199,7 +199,7 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/txt_kor"
-                    android:text="រូប​ក បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 2 ចំណែកគឺ 2/4។"
+                    android:text="រូប​(ក) បែងចែកជាបួនចំណែកដូចគ្នា ប៉ុន្តែចំណែកដែលផាត់ពណ៌មានខុសគ្នា ផ្នែកផាត់ពណ៌មាន 2 ចំណែកគឺ 2/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"
@@ -209,7 +209,7 @@
                 <View
                     android:id="@+id/v_colume"
                     android:layout_width="1dp"
-                    android:layout_height="180dp"
+                    android:layout_height="200dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_gravity="center"
@@ -224,7 +224,7 @@
                     android:background="#3A3D5F" />
                 <TextView
                     android:id="@+id/txt_khor"
-                    android:text="រូប​ខ បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 1 ចំណែកគឺ 1/4។"
+                    android:text="រូប​(ខ) បែងចែកជាបួនចំណែកដូចគ្នា ប៉ុន្តែចំណែកដែលផាត់ពណ៌មានខុសគ្នា ផ្នែកផាត់ពណ៌មាន 1 ចំណែកគឺ 1/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"
@@ -232,7 +232,7 @@
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/v_colume"/>
                 <TextView
-                    android:text="រូប​គ បែងចែកជា 4 ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 3 ចំណែកគឺ 3/4។"
+                    android:text="រូប​(គ) បបែងចែកជាបួនចំណែកដូចគ្នា ប៉ុន្តែចំណែកដែលផាត់ពណ៌មានខុសគ្នា ផ្នែកផាត់ពណ៌មាន 3 ចំណែកគឺ 3/4។"
                     android:fontFamily="@font/battambang_regular"
                     android:layout_marginTop="5dp"
                     android:textSize="18sp"
@@ -252,6 +252,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:text="@string/fraction_such_as_1"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/battambang_regular"
+                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
                     android:text="@string/fraction_such_as"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
@@ -259,10 +266,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="@string/fraction_such_as_1"
+                    android:text="@string/fraction_such_as_2"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
-                    android:layout_marginTop="10dp"
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -277,14 +283,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="_ ដូចនេះ រៀបលំដាប់ប្រភាគពីតូចទៅធំ 1/4 ; 2/4 ; 3/4"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textColor="#3A3D5F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text="_ រៀបលំដាប់ប្រភាគពីធំទៅតូច 3/4 ; 2/4 ; 1/4"
+                    android:text="ដើម្បីរៀបលំដាប់ប្រភាគពីតូចទៅធំ ឬពីធំទៅតូច យើងត្រូវប្រៀបធៀបភាគយក រួចរៀបតាមលំដាប់កើន ឬលំដាប់ចុះ។​"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
                     android:textColor="#3A3D5F"

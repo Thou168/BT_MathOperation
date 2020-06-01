@@ -20,6 +20,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
     int status=1;
     TextView current_lv1,current_lv2,current_lv3,current_lv4;
     Random random;
+    LinearLayout ln_view1,ln_view2;
 
     ImageView img_back;
     ImageView previous,next;
@@ -62,11 +64,13 @@ public class Learn_Decimal_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn_decimal);
+        ln_view1=findViewById(R.id.ln_view_1);
+        ln_view2=findViewById(R.id.ln_view_2);
         txt_top=findViewById(R.id.first_q);
         txt_bot=findViewById(R.id.first_below);
         result=findViewById(R.id.result);
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែរត្រឹមត្រូវ:");
+//        txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -190,11 +194,13 @@ public class Learn_Decimal_2 extends AppCompatActivity {
 
         result.setText("??");
         txt_ask.setTextSize(18f);
-        txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគភាគរយដែលត្រឹមត្រូវ:");
         if (level_plus==1){
 //            txt_ask.setText("55/100=_____");
+            ln_view2.setVisibility(View.GONE);
+            ln_view1.setVisibility(View.VISIBLE);
             txt_top.setText("55");
             txt_bot.setText("100");
+            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
 
             //btn
             btn1.setText("0.50");
@@ -228,8 +234,11 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==2){
 //            txt_ask.setText("44/100=_____");
+            ln_view2.setVisibility(View.GONE);
+            ln_view1.setVisibility(View.VISIBLE);
             txt_top.setText("44");
             txt_bot.setText("100");
+            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
             //btn
             btn1.setText("0.44");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -262,32 +271,35 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==3){
 //            txt_ask.setText("76/100=_____");
-            txt_top.setText("76");
-            txt_bot.setText("100");
+//            txt_top.setText("76");
+//            txt_bot.setText("100");
+            ln_view1.setVisibility(View.GONE);
+            ln_view2.setVisibility(View.VISIBLE);
+            txt_ask.setText("ចូរជ្រើសរើចំនួនទសភាគដែលធំជាងគេ។");
             //btn
-            btn1.setText("76/10");
+            btn1.setText("0.75");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("0.75");
+            btn2.setText("0.77");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("0.76");
+            btn3.setText("1.05");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    result.setText("0.76");
+                    result.setText("1.05");
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("0.77");
+            btn4.setText("0.67");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -296,8 +308,11 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             });
         }else if (level_plus==4){
 //            txt_ask.setText("2/100=_____");
+            ln_view2.setVisibility(View.GONE);
+            ln_view1.setVisibility(View.VISIBLE);
             txt_top.setText("2");
             txt_bot.setText("100");
+            txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
             //btn
             btn1.setText("2.2");
             btn1.setOnClickListener(new View.OnClickListener() {

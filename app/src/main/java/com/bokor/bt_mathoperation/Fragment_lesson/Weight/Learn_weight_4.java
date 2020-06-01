@@ -29,6 +29,8 @@ import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_capacity_l
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_mul_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
+import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -633,10 +635,20 @@ public class Learn_weight_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_to = new Intent(getApplicationContext(), Select_capacity_lesson.class);
-                i_to.putExtra("add_to","learn");
-                startActivity(i_to);
-                finish();
+                if (extras != null) {
+                    userName = extras.getString("sample_weight");
+                    if (userName != null) {
+                        Intent i_to = new Intent(getApplicationContext(), Learn_capa_1.class);
+                        i_to.putExtra("sample_capa","learn");
+                        startActivity(i_to);
+                        finish();
+                    }
+                }else {
+                    Intent i_to = new Intent(getApplicationContext(), Select_capacity_lesson.class);
+                    i_to.putExtra("add_to", "learn");
+                    startActivity(i_to);
+                    finish();
+                }
             }
         });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {

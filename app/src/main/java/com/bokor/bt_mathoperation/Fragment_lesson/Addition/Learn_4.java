@@ -622,10 +622,21 @@ public class Learn_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_to = new Intent(getApplicationContext(),Select_sub_lesson.class);
-                i_to.putExtra("add_to","learn");
-                startActivity(i_to);
-                finish();
+                extras = getIntent().getExtras();
+                if (extras != null) {
+                    userName = extras.getString("sample_add");
+                    if (userName != null) {
+                        Intent i_to = new Intent(getApplicationContext(),Learn_Sub.class);
+                        i_to.putExtra("sample_sub","learn");
+                        startActivity(i_to);
+                        finish();
+                    }
+                } else {
+                    Intent i_to = new Intent(getApplicationContext(),Select_sub_lesson.class);
+                    i_to.putExtra("add_to","learn");
+                    startActivity(i_to);
+                    finish();
+                }
             }
         });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {

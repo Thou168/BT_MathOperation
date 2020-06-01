@@ -153,10 +153,10 @@ public class Learn_Frac_2 extends AppCompatActivity {
             userName = extras.getString("sample_frac");
             if (userName != null) {
                 //text current level
-//                previous.setVisibility(View.VISIBLE);
-//                if (level_plus==status){
-//                    next.setVisibility(View.INVISIBLE);
-//                }else next.setVisibility(View.VISIBLE);
+    //                previous.setVisibility(View.VISIBLE);
+    //                if (level_plus==status){
+    //                    next.setVisibility(View.INVISIBLE);
+    //                }else next.setVisibility(View.VISIBLE);
 
                 current_lv1.setText("5");
                 current_lv2.setText("6");

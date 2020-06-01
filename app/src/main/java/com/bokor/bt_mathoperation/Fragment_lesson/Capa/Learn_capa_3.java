@@ -29,6 +29,8 @@ import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_capacity_l
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_decimal_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_mul_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Fragment_lesson.Deci.Learn_Decimal_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -640,10 +642,20 @@ public class Learn_capa_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_to = new Intent(getApplicationContext(), Select_decimal_lesson.class);
-                i_to.putExtra("add_to","learn");
-                startActivity(i_to);
-                finish();
+                if (extras != null) {
+                    userName = extras.getString("sample_capa");
+                    if (userName != null) {
+                        Intent i_to = new Intent(getApplicationContext(), Learn_Decimal_1.class);
+                        i_to.putExtra("sample_deci","learn");
+                        startActivity(i_to);
+                        finish();
+                    }
+                }else {
+                    Intent i_to = new Intent(getApplicationContext(), Select_decimal_lesson.class);
+                    i_to.putExtra("add_to", "learn");
+                    startActivity(i_to);
+                    finish();
+                }
             }
         });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {

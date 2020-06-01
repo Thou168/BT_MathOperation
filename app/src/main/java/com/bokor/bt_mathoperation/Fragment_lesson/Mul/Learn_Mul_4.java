@@ -29,6 +29,8 @@ import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_div_lesson
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
+import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -619,10 +621,21 @@ public class Learn_Mul_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i_to = new Intent(getApplicationContext(), Select_div_lesson.class);
-                i_to.putExtra("add_to","learn");
-                startActivity(i_to);
-                finish();
+                extras = getIntent().getExtras();
+                if (extras != null) {
+                    userName = extras.getString("sample_mul");
+                    if (userName != null) {
+                        Intent i_to = new Intent(getApplicationContext(), Learn_Div_1.class);
+                        i_to.putExtra("sample_div","learn");
+                        startActivity(i_to);
+                        finish();
+                    }
+                }else {
+                    Intent i_to = new Intent(getApplicationContext(), Select_div_lesson.class);
+                    i_to.putExtra("add_to", "learn");
+                    startActivity(i_to);
+                    finish();
+                }
             }
         });
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
