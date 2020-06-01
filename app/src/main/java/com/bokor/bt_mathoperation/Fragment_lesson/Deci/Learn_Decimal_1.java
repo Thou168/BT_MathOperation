@@ -20,6 +20,9 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +41,11 @@ import pl.droidsonroids.gif.GifImageView;
 public class Learn_Decimal_1 extends AppCompatActivity {
     TextView txt_top,txt_bot,result;
     TextView txt_ask;
+    TextView txt_new;
+    LinearLayout ln_view;
+    RelativeLayout rl;
+    TableLayout table_1,table_2;
+    TextView first_second,below_second;
     TextView txt_level_current;
     int level_plus = 1;
     int status=1;
@@ -57,6 +65,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
     MediaPlayer mp1,game_over;
     Bundle extras;
     String userName;
+    RelativeLayout btn1_rl,btn2_rl,btn3_rl,btn4_rl;
     //second dialog alert
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +75,21 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         txt_top=findViewById(R.id.first_q);
         txt_bot=findViewById(R.id.first_below);
         result=findViewById(R.id.result);
+        txt_new=findViewById(R.id.show_question);
+        first_second=findViewById(R.id.first_second);
+        below_second=findViewById(R.id.first_second_below);
+
+        table_1=findViewById(R.id.table_1);
+        table_2=findViewById(R.id.table_2);
+        //relative button
+        btn1_rl=findViewById(R.id.btn_1_r);
+        btn2_rl=findViewById(R.id.btn_2_r);
+        btn3_rl=findViewById(R.id.btn_3_r);
+        btn4_rl=findViewById(R.id.btn_4_r);
+        PushDownAnim.setPushDownAnimTo(btn1_rl,btn2_rl,btn3_rl,btn4_rl).setScale(PushDownAnim.MODE_SCALE,0.80f);
+
+        rl=findViewById(R.id.rl);
+        ln_view=findViewById(R.id.ln_view_1);
 //        txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ:");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -132,6 +156,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         txt_level_current.setText("កម្រិត "+level_plus);
         result.setText("??");
         txt_ask.setTextSize(18f);
+        rl.setVisibility(View.GONE);
 //        txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគភាគដប់ដែលត្រឹមត្រូវ:");
 
         if (level_plus>1){
@@ -163,6 +188,10 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             txt_top.setText("5");
             txt_bot.setText("10");
             txt_ask.setText("តើចំនួនទសភាគមួយណាដែលមានតម្លៃស្មើនឹងប្រភាគ5/10?");
+            ln_view.setVisibility(View.VISIBLE);
+            rl.setVisibility(View.GONE);
+            table_2.setVisibility(View.VISIBLE);
+            table_1.setVisibility(View.GONE);
 
             //btn
             btn1.setText("0.25");
@@ -196,34 +225,38 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
 //            txt_ask.setText("2/10=_____");
-            txt_top.setText("2");
-            txt_bot.setText("10");
-            txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ");
+            txt_new.setText("0.2 =");
+            first_second.setVisibility(View.INVISIBLE);
+            below_second.setVisibility(View.INVISIBLE);
+            table_2.setVisibility(View.GONE);
+            table_1.setVisibility(View.VISIBLE);
+            first_second.setText("2");
+            below_second.setText("10");
+            txt_ask.setText("ចូរជ្រើសរើសប្រភាគដែលមានតម្លៃស្មើនឹង0.2។");
+            rl.setVisibility(View.VISIBLE);
+            ln_view.setVisibility(View.GONE);
             //btn
-            btn1.setText("0.2");
-            btn1.setOnClickListener(new View.OnClickListener() {
+            btn1_rl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    result.setText("0.2");
+                    first_second.setVisibility(View.VISIBLE);
+                    below_second.setVisibility(View.VISIBLE);
                     showAlertDialogPositive();
                 }
             });
-            btn2.setText("0.22");
-            btn2.setOnClickListener(new View.OnClickListener() {
+            btn2_rl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("0.21");
-            btn3.setOnClickListener(new View.OnClickListener() {
+            btn3_rl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("0.02");
-            btn4.setOnClickListener(new View.OnClickListener() {
+            btn4_rl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
@@ -234,6 +267,10 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             txt_top.setText("8");
             txt_bot.setText("10");
             txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគដែលមានតម្លៃស្មើ8/10");
+            ln_view.setVisibility(View.VISIBLE);
+            rl.setVisibility(View.GONE);
+            table_2.setVisibility(View.VISIBLE);
+            table_1.setVisibility(View.GONE);
             //btn
             btn1.setText("0.85");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -269,6 +306,10 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             txt_top.setText("1");
             txt_bot.setText("10");
             txt_ask.setText("ចូរជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ");
+            ln_view.setVisibility(View.VISIBLE);
+            rl.setVisibility(View.GONE);
+            table_2.setVisibility(View.VISIBLE);
+            table_1.setVisibility(View.GONE);
             //btn
             btn1.setText("0.4");
             btn1.setOnClickListener(new View.OnClickListener() {

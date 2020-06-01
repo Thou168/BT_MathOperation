@@ -60,8 +60,8 @@ public class Lets_start_mul_2 extends AppCompatActivity {
     private void id(){
         example=findViewById(R.id.example);
         example.setText("ឧទាហរណ៍ ៖ ស្វាយមួយឡូមាន 12 ផ្លែ។ តើស្វាយ 6 ឡូមានប៉ុន្មានផ្លែ? \n12 × 6 = ?");
-//        carry_on=findViewById(R.id.carry_on);
-//        carry_on.setVisibility(View.GONE);
+        carry_on=findViewById(R.id.carry_on);
+        carry_on.setVisibility(View.VISIBLE);
         top_num=findViewById(R.id.top_num);
         top_num.setText("12");
         bottom_num=findViewById(R.id.bottom_num);

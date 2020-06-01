@@ -20,6 +20,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,9 +38,10 @@ import pl.droidsonroids.gif.GifImageView;
 import xiaofei.library.gridlayout.GridLayout;
 
 public class Learn_Decimal_3 extends AppCompatActivity {
-    ImageView img_change;
-    ImageView img_change_new;
-    TextView txt_ask;
+    TextView txt_ask,txt_show_exam;
+    LinearLayout lnView;
+    TextView first_second,below_second;
+    View line;
     TextView txt_level_current;
     int level_plus = 1;
     int status=1;
@@ -63,11 +65,22 @@ public class Learn_Decimal_3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.learn_kilogram);
-        img_change=findViewById(R.id.img_change);
-        img_change_new=findViewById(R.id.img_change_new);
-        img_change.setVisibility(View.GONE);
+        setContentView(R.layout.learn_decimal);
+
         txt_ask=findViewById(R.id.txt_ask);
+        txt_show_exam=findViewById(R.id.show_question);
+        first_second=findViewById(R.id.first_second);
+        below_second=findViewById(R.id.first_second_below);
+        line=findViewById(R.id.row_first_second);
+        first_second.setVisibility(View.GONE);
+        below_second.setVisibility(View.GONE);
+        line.setVisibility(View.GONE);
+
+        //Gone
+        lnView=findViewById(R.id.ln_view_1);
+        lnView.setVisibility(View.GONE);
+        //
+
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
@@ -104,10 +117,10 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
-        btn1.setTextSize(30);
-        btn2.setTextSize(30);
-        btn3.setTextSize(30);
-        btn4.setTextSize(30);
+        btn1.setTextSize(25);
+        btn2.setTextSize(25);
+        btn3.setTextSize(25);
+        btn4.setTextSize(25);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -190,8 +203,9 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         }
 
         if (level_plus==1){
-            img_change_new.setImageResource(R.drawable.deci_g3_2);
+//            img_change_new.setImageResource(R.drawable.deci_g3_2);
             txt_ask.setText("តើលេខមួយណាស្ថិតនៅខ្ទង់ភាគដប់?");
+            txt_show_exam.setText("10.3");
 
             //btn
 
@@ -224,8 +238,9 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-            img_change_new.setImageResource(R.drawable.deci_g3_1);
+//            img_change_new.setImageResource(R.drawable.deci_g3_1);
             txt_ask.setText("តើលេខ 7 ស្ថិតនៅខ្ទង់អ្វី?");
+            txt_show_exam.setText("7.83");
 
             //btn
             btn1.setText("ខ្ទង់រាយ");
@@ -257,8 +272,9 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            img_change_new.setImageResource(R.drawable.deci_g3_4);
+//            img_change_new.setImageResource(R.drawable.deci_g3_4);
             txt_ask.setText("តើលេខ 2 ស្ថិតនៅខ្ទង់អ្វី?");
+            txt_show_exam.setText("10.12");
 
             //btn
             btn1.setText("ភាគដប់");
@@ -290,8 +306,9 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-            img_change_new.setImageResource(R.drawable.deci_g3_3);
+//            img_change_new.setImageResource(R.drawable.deci_g3_3);
             txt_ask.setText("តើលេខ 9 ខាងស្តាំស្ថិតនៅខ្ទង់អ្វី?");
+            txt_show_exam.setText("9.9");
 
             //btn
             btn1.setText("ភាគពាន់");

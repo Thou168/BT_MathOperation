@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +61,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
     Bundle extras;
     String userName;
     //second dialog alert
+    RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +72,8 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         txt_bot=findViewById(R.id.first_below);
         result=findViewById(R.id.result);
         txt_ask=findViewById(R.id.txt_ask);
+        relativeLayout=findViewById(R.id.rl);
+        relativeLayout.setVisibility(View.GONE);
 //        txt_ask.setText("ចូរសរសេរជាចំនួនទសភាគ:");
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);

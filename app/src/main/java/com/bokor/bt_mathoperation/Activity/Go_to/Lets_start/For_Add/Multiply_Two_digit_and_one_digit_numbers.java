@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sum_class;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
 import com.bokor.bt_mathoperation.R;
 import com.dd.ShadowLayout;

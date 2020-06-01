@@ -40,7 +40,7 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Div_4 extends AppCompatActivity {
-    TextView qt_top,qt_bottom,qt_result;
+    TextView qt_top,qt_bottom,qt_result,result_view;
     TextView txt_level_current;
     int level_plus = 1;
     int status=1;
@@ -70,6 +70,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         qt_top=findViewById(R.id.num_top);
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
+        result_view=findViewById(R.id.num_result_view);
 
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -171,7 +172,10 @@ public class Learn_Div_4 extends AppCompatActivity {
                 next.setVisibility(View.INVISIBLE);
             }else next.setVisibility(View.VISIBLE);
         }
-        qt_result.setText("??");
+        result_view.setVisibility(View.VISIBLE);
+        result_view.setText("??");
+        qt_result.setVisibility(View.INVISIBLE);
+
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             current_lv2.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
@@ -191,7 +195,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         if (level_plus==1){
             qt_top.setText("120");
             qt_bottom.setText("5");
-
+            qt_result.setText("24");
             //btn
             btn1.setText("23");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -204,8 +208,9 @@ public class Learn_Div_4 extends AppCompatActivity {
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("24");
                 }
             });
             btn3.setText("25");
@@ -225,14 +230,16 @@ public class Learn_Div_4 extends AppCompatActivity {
         }else if (level_plus==2){
             qt_top.setText("350");
             qt_bottom.setText("7");
-
+            qt_result.setText("50");
             //btn
             btn1.setText("50");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("50");
+
                 }
             });
             btn2.setText("51");
@@ -259,7 +266,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         }else if (level_plus==3){
             qt_top.setText("620");
             qt_bottom.setText("4");
-
+            qt_result.setText("155");
             //btn
             btn1.setText("153");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -279,8 +286,10 @@ public class Learn_Div_4 extends AppCompatActivity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("155");
+
                 }
             });
             btn4.setText("156");
@@ -293,7 +302,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         }else if (level_plus==4) {
             qt_top.setText("972");
             qt_bottom.setText("6");
-
+            qt_result.setText("162");
             //btn
             btn1.setText("159");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -320,7 +329,8 @@ public class Learn_Div_4 extends AppCompatActivity {
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    qt_result.setText("162");
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_div");

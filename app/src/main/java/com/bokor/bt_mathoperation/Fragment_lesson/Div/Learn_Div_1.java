@@ -36,7 +36,7 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Div_1 extends AppCompatActivity {
-    TextView qt_top,qt_bottom,qt_result;
+    TextView qt_top,qt_bottom,qt_result,result_view;
     TextView txt_level_current;
     int level_plus = 1;
     int status=1;
@@ -67,6 +67,7 @@ public class Learn_Div_1 extends AppCompatActivity {
         qt_top=findViewById(R.id.num_top);
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
+        result_view=findViewById(R.id.num_result_view);
 
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -145,7 +146,9 @@ public class Learn_Div_1 extends AppCompatActivity {
     }
     private void showNextQuiz(){
         txt_level_current.setText("កម្រិត "+level_plus);
-        qt_result.setText("?");
+        result_view.setVisibility(View.VISIBLE);
+        result_view.setText("??");
+        qt_result.setVisibility(View.INVISIBLE);
         //prevoious and next
         if (level_plus>1){
             previous.setVisibility(View.VISIBLE);
@@ -174,7 +177,7 @@ public class Learn_Div_1 extends AppCompatActivity {
         if (level_plus==1){
             qt_top.setText("4");
             qt_bottom.setText("1");
-
+            qt_result.setText("4");
             //btn
             btn1.setText("3");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -187,8 +190,9 @@ public class Learn_Div_1 extends AppCompatActivity {
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("4");
                 }
             });
             btn3.setText("5");
@@ -208,14 +212,16 @@ public class Learn_Div_1 extends AppCompatActivity {
         }else if (level_plus==2){
             qt_top.setText("4");
             qt_bottom.setText("2");
+            qt_result.setText("2");
 
             //btn
             btn1.setText("2");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("2");
                 }
             });
             btn2.setText("3");
@@ -242,6 +248,7 @@ public class Learn_Div_1 extends AppCompatActivity {
         }else if (level_plus==3){
             qt_top.setText("8");
             qt_bottom.setText("2");
+            qt_result.setText("4");
 
             //btn
             btn1.setText("2");
@@ -262,8 +269,9 @@ public class Learn_Div_1 extends AppCompatActivity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("4");
                 }
             });
             btn4.setText("5");
@@ -276,7 +284,7 @@ public class Learn_Div_1 extends AppCompatActivity {
         }else if (level_plus==4){
             qt_top.setText("9");
             qt_bottom.setText("3");
-
+            qt_result.setText("3");
             //btn
             btn1.setText("0");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -303,7 +311,8 @@ public class Learn_Div_1 extends AppCompatActivity {
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    qt_result.setText("3");
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_div");

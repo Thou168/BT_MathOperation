@@ -147,14 +147,13 @@
             <RelativeLayout
                 android:gravity="center"
                 android:layout_centerInParent="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/num_top"
                     android:textColor="@color/white"
-                    android:layout_marginStart="60dp"
                     android:text="14"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -164,7 +163,7 @@
                     android:layout_marginEnd="5dp"
                     android:text="+"
                     android:textColor="@color/white"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -175,7 +174,7 @@
                     android:layout_toEndOf="@+id/symbol"
                     android:text="12"
                     android:textColor="@color/white"
-                    android:textSize="36sp" />
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/equal"
@@ -184,18 +183,26 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_toEndOf="@+id/num_bottom"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:id="@+id/num_result"
-                    android:layout_width="100dp"
+                    android:id="@+id/num_result_view"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@+id/equal"
                     android:text="2"
                     android:textColor="@color/white"
-                    android:textSize="36sp" />
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/num_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/equal"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:textSize="30sp" />
             </RelativeLayout>
         </RelativeLayout>
 
@@ -309,6 +316,7 @@
                     android:layout_marginEnd="30dp"
                     android:src="@drawable/previous"
                     android:scaleType="centerCrop"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="44dp"
                     android:layout_height="44dp"/>
@@ -326,6 +334,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginStart="30dp"
                     android:src="@drawable/next"
+                    android:visibility="invisible"
                     android:scaleType="centerCrop"
                     android:layout_weight="1"
                     android:layout_width="44dp"

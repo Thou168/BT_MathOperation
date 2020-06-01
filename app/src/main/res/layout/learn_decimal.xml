@@ -160,6 +160,55 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:id="@+id/rl"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/show_question"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:text="23 ="
+                        android:textColor="@color/white"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@id/show_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/first_second"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_first_second"
+                            android:layout_width="40dp"
+                            android:layout_height="1dp"
+                            android:background="@color/white"
+                            android:layout_below="@+id/first_second"/>
+
+                        <TextView
+                            android:id="@+id/first_second_below"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_first_second"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
                 <LinearLayout
                     android:id="@+id/ln_view_1"
                     android:layout_marginTop="5dp"
@@ -200,6 +249,7 @@
                             android:textSize="20sp" />
                     </RelativeLayout>
                     <TextView
+                        android:id="@+id/equal"
                         android:text="="
                         android:layout_marginStart="5dp"
                         android:textSize="20sp"
@@ -347,6 +397,176 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TableLayout
+                android:id="@+id/table_1"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:id="@+id/rowOneAnswerButtons_r"
+                    android:layout_width="373dp"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/btn_1_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="113.05dp"
+                        android:layout_marginEnd="47dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/btn_new"
+                        android:fontFamily="@font/battambang_regular"
+                        android:lines="2"
+                        android:textColor="@color/white" >
+                        <TextView
+                            android:id="@+id/btn_1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_first_r"
+                            android:layout_width="40dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_1_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_1_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_first_r"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/btn_2_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="113.05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_new"
+                        android:fontFamily="@font/battambang_regular"
+                        android:lines="2"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white">
+                        <TextView
+                            android:id="@+id/btn_2_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_second"
+                            android:layout_width="40dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_2_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_2_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_second"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowTwoAnswerButtons_r"
+                    android:layout_width="373dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/btn_3_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="113.05dp"
+                        android:layout_marginEnd="47dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_new"
+                        android:fontFamily="@font/battambang_regular"
+                        android:lines="2"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" >
+                        <TextView
+                            android:id="@+id/btn_3_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_third"
+                            android:layout_width="40dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_3_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_3_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_third"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/btn_4_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="113.05dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_new"
+                        android:fontFamily="@font/battambang_regular"
+                        android:lines="2"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white">
+                        <TextView
+                            android:id="@+id/btn_4_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.2"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                        <View
+                            android:id="@+id/row_fourth"
+                            android:layout_width="40dp"
+                            android:layout_height="1dp"
+                            android:layout_centerInParent="true"
+                            android:background="@color/white"
+                            android:layout_below="@+id/btn_4_top"/>
+
+                        <TextView
+                            android:id="@+id/btn_4_bot"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_fourth"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/table_2"
+                android:visibility="visible"
                 android:layout_width="match_parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"

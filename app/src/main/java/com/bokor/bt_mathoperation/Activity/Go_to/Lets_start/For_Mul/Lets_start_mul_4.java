@@ -19,10 +19,13 @@ import static com.thekhaeng.pushdownanim.PushDownAnim.MODE_SCALE;
 public class Lets_start_mul_4 extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
+    TextView current_carry_on;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_start_mul_1);
+        current_carry_on=findViewById(R.id.carry_on);
+
         shadowLayout = findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override

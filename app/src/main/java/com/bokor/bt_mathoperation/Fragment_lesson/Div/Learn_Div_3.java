@@ -36,7 +36,7 @@ import java.util.Random;
 import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_Div_3 extends AppCompatActivity {
-    TextView qt_top,qt_bottom,qt_result;
+    TextView qt_top,qt_bottom,qt_result,result_view;
     TextView txt_level_current;
     int level_plus = 1;
     int status=1;
@@ -66,6 +66,7 @@ public class Learn_Div_3 extends AppCompatActivity {
         qt_top=findViewById(R.id.num_top);
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
+        result_view=findViewById(R.id.num_result_view);
 //        qt_result.setTextSize(30);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -103,6 +104,10 @@ public class Learn_Div_3 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         btn4=findViewById(R.id.btn_4);
+        btn1.setTextSize(23f);
+        btn2.setTextSize(23f);
+        btn3.setTextSize(23f);
+        btn4.setTextSize(23f);
         PushDownAnim.setPushDownAnimTo(btn1,btn2,btn3,btn4).setScale(PushDownAnim.MODE_SCALE,0.89f);
         ImageView img_hand = findViewById(R.id.img_hand);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_scale_animation);
@@ -167,7 +172,9 @@ public class Learn_Div_3 extends AppCompatActivity {
                 next.setVisibility(View.INVISIBLE);
             }else next.setVisibility(View.VISIBLE);
         }
-        qt_result.setText("??");
+        result_view.setVisibility(View.VISIBLE);
+        result_view.setText("          ??");
+        qt_result.setVisibility(View.INVISIBLE);
         if (level_plus==1){
             current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
             current_lv2.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
@@ -187,31 +194,33 @@ public class Learn_Div_3 extends AppCompatActivity {
         if (level_plus==1){
             qt_top.setText("10");
             qt_bottom.setText("4");
+            qt_result.setText("2សំណល់5");
 
             //btn
-            btn1.setText("1,5");
+            btn1.setText("1សំណល់5");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("2,5");
+            btn2.setText("2សំណល់5");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("2,5");
                 }
             });
-            btn3.setText("3,5");
+            btn3.setText("3សំណល់5");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("4,5");
+            btn4.setText("4សំណល់5");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -221,31 +230,33 @@ public class Learn_Div_3 extends AppCompatActivity {
         }else if (level_plus==2){
             qt_top.setText("19");
             qt_bottom.setText("5");
+            qt_result.setText("3សំណល់8");
 
             //btn
-            btn1.setText("3,8");
+            btn1.setText("3សំណល់8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("3,8");
                 }
             });
-            btn2.setText("4,8");
+            btn2.setText("4សំណល់8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("5,8");
+            btn3.setText("5សំណល់8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("6,8");
+            btn4.setText("6សំណល់8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -255,31 +266,33 @@ public class Learn_Div_3 extends AppCompatActivity {
         }else if (level_plus==3){
             qt_top.setText("59");
             qt_bottom.setText("5");
+            qt_result.setText("11សំណល់8");
 
             //btn
-            btn1.setText("9,8");
+            btn1.setText("9សំណល់8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("10,8");
+            btn2.setText("10សំណល់8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("11,8");
+            btn3.setText("11សំណល់8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
-                    qt_result.setText("11,8");
                 }
             });
-            btn4.setText("12,8");
+            btn4.setText("12សំណល់8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -289,34 +302,36 @@ public class Learn_Div_3 extends AppCompatActivity {
         }else if (level_plus==4){
             qt_top.setText("98");
             qt_bottom.setText("10");
+            qt_result.setText("9សំណល់8");
 
             //btn
-            btn1.setText("6,8");
+            btn1.setText("6សំណល់8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("7,8");
+            btn2.setText("7សំណល់8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("8,8");
+            btn3.setText("8សំណល់8");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("9,8");
+            btn4.setText("9សំណល់8");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    qt_result.setText("9,8");
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_div");
