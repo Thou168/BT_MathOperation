@@ -20,6 +20,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,6 +62,8 @@ public class Learn_Div_4 extends AppCompatActivity {
     Bundle extras;
     String userName;
     TextView symbol;
+    TextView txt_slop;
+    RelativeLayout rl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +74,8 @@ public class Learn_Div_4 extends AppCompatActivity {
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
         result_view=findViewById(R.id.num_result_view);
+        txt_slop=findViewById(R.id.txt_slop);
+        rl=findViewById(R.id.rl);
 
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -193,6 +198,8 @@ public class Learn_Div_4 extends AppCompatActivity {
         }
 
         if (level_plus==1){
+            rl.setVisibility(View.VISIBLE);
+            txt_slop.setVisibility(View.GONE);
             qt_top.setText("120");
             qt_bottom.setText("5");
             qt_result.setText("24");
@@ -228,6 +235,8 @@ public class Learn_Div_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
+            rl.setVisibility(View.VISIBLE);
+            txt_slop.setVisibility(View.GONE);
             qt_top.setText("350");
             qt_bottom.setText("7");
             qt_result.setText("50");
@@ -264,35 +273,38 @@ public class Learn_Div_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            qt_top.setText("620");
-            qt_bottom.setText("4");
-            qt_result.setText("155");
+            rl.setVisibility(View.GONE);
+            txt_slop.setVisibility(View.VISIBLE);
+            txt_slop.setText("នារីមានសៀវភៅ120ក្បាល។ នាងបានចែកសៀវភៅទាំងនេះឱ្យទៅប្អូនៗនាងទាំង4នាក់ ដោយក្នុងម្នាក់ៗទទួលបានចំណែកស្មើៗគ្នា។ តើប្អូនៗរបស់នាងបានសៀវភៅម្នាក់ប៉ុន្មានក្បាល។\u200B");
+//            qt_top.setText("620");
+//            qt_bottom.setText("4");
+//            qt_result.setText("155");
             //btn
-            btn1.setText("153");
+            btn1.setText("10");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("154");
+            btn2.setText("20");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("155");
+            btn3.setText("30");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    qt_result.setVisibility(View.VISIBLE);
-                    result_view.setVisibility(View.INVISIBLE);
+//                    qt_result.setVisibility(View.VISIBLE);
+//                    result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
 
                 }
             });
-            btn4.setText("156");
+            btn4.setText("40");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -300,32 +312,35 @@ public class Learn_Div_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4) {
-            qt_top.setText("972");
-            qt_bottom.setText("6");
-            qt_result.setText("162");
+            rl.setVisibility(View.GONE);
+            txt_slop.setVisibility(View.VISIBLE);
+            txt_slop.setText("លោកគ្រូសំមានក្រូច250ផ្លែ គាត់ចែកឱ្យសិស្សចំនួន5នាក់។ តើសិស្សម្នាក់ៗទទួលបានក្រូចប៉ុន្មានផ្លែ?");
+//            qt_top.setText("972");
+//            qt_bottom.setText("6");
+//            qt_result.setText("162");
             //btn
-            btn1.setText("159");
+            btn1.setText("20");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("160");
+            btn2.setText("30");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("161");
+            btn3.setText("40");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("162");
+            btn4.setText("50");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
