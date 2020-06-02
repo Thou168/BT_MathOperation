@@ -145,7 +145,7 @@
             android:layout_centerInParent="true"
             android:layout_height="237dp">
             <RelativeLayout
-                android:layout_centerInParent="true"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
