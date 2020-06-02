@@ -20,13 +20,12 @@ import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sub_class;
 import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Sum_class;
 import com.bokor.bt_mathoperation.Activity.Symbol_Activity.Weight_class;
 import com.bokor.bt_mathoperation.R;
-import com.google.android.material.navigation.NavigationView;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
 public class Home_Activity extends AppCompatActivity implements View.OnClickListener {
 //    DrawerLayout drawerLayout;
 //    ActionBarDrawerToggle toggle;
-    NavigationView navigationView;
+//    NavigationView navigationView;
     ImageButton img_setting;
 //    Toolbar toolbar;
     ImageButton btn_sum,btn_mul,btn_div,btn_fraction,btn_weight,btn_capacity,btn_decimal;
@@ -74,7 +73,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
 //            }
 //        });
 //        toolbar.setNavigationOnClickListener(new View.OnClickListener () { @Override public void onClick(View view) { if (drawerLayout.isDrawerOpen (Gravity.LEFT)) { drawerLayout.closeDrawer (Gravity.LEFT); } else { drawerLayout.openDrawer (Gravity.LEFT); } } });
-        navigationView = findViewById(R.id.navi);
+//        navigationView = findViewById(R.id.navi);
     }
 
     private void call_id(){
