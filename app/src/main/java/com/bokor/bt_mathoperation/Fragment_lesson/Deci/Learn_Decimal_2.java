@@ -279,7 +279,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
 //            txt_bot.setText("100");
             ln_view1.setVisibility(View.GONE);
             ln_view2.setVisibility(View.VISIBLE);
-            txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគដែលធំជាងគេ៖");
+            txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគដែលធំជាងគេ។");
             //btn
             btn1.setText("0.75");
             btn1.setOnClickListener(new View.OnClickListener() {

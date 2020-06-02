@@ -152,26 +152,23 @@
                     android:id="@+id/txt_ask"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
+                    android:layout_marginTop="20dp"
                     android:textSize="20sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/battambang_regular"
-                    android:layout_marginTop="20dp"
                     android:text="ចូរជ្រើសរើសប្រភាគដែលធំជាងគេក្នុងចំណោមប្រភាគខាងក្រោម៖"
                     android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentTop="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout
                     android:id="@+id/ln_crop"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_below="@+id/txt_ask"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="top"
-                    android:layout_centerInParent="true"
-                    android:layout_centerHorizontal="true">
+                    android:layout_alignStart="@+id/txt_ask"
+                    android:layout_alignEnd="@+id/txt_ask"
+                    android:gravity="center">
 
                     <RelativeLayout
                         android:id="@+id/rl_start"
@@ -196,32 +193,35 @@
                                 android:text="ក. "
                                 android:textColor="@color/white"
                                 android:textSize="25sp" />
+
                             <RelativeLayout
-                                android:gravity="center"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
                                 <TextView
                                     android:id="@+id/first_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
                                     android:text="2"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
+
                                 <View
                                     android:id="@+id/row_first"
                                     android:layout_width="20dp"
                                     android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/first_q"/>
+                                    android:layout_below="@+id/first_q"
+                                    android:background="@color/white" />
 
                                 <TextView
                                     android:id="@+id/first_below"
-                                    android:layout_centerInParent="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/row_first"
+                                    android:layout_centerInParent="true"
                                     android:text="5"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
@@ -242,32 +242,35 @@
                                 android:text="គ. "
                                 android:textColor="@color/white"
                                 android:textSize="25sp" />
+
                             <RelativeLayout
-                                android:gravity="center"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
                                 <TextView
                                     android:id="@+id/third_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
                                     android:text="4"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
+
                                 <View
                                     android:id="@+id/row_third"
                                     android:layout_width="20dp"
                                     android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/third_q"/>
+                                    android:layout_below="@+id/third_q"
+                                    android:background="@color/white" />
 
                                 <TextView
                                     android:id="@+id/third_below"
-                                    android:layout_centerInParent="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/row_third"
+                                    android:layout_centerInParent="true"
                                     android:text="5"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
@@ -298,31 +301,34 @@
                                 android:text="ខ. "
                                 android:textColor="@color/white"
                                 android:textSize="25sp" />
+
                             <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content">
+
                                 <TextView
                                     android:id="@+id/second_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
                                     android:text="3"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
+
                                 <View
                                     android:id="@+id/row_second"
                                     android:layout_width="20dp"
                                     android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/second_q"/>
+                                    android:layout_below="@+id/second_q"
+                                    android:background="@color/white" />
 
                                 <TextView
                                     android:id="@+id/second_below"
-                                    android:layout_centerInParent="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/row_second"
+                                    android:layout_centerInParent="true"
                                     android:text="5"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
@@ -343,32 +349,35 @@
                                 android:text="ឃ. "
                                 android:textColor="@color/white"
                                 android:textSize="25sp" />
+
                             <RelativeLayout
-                                android:gravity="center"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
                                 <TextView
                                     android:id="@+id/fourth_q"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentTop="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
                                     android:text="5"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />
+
                                 <View
                                     android:id="@+id/row_fourth"
                                     android:layout_width="20dp"
                                     android:layout_height="1dp"
-                                    android:background="@color/white"
-                                    android:layout_below="@+id/fourth_q"/>
+                                    android:layout_below="@+id/fourth_q"
+                                    android:background="@color/white" />
 
                                 <TextView
                                     android:id="@+id/fourth_below"
-                                    android:layout_centerInParent="true"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/row_fourth"
+                                    android:layout_centerInParent="true"
                                     android:text="5"
                                     android:textColor="@color/white"
                                     android:textSize="20sp" />

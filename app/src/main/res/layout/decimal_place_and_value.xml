@@ -59,37 +59,69 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/such_as"
-                    android:text=". លេខ 3 នៅខាងមុខគេគឺជាខ្ទង់រាយ ។"
-                    android:textSize="18sp"
+                <LinearLayout
                     android:layout_marginStart="41dp"
                     android:layout_marginEnd="41dp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textColor="#3A3D5F"
-                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text=". លេខ 2 នៅខ្ទង់ភាគដប់មានតម្លៃ 0.2 ឬ 2/10 ។"
-                    android:textSize="18sp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/oval"
+                        android:layout_width="7.94dp"
+                        android:layout_gravity="center"
+                        android:layout_height="7.94dp"/>
+                    <TextView
+                        android:id="@+id/such_as"
+                        android:text="លេខ 3 នៅខាងមុខគេគឺជាខ្ទង់រាយ។"
+                        android:layout_marginStart="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_marginStart="41dp"
                     android:layout_marginEnd="41dp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textColor="#3A3D5F"
-                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text=". លេខ 5 នៅខ្ទង់ភាគរយមានតម្លៃ 0.05 ឬ 5/100 ។"
-                    android:textSize="18sp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/oval"
+                        android:layout_width="7.94dp"
+                        android:layout_gravity="center"
+                        android:layout_height="7.94dp"/>
+                    <TextView
+                        android:text="លេខ 2 នៅខ្ទង់ភាគដប់មានតម្លៃ 0.2 ឬ 2/10។"
+                        android:textSize="18sp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
                     android:layout_marginStart="41dp"
                     android:layout_marginEnd="41dp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textColor="#3A3D5F"
-                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/oval"
+                        android:layout_width="7.94dp"
+                        android:layout_gravity="center"
+                        android:layout_height="7.94dp"/>
+                    <TextView
+                        android:text="លេខ 5 នៅខ្ទង់ភាគរយមានតម្លៃ 0.05 ឬ 5/100។"
+                        android:textSize="18sp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
             </LinearLayout>
             <com.dd.ShadowLayout
                 android:id="@+id/shadow_id"

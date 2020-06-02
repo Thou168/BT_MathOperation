@@ -194,23 +194,59 @@ public class Learn_Div_3 extends AppCompatActivity {
         if (level_plus==1){
             qt_top.setText("10");
             qt_bottom.setText("4");
-            qt_result.setText("2សំណល់5");
+            qt_result.setText("2សំណល់2");
 
             //btn
-            btn1.setText("1សំណល់5");
+            btn1.setText("1សំណល់2");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("2សំណល់5");
+            btn2.setText("2សំណល់2");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     qt_result.setVisibility(View.VISIBLE);
                     result_view.setVisibility(View.INVISIBLE);
                     showAlertDialogPositive();
+                }
+            });
+            btn3.setText("3សំណល់2");
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("4សំណល់2");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+        }else if (level_plus==2){
+            qt_top.setText("19");
+            qt_bottom.setText("5");
+            qt_result.setText("3សំណល់4");
+
+            //btn
+            btn1.setText("3សំណល់4");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    qt_result.setVisibility(View.VISIBLE);
+                    result_view.setVisibility(View.INVISIBLE);
+                    showAlertDialogPositive();
+                }
+            });
+            btn2.setText("4សំណល់4");
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
                 }
             });
             btn3.setText("3សំណល់5");
@@ -227,63 +263,27 @@ public class Learn_Div_3 extends AppCompatActivity {
                     surprise_wrong();
                 }
             });
-        }else if (level_plus==2){
-            qt_top.setText("19");
-            qt_bottom.setText("5");
-            qt_result.setText("3សំណល់8");
-
-            //btn
-            btn1.setText("3សំណល់8");
-            btn1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    qt_result.setVisibility(View.VISIBLE);
-                    result_view.setVisibility(View.INVISIBLE);
-                    showAlertDialogPositive();
-                }
-            });
-            btn2.setText("4សំណល់8");
-            btn2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    surprise_wrong();
-                }
-            });
-            btn3.setText("5សំណល់8");
-            btn3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    surprise_wrong();
-                }
-            });
-            btn4.setText("6សំណល់8");
-            btn4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    surprise_wrong();
-                }
-            });
         }else if (level_plus==3){
             qt_top.setText("59");
             qt_bottom.setText("5");
-            qt_result.setText("11សំណល់8");
+            qt_result.setText("11សំណល់4");
 
             //btn
-            btn1.setText("9សំណល់8");
+            btn1.setText("9សំណល់5");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("10សំណល់8");
+            btn2.setText("10សំណល់4");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("11សំណល់8");
+            btn3.setText("11សំណល់4");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -292,7 +292,7 @@ public class Learn_Div_3 extends AppCompatActivity {
                     showAlertDialogPositive();
                 }
             });
-            btn4.setText("12សំណល់8");
+            btn4.setText("11សំណល់5");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -305,21 +305,21 @@ public class Learn_Div_3 extends AppCompatActivity {
             qt_result.setText("9សំណល់8");
 
             //btn
-            btn1.setText("6សំណល់8");
+            btn1.setText("7សំណល់8");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("7សំណល់8");
+            btn2.setText("8សំណល់8");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("8សំណល់8");
+            btn3.setText("8សំណល់9");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
