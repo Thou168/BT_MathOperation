@@ -241,7 +241,8 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
 
                     <TextView
@@ -263,7 +264,8 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/txt_explain_top_mid"
@@ -284,7 +286,8 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom_mid"
@@ -305,7 +308,8 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom"
@@ -328,7 +332,8 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/txt_explain_som_nol"

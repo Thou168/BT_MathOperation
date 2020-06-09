@@ -20,6 +20,8 @@ public class Lets_start_fraction_4 extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
     TextView txt_yg_ban,txt_jomnam;
+
+    TextView num1_top,num1_bot,num2_top,num2_bot,num3_top,num3_bot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,8 +58,18 @@ public class Lets_start_fraction_4 extends AppCompatActivity {
     }
     private void id(){
         txt_yg_ban=findViewById(R.id.txt_yerng_ban);
-        txt_yg_ban.setText(R.string.fraction_sub);
+        txt_yg_ban.setText(R.string.fraction_add2);
         txt_jomnam=findViewById(R.id.txt_jomnam);
+
+        num1_top=findViewById(R.id.first_q);
+        num1_top.setText("2");
+        num2_top=findViewById(R.id.second_q);
+        num2_top.setText("1");
+        num3_top=findViewById(R.id.result_q);
+        num3_top.setText("1");
+        TextView subview = findViewById(R.id.symbol);
+        subview.setText("-");
+
         txt_jomnam.setText("ដើម្បីដកប្រភាគដែលមានភាគបែងដូចគ្នា យើងត្រូវដកភាគយកនឹងភាគយក រីឯភាគបែង\u200Bរក្សាទុកនៅដដែល។");
     }
 }

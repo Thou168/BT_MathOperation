@@ -232,7 +232,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
             table_1.setVisibility(View.VISIBLE);
             first_second.setText("2");
             below_second.setText("10");
-            txt_ask.setText("ចូរជ្រើសរើសចំនួនទសភាគដែលមានតម្លៃស្មើ0.2៖");
+            txt_ask.setText("ចូរជ្រើសរើសប្រភាគដែលមានតម្លៃស្មើ0.2៖");
             rl.setVisibility(View.VISIBLE);
             ln_view.setVisibility(View.GONE);
             //btn
