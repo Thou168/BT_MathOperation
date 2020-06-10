@@ -20,6 +20,7 @@ public class Change_scale_from_gram_to_kilogram extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
     TextView example,answer,such_as;
+    TextView answer_below;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +60,10 @@ public class Change_scale_from_gram_to_kilogram extends AppCompatActivity {
     private void id(){
         example=findViewById(R.id.example);
         example.setText("ឧទាហរណ៍ ៖ 4300g = ..........kg..........g");
+        answer_below=findViewById(R.id.answer_below);
+        answer_below.setVisibility(View.VISIBLE);
         answer=findViewById(R.id.answer);
-        answer.setText("4300g = 4000 + 300g ឬ (4000 ÷ 1000)kg + 300g = 4kg 300g");
+        answer.setText("4300g = 4000 + 300g");
         such_as=findViewById(R.id.such_as);
         such_as.setText("ដូចនេះ 4300g = 4kg 300g");
     }

@@ -36,99 +36,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <!--            <LinearLayout-->
-            <!--                android:background="@drawable/gradient_around_pink"-->
-            <!--                android:gravity="start|center"-->
-            <!--                android:layout_marginStart="41dp"-->
-            <!--                android:layout_marginEnd="41dp"-->
-            <!--                android:layout_marginTop="25dp"-->
-            <!--                android:paddingTop="5dp"-->
-            <!--                android:paddingBottom="5dp"-->
-            <!--                android:orientation="vertical"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content">-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:text="6 ជាតំណាងចែក"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:text="2 ជាតួចែក"-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:text="3 ជាផលចែក"-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:text="÷ ជាសញ្ញាចែក"-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--            </LinearLayout>-->
             <TextView
                 android:id="@+id/example"
                 android:text="ឧទាហរណ៍ ៖ 3kg 200g = ..........g"
@@ -145,7 +52,19 @@
                 android:textSize="18sp"
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginTop="10dp"
-                android:gravity="center"
+                android:gravity="center|start"
+                android:layout_marginStart="41dp"
+                android:layout_marginEnd="41dp"
+                android:textColor="#3A3D5F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/answer_below"
+                android:visibility="gone"
+                android:text="ឬ (4000 ÷ 1000)kg + 300g = 4kg 300g"
+                android:textSize="15sp"
+                android:fontFamily="@font/battambang_regular"
+                android:gravity="start"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
                 android:textColor="#3A3D5F"
@@ -154,6 +73,7 @@
             <ImageView
                 android:src="@drawable/all_vegetable"
                 android:visibility="visible"
+                android:layout_marginTop="5dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_marginStart="41dp"
@@ -193,7 +113,7 @@
                     android:padding="10dp"
                     android:layout_marginStart="5dp"
                     android:text="1គីឡូក្រាម=10ខាំ=1000ក្រាម\n1ខាំ=100ក្រាម"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:fontFamily="@font/battambang_regular"
                     android:textColor="#3A3D5F"
                     android:layout_marginTop="19dp"
