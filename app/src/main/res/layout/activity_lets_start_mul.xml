@@ -153,7 +153,7 @@
                         android:id="@+id/txt_explain_top"
                         android:textColor="#3A3D5F"
                         android:layout_marginStart="5dp"
-                        android:text="3 គុណនឹងលេខ 2 ខ្ទង់រាយ។ 3 × 2 = 6 សរសេរលេខ 6"
+                        android:text="3 គុណនឹងលេខ 2 ខ្ទង់រាយ។ \n3 × 2 = 6 សរសេរលេខ 6"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -174,7 +174,7 @@
                     <TextView
                         android:id="@+id/txt_explain_bottom"
                         android:layout_marginStart="5dp"
-                        android:text="3 គុណនឹងលេខ 1 ខ្ទង់ដប់។ 3 × 1 = 3 សរសេរលេខ 3"
+                        android:text="3 គុណនឹងលេខ 1 ខ្ទង់ដប់។ \n3 × 1 = 3 សរសេរលេខ 3"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"

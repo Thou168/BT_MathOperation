@@ -1,9 +1,17 @@
 package com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Capacity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,10 +26,22 @@ import static com.thekhaeng.pushdownanim.PushDownAnim.MODE_SCALE;
 public class Lets_start_capacity_2 extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_start_capacity);
+
+        textView=findViewById(R.id.txt_view);
+        textView.setText("មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ");
+        String first = "មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ml";
+        SpannableString fristtxt = new SpannableString(first);
+
+        SpannableStringBuilder ssb_last = new SpannableStringBuilder(fristtxt);
+
+        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
+        ssb_last.setSpan(fcsRed, 37, 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView.setText(ssb_last);
 
         shadowLayout=findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {

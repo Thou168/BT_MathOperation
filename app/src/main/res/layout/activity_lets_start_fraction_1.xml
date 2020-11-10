@@ -251,13 +251,132 @@
                 android:layout_marginEnd="41dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:text="@string/fraction_such_as_1"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textColor="#3A3D5F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_first"
+                        android:text="@string/fraction_such_as_1"
+                        android:textSize="18sp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_first"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/txt_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="2"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_bot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result_1"
+                            android:text="4"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_sec"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/rl_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="1"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_bot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result_1"
+                            android:text="4"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txt_sec"
+                        android:text="និង"
+                        android:textSize="18sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/rl_sec"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_thi"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/txt_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="3"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_bot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result_1"
+                            android:text="4"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
                 <TextView
                     android:text="@string/fraction_such_as"
                     android:textSize="18sp"
@@ -265,13 +384,142 @@
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <TextView
-                    android:text="@string/fraction_such_as_2"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textColor="#3A3D5F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txt_1"
+                        android:text="@string/fraction_such_as_2"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_first"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/txt_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="1"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_bot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result_1"
+                            android:text="4"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txt_first"
+                        android:text="@string/big_right"
+                        android:textSize="18sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/rl_first"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_sec"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/txt_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="2"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_bot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result_1"
+                            android:text="4"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txt_sec"
+                        android:text="@string/big_right"
+                        android:textSize="18sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/rl_sec"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_thi"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/txt_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="3"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_bot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result_1"
+                            android:text="4"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/gradient_around_pink"

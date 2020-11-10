@@ -20,6 +20,8 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,6 +65,9 @@ public class Learn_Mul_4 extends AppCompatActivity {
     TextView symbol;
     Bundle extras;
     String userName;
+    RelativeLayout rl_main;
+    LinearLayout ln_main;
+    TextView txt_showqt;
     //second dialog alert
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +83,10 @@ public class Learn_Mul_4 extends AppCompatActivity {
         current_lv2=findViewById(R.id.current_level2);
         current_lv3=findViewById(R.id.current_level3);
         current_lv4=findViewById(R.id.current_level4);
+
+        rl_main = findViewById(R.id.rl_main);
+        ln_main = findViewById(R.id.ln_main);
+        txt_showqt = findViewById(R.id.txt_showqt);
 
         txt_level_current=findViewById(R.id.txt_level_current);
 
@@ -260,33 +269,35 @@ public class Learn_Mul_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            qt_top.setText("457");
-            qt_bottom.setText("3");
+//            qt_top.setText("457");
+//            qt_bottom.setText("3");
+            rl_main.setVisibility(View.GONE);
+            ln_main.setVisibility(View.VISIBLE);
 
             //btn
-            btn1.setText("1369");
+            btn1.setText("460");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("1370");
+            btn2.setText("470");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("1371");
+            btn3.setText("480");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     showAlertDialogPositive();
-                    qt_result.setText("1371");
+                    qt_result.setText("480");
                 }
             });
-            btn4.setText("1372");
+            btn4.setText("490");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -294,36 +305,35 @@ public class Learn_Mul_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4) {
-            qt_top.setText("672");
-            qt_bottom.setText("4");
+            txt_showqt.setText("សាលារៀនមួយមានបន្ទប់រៀន 6បន្ទប់ ហើយបន្ទប់នីមួយៗមានសិស្ស40នាក់។ តើសាលារៀននោះមានសិស្សទាំងអស់ប៉ុន្មាននាក់?");
 
             //btn
-            btn1.setText("2685");
+            btn1.setText("210");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn2.setText("2686");
+            btn2.setText("220");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("2687");
+            btn3.setText("230");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("2688");
+            btn4.setText("240");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    qt_result.setText("2688");
+                    qt_result.setText("240");
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_mul");

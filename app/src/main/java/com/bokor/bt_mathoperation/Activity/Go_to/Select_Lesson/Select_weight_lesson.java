@@ -46,7 +46,7 @@ public class Select_weight_lesson extends AppCompatActivity {
         title.add("ការប្តូរខ្នាតពី គីឡូក្រាម ទៅ ក្រាម");
 
         id.add("04");
-        title.add("ការប្តូរទម្ងន់ពី ក្រាម ទៅ គីឡូក្រាម និងក្រាម");
+        title.add("ការប្តូរទម្ងន់ពី ក្រាម ទៅ គីឡូក្រាម");
 
         rv = findViewById(R.id.my_recycler_view);
         rv.setHasFixedSize(true);

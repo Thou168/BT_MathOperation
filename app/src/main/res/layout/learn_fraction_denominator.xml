@@ -199,41 +199,13 @@
                             <ImageView
                                 android:id="@+id/img_g2_1"
                                 android:layout_width="80dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:src="@drawable/frac_g2_1_1" />
-                            <!--                            <RelativeLayout-->
-                            <!--                                android:gravity="center"-->
-                            <!--                                android:layout_width="wrap_content"-->
-                            <!--                                android:layout_height="wrap_content">-->
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/first_q"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_alignParentTop="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:text="2"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                                <View-->
-                            <!--                                    android:id="@+id/row_first"-->
-                            <!--                                    android:layout_width="20dp"-->
-                            <!--                                    android:layout_height="1dp"-->
-                            <!--                                    android:background="@color/white"-->
-                            <!--                                    android:layout_below="@+id/first_q"/>-->
 
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/first_below"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:layout_below="@+id/row_first"-->
-                            <!--                                    android:text="5"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                            </RelativeLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_marginTop="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ln_1"
@@ -251,38 +223,8 @@
                             <ImageView
                                 android:id="@+id/img_g2_3"
                                 android:layout_width="80dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:src="@drawable/frac_g2_1_3" />
-                            <!--                            <RelativeLayout-->
-                            <!--                                android:gravity="center"-->
-                            <!--                                android:layout_width="wrap_content"-->
-                            <!--                                android:layout_height="wrap_content">-->
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/third_q"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_alignParentTop="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:text="4"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                                <View-->
-                            <!--                                    android:id="@+id/row_third"-->
-                            <!--                                    android:layout_width="20dp"-->
-                            <!--                                    android:layout_height="1dp"-->
-                            <!--                                    android:background="@color/white"-->
-                            <!--                                    android:layout_below="@+id/third_q"/>-->
-
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/third_below"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:layout_below="@+id/row_third"-->
-                            <!--                                    android:text="5"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                            </RelativeLayout>-->
                         </LinearLayout>
                     </RelativeLayout>
 
@@ -313,40 +255,13 @@
                             <ImageView
                                 android:id="@+id/img_g2_2"
                                 android:layout_width="80dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:src="@drawable/frac_g2_1_2" />
-                            <!--                            <RelativeLayout-->
-                            <!--                                android:layout_width="wrap_content"-->
-                            <!--                                android:layout_height="wrap_content">-->
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/second_q"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_alignParentTop="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:text="3"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                                <View-->
-                            <!--                                    android:id="@+id/row_second"-->
-                            <!--                                    android:layout_width="20dp"-->
-                            <!--                                    android:layout_height="1dp"-->
-                            <!--                                    android:background="@color/white"-->
-                            <!--                                    android:layout_below="@+id/second_q"/>-->
 
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/second_below"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:layout_below="@+id/row_second"-->
-                            <!--                                    android:text="5"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                            </RelativeLayout>-->
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_marginTop="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ln_2"
@@ -364,38 +279,8 @@
                             <ImageView
                                 android:id="@+id/img_g2_4"
                                 android:layout_width="80dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="35dp"
                                 android:src="@drawable/frac_g2_1_4" />
-                            <!--                            <RelativeLayout-->
-                            <!--                                android:gravity="center"-->
-                            <!--                                android:layout_width="wrap_content"-->
-                            <!--                                android:layout_height="wrap_content">-->
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/fourth_q"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_alignParentTop="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:text="5"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                                <View-->
-                            <!--                                    android:id="@+id/row_fourth"-->
-                            <!--                                    android:layout_width="20dp"-->
-                            <!--                                    android:layout_height="1dp"-->
-                            <!--                                    android:background="@color/white"-->
-                            <!--                                    android:layout_below="@+id/fourth_q"/>-->
-
-                            <!--                                <TextView-->
-                            <!--                                    android:id="@+id/fourth_below"-->
-                            <!--                                    android:layout_centerInParent="true"-->
-                            <!--                                    android:layout_width="wrap_content"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:layout_below="@+id/row_fourth"-->
-                            <!--                                    android:text="5"-->
-                            <!--                                    android:textColor="@color/white"-->
-                            <!--                                    android:textSize="20sp" />-->
-                            <!--                            </RelativeLayout>-->
                         </LinearLayout>
                     </RelativeLayout>
                 </LinearLayout>

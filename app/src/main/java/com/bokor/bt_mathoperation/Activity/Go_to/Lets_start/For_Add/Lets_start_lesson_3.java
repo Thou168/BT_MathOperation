@@ -100,7 +100,7 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
 
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍ ៖ 47 + 5 = ?");
+        example.setText("ឧទាហរណ៍ ៖ 42 + 34 = ?");
         carry_on=findViewById(R.id.carry_on);
 //        carry_on.setVisibility(View.VISIBLE);
         top_num=findViewById(R.id.top_num);

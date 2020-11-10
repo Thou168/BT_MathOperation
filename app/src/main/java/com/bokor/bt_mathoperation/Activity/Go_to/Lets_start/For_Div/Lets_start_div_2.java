@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class Lets_start_div_2 extends AppCompatActivity {
     ShadowLayout shadowLayout;
     TextView example,num_top,top_div,num_bottom,bottom_div,answer,txt_explain_top,txt_explain_top_mid,txt_explain_bottom_mid,txt_explain_bottom;
     TextView such_as;
+    LinearLayout ln_mainbox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,8 +59,10 @@ public class Lets_start_div_2 extends AppCompatActivity {
         });
     }
     private void id(){
+        ln_mainbox = findViewById(R.id.ln_main_box);
+        ln_mainbox.setVisibility(View.GONE);
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍  45 ៖ 9 = ?");
+        example.setText("ឧទាហរណ៍  ៖  លោកគ្រូសានមានសៀវភៅ45ក្បាល។ គាត់បានចែកសៀវភៅទាំងនេះឱ្យទៅសិស្ស9នាក់។ តើសិស្សម្នាក់ៗបានសៀវភៅប៉ុន្មានក្បាល?");
         num_top=findViewById(R.id.top_num);
         num_top.setText("45");
         top_div=findViewById(R.id.top_div);
@@ -69,6 +73,7 @@ public class Lets_start_div_2 extends AppCompatActivity {
         bottom_div.setText("5");
         answer=findViewById(R.id.answer);
         answer.setText("0");
+
         //box
         txt_explain_top=findViewById(R.id.txt_explain_top);
         txt_explain_top.setText("45 ជាតំណាងចែក");
@@ -79,6 +84,6 @@ public class Lets_start_div_2 extends AppCompatActivity {
         txt_explain_bottom=findViewById(R.id.txt_explain_bottom);
         txt_explain_bottom.setText("÷ ជាសញ្ញាចែក");
         such_as=findViewById(R.id.such_as);
-        such_as.setText("ដូចនេះ 45 ៖ 9 = 5");
+        such_as.setText("ដូចនេះសិស្សម្នាក់ៗបានសៀវភៅ5ក្បាល។");
     }
 }

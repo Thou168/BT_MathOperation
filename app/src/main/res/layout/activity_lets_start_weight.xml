@@ -37,98 +37,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--            <LinearLayout-->
-            <!--                android:background="@drawable/gradient_around_pink"-->
-            <!--                android:gravity="start|center"-->
-            <!--                android:layout_marginStart="41dp"-->
-            <!--                android:layout_marginEnd="41dp"-->
-            <!--                android:layout_marginTop="25dp"-->
-            <!--                android:paddingTop="5dp"-->
-            <!--                android:paddingBottom="5dp"-->
-            <!--                android:orientation="vertical"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content">-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:text="6 ជាតំណាងចែក"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:text="2 ជាតួចែក"-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:text="3 ជាផលចែក"-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--                <LinearLayout-->
-            <!--                    android:layout_marginStart="20dp"-->
-            <!--                    android:orientation="horizontal"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content">-->
-            <!--                    <ImageView-->
-            <!--                        android:src="@drawable/dot"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:scaleType="centerCrop"-->
-            <!--                        android:layout_width="7dp"-->
-            <!--                        android:layout_height="7dp"/>-->
-            <!--                    <TextView-->
-            <!--                        android:text="÷ ជាសញ្ញាចែក"-->
-            <!--                        android:textColor="#3A3D5F"-->
-            <!--                        android:layout_marginStart="12dp"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textSize="18sp"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"/>-->
-            <!--                </LinearLayout>-->
-            <!--            </LinearLayout>-->
+            <ImageView
+                android:src="@drawable/fish_onekilo"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"/>
+            <TextView
+                android:background="@drawable/gradient_around_pink"
+                android:padding="10dp"
+                android:text="ត្រីមានទម្ងន់ 1គីឡូក្រាមឬ 10ខាំ យើងអាចសរសេរ 1គ.ក ឬ 1kg"
+                android:layout_marginEnd="41dp"
+                android:textSize="18sp"
+                android:layout_marginStart="41dp"
+                android:fontFamily="@font/battambang_regular"
+                android:textColor="#3A3D5F"
+                android:layout_marginTop="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:background="@drawable/gradient_around_pink"
@@ -142,20 +66,8 @@
                 android:layout_marginTop="19dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-
             <TextView
-                android:background="@drawable/gradient_around_pink"
-                android:padding="10dp"
-                android:text="ត្រីមានទម្ងន់ 1គីឡូក្រាមឬ 10ខាំ យើងអាចសរសេរ 1គ.ក ឬ 1kg"
-                android:layout_marginEnd="41dp"
-                android:textSize="18sp"
-                android:layout_marginStart="41dp"
-                android:fontFamily="@font/battambang_regular"
-                android:textColor="#3A3D5F"
-                android:layout_marginTop="19dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
+                android:visibility="gone"
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
                 android:text="ម្នាស់មានទម្ងន់ 2គីឡូក្រាមនិង 400ក្រាម ឬ 2គ.ក 4ខាំ។ យើងអាចសរសេរ 2គ.ក 400ក. ឬ 2kg 400g"

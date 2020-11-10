@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -13,32 +14,21 @@ import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
-import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -65,10 +55,16 @@ public class Learn_Sub_2 extends AppCompatActivity {
     MediaPlayer mp1,game_over;
     Bundle extras;
     String userName;
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
+    int value;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        getPreferences(MODE_PRIVATE).getString("level_sub", String.valueOf(value));
+//        Log.d("Level sub",getPreferences(MODE_PRIVATE).getString("level_sub"));
+
         symbol = findViewById(R.id.symbol);
         symbol.setText("-");
         qt_top=findViewById(R.id.num_top);

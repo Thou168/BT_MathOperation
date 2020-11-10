@@ -23,6 +23,7 @@ public class Lets_start_div_3 extends AppCompatActivity {
     TextView example,num_top,top_div,num_bottom,bottom_div,answer,txt_explain_top,txt_explain_top_mid,txt_explain_bottom_mid,txt_explain_bottom;
     TextView such_as;
     LinearLayout ln_somnol;
+    LinearLayout ln_mainbox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +60,10 @@ public class Lets_start_div_3 extends AppCompatActivity {
         });
     }
     private void id(){
+        ln_mainbox=findViewById(R.id.ln_main_box);
+        ln_mainbox.setVisibility(View.GONE);
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍  42 ៖ 5 = ?");
+        example.setText("ឧទាហរណ៍  ៖  ដារ៉ាមានប៉ោម42ផ្លែ។ គាត់បានចែកប៉ោមទាំងនេះឱ្យប្អូនជីដូនមួយគាត់ទាំង8នាក់ក្នុងចំណែកស្មើៗគ្នា។ តើប្អូនជីដូនមួយម្នាក់ៗ ទទួលបានប៉ោមប៉ុន្មានផ្លែ? ហើយដារ៉ានៅសល់ប៉ោមប៉ុន្មានផ្លែទៀត?");
         num_top=findViewById(R.id.top_num);
         num_top.setText("42");
         top_div=findViewById(R.id.top_div);

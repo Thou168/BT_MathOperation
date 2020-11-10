@@ -37,7 +37,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class Learn_capa_1 extends AppCompatActivity {
     ImageView img_change;
-    ImageView img_change_new;
+    ImageView img_change_new,img_change_new_more;
     TextView txt_ask;
     TextView txt_level_current;
     int level_plus = 1;
@@ -65,6 +65,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         setContentView(R.layout.learn_kilogram);
         img_change=findViewById(R.id.img_change);
         img_change_new=findViewById(R.id.img_change_new);
+        img_change_new_more=findViewById(R.id.img_change_new_more);
         txt_ask=findViewById(R.id.txt_ask);
         current_lv1=findViewById(R.id.current_level1);
         current_lv2=findViewById(R.id.current_level2);
@@ -175,6 +176,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         if (level_plus==1){
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
+            img_change_new_more.setVisibility(View.GONE);
             txt_ask.setText("លីត្រជាឯកតាចំណុះតាងដោយអក្សរអ្វី?");
 
             //btn
@@ -208,7 +210,9 @@ public class Learn_capa_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             img_change_new.setVisibility(View.VISIBLE);
+            img_change_new_more.setVisibility(View.VISIBLE);
             img_change_new.setImageResource(R.drawable.litre_tank);
+            img_change_new_more.setImageResource(R.drawable.litre_tank_eq);
             txt_ask.setText("ធុងទឹកនេះមានចំណុះ500លីត្រ ដោយធុងទឹកមួយទៀតមានចំណុះពាក់កណ្តាលនៃធុងទឹកនេះ។ តើធុងទឹកមួយទៀតមានចំណុះប៉ុន្មានលីត្រ?");
 
             //btn
@@ -243,6 +247,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         }else if (level_plus==3){
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
+            img_change_new_more.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
             txt_ask.setText("តើ 14000 មីលីលីត្រ = _______ លីត្រ?");
 
@@ -278,6 +283,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         }else if (level_plus==4){
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
+            img_change_new_more.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
             txt_ask.setText("តើ 8000 មីលីត្រ = _______ លីត្រ?");
 

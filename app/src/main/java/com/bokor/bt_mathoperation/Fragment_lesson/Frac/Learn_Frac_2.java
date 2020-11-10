@@ -70,7 +70,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
         img_g2_4=findViewById(R.id.img_g2_4);
 
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("ក្នុងចំណោមចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
+
         txt_ask.setTextSize(15);
         t1=findViewById(R.id.txt1);
         t1.setTextSize(15);
@@ -209,6 +209,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
         }
 
         if (level_plus==1){
+            txt_ask.setText("ក្នុងចំណោមចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
             img_g2_1.setImageResource(R.drawable.frac_g2_1_1);
             img_g2_2.setImageResource(R.drawable.frac_g2_1_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_1_3);
@@ -244,6 +245,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
+            txt_ask.setText("ក្នុងចំណោមចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
             img_g2_1.setImageResource(R.drawable.frac_g2_2_3);
             img_g2_2.setImageResource(R.drawable.frac_g2_2_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_2_1);
@@ -278,6 +280,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
+            txt_ask.setText("ចូរជ្រើសរើសការរៀបលំដាប់ប្រភាគពីធំទៅតូច។");
             img_g2_1.setImageResource(R.drawable.frac_g2_3_1);
             img_g2_2.setImageResource(R.drawable.frac_g2_3_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_3_3);
@@ -294,14 +297,15 @@ public class Learn_Frac_2 extends AppCompatActivity {
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    surprise_wrong();
+
+                    showAlertDialogPositive();
                 }
             });
             btn3.setText("គ");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    showAlertDialogPositive();
+                    surprise_wrong();
                 }
             });
             btn4.setText("ឃ");
@@ -312,6 +316,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
+            txt_ask.setText("ចូរជ្រើសរើសការរៀបលំដាប់ប្រភាគពីធំទៅតូច។");
             img_g2_1.setImageResource(R.drawable.frac_g2_4_1);
             img_g2_2.setImageResource(R.drawable.frac_g2_4_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_4_3);
@@ -335,13 +340,6 @@ public class Learn_Frac_2 extends AppCompatActivity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    surprise_wrong();
-                }
-            });
-            btn4.setText("ឃ");
-            btn4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_frac");
@@ -351,6 +349,13 @@ public class Learn_Frac_2 extends AppCompatActivity {
                     }else {
                         showAlertDialogEnd();
                     }
+                }
+            });
+            btn4.setText("ឃ");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    surprise_wrong();
                 }
             });
 

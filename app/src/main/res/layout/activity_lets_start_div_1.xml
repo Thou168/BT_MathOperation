@@ -221,7 +221,82 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
+
+            <TextView
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="#3A3D5F"
+                android:text="ផ្ទៀងផ្ទាត់់ផលចែក"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginStart="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/carry_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/bottom_num_div"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/symbol_div"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="#3A3D5F"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+                <TextView
+                    android:id="@+id/top_num_div"
+                    android:text="108"
+                    android:textSize="21sp"
+                    android:layout_below="@+id/carry_on"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/symbol_div"
+                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/symbol_div"
+                    android:text="+"
+                    android:layout_marginTop="45dp"
+                    android:textSize="21sp"
+                    android:textColor="#3A3D5F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/bottom_num_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/top_num_div"
+                    android:layout_marginTop="60dp"
+                    android:text="3"
+                    android:textAlignment="textEnd"
+                    android:textColor="#3A3D5F"
+                    android:textSize="21sp" />
+                <View
+                    android:id="@+id/ruler_div"
+                    android:layout_width="60dp"
+                    android:layout_below="@+id/bottom_num_div"
+                    android:layout_height="1dp"
+                    android:background="#3A3D5F" />
+                <TextView
+                    android:id="@+id/answer_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ruler_div"
+                    android:layout_alignEnd="@+id/top_num_div"
+                    android:text="324"
+                    android:textAlignment="textEnd"
+                    android:textColor="#3A3D5F"
+                    android:textSize="21sp" />
+            </RelativeLayout>
             <LinearLayout
+
+                android:visibility="gone"
                 android:background="@drawable/gradient_around_pink"
                 android:gravity="start|center"
                 android:layout_marginStart="41dp"
@@ -301,6 +376,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginStart="20dp"
+                    android:visibility="gone"
                     android:layout_marginEnd="20dp"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"

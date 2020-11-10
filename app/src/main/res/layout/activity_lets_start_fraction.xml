@@ -179,30 +179,100 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="រូបក បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 1ចំណែកគឺ 1/6។"
+                    android:id="@+id/txt_left"
+                    android:text="រូបក បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 1ចំណែកគឺ"
                     android:fontFamily="@font/battambang_regular"
                     android:textSize="18sp"
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toStartOf="@+id/v_colume"/>
+                <RelativeLayout
+                    android:layout_below="@+id/txt_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/num1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:text="1"
+                        android:textColor="#3A3D5F"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/row_result_1"
+                        android:layout_width="20dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/num1"
+                        android:background="#3A3D5F" />
+
+                    <TextView
+                        android:id="@+id/num1_bot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_below="@+id/row_result_1"
+                        android:text="6"
+                        android:textColor="#3A3D5F"
+                        android:textSize="20sp" />
+                </RelativeLayout>
                 <View
                     android:id="@+id/v_colume"
                     android:layout_width="1dp"
-                    android:layout_height="150dp"
+                    android:layout_height="190dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_gravity="center"
                     android:layout_centerInParent="true"
                     android:background="#3A3D5F" />
-                <TextView
-                    android:text="រូបខ បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 5ចំណែកគឺ 5/6។"
-                    android:fontFamily="@font/battambang_regular"
-                    android:textSize="18sp"
-                    android:textColor="#3A3D5F"
+                <RelativeLayout
+                    android:layout_toEndOf="@+id/v_colume"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/v_colume"/>
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txt_right"
+                        android:text="រូបខ បែងចែកជា 6ចំណែកស្មើគ្នា។ ផ្នែកផាត់ពណ៌មាន 5ចំណែកគឺ "
+                        android:fontFamily="@font/battambang_regular"
+                        android:textSize="18sp"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <RelativeLayout
+                        android:layout_below="@+id/txt_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/result_q"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:text="5"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_result"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/result_q"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/result_below"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/row_result"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
             </RelativeLayout>
             <LinearLayout
                 android:layout_marginTop="20dp"
@@ -220,14 +290,378 @@
                     android:textColor="#3A3D5F"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <TextView
-                    android:text="@string/fraction_2"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/battambang_regular"
-                    android:layout_marginTop="10dp"
-                    android:textColor="#3A3D5F"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/such_as"
+                        android:text="ដូចនេះ"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_first"
+                        android:layout_toEndOf="@+id/such_as"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="1"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/next_step1"
+                        android:text="តូចជាង"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/rl_first"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_tow"
+                        android:layout_toEndOf="@+id/next_step1"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="5"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/or"
+                        android:layout_toEndOf="@+id/rl_tow"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:text="ឬ"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_three"
+                        android:layout_toEndOf="@+id/or"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="5"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/big_then"
+                        android:layout_toEndOf="@+id/rl_three"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:text="ធំជាង"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_four"
+                        android:layout_toEndOf="@+id/big_then"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="1"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txt_sec"
+                        android:text="@string/fraction_2"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_first"
+                        android:layout_toEndOf="@+id/txt_sec"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="1"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/next_step1"
+                        android:text="@string/big_right"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/rl_first"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_tow"
+                        android:layout_toEndOf="@+id/next_step1"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="5"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/or"
+                        android:layout_toEndOf="@+id/rl_tow"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:text="ឬ"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_three"
+                        android:layout_toEndOf="@+id/or"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="5"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/big_then"
+                        android:layout_toEndOf="@+id/rl_three"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/big_left"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/battambang_regular"
+                        android:textColor="#3A3D5F"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RelativeLayout
+                        android:id="@+id/rl_four"
+                        android:layout_toEndOf="@+id/big_then"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/num1_top"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:text="1"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:id="@+id/row_1"
+                            android:layout_width="20dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/num1_top"
+                            android:background="#3A3D5F" />
+
+                        <TextView
+                            android:id="@+id/num1_b"
+                            android:layout_marginStart="5dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/row_1"
+                            android:text="6"
+                            android:textColor="#3A3D5F"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
             </LinearLayout>
             <TextView
                 android:background="@drawable/gradient_around_pink"

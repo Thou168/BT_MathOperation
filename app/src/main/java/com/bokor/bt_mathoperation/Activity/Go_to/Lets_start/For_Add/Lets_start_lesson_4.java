@@ -32,7 +32,7 @@ public class Lets_start_lesson_4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lets_start_lesson);
+        setContentView(R.layout.activity_lets_start_lesson_pop);
         id();
 
         mediaPlayer=MediaPlayer.create(this,R.raw.plus_first);

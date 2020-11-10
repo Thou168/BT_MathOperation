@@ -171,13 +171,26 @@
                         android:scaleType="fitCenter"
                         android:layout_width="80dp"
                         android:layout_height="120dp"/>
-                    <ImageView
-                        android:id="@+id/img_change_new"
-                        android:layout_centerInParent="true"
-                        android:layout_gravity="center"
-                        android:scaleType="fitCenter"
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:layout_height="120dp">
+                        <ImageView
+                            android:id="@+id/img_change_new"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:layout_width="130dp"
+                            android:layout_height="100dp"/>
+                        <ImageView
+                            android:id="@+id/img_change_new_more"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:layout_width="130dp"
+                            android:layout_height="100dp"/>
+                    </LinearLayout>
+
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>

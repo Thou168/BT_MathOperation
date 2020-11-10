@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/let_start_bg">
@@ -38,13 +37,65 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៍ ៖ ក្រណាត់មួយផ្ទាំងចែកជា 10ចំណែកស្មើគ្នា។​ គេយក4ចំណែកទៅដេរខោ។ តាងដោយប្រភាគ 4/10 ឬ 0.4។"
+                android:text="ឧទាហរណ៍ ៖ ក្រណាត់មួយផ្ទាំងចែកជា 10ចំណែកស្មើគ្នា។​ គេយក4ចំណែកទៅដេរខោ។ តាងដោយប្រភាគ"
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
                 android:textColor="#3A3D5F"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginStart="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/txtBot"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/battambang_regular"
+                    android:text="4"
+                    android:textColor="#3A3D5F"
+                    android:textSize="18sp" />
+                <View
+                    android:id="@+id/ruler"
+                    android:layout_width="20dp"
+                    android:layout_below="@+id/txtTop"
+                    android:layout_height="1dp"
+                    android:background="#3A3D5F" />
+                <TextView
+                    android:id="@+id/txtBot"
+                    android:text="10"
+                    android:textSize="18sp"
+                    android:textColor="#3A3D5F"
+                    android:fontFamily="@font/battambang_regular"
+                    android:layout_below="@+id/ruler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/equal"
+                    android:layout_toEndOf="@+id/ruler"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ឬ"
+                    android:textColor="#3A3D5F"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_toEndOf="@+id/equal"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.4"
+                    android:textColor="#3A3D5F"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/img"

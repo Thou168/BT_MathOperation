@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/let_start_bg"
-    tools:context=".Activity.Go_to.Lets_start.For_Add.Multiply_Two_digit_and_one_digit_numbers">
+    tools:context=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_1">
 
     <ImageView
         android:id="@+id/img_back"
@@ -18,6 +18,7 @@
 
     <ImageView
         android:id="@+id/sounds"
+        android:visibility="visible"
         android:layout_alignParentEnd="true"
         android:src="@drawable/sound_on"
         android:scaleType="centerCrop"
@@ -38,7 +39,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៍ ៖ 21 + 8 = ? "
+                android:text="ឧទាហរណ៍ ៖ 48 - 5 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:textColor="#3A3D5F"
@@ -61,7 +62,7 @@
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/top_num"
-                    android:text="21"
+                    android:text="48"
                     android:textSize="21sp"
                     android:layout_below="@+id/carry_on"
                     android:layout_marginTop="5dp"
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/symbol"
-                    android:text="+"
+                    android:text="-"
                     android:layout_marginTop="45dp"
                     android:textSize="21sp"
                     android:textColor="#3A3D5F"
@@ -85,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/top_num"
                     android:layout_marginTop="60dp"
-                    android:text="8"
+                    android:text="5"
                     android:textAlignment="textEnd"
                     android:textColor="#3A3D5F"
                     android:textSize="21sp" />
@@ -112,12 +113,13 @@
 
                 <TextView
                     android:id="@+id/answer"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ruler"
                     android:layout_alignEnd="@+id/top_num"
-                    android:text="29"
                     android:textAlignment="textEnd"
+                    android:layout_toEndOf="@+id/symbol"
+                    android:text="43"
                     android:textColor="#3A3D5F"
                     android:textSize="21sp" />
             </RelativeLayout>
@@ -146,9 +148,9 @@
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/txt_explain_top"
-                        android:layout_marginStart="5dp"
                         android:textColor="#3A3D5F"
-                        android:text="1 បូក 8 ស្មើនឹង 9 សរសេរលេខ 9"
+                        android:text="8 ដក 5 នៅសល់ 3 សរសេរលេខ 3"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textSize="18sp"
                         android:layout_width="wrap_content"
@@ -168,7 +170,7 @@
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/txt_explain_bottom"
-                        android:text="2 ទម្លាក់ចុះ សរសេរលេខ 2"
+                        android:text="4 ទម្លាក់ចុះ សរសេរលេខ 4"
                         android:layout_marginStart="5dp"
                         android:textColor="#3A3D5F"
                         android:fontFamily="@font/battambang_regular"
@@ -179,7 +181,7 @@
             </LinearLayout>
             <TextView
                 android:id="@+id/such_as"
-                android:text="ដូចនេះ 21 + 8 = 29"
+                android:text="ដូចនេះ 48 - 5 = 43"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"
                 android:fontFamily="@font/battambang_regular"
@@ -193,11 +195,11 @@
                 android:layout_width="match_parent"
                 android:paddingBottom="5dp"
                 android:layout_marginTop="19dp"
-                android:layout_height="285dp">
+                android:layout_height="290dp">
                 <RelativeLayout
                     android:background="@drawable/gradient_around_pink"
                     android:layout_width="wrap_content"
-                    android:layout_height="220dp">
+                    android:layout_height="230dp">
                     <LinearLayout
                         android:orientation="vertical"
                         android:id="@+id/ln_view"
@@ -243,20 +245,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:id="@+id/pop"
-                                android:text="1"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginStart="75dp"
-                                android:visibility="gone"
+                                android:id="@+id/pop_first"
+                                android:text="2"
+                                android:layout_marginStart="85dp"
                                 android:textSize="15sp"
                                 android:textColor="#3A3D5F"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
                                 android:id="@+id/two_char_top"
-                                android:text="2"
-                                android:layout_below="@+id/pop"
-                                android:layout_marginTop="7.74dp"
+                                android:layout_below="@+id/pop_first"
+                                android:text="3"
+                                android:layout_marginTop="-10dp"
                                 android:layout_marginStart="75dp"
                                 android:textSize="18sp"
                                 android:textColor="#3A3D5F"
@@ -264,7 +264,7 @@
                                 android:layout_height="wrap_content"/>
 
                             <TextView
-                                android:text="+"
+                                android:text="-"
                                 android:id="@+id/symbol_add"
                                 android:layout_below="@+id/two_char_top"
                                 android:layout_marginStart="20dp"
@@ -292,24 +292,30 @@
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:background="#3A3D5F" />
-
                             <TextView
                                 android:id="@+id/two_ans"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/symbol_add"
-                                android:layout_alignEnd="@+id/two_char_top"
-                                android:layout_marginStart="75dp"
-                                android:layout_marginTop="63dp"
-                                android:layout_marginEnd="0dp"
                                 android:text="2"
+                                android:layout_below="@+id/symbol_add"
+                                android:layout_marginStart="75dp"
+                                android:layout_marginTop="53dp"
+                                android:textSize="18sp"
                                 android:textColor="#3A3D5F"
-                                android:textSize="18sp" />
-
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/pop_sec"
+                                android:text="12"
+                                android:layout_marginEnd="62dp"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="15sp"
+                                android:textColor="#3A3D5F"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                             <TextView
                                 android:id="@+id/one_char_top"
-                                android:text="1"
-                                android:layout_marginTop="7.74dp"
+                                android:text="2"
+                                android:layout_below="@+id/pop_first"
+                                android:layout_marginTop="-10dp"
                                 android:layout_marginEnd="80dp"
                                 android:layout_alignParentEnd="true"
                                 android:textSize="18sp"
@@ -330,15 +336,15 @@
 
                             <TextView
                                 android:id="@+id/one_ans"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:text="4"
                                 android:layout_below="@+id/one_char_bot"
-                                android:layout_alignEnd="@+id/one_char_top"
-                                android:layout_marginTop="38dp"
-                                android:layout_marginEnd="0dp"
-                                android:text="9"
+                                android:layout_marginTop="28dp"
+                                android:layout_marginEnd="80dp"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="18sp"
                                 android:textColor="#3A3D5F"
-                                android:textSize="18sp" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -358,6 +364,7 @@
                     android:layout_height="wrap_content"
                     app:sl_cornerRadius="4dp"
                     app:sl_shadowColor="#F50057">
+
                     <TextView
                         android:id="@+id/start"
                         android:layout_width="wrap_content"

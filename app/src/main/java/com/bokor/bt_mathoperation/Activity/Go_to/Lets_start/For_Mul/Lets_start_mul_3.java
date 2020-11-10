@@ -58,7 +58,7 @@ public class Lets_start_mul_3 extends AppCompatActivity {
     }
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍ ៖ ចន្ថាមានដូង 3 ធ្លាយដែលក្នុងមួយធ្លាយមាន 10 ផ្លែ។ តើដូងទាំងអស់មានប៉ុន្មានផ្លែ? \n10 × 3 = ?");
+        example.setText("ឧទាហរណ៍ ៖ ចន្ថាមានដូង 3 ធ្លាយដែលក្នុងមួយធ្លាយមាន 10 ផ្លែ។ តើដូងទាំងអស់មានប៉ុន្មានផ្លែ?");
 //        carry_on=findViewById(R.id.carry_on);
 //        carry_on.setVisibility(View.GONE);
         top_num=findViewById(R.id.top_num);

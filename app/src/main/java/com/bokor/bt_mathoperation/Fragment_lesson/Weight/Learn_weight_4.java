@@ -229,7 +229,7 @@ public class Learn_weight_4 extends AppCompatActivity {
             });
         }else if (level_plus==2){
 //            img_change.setImageResource(R.drawable.kl2);
-            txt_ask.setText("តើ 5550 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
+            txt_ask.setText("តើ 5500 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
             btn1.setText("5គក550ក");
@@ -262,7 +262,7 @@ public class Learn_weight_4 extends AppCompatActivity {
             });
         }else if (level_plus==3){
 //            img_change.setImageResource(R.drawable.kl3);
-            txt_ask.setText("តើ 2340 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
+            txt_ask.setText("តើ 2300 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
             btn1.setText("2គក3ក");

@@ -193,11 +193,11 @@
                 android:layout_width="match_parent"
                 android:paddingBottom="5dp"
                 android:layout_marginTop="19dp"
-                android:layout_height="285dp">
+                android:layout_height="300dp">
                 <RelativeLayout
                     android:background="@drawable/gradient_around_pink"
                     android:layout_width="wrap_content"
-                    android:layout_height="220dp">
+                    android:layout_height="240dp">
                     <LinearLayout
                         android:orientation="vertical"
                         android:id="@+id/ln_view"
@@ -247,7 +247,7 @@
                                 android:text="1"
                                 android:layout_marginTop="1dp"
                                 android:layout_marginStart="75dp"
-                                android:visibility="gone"
+                                android:visibility="visible"
                                 android:textSize="15sp"
                                 android:textColor="#3A3D5F"
                                 android:layout_width="wrap_content"
@@ -300,7 +300,7 @@
                                 android:layout_below="@+id/symbol_add"
                                 android:layout_alignEnd="@+id/two_char_top"
                                 android:layout_marginStart="75dp"
-                                android:layout_marginTop="63dp"
+                                android:layout_marginTop="43dp"
                                 android:layout_marginEnd="0dp"
                                 android:text="2"
                                 android:textColor="#3A3D5F"
@@ -309,6 +309,7 @@
                             <TextView
                                 android:id="@+id/one_char_top"
                                 android:text="1"
+                                android:layout_below="@+id/pop"
                                 android:layout_marginTop="7.74dp"
                                 android:layout_marginEnd="80dp"
                                 android:layout_alignParentEnd="true"
@@ -334,7 +335,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/one_char_bot"
                                 android:layout_alignEnd="@+id/one_char_top"
-                                android:layout_marginTop="38dp"
+                                android:layout_marginTop="20dp"
                                 android:layout_marginEnd="0dp"
                                 android:text="9"
                                 android:textColor="#3A3D5F"
@@ -346,7 +347,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="160dp"
+                        android:layout_marginTop="180dp"
                         android:background="#3A3D5F" />
                 </RelativeLayout>
                 <com.dd.ShadowLayout

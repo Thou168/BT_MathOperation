@@ -112,7 +112,7 @@
                     android:background="@drawable/gradient_around_pink"
                     android:padding="10dp"
                     android:layout_marginStart="5dp"
-                    android:text="1គីឡូក្រាម=10ខាំ=1000ក្រាម\n1ខាំ=100ក្រាម"
+                    android:text="1000ក្រាម= 1គីឡូក្រាម៕​ \n- ដោយសារក្រាម និងគីឡូក្រាមខុសគ្នា 1000ដង \nដូចនេះដើម្បីប្តូរពីក្រាម ទៅគីឡូក្រាមយើងត្រូវចែកនឹង1000"
                     android:textSize="16sp"
                     android:fontFamily="@font/battambang_regular"
                     android:textColor="#3A3D5F"

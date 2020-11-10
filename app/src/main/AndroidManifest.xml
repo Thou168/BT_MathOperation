@@ -16,7 +16,6 @@
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub_2" />
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub_3" />
         <activity android:name=".Fragment_lesson.Sub.Learn_Sub_4" />
-        <activity android:name=".Fragment_lesson.Sub.Learn_Sub_Question" />
 
         <activity android:name=".Fragment_lesson.Div.Learn_Div_1"/>
         <activity android:name=".Fragment_lesson.Div.Learn_Div_2"/>
@@ -148,9 +147,6 @@
         <activity
             android:name=".Activity.Symbol_Activity.Sub_class"
             android:screenOrientation="portrait" />
-<!--        <activity-->
-<!--            android:name=".Activity.Symbol_Activity.Sub_class"-->
-<!--            android:screenOrientation="portrait" />-->
         <activity
             android:name=".Activity.Symbol_Activity.Mul_class"
             android:screenOrientation="portrait" />
@@ -160,6 +156,7 @@
         <activity
             android:name=".Activity.Home_Activity"
             android:screenOrientation="portrait" />
+<!--        android:name=".Splash_screen.Splashscreen"-->
         <activity
             android:name=".Splash_screen.Splashscreen"
             android:screenOrientation="portrait"

@@ -1,14 +1,13 @@
 package com.bokor.bt_mathoperation.Fragment_lesson.Sub;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -18,32 +17,19 @@ import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
-import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_1;
-import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
-
 import pl.droidsonroids.gif.GifImageView;
-
 public class Learn_Sub extends AppCompatActivity {
     TextView qt_top,qt_bottom,qt_result;
     TextView symbol;
@@ -66,6 +52,8 @@ public class Learn_Sub extends AppCompatActivity {
     MediaPlayer mp1,game_over;
     Bundle extras;
     String userName;
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -327,146 +315,22 @@ public class Learn_Sub extends AppCompatActivity {
 
         }
 
-//        random = new Random();
-//        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
-//        String letter = Character.toString(str.charAt(1));
-//        int in = Integer.parseInt(letter);
-//        int int2 = random.nextInt((9-in) + 1) + 1;
-//        final int result = Integer.parseInt(str) - int2;
-//
-//        //Question
-//        qt_top.setText(String.valueOf(Integer.parseInt(str)));
-//        qt_bottom.setText(String.valueOf(int2));
-//        qt_result.setText(String.valueOf(result));
-//        //
-//
-//        System.out.println("-------- "+result);
-////       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-//        System.out.println("======"+str+"==="+in);
-//        ArrayList<Integer> nelist = new ArrayList<>();
-//        while (nelist.size()<4){
-//            int num = random.nextInt((result+2) - (result-2)) + (result-2);
-//            if (!nelist.contains(num)){
-//                nelist.add(num);
-//            }
-//        }
-//        ArrayList<Integer> btnList = new ArrayList<>();
-//        nelist.add(result);
-//        ArrayList<Button> tv_list = new ArrayList<Button>();
-//        tv_list.add(btn1);
-//        tv_list.add(btn2);
-//        tv_list.add(btn3);
-//        tv_list.add(btn4);
-//        while (btnList.size()<4){
-//            for (int i = 0;i<nelist.size();i++){
-//                if (!btnList.contains(nelist.get(i))){
-//                    btnList.add(nelist.get(i));
-//                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
-//                    System.out.println("======"+btnList.get(i));
-//                }
-//            }
-//            Collections.sort(btnList);
-//        }
-//        String value = btn1.getText().toString();
-//        final int num1 = Integer.parseInt(value);
-//        String value2 = btn2.getText().toString();
-//        final int num2 = Integer.parseInt(value2);
-//        String value3 = btn3.getText().toString();
-//        final int num3 = Integer.parseInt(value3);
-//        String value4 = btn4.getText().toString();
-//        final int num4 = Integer.parseInt(value4);
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num1 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_sub");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num2 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_sub");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num3 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_sub");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num4 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_sub");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
+    }
+
+    private void nextLevelPre(){
+        if (level_plus==4) {
+            SharedPreferences sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putInt("your_int_key", level_plus);
+            editor.apply();
+        }
+        saveData();
+    }
+
+    private void saveData(){
+        SharedPreferences sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE);
+        int myIntValue = sp.getInt("your_int_key", 0);
+        Log.d("mmdajnsjdnajsndj", String.valueOf(myIntValue));
     }
 
     private void surprise_wrong(){
@@ -474,31 +338,16 @@ public class Learn_Sub extends AppCompatActivity {
         showAlertDialogNegative();
         vibe.vibrate(200);
         game_over.start();
-//        game_over.setLooping(true);
     }
 
     private void surprise_true(){
         mp1.start();
-//        mp1.setLooping(true);
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
 
-        //star drop
-//        container.addEmoji(R.drawable.star1);
-//        container.addEmoji(R.drawable.star2);
-//        container.addEmoji(R.drawable.star3);
-//        container.addEmoji(R.drawable.star4);
-//        container.addEmoji(R.drawable.star5);
-//        container.startDropping();
-//        //container.stopDropping();
-//        container.setPer(10);
-//        container.setDuration(7200);
-//        container.setDropDuration(2400);
-//        container.setDropFrequency(500);
-        //end
     }
 
     @Override
@@ -529,7 +378,6 @@ public class Learn_Sub extends AppCompatActivity {
         ImageView home = layoutView.findViewById(R.id.home);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
-//        dialogBuilder.setCancelable(false);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowFalse;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -582,6 +430,7 @@ public class Learn_Sub extends AppCompatActivity {
                     if (extras != null) {
                         userName = extras.getString("sample_sub");
                         if (userName != null) {
+                            nextLevelPre();
                             Intent intent = new Intent(getApplicationContext(), Learn_Sub_2.class);
                             intent.putExtra("sample_sub", "learn_sub_1");
                             startActivity(intent);
