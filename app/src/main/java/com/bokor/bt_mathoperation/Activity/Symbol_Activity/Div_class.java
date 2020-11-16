@@ -3,6 +3,7 @@ package com.bokor.bt_mathoperation.Activity.Symbol_Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,6 +27,8 @@ public class Div_class extends AppCompatActivity {
     LinearLayout rl_play,rl_practice;
     Bundle extras;
     String put_extra;
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,7 @@ public class Div_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clear_div();
                 Intent intent = new Intent(getApplicationContext(), Learn_Div_1.class);
                 intent.putExtra("sample_div", "div");
                 startActivity(intent);
@@ -59,6 +63,13 @@ public class Div_class extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    public void clear_div(){
+        preferences = getSharedPreferences("Game_div", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     @Override

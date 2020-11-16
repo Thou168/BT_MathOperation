@@ -1,9 +1,11 @@
 package com.bokor.bt_mathoperation.Fragment_lesson.Weight;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -20,6 +22,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +34,7 @@ import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Frac.Learn_Frac_3;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -63,10 +67,19 @@ public class Learn_weight_4 extends AppCompatActivity {
     Bundle extras;
     String userName;
     //second dialog alert
+    SharedPreferences preferences;
+    RelativeLayout rl_main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn_kilogram);
+        extras = getIntent().getExtras();
+        if (extras!=null){
+            userName = extras.getString("sample_weight");
+        }
+        rl_main = findViewById(R.id.rl_main);
+        rl_main.setVisibility(View.GONE);
+
         img_change=findViewById(R.id.img_change);
         img_change.setVisibility(View.GONE);
         img_change_new=findViewById(R.id.img_change_new);
@@ -94,7 +107,23 @@ public class Learn_weight_4 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus--;
+                if (userName!=null){
+                    if (level_plus==1){
+                        Intent i = new Intent(getApplicationContext(), Learn_weight_3.class);
+                        i.putExtra("to_lv_3","to3");
+                        startActivity(i);
+                        finish();
+
+                        SharedPreferences sp = getSharedPreferences("Game_weight", Activity.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putInt("your_lv_4", 4);
+                        editor.apply();
+                    }else {
+                        level_plus--;
+                    }
+                }else {
+                    level_plus--;
+                }
                 showNextQuiz();
             }
         });
@@ -139,10 +168,15 @@ public class Learn_weight_4 extends AppCompatActivity {
             userName = extras.getString("sample_weight");
             if (userName != null) {
                 //text current level
-//                previous.setVisibility(View.VISIBLE);
-//                if (level_plus==status){
-//                    next.setVisibility(View.INVISIBLE);
-//                }else next.setVisibility(View.VISIBLE);
+                preferences = getSharedPreferences("Game_weight", Context.MODE_PRIVATE);
+                preferences.getInt("level_current_weight_4", 1);
+                status = preferences.getInt("level_current_weight_4",1);
+                Log.d("status action 4", String.valueOf(status));
+
+                previous.setVisibility(View.VISIBLE);
+                if (level_plus==status){
+                    next.setVisibility(View.INVISIBLE);
+                }else next.setVisibility(View.VISIBLE);
 
                 current_lv1.setText("13");
                 current_lv2.setText("14");
@@ -336,151 +370,14 @@ public class Learn_weight_4 extends AppCompatActivity {
             });
 
         }
-
-        //Question Baning
-//        random = new Random();
-//        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
-////        int main_num = random.nextInt(9)-1;
-//        String letter = Character.toString(str.charAt(1));
-////        if (str.charAt(str.length()-1)=='9'){
-////            str = str.replace(str.substring(str.length()-1), String.valueOf(main_num));
-////        }
-//        int in = Integer.parseInt(letter);
-//        int int2 = random.nextInt((9-in) + 1) + 1;
-//
-//        final int result = Integer.parseInt(str) + int2;
-
-//        qt_top.setText(String.valueOf(Integer.parseInt(str)));
-//        qt_bottom.setText(String.valueOf(int2));
-//        qt_result.setText(String.valueOf(result));
-
-//        System.out.println("-------- "+result);
-////       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-//        System.out.println("======"+str+"==="+in);
-//        ArrayList<Integer> nelist = new ArrayList<>();
-//        while (nelist.size()<4){
-//            int num = random.nextInt((result+2) - (result-2)) + (result-2);
-//            if (!nelist.contains(num)){
-//                nelist.add(num);
-//            }
-//        }
-//        ArrayList<Integer> btnList = new ArrayList<>();
-//        nelist.add(result);
-//        ArrayList<Button> tv_list = new ArrayList<Button>();
-//        tv_list.add(btn1);
-//        tv_list.add(btn2);
-//        tv_list.add(btn3);
-//        tv_list.add(btn4);
-//        while (btnList.size()<4){
-//            for (int i = 0;i<nelist.size();i++){
-//                if (!btnList.contains(nelist.get(i))){
-//                    btnList.add(nelist.get(i));
-//                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
-//                    System.out.println("======"+btnList.get(i));
-//                }
-//            }
-//            Collections.sort(btnList);
-//        }
-//        String value = btn1.getText().toString();
-//        final int num1 = Integer.parseInt(value);
-//        String value2 = btn2.getText().toString();
-//        final int num2 = Integer.parseInt(value2);
-//        String value3 = btn3.getText().toString();
-//        final int num3 = Integer.parseInt(value3);
-//        String value4 = btn4.getText().toString();
-//        final int num4 = Integer.parseInt(value4);
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num1 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num2 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num3 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num4 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
+    }
+    public void Save() {
+        if (userName!=null) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("level_current_weight_4", status);
+            editor.apply();
+            System.out.println("Save = " + editor.putInt("level_current_weight_4", status));
+        }
     }
 
     private void surprise_wrong(){
@@ -499,20 +396,6 @@ public class Learn_weight_4 extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
-
-        //star drop
-//        container.addEmoji(R.drawable.star1);
-//        container.addEmoji(R.drawable.star2);
-//        container.addEmoji(R.drawable.star3);
-//        container.addEmoji(R.drawable.star4);
-//        container.addEmoji(R.drawable.star5);
-//        container.startDropping();
-//        //container.stopDropping();
-//        container.setPer(10);
-//        container.setDuration(7200);
-//        container.setDropDuration(2400);
-//        container.setDropFrequency(500);
-        //end
     }
 
     @Override
@@ -572,7 +455,6 @@ public class Learn_weight_4 extends AppCompatActivity {
         ImageView home = layoutView.findViewById(R.id.home);
         ImageView again = layoutView.findViewById(R.id.again);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
-//        dialogBuilder.setCancelable(false);
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowTrue;
@@ -585,6 +467,7 @@ public class Learn_weight_4 extends AppCompatActivity {
                 if (level_plus==status){
                     status++;
                 }
+                Save();
                 level_plus++;
                 Log.d("status level", String.valueOf(status));
                 Log.d("current level", String.valueOf(level_plus));

@@ -2,8 +2,11 @@ package com.bokor.bt_mathoperation.Activity.Symbol_Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,7 +26,8 @@ public class Sum_class extends AppCompatActivity {
     ImageView back_sum,alert;
     LinearLayout rl_play,rl_practice;
     TranslateAnimation transAnim;
-
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +49,15 @@ public class Sum_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clear_sum();
                 Intent intent = new Intent(getApplicationContext(), Learn_1.class);
                 intent.putExtra("sample_add", "addition");
                 startActivity(intent);
+
+                preferences=getSharedPreferences("Game_add", Context.MODE_PRIVATE);
+                Log.d("current game2",String.valueOf(preferences.getInt("level_current_add_2", 1)));
+                Log.d("current game3",String.valueOf(preferences.getInt("level_current_add_3", 1)));
+                Log.d("current game4",String.valueOf(preferences.getInt("level_current_add_4", 1)));
             }
         });
 
@@ -59,6 +69,13 @@ public class Sum_class extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void clear_sum(){
+        preferences = getSharedPreferences("Game_add", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     @Override

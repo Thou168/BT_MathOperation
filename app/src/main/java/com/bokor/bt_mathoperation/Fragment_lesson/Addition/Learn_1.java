@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -58,11 +59,21 @@ public class Learn_1 extends AppCompatActivity {
     MediaPlayer mp1,game_over;
     Bundle extras;
     String userName;
+    String userBack;
     //second dialog alert
+
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
+    int backSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        extras = getIntent().getExtras();
+        if (extras!=null){
+            userBack = extras.getString("to_lv_1");
+            backSave = extras.getInt("to_1",0);
+        }
         qt_top=findViewById(R.id.num_top);
         qt_bottom=findViewById(R.id.num_bottom);
         qt_result=findViewById(R.id.num_result);
@@ -93,6 +104,7 @@ public class Learn_1 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 level_plus--;
                 showNextQuiz();
                 Log.d("previous plus", String.valueOf(level_plus));
@@ -101,21 +113,18 @@ public class Learn_1 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus++;
+                if (userBack!=null){
+                    if (level_plus<4){
+                        level_plus++;
+                    }else {
+                        nextAction();
+                    }
+                }else {
+                    level_plus++;
+                }
                 showNextQuiz();
                 Log.d("next plus", String.valueOf(level_plus));
 
-//                extras = getIntent().getExtras();
-//                if (extras!=null){
-//                    userName=extras.getString("back");
-//                    if (userName!=null){
-//                        if (level_plus==4) {
-//                            Intent i = new Intent(getApplicationContext(),Learn_2.class);
-//                            i.putExtra("next","this");
-//                            startActivity(i);
-//                        }
-//                    }
-//                }
             }
         });
 
@@ -136,20 +145,18 @@ public class Learn_1 extends AppCompatActivity {
         mp1=MediaPlayer.create(this, R.raw.hand_clap);
         game_over=MediaPlayer.create(this,R.raw.game_over);
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
+        if (userBack!=null){
+            level_plus=4;
+        }
         showNextQuiz();
-//        extras = getIntent().getExtras();
-//        if (extras!=null){
-//            userName=extras.getString("back");
-//            if (userName!=null){
-//                level_plus=4;
-//                showNextQuiz();
-//            }
-//        }
     }
     private void showNextQuiz(){
+        preferences = getSharedPreferences("Game_add", Context.MODE_PRIVATE);
+        preferences.getInt("level_current_add_1", 0);
+
         txt_level_current.setText("កម្រិត "+level_plus);
         qt_result.setText("??");
+
         //prevoious and next
         if (level_plus>1){
             previous.setVisibility(View.VISIBLE);
@@ -157,6 +164,9 @@ public class Learn_1 extends AppCompatActivity {
 
         if (level_plus==status){
             next.setVisibility(View.INVISIBLE);
+            if (userBack!=null){
+                next.setVisibility(View.VISIBLE);
+            }
         }else next.setVisibility(View.VISIBLE);
 
         if (level_plus==1){
@@ -173,6 +183,12 @@ public class Learn_1 extends AppCompatActivity {
             current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+            if (userBack!=null){
+                current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+                current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+                current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+                current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+            }
         }
 
         if (level_plus==1){
@@ -311,7 +327,7 @@ public class Learn_1 extends AppCompatActivity {
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_add");
-                        if (userName!=null){
+                        if (userName!=null || userBack!=null){
                             showAlertDialogPositive();
                         }
                     }else {
@@ -321,151 +337,6 @@ public class Learn_1 extends AppCompatActivity {
             });
 
         }
-
-        //Question Baning
-//        random = new Random();
-//        String str = String.valueOf(random.nextInt((99 - 10) + 1) + 10);
-////        int main_num = random.nextInt(9)-1;
-//        String letter = Character.toString(str.charAt(1));
-////        if (str.charAt(str.length()-1)=='9'){
-////            str = str.replace(str.substring(str.length()-1), String.valueOf(main_num));
-////        }
-//        int in = Integer.parseInt(letter);
-//        int int2 = random.nextInt((9-in) + 1) + 1;
-//
-//        final int result = Integer.parseInt(str) + int2;
-
-//        qt_top.setText(String.valueOf(Integer.parseInt(str)));
-//        qt_bottom.setText(String.valueOf(int2));
-//        qt_result.setText(String.valueOf(result));
-
-//        System.out.println("-------- "+result);
-////       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-//        System.out.println("======"+str+"==="+in);
-//        ArrayList<Integer> nelist = new ArrayList<>();
-//        while (nelist.size()<4){
-//            int num = random.nextInt((result+2) - (result-2)) + (result-2);
-//            if (!nelist.contains(num)){
-//                nelist.add(num);
-//            }
-//        }
-//        ArrayList<Integer> btnList = new ArrayList<>();
-//        nelist.add(result);
-//        ArrayList<Button> tv_list = new ArrayList<Button>();
-//        tv_list.add(btn1);
-//        tv_list.add(btn2);
-//        tv_list.add(btn3);
-//        tv_list.add(btn4);
-//        while (btnList.size()<4){
-//            for (int i = 0;i<nelist.size();i++){
-//                if (!btnList.contains(nelist.get(i))){
-//                    btnList.add(nelist.get(i));
-//                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
-//                    System.out.println("======"+btnList.get(i));
-//                }
-//            }
-//            Collections.sort(btnList);
-//        }
-//        String value = btn1.getText().toString();
-//        final int num1 = Integer.parseInt(value);
-//        String value2 = btn2.getText().toString();
-//        final int num2 = Integer.parseInt(value2);
-//        String value3 = btn3.getText().toString();
-//        final int num3 = Integer.parseInt(value3);
-//        String value4 = btn4.getText().toString();
-//        final int num4 = Integer.parseInt(value4);
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num1 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num2 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num3 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num4 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        extras = getIntent().getExtras();
-//                        if (extras != null) {
-//                            userName = extras.getString("sample_add");
-//                            if (userName!=null){
-//                                showAlertDialogPositive();
-//                            }
-//                        }else {
-//                            showAlertDialogEnd();
-//                        }
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
     }
 
     private void surprise_wrong(){
@@ -473,31 +344,15 @@ public class Learn_1 extends AppCompatActivity {
         showAlertDialogNegative();
         vibe.vibrate(200);
         game_over.start();
-//        game_over.setLooping(true);
     }
 
     private void surprise_true(){
         mp1.start();
-//        mp1.setLooping(true);
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
-
-        //star drop
-//        container.addEmoji(R.drawable.star1);
-//        container.addEmoji(R.drawable.star2);
-//        container.addEmoji(R.drawable.star3);
-//        container.addEmoji(R.drawable.star4);
-//        container.addEmoji(R.drawable.star5);
-//        container.startDropping();
-//        //container.stopDropping();
-//        container.setPer(10);
-//        container.setDuration(7200);
-//        container.setDropDuration(2400);
-//        container.setDropFrequency(500);
-        //end
     }
 
     @Override
@@ -509,6 +364,10 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                preferences = getSharedPreferences("Game_add",MODE_PRIVATE);
+                preferences_ed = preferences.edit();
+                preferences_ed.clear();
+                preferences_ed.apply();
                 finish();
             }
         });
@@ -570,6 +429,7 @@ public class Learn_1 extends AppCompatActivity {
                 if (level_plus!=4) {
                     if (level_plus==status){
                         status++;
+                        Log.d("view status lv 1: ", String.valueOf(status));
                     }
                     level_plus++;
                     Log.d("status level", String.valueOf(status));
@@ -580,12 +440,8 @@ public class Learn_1 extends AppCompatActivity {
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_add");
-                        if (userName != null) {
-                            Intent intent = new Intent(getApplicationContext(), Learn_2.class);
-                            intent.putExtra("sample_add", "learn1");
-                            startActivity(intent);
-                            finish();
-                        }
+                        nextAction();
+                        Log.d("first","dada");
                     }
                 }
                 alertDialog.dismiss();
@@ -606,6 +462,17 @@ public class Learn_1 extends AppCompatActivity {
                 alertDialog.cancel();
             }
         });
+    }
+
+    private void nextAction(){
+        if (userName != null || userBack!=null) {
+            Intent intent = new Intent(getApplicationContext(), Learn_2.class);
+            intent.putExtra("sample_add", "learn1");
+            intent.putExtra("to_2_back",backSave);
+            intent.putExtra("to_2",backSave);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void showAlertDialogEnd() {

@@ -156,7 +156,6 @@
         <activity
             android:name=".Activity.Home_Activity"
             android:screenOrientation="portrait" />
-<!--        android:name=".Splash_screen.Splashscreen"-->
         <activity
             android:name=".Splash_screen.Splashscreen"
             android:screenOrientation="portrait"

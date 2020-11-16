@@ -3,6 +3,7 @@ package com.bokor.bt_mathoperation.Activity.Symbol_Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -25,6 +26,8 @@ public class Mul_class extends AppCompatActivity {
     LinearLayout rl_play,rl_practice;
     Bundle extras;
     String put_extra;
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,7 @@ public class Mul_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clear_mul();
                 Intent intent = new Intent(getApplicationContext(), Learn_Mul_1.class);
                 intent.putExtra("sample_mul", "multiply");
                 startActivity(intent);
@@ -61,6 +65,13 @@ public class Mul_class extends AppCompatActivity {
                 back_mul.startAnimation(animFadein);
             }
         });
+    }
+
+    public void clear_mul(){
+        preferences = getSharedPreferences("Game_mul", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     @Override

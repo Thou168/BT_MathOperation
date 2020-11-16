@@ -52,12 +52,21 @@ public class Learn_Sub extends AppCompatActivity {
     MediaPlayer mp1,game_over;
     Bundle extras;
     String userName;
+    String userBack;
+
     SharedPreferences preferences;
     SharedPreferences.Editor preferences_ed;
+    int backSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        extras = getIntent().getExtras();
+        if (extras!=null){
+            userBack = extras.getString("to_sub_1");
+            backSave = extras.getInt("to_1",0);
+        }
+
         symbol = findViewById(R.id.symbol);
         symbol.setText("-");
         qt_top=findViewById(R.id.num_top);
@@ -98,21 +107,18 @@ public class Learn_Sub extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus++;
+                if (userBack!=null){
+                    if (level_plus<4){
+                        level_plus++;
+                    }else {
+                        nextAction();
+                    }
+                }else {
+                    level_plus++;
+                }
                 showNextQuiz();
                 Log.d("next plus", String.valueOf(level_plus));
 
-//                extras = getIntent().getExtras();
-//                if (extras!=null){
-//                    userName=extras.getString("back");
-//                    if (userName!=null){
-//                        if (level_plus==4) {
-//                            Intent i = new Intent(getApplicationContext(),Learn_2.class);
-//                            i.putExtra("next","this");
-//                            startActivity(i);
-//                        }
-//                    }
-//                }
             }
         });
         btn1=findViewById(R.id.btn_1);
@@ -137,10 +143,16 @@ public class Learn_Sub extends AppCompatActivity {
 
         answer=findViewById(R.id.answer);
         answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
-        showNextQuiz();
 
+        if (userBack!=null){
+            level_plus=4;
+        }
+        showNextQuiz();
     }
     private void showNextQuiz(){
+        preferences = getSharedPreferences("Game_sub", Context.MODE_PRIVATE);
+        preferences.getInt("level_current_sub_1", 0);
+
         txt_level_current.setText("កម្រិត "+level_plus);
         qt_result.setText("??");
         //prevoious and next
@@ -150,6 +162,9 @@ public class Learn_Sub extends AppCompatActivity {
 
         if (level_plus==status){
             next.setVisibility(View.INVISIBLE);
+            if (userBack!=null){
+                next.setVisibility(View.VISIBLE);
+            }
         }else next.setVisibility(View.VISIBLE);
 
         if (level_plus==1){
@@ -166,6 +181,12 @@ public class Learn_Sub extends AppCompatActivity {
             current_lv4.setBackground(getDrawable(R.drawable.gradient_level_not_complete));
         }else if (level_plus==4){
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+            if (userBack!=null){
+                current_lv1.setBackground(getDrawable(R.drawable.gradient_current_level));
+                current_lv2.setBackground(getDrawable(R.drawable.gradient_current_level));
+                current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
+                current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
+            }
         }
 
         if (level_plus==1){
@@ -304,7 +325,7 @@ public class Learn_Sub extends AppCompatActivity {
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_sub");
-                        if (userName!=null){
+                        if (userName!=null || userBack!=null){
                             showAlertDialogPositive();
                         }
                     }else {
@@ -317,20 +338,15 @@ public class Learn_Sub extends AppCompatActivity {
 
     }
 
-    private void nextLevelPre(){
-        if (level_plus==4) {
-            SharedPreferences sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sp.edit();
-            editor.putInt("your_int_key", level_plus);
-            editor.apply();
+    private void nextAction(){
+        if (userName != null || userBack!=null) {
+            Intent intent = new Intent(getApplicationContext(), Learn_Sub_2.class);
+            intent.putExtra("sample_sub", "learn1");
+            intent.putExtra("to_2_back",backSave);
+            intent.putExtra("to_2",backSave);
+            startActivity(intent);
+            finish();
         }
-        saveData();
-    }
-
-    private void saveData(){
-        SharedPreferences sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE);
-        int myIntValue = sp.getInt("your_int_key", 0);
-        Log.d("mmdajnsjdnajsndj", String.valueOf(myIntValue));
     }
 
     private void surprise_wrong(){
@@ -429,13 +445,8 @@ public class Learn_Sub extends AppCompatActivity {
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_sub");
-                        if (userName != null) {
-                            nextLevelPre();
-                            Intent intent = new Intent(getApplicationContext(), Learn_Sub_2.class);
-                            intent.putExtra("sample_sub", "learn_sub_1");
-                            startActivity(intent);
-                            finish();
-                        }
+                        nextAction();
+                        Log.d("first","dada");
                     }
                 }
                 alertDialog.cancel();

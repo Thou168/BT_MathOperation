@@ -1,9 +1,11 @@
 package com.bokor.bt_mathoperation.Fragment_lesson.Mul;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -31,6 +33,7 @@ import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_div_lesson
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_sub_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_3;
 import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Sub.Learn_Sub;
 import com.bokor.bt_mathoperation.R;
@@ -69,10 +72,16 @@ public class Learn_Mul_4 extends AppCompatActivity {
     LinearLayout ln_main;
     TextView txt_showqt;
     //second dialog alert
+    SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        extras = getIntent().getExtras();
+        if (extras!=null){
+            userName = extras.getString("sample_mul");
+        }
+
         symbol=findViewById(R.id.symbol);
         symbol.setText("×");
         qt_top=findViewById(R.id.num_top);
@@ -104,7 +113,23 @@ public class Learn_Mul_4 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                level_plus--;
+                if (userName!=null){
+                    if (level_plus==1){
+                        Intent i = new Intent(getApplicationContext(), Learn_Mul_3.class);
+                        i.putExtra("to_lv_3","to3");
+                        startActivity(i);
+                        finish();
+
+                        SharedPreferences sp = getSharedPreferences("Game_mul", Activity.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putInt("your_lv_4", 4);
+                        editor.apply();
+                    }else {
+                        level_plus--;
+                    }
+                }else {
+                    level_plus--;
+                }
                 showNextQuiz();
             }
         });
@@ -135,8 +160,6 @@ public class Learn_Mul_4 extends AppCompatActivity {
 
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-        answer=findViewById(R.id.answer);
-        answer.setPaintFlags(answer.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
         showNextQuiz();
     }
     private void showNextQuiz(){
@@ -145,10 +168,15 @@ public class Learn_Mul_4 extends AppCompatActivity {
             userName = extras.getString("sample_mul");
             if (userName != null) {
                 //text current level
-//                previous.setVisibility(View.VISIBLE);
-//                if (level_plus==status){
-//                    next.setVisibility(View.INVISIBLE);
-//                }else next.setVisibility(View.VISIBLE);
+                preferences = getSharedPreferences("Game_mul", Context.MODE_PRIVATE);
+                preferences.getInt("level_current_mul_4", 1);
+                status = preferences.getInt("level_current_mul_4",1);
+                Log.d("status action 4", String.valueOf(status));
+
+                previous.setVisibility(View.VISIBLE);
+                if (level_plus==status){
+                    next.setVisibility(View.INVISIBLE);
+                }else next.setVisibility(View.VISIBLE);
 
                 current_lv1.setText("13");
                 current_lv2.setText("14");
@@ -346,137 +374,15 @@ public class Learn_Mul_4 extends AppCompatActivity {
                 }
             });
         }
+    }
 
-//        random = new Random();
-//        int num = 10,max=9;
-//        int ran = random.nextInt(num);
-//        if (ran==0){
-//            ran= ran+1;
-//        }
-//        //
-//        max = random.nextInt(max);
-//        if (max==0){
-//            max=max+1;
-//        }
-//        String num_ran = String.valueOf(ran);
-//
-//        String str = String.valueOf(random.nextInt((999 - 100) + 1) + 100);
-//        if (str.charAt(str.length()-1)=='0'){
-//            str = str.replace(str.substring(str.length()-1), num_ran);
-//        }
-//        str = str.replace(str.substring(str.length()-1), num_ran);
-//        int full_in = Integer.parseInt(str);
-//
-//        //last_digit
-//        int num_int = Integer.parseInt(num_ran);
-//
-//        //mul_below
-//        int min = random.nextInt(max)+1 ;
-//
-//        //result
-//        final int result = full_in * min;
-//
-//        //Question
-//        qt_top.setText(String.valueOf(full_in));
-//        qt_bottom.setText(String.valueOf(min));
-//        qt_result.setText(String.valueOf(result));
-//        //
-//
-//        System.out.println("-------- "+result);
-////       int num = random.nextInt((result+5) - (result-5) + 1) + (result-5);
-//        System.out.println("======"+str+"==="+num_int);
-//        ArrayList<Integer> nelist = new ArrayList<>();
-//        while (nelist.size()<4){
-//            int num_button = random.nextInt((result+2) - (result-2)) + (result-2);
-//            if (!nelist.contains(num_button)){
-//                nelist.add(num_button);
-//            }
-//        }
-//        ArrayList<Integer> btnList = new ArrayList<>();
-//        nelist.add(result);
-//        ArrayList<Button> tv_list = new ArrayList<Button>();
-//        tv_list.add(btn1);
-//        tv_list.add(btn2);
-//        tv_list.add(btn3);
-//        tv_list.add(btn4);
-//        while (btnList.size()<4){
-//            for (int i = 0;i<nelist.size();i++){
-//                if (!btnList.contains(nelist.get(i))){
-//                    btnList.add(nelist.get(i));
-//                    tv_list.get(i).setText(String.valueOf(btnList.get(i)));
-//                    System.out.println("======"+btnList.get(i));
-//                }
-//            }
-//            Collections.sort(btnList);
-//        }
-//        String value = btn1.getText().toString();
-//        final int num1 = Integer.parseInt(value);
-//        String value2 = btn2.getText().toString();
-//        final int num2 = Integer.parseInt(value2);
-//        String value3 = btn3.getText().toString();
-//        final int num3 = Integer.parseInt(value3);
-//        String value4 = btn4.getText().toString();
-//        final int num4 = Integer.parseInt(value4);
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num1 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        showAlertDialogEnd();
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num2 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                            showAlertDialogEnd();
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num3 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        showAlertDialogEnd();
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
-//        btn4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(num4 == result){
-//                    qt_result.setVisibility(View.VISIBLE);
-//                    if (level_plus==4){
-//                        showAlertDialogEnd();
-//                    }else {
-//                        showAlertDialogPositive();
-//                    }
-//                }else{
-//                    surprise_wrong();
-//                }
-//            }
-//        });
+    public void Save() {
+        if (userName!=null) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("level_current_mul_4", status);
+            editor.apply();
+            System.out.println("Save = " + editor.putInt("level_current_mul_4", status));
+        }
     }
 
     private void surprise_wrong(){
@@ -495,20 +401,6 @@ public class Learn_Mul_4 extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
-
-        //star drop
-//        container.addEmoji(R.drawable.star1);
-//        container.addEmoji(R.drawable.star2);
-//        container.addEmoji(R.drawable.star3);
-//        container.addEmoji(R.drawable.star4);
-//        container.addEmoji(R.drawable.star5);
-//        container.startDropping();
-//        //container.stopDropping();
-//        container.setPer(10);
-//        container.setDuration(7200);
-//        container.setDropDuration(2400);
-//        container.setDropFrequency(500);
-        //end
     }
 
     @Override
@@ -581,6 +473,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
                 if (level_plus==status){
                     status++;
                 }
+                Save();
                 level_plus++;
                 Log.d("status level", String.valueOf(status));
                 Log.d("current level", String.valueOf(level_plus));

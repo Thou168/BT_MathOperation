@@ -3,6 +3,7 @@ package com.bokor.bt_mathoperation.Activity.Symbol_Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,7 +27,8 @@ public class Decimal_class extends AppCompatActivity {
     LinearLayout rl_play,rl_practice;
     Bundle extras;
     String put_extra;
-
+    SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,7 @@ public class Decimal_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clear_deci();
                 Intent intent = new Intent(getApplicationContext(), Learn_Decimal_1.class);
                 intent.putExtra("sample_deci", "deci");
                 startActivity(intent);
@@ -62,6 +65,13 @@ public class Decimal_class extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    public void clear_deci(){
+        preferences = getSharedPreferences("Game_deci", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     @Override
