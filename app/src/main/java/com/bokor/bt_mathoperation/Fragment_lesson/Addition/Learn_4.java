@@ -65,6 +65,7 @@ public class Learn_4 extends AppCompatActivity {
 
     String userBack;
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -461,7 +462,7 @@ public class Learn_4 extends AppCompatActivity {
                 Log.d("current level", String.valueOf(level_plus));
                 showNextQuiz();
                 bk_normal();
-                alertDialog.cancel();
+                alertDialog.dismiss();
             }
         });
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
@@ -476,9 +477,16 @@ public class Learn_4 extends AppCompatActivity {
             public void onClick(View view) {
                 bk_normal();
                 showNextQuiz();
-                alertDialog.cancel();
+                alertDialog.dismiss();
             }
         });
+    }
+
+    public void clear_sub(){
+        preferences = getSharedPreferences("Game_sub", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     private void showAlertDialogEnd() {
@@ -510,6 +518,7 @@ public class Learn_4 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_add");
                     if (userName != null) {
+                        clear_sub();
                         Intent i_to = new Intent(getApplicationContext(),Learn_Sub.class);
                         i_to.putExtra("sample_sub","learn");
                         startActivity(i_to);

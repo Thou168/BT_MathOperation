@@ -54,10 +54,7 @@ public class Sum_class extends AppCompatActivity {
                 intent.putExtra("sample_add", "addition");
                 startActivity(intent);
 
-                preferences=getSharedPreferences("Game_add", Context.MODE_PRIVATE);
-                Log.d("current game2",String.valueOf(preferences.getInt("level_current_add_2", 1)));
-                Log.d("current game3",String.valueOf(preferences.getInt("level_current_add_3", 1)));
-                Log.d("current game4",String.valueOf(preferences.getInt("level_current_add_4", 1)));
+//                preferences=getSharedPreferences("Game_add", Context.MODE_PRIVATE);
             }
         });
 

@@ -73,6 +73,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
     TextView txt_showqt;
     //second dialog alert
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -528,6 +529,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_mul");
                     if (userName != null) {
+                        clear_div();
                         Intent i_to = new Intent(getApplicationContext(), Learn_Div_1.class);
                         i_to.putExtra("sample_div","learn");
                         startActivity(i_to);
@@ -548,6 +550,13 @@ public class Learn_Mul_4 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void clear_div(){
+        preferences = getSharedPreferences("Game_div", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     private void bk_normal(){

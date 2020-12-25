@@ -10,18 +10,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-<!--        <ImageView-->
-<!--            android:id="@+id/img_back"-->
-<!--            android:visibility="visible"-->
-<!--            android:layout_centerInParent="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:src="@drawable/ic_close_black_24dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:background="@drawable/button_state_red"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            android:layout_marginStart="42dp"-->
-<!--            android:layout_width="52dp"-->
-<!--            android:layout_height="44dp"/>-->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_marginTop="31dp"
@@ -158,7 +146,7 @@
                     android:layout_marginTop="20dp"
                     android:text="ជ្រើសរើសការរៀបលំដាប់ប្រភាគពីតូចទៅធំដែលត្រឹមត្រូវរបស់ប្រភាគខាងក្រោម៖"
                     android:gravity="center"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout

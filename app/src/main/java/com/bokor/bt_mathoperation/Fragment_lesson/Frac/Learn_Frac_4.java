@@ -71,6 +71,7 @@ public class Learn_Frac_4 extends AppCompatActivity {
     String userName;
     //second dialog alert
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -579,6 +580,7 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_frac");
                     if (userName != null) {
+                        clear_weight();
                         Intent i_to = new Intent(getApplicationContext(), Learn_weight_1.class);
                         i_to.putExtra("sample_weight","learn");
                         startActivity(i_to);
@@ -600,6 +602,14 @@ public class Learn_Frac_4 extends AppCompatActivity {
             }
         });
     }
+
+    public void clear_weight(){
+        preferences = getSharedPreferences("Game_weight", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
+    }
+
 
     private void bk_normal(){
         container.stopDropping();

@@ -81,7 +81,7 @@ public class Learn_Frac_1 extends AppCompatActivity {
         fourth_q=findViewById(R.id.fourth_q);
 
         txt_ask=findViewById(R.id.txt_ask);
-        txt_ask.setText("តើប្រភាគមួយណាដែលធំជាគេ?");
+        txt_ask.setText("តើប្រភាគមួយណាដែលធំជាងគេ?");
         //below
         first_below=findViewById(R.id.first_below);
         second_below=findViewById(R.id.second_below);

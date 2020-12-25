@@ -68,6 +68,7 @@ public class Learn_capa_3 extends AppCompatActivity {
     String userName;
     //second dialog alert
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     RelativeLayout rl_main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -526,6 +527,7 @@ public class Learn_capa_3 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_capa");
                     if (userName != null) {
+                        clear_deci();
                         Intent i_to = new Intent(getApplicationContext(), Learn_Decimal_1.class);
                         i_to.putExtra("sample_deci","learn");
                         startActivity(i_to);
@@ -546,6 +548,12 @@ public class Learn_capa_3 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    public void clear_deci(){
+        preferences = getSharedPreferences("Game_deci", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     private void bk_normal(){

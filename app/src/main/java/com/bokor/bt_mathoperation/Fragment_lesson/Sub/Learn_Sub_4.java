@@ -68,8 +68,8 @@ public class Learn_Sub_4 extends AppCompatActivity {
     LinearLayout ln_main;
     TextView txt_qt;
 
-
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -507,6 +507,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_sub");
                     if (userName != null) {
+                        clear_mul();
                         Intent i_to = new Intent(getApplicationContext(), Learn_Mul_1.class);
                         i_to.putExtra("sample_mul","learn");
                         startActivity(i_to);
@@ -528,6 +529,13 @@ public class Learn_Sub_4 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void clear_mul(){
+        preferences = getSharedPreferences("Game_mul", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     private void bk_normal(){

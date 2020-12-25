@@ -68,6 +68,7 @@ public class Learn_Div_4 extends AppCompatActivity {
     TextView txt_slop;
     RelativeLayout rl;
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -537,6 +538,7 @@ public class Learn_Div_4 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_div");
                     if (userName != null) {
+                        clear_frac();
                         Intent i_to = new Intent(getApplicationContext(), Learn_Frac_1.class);
                         i_to.putExtra("sample_frac","learn");
                         startActivity(i_to);
@@ -557,6 +559,13 @@ public class Learn_Div_4 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void clear_frac(){
+        preferences = getSharedPreferences("Game_frac", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     private void bk_normal(){

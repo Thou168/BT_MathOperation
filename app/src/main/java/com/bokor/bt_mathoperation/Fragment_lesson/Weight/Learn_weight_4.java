@@ -68,6 +68,7 @@ public class Learn_weight_4 extends AppCompatActivity {
     String userName;
     //second dialog alert
     SharedPreferences preferences;
+    SharedPreferences.Editor preferences_ed;
     RelativeLayout rl_main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -266,7 +267,7 @@ public class Learn_weight_4 extends AppCompatActivity {
             txt_ask.setText("តើ 5500 ក្រាមស្មើនឹងប៉ុន្មានគីឡូក្រាម និង ក្រាម?");
 
             //btn
-            btn1.setText("5គក550ក");
+            btn1.setText("5គក500ក");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -313,7 +314,7 @@ public class Learn_weight_4 extends AppCompatActivity {
                     surprise_wrong();
                 }
             });
-            btn3.setText("2គក340ក");
+            btn3.setText("2គក300ក");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -521,6 +522,7 @@ public class Learn_weight_4 extends AppCompatActivity {
                 if (extras != null) {
                     userName = extras.getString("sample_weight");
                     if (userName != null) {
+                        clear_capa();
                         Intent i_to = new Intent(getApplicationContext(), Learn_capa_1.class);
                         i_to.putExtra("sample_capa","learn");
                         startActivity(i_to);
@@ -541,6 +543,13 @@ public class Learn_weight_4 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void clear_capa(){
+        preferences = getSharedPreferences("Game_capa", MODE_PRIVATE);
+        preferences_ed = preferences.edit();
+        preferences_ed.clear();
+        preferences_ed.apply();
     }
 
     private void bk_normal(){
