@@ -61,7 +61,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,askgame3,askgame4;
     Bundle extras;
     String userName;
     RelativeLayout rl_main;
@@ -110,6 +110,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_Sub_3.class);
@@ -133,6 +134,7 @@ public class Learn_Sub_4 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus++;
                 showNextQuiz();
             }
@@ -301,6 +303,8 @@ public class Learn_Sub_4 extends AppCompatActivity {
             current_lv3.setBackground(getDrawable(R.drawable.gradient_current_level));
             rl_main.setVisibility(View.GONE);
             ln_main.setVisibility(View.VISIBLE);
+            askgame3=MediaPlayer.create(this,R.raw.subtraction_4_e3_sipar);
+            askgame3.start();
             txt_qt.setText("ស៊ីណាមានប្រាក់38ដុល្លា។ នាងទិញស្បែកជើងអស់ប្រាក់15ដុល្លា។ តើស៊ីណានៅសល់ប្រាក់ប៉ុន្មាន?");
 
             btn1.setText("20");
@@ -335,9 +339,11 @@ public class Learn_Sub_4 extends AppCompatActivity {
             current_lv4.setBackground(getDrawable(R.drawable.gradient_current_level));
             rl_main.setVisibility(View.GONE);
             ln_main.setVisibility(View.VISIBLE);
-            txt_qt.setText("ស្រីណុច និងស្រីនាងមានគោ10ក្បាល ហើយគេទាំងពីរ លក់គោទាំងនោះអស់8ក្បាល។ តើគេទាំងពីរនាក់ នៅសល់គោប៉ុន្មានក្បាល?");
+            askgame4=MediaPlayer.create(this,R.raw.subtraction_4_e4_sipar);
+            askgame4.start();
+            txt_qt.setText("ពូសុខចិញ្ចឹមមាន់20ក្បាល គាត់បានលក់មាន់អស់9ក្បាល។ តើគាត់នៅសល់មាន់ចំនួនប៉ុន្មានក្បាលទៀត?");
 
-            btn1.setText("2");
+            btn1.setText("11");
             btn1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -352,21 +358,21 @@ public class Learn_Sub_4 extends AppCompatActivity {
                     }
                 }
             });
-            btn2.setText("3");
+            btn2.setText("12");
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn3.setText("4");
+            btn3.setText("13");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     surprise_wrong();
                 }
             });
-            btn4.setText("5");
+            btn4.setText("14");
             btn4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -415,6 +421,14 @@ public class Learn_Sub_4 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(askgame3 != null) {
+            askgame3.stop();
+            askgame3.release();
+            askgame3 = null;
+        }else if(askgame4 != null) {
+            askgame4.stop();
+            askgame4.release();
+            askgame4 = null;
         }
     }
 

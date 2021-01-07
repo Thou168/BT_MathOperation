@@ -61,7 +61,7 @@ public class Learn_Div_4 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,askgame3,askgame4;
     Bundle extras;
     String userName;
     TextView symbol;
@@ -108,6 +108,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_Div_3.class);
@@ -131,6 +132,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus++;
                 showNextQuiz();
             }
@@ -299,10 +301,9 @@ public class Learn_Div_4 extends AppCompatActivity {
             rl.setVisibility(View.GONE);
             txt_slop.setVisibility(View.VISIBLE);
             txt_slop.setTextSize(16f);
+            askgame3=MediaPlayer.create(this,R.raw.division_4_e3_sipar);
+            askgame3.start();
             txt_slop.setText("នារីមានសៀវភៅ120ក្បាល។ នាងបានចែកសៀវភៅទាំងនេះឱ្យទៅប្អូនៗនាងទាំង4នាក់ ដោយក្នុងម្នាក់ៗទទួលបានចំណែកស្មើៗគ្នា។ តើប្អូនៗរបស់នាងបានសៀវភៅម្នាក់ប៉ុន្មានក្បាល។\u200B");
-//            qt_top.setText("620");
-//            qt_bottom.setText("4");
-//            qt_result.setText("155");
             //btn
             btn1.setText("10");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -339,10 +340,9 @@ public class Learn_Div_4 extends AppCompatActivity {
             rl.setVisibility(View.GONE);
             txt_slop.setVisibility(View.VISIBLE);
             txt_slop.setTextSize(16f);
+            askgame3=MediaPlayer.create(this,R.raw.division_4_e4_sipar);
+            askgame3.start();
             txt_slop.setText("លោកគ្រូសំមានក្រូច250ផ្លែ គាត់ចែកឱ្យសិស្សចំនួន5នាក់។ តើសិស្សម្នាក់ៗទទួលបានក្រូចប៉ុន្មានផ្លែ?");
-//            qt_top.setText("972");
-//            qt_bottom.setText("6");
-//            qt_result.setText("162");
             //btn
             btn1.setText("20");
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -424,6 +424,14 @@ public class Learn_Div_4 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(askgame3 != null) {
+            askgame3.stop();
+            askgame3.release();
+            askgame3 = null;
+        }else if(askgame4 != null) {
+            askgame4.stop();
+            askgame4.release();
+            askgame4 = null;
         }
     }
 

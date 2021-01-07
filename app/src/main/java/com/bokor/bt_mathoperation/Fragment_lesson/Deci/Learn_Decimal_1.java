@@ -129,6 +129,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus--;
                 showNextQuiz();
             }
@@ -136,6 +137,7 @@ public class Learn_Decimal_1 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userBack!=null){
                     if (level_plus<4){
                         level_plus++;

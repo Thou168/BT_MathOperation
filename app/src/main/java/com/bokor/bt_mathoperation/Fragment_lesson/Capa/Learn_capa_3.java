@@ -107,6 +107,7 @@ public class Learn_capa_3 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_capa_2.class);
@@ -130,6 +131,7 @@ public class Learn_capa_3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus++;
                 showNextQuiz();
             }

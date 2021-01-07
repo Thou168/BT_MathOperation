@@ -56,7 +56,7 @@ public class Learn_Frac_1 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask;
     Bundle extras;
     String userName;
     TextView txt_ask;
@@ -113,6 +113,7 @@ public class Learn_Frac_1 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus--;
                 showNextQuiz();
                 Log.d("previous plus", String.valueOf(level_plus));
@@ -121,6 +122,7 @@ public class Learn_Frac_1 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userBack!=null){
                     if (level_plus<4){
                         level_plus++;
@@ -193,6 +195,8 @@ public class Learn_Frac_1 extends AppCompatActivity {
         }
 
         if (level_plus==1){
+            ask=MediaPlayer.create(this,R.raw.fraction_1_e1_e4);
+            ask.start();
             first_q.setText("1");
             second_q.setText("4");
             third_q.setText("2");
@@ -229,6 +233,8 @@ public class Learn_Frac_1 extends AppCompatActivity {
             });
         }else if (level_plus==2){
             //top
+            ask=MediaPlayer.create(this,R.raw.fraction_1_e1_e4);
+            ask.start();
             first_q.setText("6");
             second_q.setText("5");
             third_q.setText("4");
@@ -270,6 +276,8 @@ public class Learn_Frac_1 extends AppCompatActivity {
             });
         }else if (level_plus==3){
             //top
+            ask=MediaPlayer.create(this,R.raw.fraction_1_e1_e4);
+            ask.start();
             first_q.setText("5");
             second_q.setText("6");
             third_q.setText("8");
@@ -311,6 +319,8 @@ public class Learn_Frac_1 extends AppCompatActivity {
             });
         }else if (level_plus==4){
             //top
+            ask=MediaPlayer.create(this,R.raw.fraction_1_e1_e4);
+            ask.start();
             first_q.setText("6");
             second_q.setText("8");
             third_q.setText("7");
@@ -391,6 +401,10 @@ public class Learn_Frac_1 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 

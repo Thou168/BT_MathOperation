@@ -107,6 +107,7 @@ public class Learn_Div_1 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus--;
                 showNextQuiz();
                 Log.d("previous plus", String.valueOf(level_plus));
@@ -115,6 +116,7 @@ public class Learn_Div_1 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userBack!=null){
                     if (level_plus<4){
                         level_plus++;

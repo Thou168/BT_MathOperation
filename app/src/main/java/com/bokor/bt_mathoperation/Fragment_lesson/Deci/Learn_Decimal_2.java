@@ -109,6 +109,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null || userBack!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_Decimal_1.class);
@@ -128,6 +129,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userBack!=null){
                     if (level_plus<4){
                         level_plus++;

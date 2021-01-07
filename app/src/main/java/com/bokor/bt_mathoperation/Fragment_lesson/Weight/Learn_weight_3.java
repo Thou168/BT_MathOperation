@@ -106,6 +106,7 @@ public class Learn_weight_3 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null || userBack!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_weight_2.class);
@@ -130,6 +131,7 @@ public class Learn_weight_3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userBack!=null){
                     if (level_plus<4){
                         level_plus++;

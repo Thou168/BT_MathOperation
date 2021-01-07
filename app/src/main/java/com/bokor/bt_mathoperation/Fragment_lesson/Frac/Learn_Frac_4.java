@@ -66,7 +66,7 @@ public class Learn_Frac_4 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -104,6 +104,7 @@ public class Learn_Frac_4 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_Frac_3.class);
@@ -127,6 +128,7 @@ public class Learn_Frac_4 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus++;
                 showNextQuiz();
             }
@@ -233,6 +235,8 @@ public class Learn_Frac_4 extends AppCompatActivity {
         }
 
         if (level_plus==1){
+            ask=MediaPlayer.create(this,R.raw.fraction_4_e1_e4);
+            ask.start();
             //front
             txt_front_1.setText("2");
             txt_bot_1.setText("6");
@@ -278,6 +282,8 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
+            ask=MediaPlayer.create(this,R.raw.fraction_4_e1_e4);
+            ask.start();
             //front
             txt_front_1.setText("4");
             txt_bot_1.setText("7");
@@ -323,6 +329,8 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
+            ask=MediaPlayer.create(this,R.raw.fraction_4_e1_e4);
+            ask.start();
             //front
             txt_front_1.setText("5");
             txt_bot_1.setText("8");
@@ -368,6 +376,8 @@ public class Learn_Frac_4 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
+            ask=MediaPlayer.create(this,R.raw.fraction_4_e1_e4);
+            ask.start();
             //front
             txt_front_1.setText("7");
             txt_bot_1.setText("9");
@@ -463,6 +473,10 @@ public class Learn_Frac_4 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 

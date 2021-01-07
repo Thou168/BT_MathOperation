@@ -64,7 +64,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,askgame3,askgame4;
     TextView symbol;
     Bundle extras;
     String userName;
@@ -114,6 +114,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_Mul_3.class);
@@ -137,6 +138,7 @@ public class Learn_Mul_4 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 level_plus++;
                 showNextQuiz();
             }
@@ -299,6 +301,8 @@ public class Learn_Mul_4 extends AppCompatActivity {
         }else if (level_plus==3){
             rl_main.setVisibility(View.GONE);
             ln_main.setVisibility(View.VISIBLE);
+            askgame3=MediaPlayer.create(this,R.raw.multiplication_4_e3_sipar);
+            askgame3.start();
             txt_showqt.setText("សំដាំដើមឈើបាន120ដើមក្នុងមួយថ្ងៃ តើរយៈពេល4ថ្ងៃគាត់ដាំដើមឈើបានប៉ុន្មានដើម?");
             //btn
             btn1.setText("460");
@@ -333,6 +337,8 @@ public class Learn_Mul_4 extends AppCompatActivity {
         }else if (level_plus==4) {
             rl_main.setVisibility(View.GONE);
             ln_main.setVisibility(View.VISIBLE);
+            askgame4=MediaPlayer.create(this,R.raw.multiplication_4_e4_sipar);
+            askgame4.start();
             txt_showqt.setText("សាលារៀនមួយមានបន្ទប់រៀន 6បន្ទប់ ហើយបន្ទប់នីមួយៗមានសិស្ស40នាក់។ តើសាលារៀននោះមានសិស្សទាំងអស់ប៉ុន្មាននាក់?");
 
             //btn
@@ -415,6 +421,14 @@ public class Learn_Mul_4 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(askgame3 != null) {
+            askgame3.stop();
+            askgame3.release();
+            askgame3 = null;
+        }else if(askgame4 != null) {
+            askgame4.stop();
+            askgame4.release();
+            askgame4 = null;
         }
     }
 

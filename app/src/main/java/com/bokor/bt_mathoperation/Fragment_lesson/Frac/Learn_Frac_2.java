@@ -59,7 +59,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -115,6 +115,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userName!=null || userBack!=null){
                     if (level_plus==1){
                         Intent i = new Intent(getApplicationContext(), Learn_Frac_1.class);
@@ -134,6 +135,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (userBack!=null){
                     if (level_plus<4){
                         level_plus++;
@@ -252,7 +254,9 @@ public class Learn_Frac_2 extends AppCompatActivity {
         }
 
         if (level_plus==1){
-            txt_ask.setText("ក្នុងចំណោមចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
+            ask=MediaPlayer.create(this,R.raw.fraction_2_e1_e4);
+            ask.start();
+            txt_ask.setText("ក្នុងចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
             img_g2_1.setImageResource(R.drawable.frac_g2_1_1);
             img_g2_2.setImageResource(R.drawable.frac_g2_1_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_1_3);
@@ -288,7 +292,9 @@ public class Learn_Frac_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-            txt_ask.setText("ក្នុងចំណោមចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
+            ask=MediaPlayer.create(this,R.raw.fraction_2_e1_e4);
+            ask.start();
+            txt_ask.setText("ក្នុងចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
             img_g2_1.setImageResource(R.drawable.frac_g2_2_3);
             img_g2_2.setImageResource(R.drawable.frac_g2_2_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_2_1);
@@ -323,7 +329,9 @@ public class Learn_Frac_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-            txt_ask.setText("ចូរជ្រើសរើសការរៀបលំដាប់ប្រភាគពីធំទៅតូច។");
+            ask=MediaPlayer.create(this,R.raw.fraction_2_e1_e4);
+            ask.start();
+            txt_ask.setText("ក្នុងចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
             img_g2_1.setImageResource(R.drawable.frac_g2_3_1);
             img_g2_2.setImageResource(R.drawable.frac_g2_3_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_3_3);
@@ -359,7 +367,9 @@ public class Learn_Frac_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-            txt_ask.setText("ចូរជ្រើសរើសការរៀបលំដាប់ប្រភាគពីធំទៅតូច។");
+            ask=MediaPlayer.create(this,R.raw.fraction_2_e1_e4);
+            ask.start();
+            txt_ask.setText("ក្នុងចម្លើយខាងក្រោម តើមួយណាជាការរៀបលំដាប់ប្រភាគពីតូចទៅធំ?");
             img_g2_1.setImageResource(R.drawable.frac_g2_4_1);
             img_g2_2.setImageResource(R.drawable.frac_g2_4_2);
             img_g2_3.setImageResource(R.drawable.frac_g2_4_3);
@@ -444,6 +454,10 @@ public class Learn_Frac_2 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 

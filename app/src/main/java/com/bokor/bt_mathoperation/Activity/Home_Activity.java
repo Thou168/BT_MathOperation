@@ -40,13 +40,7 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
-//        gif=findViewById(R.id.btn_show_gif);
-//        img_gif=findViewById(R.id.gifImageView);
-//        gif.setOnClickListener(this);
         call_id();
-//        toolbar = findViewById(R.id.toolbar);
-//        toolbar.setTitle("BT_MathOperation");
-
         img_setting = findViewById(R.id.settings);
         img_setting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,25 +49,6 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(Home_Activity.this, Info.class));
             }
         });
-
-//        drawerLayout = findViewById(R.id.drawer_layout_id);
-//        toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
-//        drawerLayout.addDrawerListener(toggle);
-//        drawerLayout.setClickable(true);
-//        setSupportActionBar(toolbar);
-
-//        toggle.setDrawerIndicatorEnabled(false);
-//        toggle.syncState();
-//        toolbar.setNavigationIcon(R.drawable.ic_info);
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadein);
-//                toolbar.startAnimation(animFadein);
-//            }
-//        });
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener () { @Override public void onClick(View view) { if (drawerLayout.isDrawerOpen (Gravity.LEFT)) { drawerLayout.closeDrawer (Gravity.LEFT); } else { drawerLayout.openDrawer (Gravity.LEFT); } } });
-//        navigationView = findViewById(R.id.navi);
     }
 
     private void call_id(){
@@ -147,13 +122,13 @@ public class Home_Activity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        btn_next = findViewById(R.id.btnNext);
-        PushDownAnim.setPushDownAnimTo(btn_next).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Home_Activity.this, Sound_Activity.class));
-            }
-        });
+//        btn_next = findViewById(R.id.btnNext);
+//        PushDownAnim.setPushDownAnimTo(btn_next).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Home_Activity.this, Sound_Activity.class));
+//            }
+//        });
     }
 
     @Override
