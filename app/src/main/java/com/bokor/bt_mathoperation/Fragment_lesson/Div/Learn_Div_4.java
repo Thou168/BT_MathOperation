@@ -148,11 +148,6 @@ public class Learn_Div_4 extends AppCompatActivity {
 
         container=findViewById(R.id.container);
 
-        //sound game
-        mp1=MediaPlayer.create(this, R.raw.hand_clap);
-        game_over=MediaPlayer.create(this,R.raw.game_over);
-
-
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         showNextQuiz();
     }
@@ -303,6 +298,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         }else if (level_plus==3){
             rl.setVisibility(View.GONE);
             txt_slop.setVisibility(View.VISIBLE);
+            txt_slop.setTextSize(16f);
             txt_slop.setText("នារីមានសៀវភៅ120ក្បាល។ នាងបានចែកសៀវភៅទាំងនេះឱ្យទៅប្អូនៗនាងទាំង4នាក់ ដោយក្នុងម្នាក់ៗទទួលបានចំណែកស្មើៗគ្នា។ តើប្អូនៗរបស់នាងបានសៀវភៅម្នាក់ប៉ុន្មានក្បាល។\u200B");
 //            qt_top.setText("620");
 //            qt_bottom.setText("4");
@@ -342,6 +338,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         }else if (level_plus==4) {
             rl.setVisibility(View.GONE);
             txt_slop.setVisibility(View.VISIBLE);
+            txt_slop.setTextSize(16f);
             txt_slop.setText("លោកគ្រូសំមានក្រូច250ផ្លែ គាត់ចែកឱ្យសិស្សចំនួន5នាក់។ តើសិស្សម្នាក់ៗទទួលបានក្រូចប៉ុន្មានផ្លែ?");
 //            qt_top.setText("972");
 //            qt_bottom.setText("6");
@@ -398,15 +395,19 @@ public class Learn_Div_4 extends AppCompatActivity {
     }
 
     private void surprise_wrong(){
+        stopPlaying();
+        game_over=MediaPlayer.create(this,R.raw.game_over);
+        game_over.start();
+
         container.stopDropping();
         showAlertDialogNegative();
         vibe.vibrate(200);
-        game_over.start();
     }
 
     private void surprise_true(){
+        stopPlaying();
+        mp1=MediaPlayer.create(this, R.raw.hand_clap);
         mp1.start();
-//        mp1.setLooping(true);
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
@@ -414,8 +415,27 @@ public class Learn_Div_4 extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(container,autoTransition);
     }
 
+    private void stopPlaying() {
+        if (mp1 != null) {
+            mp1.stop();
+            mp1.release();
+            mp1 = null;
+        }else if(game_over != null) {
+            game_over.stop();
+            game_over.release();
+            game_over = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
+    }
+
     @Override
     public void onBackPressed() {
+        stopPlaying();
         final Dialog dialogBuilder = new Dialog(Learn_Div_4.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -450,6 +470,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -458,6 +479,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_Div_4.this, Home_Activity.class));
                 finish();
             }
@@ -481,6 +503,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (level_plus==status){
                     status++;
                 }
@@ -496,6 +519,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_Div_4.this, Home_Activity.class));
                 finish();
             }
@@ -503,6 +527,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -535,6 +560,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (extras != null) {
                     userName = extras.getString("sample_div");
                     if (userName != null) {
@@ -555,6 +581,7 @@ public class Learn_Div_4 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_Div_4.this, Home_Activity.class));
                 finish();
             }

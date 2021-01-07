@@ -35,13 +35,13 @@ public class Lets_start_capacity_2 extends AppCompatActivity {
         textView=findViewById(R.id.txt_view);
         textView.setText("មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ");
         String first = "មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ml";
-        SpannableString fristtxt = new SpannableString(first);
-
-        SpannableStringBuilder ssb_last = new SpannableStringBuilder(fristtxt);
-
-        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
-        ssb_last.setSpan(fcsRed, 37, 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        textView.setText(ssb_last);
+//        SpannableString fristtxt = new SpannableString(first);
+//
+//        SpannableStringBuilder ssb_last = new SpannableStringBuilder(fristtxt);
+//
+//        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
+//        ssb_last.setSpan(fcsRed, 37, 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView.setText(first);
 
         shadowLayout=findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {

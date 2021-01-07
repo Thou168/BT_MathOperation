@@ -21,6 +21,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,6 +66,7 @@ public class Learn_capa_2 extends AppCompatActivity {
     String userBack;
     SharedPreferences preferences;
     int backSave,backSaveFrom1;
+    RelativeLayout rl_main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +78,8 @@ public class Learn_capa_2 extends AppCompatActivity {
             backSave = extras.getInt("to_2",0);
             backSaveFrom1 = extras.getInt("to_2_back",0);
         }
+        rl_main=findViewById(R.id.rl_main);
+        rl_main.setVisibility(View.GONE);
 
         img_change=findViewById(R.id.img_change);
         img_change_new=findViewById(R.id.img_change_new);
@@ -156,11 +160,6 @@ public class Learn_capa_2 extends AppCompatActivity {
         img_hand.setVisibility(View.VISIBLE);
 
         container=findViewById(R.id.container);
-
-        //sound game
-        mp1=MediaPlayer.create(this, R.raw.hand_clap);
-        game_over=MediaPlayer.create(this,R.raw.game_over);
-
 
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (userBack!=null){
@@ -413,23 +412,48 @@ public class Learn_capa_2 extends AppCompatActivity {
     }
 
     private void surprise_wrong(){
+        stopPlaying();
+        game_over=MediaPlayer.create(this,R.raw.game_over);
+        game_over.start();
+
         container.stopDropping();
         showAlertDialogNegative();
         vibe.vibrate(200);
-        game_over.start();
     }
 
     private void surprise_true(){
+        stopPlaying();
+        mp1=MediaPlayer.create(this, R.raw.hand_clap);
         mp1.start();
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+
+    }
+
+    private void stopPlaying() {
+        if (mp1 != null) {
+            mp1.stop();
+            mp1.release();
+            mp1 = null;
+        }else if(game_over != null) {
+            game_over.stop();
+            game_over.release();
+            game_over = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
     }
 
     @Override
     public void onBackPressed() {
+        stopPlaying();
         final Dialog dialogBuilder = new Dialog(Learn_capa_2.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -464,6 +488,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -472,6 +497,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_2.this, Home_Activity.class));
                 finish();
             }
@@ -495,6 +521,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (level_plus!=4) {
                     if (level_plus==status){
                         status++;
@@ -520,6 +547,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_2.this, Home_Activity.class));
                 finish();
             }
@@ -527,6 +555,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -563,6 +592,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_2.this, Learn_capa_3.class));
                 finish();
             }
@@ -570,6 +600,7 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_2.this, Home_Activity.class));
                 finish();
             }

@@ -21,6 +21,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,6 +66,7 @@ public class Learn_capa_1 extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor preferences_ed;
     int backSave;
+    RelativeLayout rl_main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +76,7 @@ public class Learn_capa_1 extends AppCompatActivity {
             userBack = extras.getString("to_lv_1");
             backSave = extras.getInt("to_1",0);
         }
+        rl_main=findViewById(R.id.rl_main);
 
         img_change=findViewById(R.id.img_change);
         img_change_new=findViewById(R.id.img_change_new);
@@ -143,11 +146,6 @@ public class Learn_capa_1 extends AppCompatActivity {
 
         container=findViewById(R.id.container);
 
-        //sound game
-        mp1=MediaPlayer.create(this, R.raw.hand_clap);
-        game_over=MediaPlayer.create(this,R.raw.game_over);
-
-
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         if (userBack!=null){
@@ -195,10 +193,12 @@ public class Learn_capa_1 extends AppCompatActivity {
         }
 
         if (level_plus==1){
+            rl_main.setVisibility(View.GONE);
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             img_change_new_more.setVisibility(View.GONE);
             txt_ask.setText("លីត្រជាឯកតាចំណុះតាងដោយអក្សរអ្វី?");
+            txt_ask.setTextSize(20f);
 
             //btn
             btn1.setText("ក");
@@ -230,11 +230,13 @@ public class Learn_capa_1 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
+            rl_main.setVisibility(View.VISIBLE);
             img_change_new.setVisibility(View.VISIBLE);
             img_change_new_more.setVisibility(View.VISIBLE);
             img_change_new.setImageResource(R.drawable.litre_tank);
             img_change_new_more.setImageResource(R.drawable.litre_tank_eq);
             txt_ask.setText("ធុងទឹកនេះមានចំណុះ500លីត្រ ដោយធុងទឹកមួយទៀតមានចំណុះពាក់កណ្តាលនៃធុងទឹកនេះ។ តើធុងទឹកមួយទៀតមានចំណុះប៉ុន្មានលីត្រ?");
+            txt_ask.setTextSize(15f);
 
             //btn
             btn1.setText("250 ល");
@@ -266,6 +268,7 @@ public class Learn_capa_1 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
+            rl_main.setVisibility(View.GONE);
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             img_change_new_more.setVisibility(View.GONE);
@@ -302,6 +305,7 @@ public class Learn_capa_1 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
+            rl_main.setVisibility(View.GONE);
             img_change.setVisibility(View.GONE);
             img_change_new.setVisibility(View.GONE);
             img_change_new_more.setVisibility(View.GONE);
@@ -350,16 +354,19 @@ public class Learn_capa_1 extends AppCompatActivity {
     }
 
     private void surprise_wrong(){
+        stopPlaying();
+        game_over=MediaPlayer.create(this,R.raw.game_over);
+        game_over.start();
+
         container.stopDropping();
         showAlertDialogNegative();
         vibe.vibrate(200);
-        game_over.start();
-//        game_over.setLooping(true);
     }
 
     private void surprise_true(){
+        stopPlaying();
+        mp1=MediaPlayer.create(this, R.raw.hand_clap);
         mp1.start();
-//        mp1.setLooping(true);
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
@@ -368,8 +375,27 @@ public class Learn_capa_1 extends AppCompatActivity {
 
     }
 
+    private void stopPlaying() {
+        if (mp1 != null) {
+            mp1.stop();
+            mp1.release();
+            mp1 = null;
+        }else if(game_over != null) {
+            game_over.stop();
+            game_over.release();
+            game_over = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
+    }
+
     @Override
     public void onBackPressed() {
+        stopPlaying();
         final Dialog dialogBuilder = new Dialog(Learn_capa_1.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -404,6 +430,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -412,6 +439,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_1.this, Home_Activity.class));
                 finish();
             }
@@ -435,6 +463,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (level_plus!=4) {
                     if (level_plus==status){
                         status++;
@@ -457,6 +486,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_1.this, Home_Activity.class));
                 finish();
             }
@@ -464,6 +494,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -502,6 +533,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_1.this, Learn_capa_2.class));
                 finish();
             }
@@ -509,6 +541,7 @@ public class Learn_capa_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_capa_1.this, Home_Activity.class));
                 finish();
             }

@@ -154,11 +154,6 @@ public class Learn_Decimal_3 extends AppCompatActivity {
 
         container=findViewById(R.id.container);
 
-        //sound game
-        mp1=MediaPlayer.create(this, R.raw.hand_clap);
-        game_over=MediaPlayer.create(this,R.raw.game_over);
-
-
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         showNextQuiz();
     }
@@ -386,24 +381,48 @@ public class Learn_Decimal_3 extends AppCompatActivity {
     }
 
     private void surprise_wrong(){
+        stopPlaying();
+        game_over=MediaPlayer.create(this,R.raw.game_over);
+        game_over.start();
+
         container.stopDropping();
         showAlertDialogNegative();
         vibe.vibrate(200);
-        game_over.start();
-//        game_over.setLooping(true);
     }
 
     private void surprise_true(){
+        stopPlaying();
+        mp1=MediaPlayer.create(this, R.raw.hand_clap);
         mp1.start();
 
         //transition rain dialog win
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+
+    }
+
+    private void stopPlaying() {
+        if (mp1 != null) {
+            mp1.stop();
+            mp1.release();
+            mp1 = null;
+        }else if(game_over != null) {
+            game_over.stop();
+            game_over.release();
+            game_over = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
     }
 
     @Override
     public void onBackPressed() {
+        stopPlaying();
         final Dialog dialogBuilder = new Dialog(Learn_Decimal_3.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -438,6 +457,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -446,6 +466,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_Decimal_3.this, Home_Activity.class));
                 finish();
             }
@@ -469,6 +490,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (level_plus==status){
                     status++;
                 }
@@ -484,6 +506,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_Decimal_3.this, Home_Activity.class));
                 finish();
             }
@@ -491,6 +514,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -519,6 +543,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_Decimal_3.this, Home_Activity.class));
                 finish();
             }

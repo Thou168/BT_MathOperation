@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class Lets_start_decimal_2 extends AppCompatActivity {
 
     TextView example,such_as;
     ImageView img;
+    RelativeLayout close;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,10 +76,12 @@ public class Lets_start_decimal_2 extends AppCompatActivity {
 
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍ ៖ ការេមួយបែងជា100ចំណែកស្មើគ្នា។ យើងផាត់ពណ៌ 30ចំណែក។ តាងដោយ 30/100 ឬ 0.30 ។");
+        example.setText("ឧទាហរណ៍ ៖ ការ៉េមួយបែងចែកជា១០០ចំណែកស្មើគ្នា។ យើងផាត់ពណ៌តែបីចំណែកតាងដោយ៣ភាគ១០០។");
         such_as=findViewById(R.id.such_as);
         such_as.setText(R.string.doch_nis_decimal_2);
         img=findViewById(R.id.img);
         img.setImageResource(R.drawable.percentage_decimal);
+        close = findViewById(R.id.close);
+        close.setVisibility(View.GONE);
     }
 }

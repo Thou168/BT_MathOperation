@@ -8,11 +8,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Vibrator;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -22,18 +20,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -142,8 +135,7 @@ public class Learn_1 extends AppCompatActivity {
         container=findViewById(R.id.container);
 
         //sound game
-        mp1=MediaPlayer.create(this, R.raw.hand_clap);
-        game_over=MediaPlayer.create(this,R.raw.game_over);
+
         vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (userBack!=null){
             level_plus=4;
@@ -340,13 +332,18 @@ public class Learn_1 extends AppCompatActivity {
     }
 
     private void surprise_wrong(){
+        stopPlaying();
+        game_over=MediaPlayer.create(this,R.raw.game_over);
+        game_over.start();
+
         container.stopDropping();
         showAlertDialogNegative();
         vibe.vibrate(200);
-        game_over.start();
     }
 
     private void surprise_true(){
+        stopPlaying();
+        mp1=MediaPlayer.create(this, R.raw.hand_clap);
         mp1.start();
 
         //transition rain dialog win
@@ -355,8 +352,27 @@ public class Learn_1 extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(container,autoTransition);
     }
 
+    private void stopPlaying() {
+        if (mp1 != null) {
+            mp1.stop();
+            mp1.release();
+            mp1 = null;
+        }else if(game_over != null) {
+            game_over.stop();
+            game_over.release();
+            game_over = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
+    }
+
     @Override
     public void onBackPressed() {
+        stopPlaying();
         final Dialog dialogBuilder = new Dialog(Learn_1.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -387,7 +403,6 @@ public class Learn_1 extends AppCompatActivity {
         ImageView home = layoutView.findViewById(R.id.home);
         gifImageView = layoutView.findViewById(R.id.gifImageView);
         dialogBuilder.setView(layoutView);
-//        dialogBuilder.setCancelable(false);
         alertDialog = dialogBuilder.create();
         alertDialog.getWindow().getAttributes().windowAnimations = R.style.WindowFalse;
         alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -395,6 +410,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonNegative).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -403,6 +419,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_1.this, Home_Activity.class));
                 finish();
             }
@@ -426,6 +443,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(dialogButtonPositive).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 if (level_plus!=4) {
                     if (level_plus==status){
                         status++;
@@ -450,6 +468,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_1.this, Home_Activity.class));
                 finish();
             }
@@ -457,6 +476,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(again).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 bk_normal();
                 showNextQuiz();
                 alertDialog.cancel();
@@ -497,6 +517,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(con).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_1.this, Learn_2.class));
                 finish();
             }
@@ -504,6 +525,7 @@ public class Learn_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
                 startActivity(new Intent(Learn_1.this, Home_Activity.class));
                 finish();
             }

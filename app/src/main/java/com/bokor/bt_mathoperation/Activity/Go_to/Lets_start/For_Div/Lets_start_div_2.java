@@ -62,7 +62,7 @@ public class Lets_start_div_2 extends AppCompatActivity {
         ln_mainbox = findViewById(R.id.ln_main_box);
         ln_mainbox.setVisibility(View.GONE);
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍  ៖  លោកគ្រូសានមានសៀវភៅ45ក្បាល។ គាត់បានចែកសៀវភៅទាំងនេះឱ្យទៅសិស្ស9នាក់។ តើសិស្សម្នាក់ៗបានសៀវភៅប៉ុន្មានក្បាល?");
+        example.setText("លោកគ្រូសានមានសៀវភៅ៤៥ក្បាល។ គាត់បានចែកសៀវភៅទាំងនេះឱ្យទៅសិស្ស៩នាក់។ តើសិស្សម្នាក់ៗបានសៀវភៅប៉ុន្មានក្បាល?");
         num_top=findViewById(R.id.top_num);
         num_top.setText("45");
         top_div=findViewById(R.id.top_div);

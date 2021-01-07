@@ -166,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="1ល = 1000មល ឬ 1L = 1000 mL"
+                    android:text="1ល = 1000មល ឬ 1L = 1000 ml"
                     android:layout_marginStart="10dp"
                     android:textSize="18sp"
                     android:fontFamily="@font/battambang_regular"
