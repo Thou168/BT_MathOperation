@@ -3,6 +3,7 @@ package com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,11 +29,13 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
 
     TextView example,carry_on,top_num,bottom_num,answer,txt_explain_T,txt_explain_B,such_as;
     TextView two_char_top,two_char_bot,one_char_top,one_char_bot,two_ans,one_ans;
-
+    MediaPlayer lesson_add3,letstart = new MediaPlayer();
+    String getSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_start_lesson);
+        getSound = getIntent().getStringExtra("soundbackstop");
         id();
 
         mediaPlayer=MediaPlayer.create(this,R.raw.plus_first);
@@ -42,8 +45,10 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                letStart();
                 Intent intent = new Intent(Lets_start_lesson_3.this, Learn_3.class);
                 startActivity(intent);
+                finish();
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -62,40 +67,55 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
                 if(isPlaying) {
                     sound.setImageResource(R.drawable.sound_on);
                     isPlaying=false;
+                    sound();
                 } else {
                     sound.setImageResource(R.drawable.sound_off);
                     isPlaying=true;
+                    stopPlaying();
                 }
-//                if (isPlaying) {
-//                    if (mediaPlayer.isPlaying()) {
-//                        mediaPlayer.pause();
-//                    }else {
-//                        mediaPlayer2.pause();
-//                    }
-//                    Toast.makeText(getApplicationContext(),"សម្លេងត្រូវបានផ្អាក",Toast.LENGTH_SHORT).show();
-//                }else{
-//                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-//                        @Override
-//                        public void onCompletion(MediaPlayer mp) {
-//                            try {
-//                                mediaPlayer2.start();
-//                            } catch (Exception e) {
-//                                e.printStackTrace();
-//                            }
-//                        }
-//                    });
-//                    try {
-//                        mediaPlayer.start();
-//                        if (!mediaPlayer.isPlaying()){
-//                            mediaPlayer2.start();
-//                        }
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//                isPlaying = !isPlaying;
             }
         });
+    }
+
+    private void letStart(){
+        letstart=MediaPlayer.create(this, R.raw.let_startgame);
+        letstart.start();
+    }
+
+    private void sound(){
+        stopPlaying();
+        lesson_add3=MediaPlayer.create(this, R.raw.addition_3_sipar);
+        lesson_add3.start();
+    }
+
+    private void stopPlaying() {
+        if (lesson_add3 != null) {
+            lesson_add3.stop();
+            lesson_add3.release();
+            lesson_add3 = null;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (getSound!=null){
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+//                    sound();
+                }
+            }, 6000);
+        } else {
+            sound();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
     }
 
     private void id(){
@@ -133,6 +153,7 @@ public class Lets_start_lesson_3 extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        stopPlaying();
         finish();
     }
 

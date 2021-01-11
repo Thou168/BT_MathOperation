@@ -26,8 +26,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Mul.Lets_start_mul;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
+import com.bokor.bt_mathoperation.Fragment_lesson.Frac.Learn_Frac_1;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -56,7 +59,7 @@ public class Learn_Mul_1 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,stop_sound,yes_sound,no_sound;
     TextView symbol;
 
     Bundle extras;
@@ -67,10 +70,12 @@ public class Learn_Mul_1 extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor preferences_ed;
     int backSave;
+    String getBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        getBack = getIntent().getStringExtra("getBack");
         extras = getIntent().getExtras();
         if (extras!=null){
             userBack = extras.getString("to_lv_1");
@@ -358,6 +363,21 @@ public class Learn_Mul_1 extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(container,autoTransition);
     }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
+    }
+
     private void stopPlaying() {
         if (mp1 != null) {
             mp1.stop();
@@ -379,6 +399,7 @@ public class Learn_Mul_1 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_Mul_1.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -386,12 +407,25 @@ public class Learn_Mul_1 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                //back play sound
+                if (getBack!=null){
+                    finish();
+                } else {
+                    Intent intent = new Intent(Learn_Mul_1.this, Lets_start_mul.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

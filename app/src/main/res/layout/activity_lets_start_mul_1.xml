@@ -39,7 +39,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ឧទាហរណ៍ ៖ រោងចក្រមួយកន្លែងអាចដេរខោអាវបាន213សម្រាប់ក្នុងមួយថ្ងៃ។ តើរយៈពេល6ថ្ងៃរោងចក្រនោះអាចដេរខោអាវបានប៉ុន្មានសម្រាប់? \n213 × 6 = ? "
+                android:text="ឧទាហរណ៍ ៖ រោងចក្រមួយកន្លែងអាចដេរខោអាវបាន213សម្រាប់ក្នុងមួយថ្ងៃ។ តើរយៈពេល6ថ្ងៃរោងចក្រនោះអាចដេរខោអាវបានប៉ុន្មានសម្រាប់? \nយើងមាន 213 x 6 = ? "
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"

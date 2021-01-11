@@ -1,7 +1,9 @@
 package com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,25 +21,26 @@ import static com.thekhaeng.pushdownanim.PushDownAnim.MODE_SCALE;
 public class Lets_start_fraction_3 extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
-
+    MediaPlayer lesson_frac3,letstart = new MediaPlayer();
+    String getSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_start_fraction_2);
-
-
+        getSound = getIntent().getStringExtra("soundbackstop");
         shadowLayout=findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                letStart();
                 startActivity(new Intent(Lets_start_fraction_3.this, Learn_Frac_3.class));
+                finish();
             }
         });
         img_back=findViewById(R.id.img_back);
         PushDownAnim.setPushDownAnimTo(img_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 onBackPressed();
             }
         });
@@ -49,13 +52,61 @@ public class Lets_start_fraction_3 extends AppCompatActivity {
                 if(isPlaying) {
                     sound.setImageResource(R.drawable.sound_on);
                     isPlaying=false;
+                    sound();
                 } else {
                     sound.setImageResource(R.drawable.sound_off);
                     isPlaying=true;
+                    stopPlaying();
                 }
             }
         });
     }
 
+    private void letStart(){
+        letstart=MediaPlayer.create(this, R.raw.let_startgame);
+        letstart.start();
+    }
+
+    private void sound(){
+        stopPlaying();
+        lesson_frac3=MediaPlayer.create(this, R.raw.fraction_3_sipar);
+        lesson_frac3.start();
+    }
+
+    private void stopPlaying() {
+        if (lesson_frac3 != null) {
+            lesson_frac3.stop();
+            lesson_frac3.release();
+            lesson_frac3 = null;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (getSound!=null){
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+//                    sound();
+                }
+            }, 6000);
+        } else {
+            sound();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
+    }
+
+    @Override
+    public void onBackPressed() {
+        stopPlaying();
+        finish();
+    }
 
 }

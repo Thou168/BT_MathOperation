@@ -139,7 +139,7 @@
             <TextView
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="បន្លែគ្រប់មុខមានទម្ងន់ 15គីឡូក្រាម យើងសរសេរ 15គក ឬ 15kg"
+                android:text="បន្លែគ្រប់មុខមានទម្ងន់ 15គីឡូក្រាម យើងអាចសរសេរកាត់ 15គក។ គីឡូក្រាមជាឯកតារង្វាស់ទម្ងន់។ គីឡូក្រាមតាងដោយអក្សរ គក ឬ អក្សរ kg។"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"

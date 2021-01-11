@@ -28,6 +28,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Change_scale_from_kilogram_to_gram;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Weight.Lets_start_weight;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.Fragment_lesson.Frac.Learn_Frac_2;
@@ -60,7 +62,7 @@ public class Learn_weight_3 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -255,8 +257,9 @@ public class Learn_weight_3 extends AppCompatActivity {
         }
 
         if (level_plus==1){
-//            img_change.setImageResource(R.drawable.kl1);
-            txt_ask.setText("តើ85គីឡូក្រាម ស្មើនឹងចំនួនប៉ុន្មានក្រាម?");
+            ask=MediaPlayer.create(this,R.raw.weight_3_e1_sipar);
+            ask.start();
+            txt_ask.setText("តើ85គីឡូក្រាម ស្មើនឹងប៉ុន្មានក្រាម?");
 
             //btn
             btn1.setText("8ក");
@@ -288,8 +291,9 @@ public class Learn_weight_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-//            img_change.setImageResource(R.drawable.kl2);
-            txt_ask.setText("តើ0.31គីឡូក្រាម ស្មើនឹងចំនួនប៉ុន្មានក្រាម?");
+            ask=MediaPlayer.create(this,R.raw.weight_3_e2_sipar);
+            ask.start();
+            txt_ask.setText("តើ0.31គីឡូក្រាម ស្មើនឹងប៉ុន្មានក្រាម?");
 
             //btn
             btn1.setText("310ក");
@@ -321,7 +325,8 @@ public class Learn_weight_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-//            img_change.setImageResource(R.drawable.kl3);
+            ask=MediaPlayer.create(this,R.raw.weight_3_e3_sipar);
+            ask.start();
             txt_ask.setText("តើ12គ.ក 200ក ស្មើនឹងប៉ុន្មានក្រាម?");
             //btn
             btn1.setText("10200ក");
@@ -353,8 +358,9 @@ public class Learn_weight_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-//            img_change.setImageResource(R.drawable.kl4);
-            txt_ask.setText("មីងសនទិញសាច់គោ2គ.ក 500ក្រាម និងសាច់មាន់ 3គ.ក។ តើមីងសនទិញសាច់ទាំងអស់ទម្ងន់ប៉ុន្មានគ.ក?");
+            ask=MediaPlayer.create(this,R.raw.weight_3_e4_sipar);
+            ask.start();
+            txt_ask.setText("មីងសនទិញសាច់គោ2គ.ក និង500ក និងសាច់មាន់ 3គ.ក។ តើមីងសនទិញសាច់ទាំងអស់ទម្ងន់ប៉ុន្មានគ.ក?");
 
             //btn
             btn1.setText("3គក​50ក");
@@ -425,7 +431,21 @@ public class Learn_weight_3 extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+    }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
     }
 
     private void stopPlaying() {
@@ -437,6 +457,10 @@ public class Learn_weight_3 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 
@@ -449,6 +473,7 @@ public class Learn_weight_3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_weight_3.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -456,12 +481,24 @@ public class Learn_weight_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_weight_3.this, Change_scale_from_kilogram_to_gram.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

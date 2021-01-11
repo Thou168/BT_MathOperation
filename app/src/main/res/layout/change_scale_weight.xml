@@ -113,7 +113,7 @@
                     android:background="@drawable/gradient_around_pink"
                     android:padding="10dp"
                     android:layout_marginStart="5dp"
-                    android:text="1000ក្រាម= 1គីឡូក្រាម\n 4300ក្រាម=4គីឡូក្រាម300ក្រាម"
+                    android:text="1000ក្រាម = 1គីឡូក្រាម\n 4300ក្រាម = 4គីឡូក្រាម300ក្រាម"
                     android:textSize="16sp"
                     android:fontFamily="@font/battambang_regular"
                     android:textColor="#3A3D5F"

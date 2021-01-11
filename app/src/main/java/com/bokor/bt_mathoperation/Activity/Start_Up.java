@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Size;
@@ -47,7 +48,7 @@ public class Start_Up extends AppCompatActivity {
     Shimmer shimmer;
     ShimmerFrameLayout shimmerFrameLayout;
     KonfettiView konfettiView;
-//    AlertDialog alertDialog;
+    MediaPlayer start = new MediaPlayer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +86,8 @@ public class Start_Up extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(img_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                start=MediaPlayer.create(Start_Up.this,R.raw.start);
+                start.start();
                 Intent i = new Intent(Start_Up.this,Sponsor_screen.class);
                 startActivity(i,ActivityOptions.makeSceneTransitionAnimation(Start_Up.this).toBundle());
             }
@@ -97,6 +100,23 @@ public class Start_Up extends AppCompatActivity {
             }
         });
     }
+
+    private void stopPlaying() {
+        if (start != null) {
+            start.stop();
+            start.release();
+            start = null;
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (!start.isPlaying()){
+            stopPlaying();
+        }
+    }
+
     public void toggleAnimation(View target) {
         if (shimmer != null && shimmer.isAnimating()) {
             shimmer.cancel();

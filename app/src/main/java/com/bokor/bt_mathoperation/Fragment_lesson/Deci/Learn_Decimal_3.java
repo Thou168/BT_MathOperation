@@ -28,6 +28,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal_2;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal_3;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_decimal_lesson;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_2;
@@ -57,11 +59,10 @@ public class Learn_Decimal_3 extends AppCompatActivity {
     AlertDialog.Builder dialogBuilder;
     AlertDialog alertDialog;
     GifImageView gifImageView;
-    TextView num_result,answer;
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     SharedPreferences preferences;
@@ -226,7 +227,8 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         }
 
         if (level_plus==1){
-//            img_change_new.setImageResource(R.drawable.deci_g3_2);
+            ask=MediaPlayer.create(this,R.raw.decimal_3_e1_sipar);
+            ask.start();
             txt_ask.setText("តើលេខមួយណាស្ថិតនៅខ្ទង់ភាគដប់?");
             txt_show_exam.setText("10.3");
 
@@ -261,7 +263,8 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-//            img_change_new.setImageResource(R.drawable.deci_g3_1);
+            ask=MediaPlayer.create(this,R.raw.decimal_3_e2_sipar);
+            ask.start();
             txt_ask.setText("តើលេខ 7 ស្ថិតនៅខ្ទង់អ្វី?");
             txt_show_exam.setText("7.83");
 
@@ -295,7 +298,8 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-//            img_change_new.setImageResource(R.drawable.deci_g3_4);
+            ask=MediaPlayer.create(this,R.raw.decimal_3_e3_sipar);
+            ask.start();
             txt_ask.setText("តើលេខ 2 ស្ថិតនៅខ្ទង់អ្វី?");
             txt_show_exam.setText("10.12");
 
@@ -329,7 +333,8 @@ public class Learn_Decimal_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-//            img_change_new.setImageResource(R.drawable.deci_g3_3);
+            ask=MediaPlayer.create(this,R.raw.decimal_3_e4_sipar);
+            ask.start();
             txt_ask.setText("តើលេខ 9 ខាងស្តាំស្ថិតនៅខ្ទង់អ្វី?");
             txt_show_exam.setText("9.9");
 
@@ -401,7 +406,21 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+    }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
     }
 
     private void stopPlaying() {
@@ -413,6 +432,10 @@ public class Learn_Decimal_3 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 
@@ -425,6 +448,7 @@ public class Learn_Decimal_3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_Decimal_3.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -432,12 +456,24 @@ public class Learn_Decimal_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_Decimal_3.this, Lets_start_decimal_3.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

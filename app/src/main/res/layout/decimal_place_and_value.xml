@@ -38,7 +38,7 @@
             <TextView
                 android:id="@+id/example"
                 android:textSize="18sp"
-                android:text="ដូចយើងមានលេខដូចខាងក្រោមដើម្បីបង្ហាញ ខ្ទង់ និងតម្លៃនៃខ្ទង់។"
+                android:text="យើងមានលេខដូចខាងក្រោមដើម្បីបង្ហាញ ខ្ទង់ និងតម្លៃនៃខ្ទង់។"
                 android:fontFamily="@font/battambang_regular"
                 android:layout_marginStart="41dp"
                 android:layout_marginEnd="41dp"
@@ -68,7 +68,8 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
                         android:id="@+id/such_as"
@@ -89,15 +90,15 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
-                        android:text="លេខ 2 នៅខ្ទង់ភាគដប់មានតម្លៃ 0.2 ឬ 2/10។"
+                        android:text="លេខ 2 នៅខ្ទង់ភាគដប់មានតម្លៃ 0.2 ឬ 2ភាគ10។"
                         android:textSize="18sp"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textColor="#3A3D5F"
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -110,15 +111,15 @@
                     <ImageView
                         android:src="@drawable/oval"
                         android:layout_width="7.94dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="15dp"
                         android:layout_height="7.94dp"/>
                     <TextView
-                        android:text="លេខ 5 នៅខ្ទង់ភាគរយមានតម្លៃ 0.05 ឬ 5/100។"
+                        android:text="លេខ 5 នៅខ្ទង់ភាគរយមានតម្លៃ 0.05 ឬ 5ភាគ100។"
                         android:textSize="18sp"
                         android:layout_marginStart="10dp"
                         android:fontFamily="@font/battambang_regular"
                         android:textColor="#3A3D5F"
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>

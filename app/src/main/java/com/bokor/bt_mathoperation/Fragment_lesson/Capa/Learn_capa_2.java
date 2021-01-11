@@ -27,7 +27,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.The_sum_of_two_digit_and_one_digit_numbers_is_a_factor;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity_2;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.Fragment_lesson.Frac.Learn_Frac_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Frac.Learn_Frac_4;
 import com.bokor.bt_mathoperation.Fragment_lesson.Weight.Learn_weight_3;
@@ -59,7 +62,7 @@ public class Learn_capa_2 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -79,7 +82,6 @@ public class Learn_capa_2 extends AppCompatActivity {
             backSaveFrom1 = extras.getInt("to_2_back",0);
         }
         rl_main=findViewById(R.id.rl_main);
-        rl_main.setVisibility(View.GONE);
 
         img_change=findViewById(R.id.img_change);
         img_change_new=findViewById(R.id.img_change_new);
@@ -250,9 +252,10 @@ public class Learn_capa_2 extends AppCompatActivity {
         }
 
         if (level_plus==1){
-            img_change.setImageResource(R.drawable.mili_1);
-            img_change.setVisibility(View.GONE);
+            rl_main.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
+            ask=MediaPlayer.create(this,R.raw.measuring_l_2_e1);
+            ask.start();
             txt_ask.setText("មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរអ្វី?");
 
             //btn
@@ -285,9 +288,12 @@ public class Learn_capa_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-            img_change.setImageResource(R.drawable.litre_mili);
+            rl_main.setVisibility(View.VISIBLE);
             img_change.setVisibility(View.VISIBLE);
+            img_change.setImageResource(R.drawable.litre_mili);
             txt_ask.setTextSize(15f);
+            ask=MediaPlayer.create(this,R.raw.measuring_l_2_e2);
+            ask.start();
             txt_ask.setText("តើទឹកនៅក្នុងបំពង់កែវនេះមានចំណុះប៉ុន្មានមល? បើក្នុងមួយកាំមានចំណុះ 200មល។");
 
             //btn
@@ -320,10 +326,11 @@ public class Learn_capa_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-//            img_change.setImageResource(R.drawable.kl3);
-            img_change.setVisibility(View.GONE);
+            rl_main.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 6 លីត្រ = ______ មីលីលីត្រ?");
+            ask=MediaPlayer.create(this,R.raw.measuring_l_2_e3);
+            ask.start();
+            txt_ask.setText("តើ 6លីត្រ ស្មើប៉ុន្មានមីលីលីត្រ?");
 
             //btn
             btn1.setText("60 មល");
@@ -355,10 +362,11 @@ public class Learn_capa_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-//            img_change.setImageResource(R.drawable.kl4);
-            img_change.setVisibility(View.GONE);
+            rl_main.setVisibility(View.GONE);
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 64 លីត្រ = _______ មីលីលីត្រ?");
+            ask=MediaPlayer.create(this,R.raw.measuring_l_2_e4);
+            ask.start();
+            txt_ask.setText("តើ 64លីត្រ ស្មើនឹងប៉ុន្មានមីលីលីត្រ?");
             //btn
             btn1.setTextSize(23);
             btn2.setTextSize(23);
@@ -435,6 +443,21 @@ public class Learn_capa_2 extends AppCompatActivity {
 
     }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
+    }
+
     private void stopPlaying() {
         if (mp1 != null) {
             mp1.stop();
@@ -444,6 +467,10 @@ public class Learn_capa_2 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 
@@ -456,6 +483,7 @@ public class Learn_capa_2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_capa_2.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -463,12 +491,24 @@ public class Learn_capa_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_capa_2.this, Lets_start_capacity_2.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

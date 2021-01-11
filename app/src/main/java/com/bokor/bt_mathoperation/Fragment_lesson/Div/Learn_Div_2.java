@@ -26,7 +26,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Add.The_sum_of_two_digit_and_one_digit_numbers_is_a_factor;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Div.Lets_start_div_2;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_3;
 import com.bokor.bt_mathoperation.Fragment_lesson.Mul.Learn_Mul_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Mul.Learn_Mul_3;
@@ -57,7 +60,7 @@ public class Learn_Div_2 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     TextView symbol;
@@ -429,6 +432,21 @@ public class Learn_Div_2 extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(container,autoTransition);
     }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
+    }
+
     private void stopPlaying() {
         if (mp1 != null) {
             mp1.stop();
@@ -450,19 +468,32 @@ public class Learn_Div_2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_Div_2.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
         Button yes = dialogBuilder.findViewById(R.id.yes);
-        PushDownAnim.setPushDownAnimTo(no).setScale(PushDownAnim.MODE_SCALE,0.80f).setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_Div_2.this, Lets_start_div_2.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

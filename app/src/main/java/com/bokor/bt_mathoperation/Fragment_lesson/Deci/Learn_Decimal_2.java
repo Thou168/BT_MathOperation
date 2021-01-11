@@ -28,8 +28,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity_2;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Decimal.Lets_start_decimal_2;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_1;
+import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_2;
 import com.bokor.bt_mathoperation.Fragment_lesson.Capa.Learn_capa_3;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
@@ -59,7 +62,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -255,6 +258,8 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         result.setText("??");
         txt_ask.setTextSize(18f);
         if (level_plus==1){
+            ask=MediaPlayer.create(this,R.raw.decimal_2_e1_sipar);
+            ask.start();
 //            txt_ask.setText("55/100=_____");
             ln_view2.setVisibility(View.GONE);
             ln_view1.setVisibility(View.VISIBLE);
@@ -293,6 +298,8 @@ public class Learn_Decimal_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
+            ask=MediaPlayer.create(this,R.raw.decimal_2_e2_sipar);
+            ask.start();
 //            txt_ask.setText("44/100=_____");
             ln_view2.setVisibility(View.GONE);
             ln_view1.setVisibility(View.VISIBLE);
@@ -330,6 +337,8 @@ public class Learn_Decimal_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
+            ask=MediaPlayer.create(this,R.raw.decimal_2_e3_sipar);
+            ask.start();
 //            txt_ask.setText("76/100=_____");
 //            txt_top.setText("76");
 //            txt_bot.setText("100");
@@ -367,6 +376,8 @@ public class Learn_Decimal_2 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
+            ask=MediaPlayer.create(this,R.raw.decimal_2_e4_sipar);
+            ask.start();
 //            txt_ask.setText("2/100=_____");
             ln_view2.setVisibility(View.GONE);
             ln_view1.setVisibility(View.VISIBLE);
@@ -442,7 +453,21 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+    }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
     }
 
     private void stopPlaying() {
@@ -454,6 +479,10 @@ public class Learn_Decimal_2 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 
@@ -466,6 +495,7 @@ public class Learn_Decimal_2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_Decimal_2.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -473,12 +503,24 @@ public class Learn_Decimal_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_Decimal_2.this, Lets_start_decimal_2.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

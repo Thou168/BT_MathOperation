@@ -2,7 +2,9 @@ package com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Capacity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -27,11 +29,13 @@ public class Lets_start_capacity_2 extends AppCompatActivity {
     ImageView img_back,sound;
     ShadowLayout shadowLayout;
     TextView textView;
+    MediaPlayer lesson_capa2,letstart = new MediaPlayer();
+    String getSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_start_capacity);
-
+        getSound = getIntent().getStringExtra("soundbackstop");
         textView=findViewById(R.id.txt_view);
         textView.setText("មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ");
         String first = "មីលីលីត្រជាឯកតាចំណុះតាងដោយអក្សរ មល ឬ ml";
@@ -47,7 +51,9 @@ public class Lets_start_capacity_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                letStart();
                 startActivity(new Intent(Lets_start_capacity_2.this, Learn_capa_2.class));
+                finish();
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -66,11 +72,60 @@ public class Lets_start_capacity_2 extends AppCompatActivity {
                 if(isPlaying) {
                     sound.setImageResource(R.drawable.sound_on);
                     isPlaying=false;
+                    sound();
                 } else {
                     sound.setImageResource(R.drawable.sound_off);
                     isPlaying=true;
+                    stopPlaying();
                 }
             }
         });
+    }
+
+    private void letStart(){
+        letstart=MediaPlayer.create(this, R.raw.let_startgame);
+        letstart.start();
+    }
+
+    private void sound(){
+        stopPlaying();
+        lesson_capa2= MediaPlayer.create(this, R.raw.measuring_l_2);
+        lesson_capa2.start();
+    }
+
+    private void stopPlaying() {
+        if (lesson_capa2 != null) {
+            lesson_capa2.stop();
+            lesson_capa2.release();
+            lesson_capa2 = null;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (getSound!=null){
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+//                    sound();
+                }
+            }, 6000);
+        } else {
+            sound();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
+    }
+
+    @Override
+    public void onBackPressed() {
+        stopPlaying();
+        finish();
     }
 }

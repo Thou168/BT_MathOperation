@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,6 +27,7 @@ public class Sub_class extends AppCompatActivity {
     String put_extra;
     SharedPreferences preferences;
     SharedPreferences.Editor preferences_ed;
+    MediaPlayer playgame_sound,learning_sound = new MediaPlayer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,7 @@ public class Sub_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_play).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                learning_sound();
                 startActivity(new Intent(getApplicationContext(), Select_sub_lesson.class));
             }
         });
@@ -48,9 +50,11 @@ public class Sub_class extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(rl_practice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                playgame_sound();
                 clear_sub();
                 Intent intent = new Intent(getApplicationContext(), Learn_Sub.class);
                 intent.putExtra("sample_sub", "sub_class");
+                intent.putExtra("getBack","show");
                 startActivity(intent);
             }
         });
@@ -71,6 +75,16 @@ public class Sub_class extends AppCompatActivity {
         preferences_ed = preferences.edit();
         preferences_ed.clear();
         preferences_ed.apply();
+    }
+
+    private void playgame_sound(){
+        playgame_sound=MediaPlayer.create(this, R.raw.games_play_sound);
+        playgame_sound.start();
+    }
+
+    private void learning_sound(){
+        learning_sound=MediaPlayer.create(this, R.raw.learning_game);
+        learning_sound.start();
     }
 
     @Override

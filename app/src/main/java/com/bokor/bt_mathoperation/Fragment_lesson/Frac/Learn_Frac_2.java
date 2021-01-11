@@ -26,11 +26,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Div.Lets_start_div_4;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Fraction.Lets_start_fraction_2;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_2;
 import com.bokor.bt_mathoperation.Fragment_lesson.Addition.Learn_3;
 import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_1;
 import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_3;
+import com.bokor.bt_mathoperation.Fragment_lesson.Div.Learn_Div_4;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -59,7 +62,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over,ask;
+    MediaPlayer mp1,game_over,ask,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -348,15 +351,14 @@ public class Learn_Frac_2 extends AppCompatActivity {
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    showAlertDialogPositive();
+                    surprise_wrong();
                 }
             });
             btn3.setText("គ");
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    surprise_wrong();
+                    showAlertDialogPositive();
                 }
             });
             btn4.setText("ឃ");
@@ -393,6 +395,13 @@ public class Learn_Frac_2 extends AppCompatActivity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    surprise_wrong();
+                }
+            });
+            btn4.setText("ឃ");
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     extras = getIntent().getExtras();
                     if (extras != null) {
                         userName = extras.getString("sample_frac");
@@ -402,13 +411,6 @@ public class Learn_Frac_2 extends AppCompatActivity {
                     }else {
                         showAlertDialogEnd();
                     }
-                }
-            });
-            btn4.setText("ឃ");
-            btn4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    surprise_wrong();
                 }
             });
 
@@ -445,6 +447,21 @@ public class Learn_Frac_2 extends AppCompatActivity {
         TransitionManager.beginDelayedTransition(container,autoTransition);
     }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
+    }
+
     private void stopPlaying() {
         if (mp1 != null) {
             mp1.stop();
@@ -470,6 +487,7 @@ public class Learn_Frac_2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_Frac_2.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -477,12 +495,24 @@ public class Learn_Frac_2 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_Frac_2.this, Lets_start_fraction_2.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

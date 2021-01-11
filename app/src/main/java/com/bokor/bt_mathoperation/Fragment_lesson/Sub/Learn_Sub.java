@@ -24,7 +24,11 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Mul.Lets_start_mul;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_1;
 import com.bokor.bt_mathoperation.Activity.Home_Activity;
+import com.bokor.bt_mathoperation.Fragment_lesson.Mul.Learn_Mul_1;
 import com.bokor.bt_mathoperation.R;
 import com.luolc.emojirain.EmojiRainLayout;
 import com.thekhaeng.pushdownanim.PushDownAnim;
@@ -49,7 +53,7 @@ public class Learn_Sub extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     String userBack;
@@ -57,10 +61,12 @@ public class Learn_Sub extends AppCompatActivity {
     SharedPreferences preferences;
     SharedPreferences.Editor preferences_ed;
     int backSave;
+    String getBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.learn);
+        getBack = getIntent().getStringExtra("getBack");
         extras = getIntent().getExtras();
         if (extras!=null){
             userBack = extras.getString("to_sub_1");
@@ -365,7 +371,21 @@ public class Learn_Sub extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+    }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
     }
 
     private void stopPlaying() {
@@ -389,6 +409,7 @@ public class Learn_Sub extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_Sub.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -396,12 +417,25 @@ public class Learn_Sub extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                //back play sound
+                if (getBack!=null){
+                    finish();
+                } else {
+                    Intent intent = new Intent(Learn_Sub.this, Lets_start_sub_1.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

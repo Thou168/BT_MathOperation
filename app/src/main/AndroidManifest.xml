@@ -73,7 +73,6 @@
         <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul_2" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul_3" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Mul.Lets_start_mul_4" />
-        <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_1" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_2" />
         <activity android:name=".Activity.Go_to.Lets_start.For_Sub.Lets_start_sub_3" />
@@ -166,10 +165,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Activity.Sound_Activity"
-            android:configChanges="screenSize|keyboardHidden|locale"
-            android:screenOrientation="portrait" />
 
         <activity android:name=".Fragment_lesson.Mul.Learn_Mul_1"/>
         <activity android:name=".Fragment_lesson.Mul.Learn_Mul_2"/>

@@ -28,6 +28,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity_2;
+import com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Capacity.Lets_start_capacity_3;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_capacity_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_decimal_lesson;
 import com.bokor.bt_mathoperation.Activity.Go_to.Select_Lesson.Select_mul_lesson;
@@ -63,7 +65,7 @@ public class Learn_capa_3 extends AppCompatActivity {
     EmojiRainLayout container;
 
     Vibrator vibe;
-    MediaPlayer mp1,game_over;
+    MediaPlayer mp1,game_over,ask,stop_sound,yes_sound,no_sound;
     Bundle extras;
     String userName;
     //second dialog alert
@@ -224,9 +226,11 @@ public class Learn_capa_3 extends AppCompatActivity {
         }
 
         if (level_plus==1){
-//            img_change.setImageResource(R.drawable.kl1);
+            ask=MediaPlayer.create(this,R.raw.measuring_l_3_e1);
+            ask.start();
             txt_ask.setTextSize(20f);
-            txt_ask.setText("តើ 9700 មីលីលីត្រ = _____ លីត្រ នឹង _____ មីលីលីត្រ?");
+//            txt_ask.setText("តើ 9700 មីលីលីត្រ = _____ លីត្រ និង _____ មីលីលីត្រ?");
+            txt_ask.setText("តើ 9700មីលីលីត្រ ស្មើនឹងប៉ុន្មានលីត្រ និង មីលីលីត្រ?");
 
             //btn
             btn1.setTextSize(20f);
@@ -262,7 +266,8 @@ public class Learn_capa_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==2){
-//            img_change.setImageResource(R.drawable.kl2);
+            ask=MediaPlayer.create(this,R.raw.measuring_l_3_e2);
+            ask.start();
             txt_ask.setTextSize(20f);
             txt_ask.setText("សូមជ្រើសរើសចម្លើយខាងក្រោម តើមួយណាមានចំណុះច្រើនជាងគេ?");
 
@@ -296,7 +301,8 @@ public class Learn_capa_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==3){
-//            img_change.setImageResource(R.drawable.kl3);
+            ask=MediaPlayer.create(this,R.raw.measuring_l_3_e3);
+            ask.start();
             txt_ask.setTextSize(20f);
             txt_ask.setText("ទឹកក្រូច1ដបមានចំណុះ 1លីត្រ។ តើទឹកក្រូច 5ដបមានចំណុះប៉ុន្មានមីលីលីត្រ?");
 
@@ -330,9 +336,10 @@ public class Learn_capa_3 extends AppCompatActivity {
                 }
             });
         }else if (level_plus==4){
-//            img_change.setImageResource(R.drawable.kl4);
-            txt_ask.setTextSize(20f);
-            txt_ask.setText("បូរ៉ាមានទឹកសុទ្ធ 3 ដប ដោយទឹកមួយដបមានចំណុះ 500 មីលីលីត្រ គាត់បានអោយមិត្តរបស់គាត់ចំនួនមួយដប។ តើបូរ៉ានៅសល់ទឹកសុទ្ធប៉ុន្មានមីលីត្រ?");
+            ask=MediaPlayer.create(this,R.raw.measuring_l_3_e4);
+            ask.start();
+            txt_ask.setTextSize(18f);
+            txt_ask.setText("បូរ៉ាមានទឹកសុទ្ធ 3 ដប ដោយទឹកមួយដបមានចំណុះ 500 មីលីលីត្រ គាត់បានអោយមិត្តរបស់គាត់ចំនួនមួយដប។ តើបូរ៉ានៅសល់ទឹកសុទ្ធប៉ុន្មានមីលីលីត្រ?");
 
             //btn
             btn1.setText("500 មល");
@@ -402,7 +409,21 @@ public class Learn_capa_3 extends AppCompatActivity {
         AutoTransition autoTransition = new AutoTransition();
         autoTransition.setDuration(2000);
         TransitionManager.beginDelayedTransition(container,autoTransition);
+    }
 
+    private void stop_play(){
+        stopPlaying();
+        stop_sound=MediaPlayer.create(this, R.raw.stop_play);
+        stop_sound.start();
+    }
+
+    private void yes_sound(){
+        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+        yes_sound.start();
+    }
+    private void no_sound(){
+        no_sound=MediaPlayer.create(this, R.raw.no_sound);
+        no_sound.start();
     }
 
     private void stopPlaying() {
@@ -414,6 +435,10 @@ public class Learn_capa_3 extends AppCompatActivity {
             game_over.stop();
             game_over.release();
             game_over = null;
+        }else if(ask != null) {
+            ask.stop();
+            ask.release();
+            ask = null;
         }
     }
 
@@ -426,6 +451,7 @@ public class Learn_capa_3 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         stopPlaying();
+        stop_play();
         final Dialog dialogBuilder = new Dialog(Learn_capa_3.this,R.style.CustomDialog);
         dialogBuilder.setContentView(R.layout.layout_dialog_alert);
         Button no = dialogBuilder.findViewById(R.id.no);
@@ -433,12 +459,24 @@ public class Learn_capa_3 extends AppCompatActivity {
         PushDownAnim.setPushDownAnimTo(no).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                yes_sound();
+                if (userName!=null){
+                    finish();
+                }else {
+                    Intent intent = new Intent(Learn_capa_3.this, Lets_start_capacity_3.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("soundbackstop", "sound");
+                    startActivity(intent);
+                }
                 finish();
             }
         });
         PushDownAnim.setPushDownAnimTo(yes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopPlaying();
+                no_sound();
                 dialogBuilder.cancel();
             }
         });

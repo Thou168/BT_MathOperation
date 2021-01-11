@@ -64,7 +64,7 @@
     <string name="fraction_add1"><![CDATA[ដោយ 1 < 2]]></string>
     <string name="fraction_add2"><![CDATA[យើងមាន ]]></string>
     <string name="fraction_sub"><![CDATA[យើងបាន 2/4 - 1/4 = 1/4]]></string>
-    <string name="jom_nam_title"><![CDATA[គីឡូក្រាម និងក្រាមជាឯកតារង្វាស់ទម្ងន់។ គីឡូក្រាម​ តាងដោយអក្សរ " គ.ក" ឬ " kg" ក្រាមតាងដោយអក្សរ " ក " ឬ "g"។]]></string>
+    <string name="jom_nam_title"><![CDATA[1គីឡូក្រាមស្មើ10ខាំ ឬ ស្មើ1000ក្រាម\n1ខាំស្មើ100ក្រាម]]></string>
     <string name="doch_nis_decimal">ដូចនេះ ៖ 0.4 ជាចំនួនទសភាគ ភាគដប់ អានថា " សូន្យចុចបួន"។ </string>
     <string name="doch_nis_decimal_2">ដូចនេះ ៖ ០.០៣ ជាចំនួនទសភាគ ភាគរយ អានថាសូនចុចសូន្យបី។ </string>
 

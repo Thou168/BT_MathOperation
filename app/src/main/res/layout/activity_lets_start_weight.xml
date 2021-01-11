@@ -36,12 +36,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <ImageView
-                android:src="@drawable/fish_onekilo"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"/>
             <TextView
+                android:visibility="gone"
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
                 android:text="ត្រីមានទម្ងន់ 1គីឡូក្រាមឬ 10ខាំ យើងអាចសរសេរ 1គ.ក ឬ 1kg"
@@ -55,6 +51,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
+                android:visibility="gone"
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
                 android:text="ប៉េងប៉ោះមានទម្ងន់ 300ក្រាមឬ 3ខាំ យើងអាចសរសេរ 300ក ឬ 300g។"
@@ -67,10 +64,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:visibility="gone"
+                android:visibility="visible"
                 android:background="@drawable/gradient_around_pink"
                 android:padding="10dp"
-                android:text="ម្នាស់មានទម្ងន់ 2គីឡូក្រាមនិង 400ក្រាម ឬ 2គ.ក 4ខាំ។ យើងអាចសរសេរ 2គ.ក 400ក. ឬ 2kg 400g"
+                android:text="ម្នាស់មានទម្ងន់ 2គីឡូក្រាមនិង 400ក្រាម ឬ 2គីឡូក្រាម 4ខាំ។ យើងអាចសរសេរ 2គក 400ក។"
                 android:layout_marginEnd="41dp"
                 android:textSize="18sp"
                 android:layout_marginStart="41dp"

@@ -2,7 +2,9 @@ package com.bokor.bt_mathoperation.Activity.Go_to.Lets_start.For_Sub;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,17 +26,21 @@ public class Lets_start_sub_2 extends AppCompatActivity {
     ShadowLayout shadowLayout;
     TextView example,carry_on,top_num,bottom_num,answer,txt_explain_T,txt_explain_B,such_as;
     TextView two_char_top,two_char_bot,one_char_top,one_char_bot,two_ans,one_ans;
-    LinearLayout ln_div;
+    MediaPlayer lesson_sub2,letstart = new MediaPlayer();
+    String getSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_start_sub_pop);
+        getSound = getIntent().getStringExtra("soundbackstop");
         id();
         shadowLayout=findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                letStart();
                 startActivity(new Intent(Lets_start_sub_2.this, Learn_Sub_2.class));
+                finish();
             }
         });
         img_back=findViewById(R.id.img_back);
@@ -53,12 +59,55 @@ public class Lets_start_sub_2 extends AppCompatActivity {
                 if(isPlaying) {
                     sound.setImageResource(R.drawable.sound_on);
                     isPlaying=false;
+                    sound();
                 } else {
                     sound.setImageResource(R.drawable.sound_off);
                     isPlaying=true;
+                    stopPlaying();
                 }
             }
         });
+    }
+
+    private void letStart(){
+        letstart=MediaPlayer.create(this, R.raw.let_startgame);
+        letstart.start();
+    }
+
+    private void sound(){
+        stopPlaying();
+        lesson_sub2=MediaPlayer.create(this, R.raw.subtraction_2_sipar);
+        lesson_sub2.start();
+    }
+
+    private void stopPlaying() {
+        if (lesson_sub2 != null) {
+            lesson_sub2.stop();
+            lesson_sub2.release();
+            lesson_sub2 = null;
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (getSound!=null){
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+//                    sound();
+                }
+            }, 6000);
+        } else {
+            sound();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlaying();
     }
     private void id(){
         example=findViewById(R.id.example);
@@ -96,5 +145,11 @@ public class Lets_start_sub_2 extends AppCompatActivity {
         two_ans.setText("2");
         one_ans=findViewById(R.id.one_ans);
         one_ans.setText("4");
+    }
+
+    @Override
+    public void onBackPressed() {
+        stopPlaying();
+        finish();
     }
 }
