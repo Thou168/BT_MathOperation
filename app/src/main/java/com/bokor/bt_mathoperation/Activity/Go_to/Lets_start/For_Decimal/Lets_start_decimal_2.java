@@ -74,7 +74,7 @@ public class Lets_start_decimal_2 extends AppCompatActivity {
 
     private void id(){
         example=findViewById(R.id.example);
-        example.setText("ឧទាហរណ៍ ៖ ការ៉េមួយបែងចែកជា១០០ចំណែកស្មើគ្នា។ យើងផាត់ពណ៌តែបីចំណែកតាងដោយ៣ភាគ១០០។");
+        example.setText("ឧទាហរណ៍ ៖ ការ៉េមួយបែងចែកជា១០០ចំណែកស្មើគ្នា។ យើងផាត់ពណ៌តែបីចំណែកតាងដោយ៣ភាគ១០០ ឬ០.០៣។");
         such_as=findViewById(R.id.such_as);
         such_as.setText(R.string.doch_nis_decimal_2);
         img=findViewById(R.id.img);

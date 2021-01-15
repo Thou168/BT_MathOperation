@@ -32,7 +32,8 @@ public class Change_scale_from_kilogram_to_gram extends AppCompatActivity {
         setContentView(R.layout.change_scale_weight);
         getSound = getIntent().getStringExtra("soundbackstop");
         change_jomnam=findViewById(R.id.change_jomnam);
-        change_jomnam.setText("3គីឡូក្រាម 200ក្រាម = 3200ក្រាម\n1គីឡូក្រាម = 10ខាំ ឬ ស្មើ1000ក្រាម");
+//        change_jomnam.setText("3គីឡូក្រាម 200ក្រាម = 3200ក្រាម\n1គីឡូក្រាម = 10ខាំ ឬ ស្មើ1000ក្រាម");
+        change_jomnam.setText("1គ.ក = 1000ក្រាម ឬ 10ខាំ");
 
         shadowLayout=findViewById(R.id.shadow_id);
         PushDownAnim.setPushDownAnimTo(shadowLayout).setOnClickListener(new View.OnClickListener() {

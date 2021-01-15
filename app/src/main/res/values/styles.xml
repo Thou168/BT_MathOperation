@@ -40,13 +40,15 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-<!--    <style name="ListView" >-->
-<!--        <item name="android:background">@color/colorPrimary1</item>-->
-<!--        <item name="android:cacheColorHint">@android:color/transparent</item>-->
-<!--        <item name="android:divider">@android:color/transparent</item>-->
-<!--        <item name="android:dividerHeight">0dp</item>-->
-<!--        <item name="android:listSelector">@drawable/listview_selector</item>-->
-<!--    </style>-->
+    <style name="dialogstyle" parent="@android:style/Theme.Holo.Light.Panel">
+        <item name="android:windowAnimationStyle">@style/animations</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="animations">
+        <item name="android:windowEnterAnimation">@anim/anim_in_true</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_false</item>
+    </style>
 
     //dialog animation
     <style name="SlidingDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
