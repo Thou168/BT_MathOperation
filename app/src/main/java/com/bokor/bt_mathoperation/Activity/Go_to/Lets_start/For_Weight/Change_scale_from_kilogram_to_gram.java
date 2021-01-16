@@ -26,10 +26,13 @@ public class Change_scale_from_kilogram_to_gram extends AppCompatActivity {
     TextView change_jomnam;
     MediaPlayer lesson_wei3,letstart = new MediaPlayer();
     String getSound;
+    ImageView vegetable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_scale_weight);
+        vegetable = findViewById(R.id.vegetableid);
+        vegetable.setImageResource(R.drawable.all_vegetable);
         getSound = getIntent().getStringExtra("soundbackstop");
         change_jomnam=findViewById(R.id.change_jomnam);
 //        change_jomnam.setText("3គីឡូក្រាម 200ក្រាម = 3200ក្រាម\n1គីឡូក្រាម = 10ខាំ ឬ ស្មើ1000ក្រាម");

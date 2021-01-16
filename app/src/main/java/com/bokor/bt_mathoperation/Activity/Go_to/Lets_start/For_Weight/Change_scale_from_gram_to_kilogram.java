@@ -25,10 +25,13 @@ public class Change_scale_from_gram_to_kilogram extends AppCompatActivity {
     TextView answer_below;
     MediaPlayer lesson_wei4,letstart = new MediaPlayer();
     String getSound;
+    ImageView vegetable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_scale_weight);
+        vegetable = findViewById(R.id.vegetableid);
+        vegetable.setImageResource(R.drawable.all_vegetable_lesson4);
         getSound = getIntent().getStringExtra("soundbackstop");
         id();
         shadowLayout=findViewById(R.id.shadow_id);
