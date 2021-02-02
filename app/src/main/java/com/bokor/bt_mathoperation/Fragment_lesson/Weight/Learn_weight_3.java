@@ -440,8 +440,8 @@ public class Learn_weight_3 extends AppCompatActivity {
     }
 
     private void yes_sound(){
-        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
-        yes_sound.start();
+//        yes_sound=MediaPlayer.create(this, R.raw.yes_sound);
+//        yes_sound.start();
     }
     private void no_sound(){
         no_sound=MediaPlayer.create(this, R.raw.no_sound);
