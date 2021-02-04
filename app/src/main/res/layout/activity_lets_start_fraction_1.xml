@@ -251,132 +251,6 @@
                 android:layout_marginEnd="41dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-<!--                <RelativeLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/txt_first"-->
-<!--                        android:text="@string/fraction_such_as_1"-->
-<!--                        android:textSize="18sp"-->
-<!--                        android:layout_centerInParent="true"-->
-<!--                        android:layout_alignParentStart="true"-->
-<!--                        android:fontFamily="@font/battambang_regular"-->
-<!--                        android:textColor="#3A3D5F"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"/>-->
-<!--                    <RelativeLayout-->
-<!--                        android:id="@+id/rl_first"-->
-<!--                        android:layout_marginStart="5dp"-->
-<!--                        android:layout_toEndOf="@+id/txt_first"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content">-->
-<!--                        <TextView-->
-<!--                            android:id="@+id/num1"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_centerInParent="true"-->
-<!--                            android:text="2"-->
-<!--                            android:textColor="#3A3D5F"-->
-<!--                            android:textSize="20sp" />-->
-
-<!--                        <View-->
-<!--                            android:id="@+id/row_result_1"-->
-<!--                            android:layout_width="20dp"-->
-<!--                            android:layout_height="1dp"-->
-<!--                            android:layout_below="@+id/num1"-->
-<!--                            android:background="#3A3D5F" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/num1_bot"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_centerInParent="true"-->
-<!--                            android:layout_below="@+id/row_result_1"-->
-<!--                            android:text="4"-->
-<!--                            android:textColor="#3A3D5F"-->
-<!--                            android:textSize="20sp" />-->
-<!--                    </RelativeLayout>-->
-<!--                    <RelativeLayout-->
-<!--                        android:id="@+id/rl_sec"-->
-<!--                        android:layout_marginStart="10dp"-->
-<!--                        android:layout_toEndOf="@+id/rl_first"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content">-->
-<!--                        <TextView-->
-<!--                            android:id="@+id/num1"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_centerInParent="true"-->
-<!--                            android:text="1"-->
-<!--                            android:textColor="#3A3D5F"-->
-<!--                            android:textSize="20sp" />-->
-
-<!--                        <View-->
-<!--                            android:id="@+id/row_result_1"-->
-<!--                            android:layout_width="20dp"-->
-<!--                            android:layout_height="1dp"-->
-<!--                            android:layout_below="@+id/num1"-->
-<!--                            android:background="#3A3D5F" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/num1_bot"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_centerInParent="true"-->
-<!--                            android:layout_below="@+id/row_result_1"-->
-<!--                            android:text="4"-->
-<!--                            android:textColor="#3A3D5F"-->
-<!--                            android:textSize="20sp" />-->
-<!--                    </RelativeLayout>-->
-<!--                    <TextView-->
-<!--                        android:id="@+id/txt_sec"-->
-<!--                        android:text="និង"-->
-<!--                        android:textSize="18sp"-->
-<!--                        android:layout_marginStart="5dp"-->
-<!--                        android:layout_toEndOf="@+id/rl_sec"-->
-<!--                        android:layout_centerInParent="true"-->
-<!--                        android:fontFamily="@font/battambang_regular"-->
-<!--                        android:textColor="#3A3D5F"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"/>-->
-
-<!--                    <RelativeLayout-->
-<!--                        android:id="@+id/rl_thi"-->
-<!--                        android:layout_marginStart="10dp"-->
-<!--                        android:layout_toEndOf="@+id/txt_sec"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content">-->
-<!--                        <TextView-->
-<!--                            android:id="@+id/num1"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_alignParentTop="true"-->
-<!--                            android:layout_centerInParent="true"-->
-<!--                            android:text="3"-->
-<!--                            android:textColor="#3A3D5F"-->
-<!--                            android:textSize="20sp" />-->
-
-<!--                        <View-->
-<!--                            android:id="@+id/row_result_1"-->
-<!--                            android:layout_width="20dp"-->
-<!--                            android:layout_height="1dp"-->
-<!--                            android:layout_below="@+id/num1"-->
-<!--                            android:background="#3A3D5F" />-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/num1_bot"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_centerInParent="true"-->
-<!--                            android:layout_below="@+id/row_result_1"-->
-<!--                            android:text="4"-->
-<!--                            android:textColor="#3A3D5F"-->
-<!--                            android:textSize="20sp" />-->
-<!--                    </RelativeLayout>-->
-<!--                </RelativeLayout>-->
                 <TextView
                     android:text="@string/fraction_such_as"
                     android:textSize="18sp"
@@ -448,7 +322,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:id="@+id/num1"
+                            android:id="@+id/num_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
@@ -458,18 +332,18 @@
                             android:textSize="20sp" />
 
                         <View
-                            android:id="@+id/row_result_1"
+                            android:id="@+id/row_result_2"
                             android:layout_width="20dp"
                             android:layout_height="1dp"
-                            android:layout_below="@+id/num1"
+                            android:layout_below="@+id/num_2"
                             android:background="#3A3D5F" />
 
                         <TextView
-                            android:id="@+id/num1_bot"
+                            android:id="@+id/num1_bot2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:layout_below="@+id/row_result_1"
+                            android:layout_below="@+id/row_result_2"
                             android:text="៤"
                             android:textColor="#3A3D5F"
                             android:textSize="20sp" />
@@ -493,7 +367,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:id="@+id/num1"
+                            android:id="@+id/num3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
@@ -503,18 +377,18 @@
                             android:textSize="20sp" />
 
                         <View
-                            android:id="@+id/row_result_1"
+                            android:id="@+id/row_result_3"
                             android:layout_width="20dp"
                             android:layout_height="1dp"
-                            android:layout_below="@+id/num1"
+                            android:layout_below="@+id/num3"
                             android:background="#3A3D5F" />
 
                         <TextView
-                            android:id="@+id/num1_bot"
+                            android:id="@+id/num1_bot3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:layout_below="@+id/row_result_1"
+                            android:layout_below="@+id/row_result_3"
                             android:text="៤"
                             android:textColor="#3A3D5F"
                             android:textSize="20sp" />
@@ -563,165 +437,6 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Button"
                     android:text="តោះលេងហ្គេម"/>
             </com.dd.ShadowLayout>
-            <!--            <RelativeLayout-->
-            <!--                android:layout_marginStart="41dp"-->
-            <!--                android:layout_marginEnd="41dp"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:paddingBottom="5dp"-->
-            <!--                android:layout_marginTop="19dp"-->
-            <!--                android:layout_height="280dp">-->
-            <!--                <RelativeLayout-->
-            <!--                    android:background="@drawable/gradient_around_pink"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="220dp">-->
-            <!--                    <LinearLayout-->
-            <!--                        android:orientation="vertical"-->
-            <!--                        android:id="@+id/ln_view"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="wrap_content">-->
-            <!--                        <LinearLayout-->
-            <!--                            android:background="@drawable/background_exit_dialog"-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="46.43dp">-->
-            <!--                            <RelativeLayout-->
-            <!--                                android:layout_width="0dp"-->
-            <!--                                android:gravity="center"-->
-            <!--                                android:layout_gravity="center"-->
-            <!--                                android:layout_height="wrap_content"-->
-            <!--                                android:layout_weight="1">-->
-            <!--                                <TextView-->
-            <!--                                    android:text="ខ្ទង់ដប់"-->
-            <!--                                    android:layout_centerInParent="true"-->
-            <!--                                    android:textSize="18sp"-->
-            <!--                                    android:textColor="@color/white"-->
-            <!--                                    android:fontFamily="@font/battambang_regular"-->
-            <!--                                    android:layout_width="wrap_content"-->
-            <!--                                    android:layout_height="wrap_content"/>-->
-            <!--                            </RelativeLayout>-->
-
-            <!--                            <RelativeLayout-->
-            <!--                                android:layout_width="0dp"-->
-            <!--                                android:gravity="center"-->
-            <!--                                android:layout_gravity="center"-->
-            <!--                                android:layout_height="wrap_content"-->
-            <!--                                android:layout_weight="1">-->
-            <!--                                <TextView-->
-            <!--                                    android:text="ខ្ទង់រាយ"-->
-            <!--                                    android:layout_centerInParent="true"-->
-            <!--                                    android:textSize="18sp"-->
-            <!--                                    android:textColor="@color/white"-->
-            <!--                                    android:fontFamily="@font/battambang_regular"-->
-            <!--                                    android:layout_width="wrap_content"-->
-            <!--                                    android:layout_height="wrap_content"/>-->
-            <!--                            </RelativeLayout>-->
-            <!--                        </LinearLayout>-->
-            <!--                        <RelativeLayout-->
-            <!--                            android:layout_width="match_parent"-->
-            <!--                            android:layout_height="wrap_content">-->
-            <!--                            <TextView-->
-            <!--                                android:id="@+id/num_2"-->
-            <!--                                android:text="1"-->
-            <!--                                android:layout_marginTop="7.74dp"-->
-            <!--                                android:layout_marginStart="75dp"-->
-            <!--                                android:textSize="18sp"-->
-            <!--                                android:textColor="#3A3D5F"-->
-            <!--                                android:layout_width="wrap_content"-->
-            <!--                                android:layout_height="wrap_content"/>-->
-
-            <!--                            <TextView-->
-            <!--                                android:text="×"-->
-            <!--                                android:id="@+id/symbol_add"-->
-            <!--                                android:layout_below="@+id/num_2"-->
-            <!--                                android:layout_marginStart="20dp"-->
-            <!--                                android:textSize="18sp"-->
-            <!--                                android:layout_marginTop="10dp"-->
-            <!--                                android:textColor="#3A3D5F"-->
-            <!--                                android:textStyle="bold"-->
-            <!--                                android:layout_width="wrap_content"-->
-            <!--                                android:layout_height="wrap_content"/>-->
-            <!--                            <View-->
-            <!--                                android:layout_width="1dp"-->
-            <!--                                android:layout_centerInParent="true"-->
-            <!--                                android:layout_height="match_parent"-->
-            <!--                                android:layout_gravity="center"-->
-            <!--                                android:background="#3A3D5F" />-->
-            <!--                            <TextView-->
-            <!--                                android:text="3"-->
-            <!--                                android:layout_below="@+id/symbol_add"-->
-            <!--                                android:layout_marginStart="75dp"-->
-            <!--                                android:layout_marginTop="63dp"-->
-            <!--                                android:textSize="18sp"-->
-            <!--                                android:textColor="#3A3D5F"-->
-            <!--                                android:layout_width="wrap_content"-->
-            <!--                                android:layout_height="wrap_content"/>-->
-
-            <!--                            <TextView-->
-            <!--                                android:id="@+id/num_1"-->
-            <!--                                android:text="2"-->
-            <!--                                android:layout_marginTop="7.74dp"-->
-            <!--                                android:layout_marginEnd="80dp"-->
-            <!--                                android:layout_alignParentEnd="true"-->
-            <!--                                android:textSize="18sp"-->
-            <!--                                android:textColor="#3A3D5F"-->
-            <!--                                android:layout_width="wrap_content"-->
-            <!--                                android:layout_height="wrap_content"/>-->
-            <!--                            <TextView-->
-            <!--                                android:id="@+id/num_8"-->
-            <!--                                android:text="3"-->
-            <!--                                android:layout_below="@+id/num_1"-->
-            <!--                                android:layout_marginTop="35.38dp"-->
-            <!--                                android:layout_marginEnd="80dp"-->
-            <!--                                android:layout_alignParentEnd="true"-->
-            <!--                                android:textSize="18sp"-->
-            <!--                                android:textColor="#3A3D5F"-->
-            <!--                                android:layout_width="wrap_content"-->
-            <!--                                android:layout_height="wrap_content"/>-->
-
-            <!--                            <TextView-->
-            <!--                                android:text="6"-->
-            <!--                                android:layout_below="@+id/num_8"-->
-            <!--                                android:layout_marginTop="38dp"-->
-            <!--                                android:layout_marginEnd="80dp"-->
-            <!--                                android:layout_alignParentEnd="true"-->
-            <!--                                android:textSize="18sp"-->
-            <!--                                android:textColor="#3A3D5F"-->
-            <!--                                android:layout_width="wrap_content"-->
-            <!--                                android:layout_height="wrap_content"/>-->
-            <!--                        </RelativeLayout>-->
-
-            <!--                    </LinearLayout>-->
-            <!--                    <View-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="1dp"-->
-            <!--                        android:layout_gravity="center"-->
-            <!--                        android:layout_marginTop="160dp"-->
-            <!--                        android:background="#3A3D5F" />-->
-            <!--                </RelativeLayout>-->
-            <!--                <com.dd.ShadowLayout-->
-            <!--                    android:id="@+id/shadow_id"-->
-            <!--                    app:sl_shadowRadius="10dp"-->
-            <!--                    android:layout_centerInParent="true"-->
-            <!--                    android:layout_alignParentBottom="true"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    app:sl_cornerRadius="4dp"-->
-            <!--                    app:sl_shadowColor="#F50057">-->
-
-            <!--                    <TextView-->
-            <!--                        android:id="@+id/start"-->
-            <!--                        android:layout_width="wrap_content"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:minWidth="233dp"-->
-            <!--                        android:minHeight="53dp"-->
-            <!--                        android:gravity="center"-->
-            <!--                        android:textColor="@android:color/white"-->
-            <!--                        android:textSize="22sp"-->
-            <!--                        android:background="@drawable/button_state_red"-->
-            <!--                        android:fontFamily="@font/battambang_regular"-->
-            <!--                        android:textAppearance="@style/TextAppearance.AppCompat.Button"-->
-            <!--                        android:text="តោះលេងហ្គេម"/>-->
-            <!--                </com.dd.ShadowLayout>-->
-            <!--            </RelativeLayout>-->
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
